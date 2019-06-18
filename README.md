@@ -1,6 +1,7 @@
+
 # Inductive general game playing dataset
 
-This repository contains the first version of the GGP dataset, which is discussed in detail in the paper:
+This repository contains the first version of the IGGP dataset, which is discussed in detail in the paper:
 
 A. Cropper, R. Evans, and M. Law. [Inductive general game playing](http://andrewcropper.com/pubs/mlj19-iggp.pdf). Machine learning (accepted).
 
@@ -18,10 +19,10 @@ There are 50 games in the initial dataset.
 
 The data is split into train/validate/test files. For each game, there are four files:
 
- - <game>_goal.dat: this describes the reward function of the MDP
- - <game>_legal.dat: this describes the available actions for each player
- - <game>_next.dat: this describes the state transition function of the MDP
- - <game>_terminal.dat: this describes the condition under which the episode terminates
+ - *game*_goal.dat: this describes the reward function of the MDP
+ - *game*_legal.dat: this describes the available actions for each player
+ - *game*_next.dat: this describes the state transition function of the MDP
+ - *game*_terminal.dat: this describes the condition under which the episode terminates
 
 Each file has the following structure:
 
