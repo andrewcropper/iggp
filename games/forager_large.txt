@@ -1,0 +1,129 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Forager
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(role black)
+
+(<= (base (at ?x ?y ?obj)) (bounds ?x) (bounds ?y) (object ?obj))
+(<= (base (score ?n)) (number ?n))
+(<= (base (time ?n)) (number ?n))
+
+(<= (input ?r left) (role ?r))
+(<= (input ?r right) (role ?r))
+(<= (input ?r up) (role ?r))
+(<= (input ?r down) (role ?r))
+
+(bounds 1)
+(bounds 2)
+(bounds 3)
+(bounds 4)
+(bounds 5)
+
+(world_min 1)
+(world_max 5)
+
+(<= (number ?n) (succ ?n ?x))
+(<= (number ?n) (succ ?x ?n))
+
+(succ 0 1)
+(succ 1 2)
+(succ 2 3)
+(succ 3 4)
+(succ 4 5)
+(succ 5 6)
+(succ 6 7)
+(succ 7 8)
+(succ 8 9)
+(succ 9 10)
+(succ 10 11)
+(succ 11 12)
+(succ 12 13)
+(succ 13 14)
+(succ 14 15)
+(succ 15 16)
+(succ 16 17)
+(succ 17 18)
+(succ 18 19)
+(succ 19 20)
+
+(<= (world_succ ?x ?y) (succ ?x ?y) (bounds ?x) (bounds ?y))
+
+(player_object x)
+
+(red_object red1)
+(red_object red2)
+(red_object red3)
+(red_object red4)
+(red_object red5)
+
+(green_object green1)
+(green_object green2)
+(green_object green3)
+(green_object green4)
+(green_object green5)
+
+(object x)
+(object red1)
+(object red2)
+(object red3)
+(object red4)
+(object red5)
+(object green1)
+(object green2)
+(object green3)
+(object green4)
+(object green5)
+
+(init (at 1 1 x))
+
+(init (score 5))
+(init (time 20))
+
+(init (at 3 2 red1))
+(init (at 5 3 red2))
+(init (at 1 5 red3))
+(init (at 3 3 red4))
+(init (at 4 1 red5))
+
+(init (at 1 2 green3))
+(init (at 5 1 green4))
+(init (at 3 5 green1))
+(init (at 4 5 green2))
+(init (at 4 4 green5))
+
+(<= aux_touched_something (aux_touched ?obj))
+
+(<= (aux_touched ?obj) (true (at ?x ?y ?obj)) (true (at ?x ?y ?player_obj)) (player_object ?player_obj) (not (player_object ?obj)))
+
+(controls black x)
+
+(<= (legal ?r left) (controls ?r ?obj))
+(<= (legal ?r right) (controls ?r ?obj))
+(<= (legal ?r up) (controls ?r ?obj))
+(<= (legal ?r down) (controls ?r ?obj))
+
+(<= (next (score ?n)) (true (score ?n)) (not aux_touched_something))
+(<= (next (score ?n)) (true (score ?x)) (aux_touched ?obj) (green_object ?obj) (succ ?x ?n))
+(<= (next (score ?n)) (true (score ?x)) (aux_touched ?obj) (red_object ?obj) (succ ?n ?x))
+(<= (next (time ?n)) (true (time ?x)) (succ ?n ?x))
+
+(<= (next (at ?x ?y ?obj)) (true (at ?x ?y ?obj)) (not (aux_touched ?obj)) (not (player_object ?obj)))
+
+(<= (next (at ?x ?y ?obj)) (true (at ?z ?y ?obj)) (does ?r left) (controls ?r ?obj) (world_succ ?x ?z))
+(<= (next (at ?x ?y ?obj)) (true (at ?z ?y ?obj)) (does ?r right) (controls ?r ?obj) (world_succ ?z ?x))
+(<= (next (at ?x ?y ?obj)) (true (at ?x ?z ?obj)) (does ?r up) (controls ?r ?obj) (world_succ ?z ?y))
+(<= (next (at ?x ?y ?obj)) (true (at ?x ?z ?obj)) (does ?r down) (controls ?r ?obj) (world_succ ?y ?z))
+
+(<= (next (at ?x ?y ?obj)) (true (at ?x ?y ?obj)) (does ?r left) (controls ?r ?obj) (world_min ?x))
+(<= (next (at ?x ?y ?obj)) (true (at ?x ?y ?obj)) (does ?r right) (controls ?r ?obj) (world_max ?x))
+(<= (next (at ?x ?y ?obj)) (true (at ?x ?y ?obj)) (does ?r up) (controls ?r ?obj) (world_max ?y))
+(<= (next (at ?x ?y ?obj)) (true (at ?x ?y ?obj)) (does ?r down) (controls ?r ?obj) (world_min ?y))
+
+
+(<= (goal black ?x) (true (score ?x)))
+
+(<= terminal (not aux_is_time))
+
+(<= aux_is_time (true (time ?x)))
+
+(<= (aux_above ?a ?b) (true (at ?x ?y ?a)) (true (at ?x ?y2 ?b)) (world_succ ?y2 ?y))

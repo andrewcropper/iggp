@@ -1,0 +1,34 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; For testing the interpreter handles the various language constructs.
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;;; Testing "distinct"
+
+(init (p a a))
+(init (p b c))
+
+(<= (next (q ?x)) (true (p ?x ?y)) (distinct ?x ?y))
+(<= (next (r ?x)) (true (p ?x ?y)) (not (distinct ?x ?y)))
+
+
+;;; Testing "or"
+
+(init (t a))
+(init (u a))
+(init (t b))
+(init (v b))
+
+(<= (next (s ?x)) (true (t ?x)) (or (true (u ?x)) (true (v ?x))))
+
+(init (g a))
+(init (h a))
+(init (k a))
+(init (g b))
+(init (i b))
+(init (j b))
+(init (g c))
+(init (h c))
+(init (i c))
+
+(<= (next (f ?x)) (true (g ?x)) (or (true (h ?x)) (true (i ?x))) (or (true (j ?x)) (true (k ?x))))

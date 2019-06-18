@@ -1,0 +1,50 @@
+atoms:
+	terminal()
+
+---
+
+statics:
+	succ(0, 1)
+	succ(1, 2)
+	succ(2, 3)
+	succ(3, 4)
+	succ(4, 5)
+
+---
+
+background:
+	true_value(0)
+
+---
+
+positives:
+
+---
+
+background:
+	true_value(1)
+
+---
+
+positives:
+
+---
+
+background:
+	true_value(2)
+
+---
+
+positives:
+
+---
+
+background:
+	true_value(3)
+
+---
+
+positives:
+
+---
+

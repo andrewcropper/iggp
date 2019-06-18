@@ -1,0 +1,1 @@
+Knight's Tour is a single player game played on a 5x6 board. The game begins with a single knight in the upper left corner of the board. On each step, the knight moves like a knight in Chess. Each time the knight moves, it leaves behind a hole. The goal of the game is to get as many hoes on the board as possible. The game ends whenever the knight jumps onto a square with a hole 

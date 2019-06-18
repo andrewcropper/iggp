@@ -1,0 +1,1 @@
+Hunter is a single player game played on a 5x3 board. The game begins with a single knight in the upper left corner of the board and pawns on all other squares. On each step, the knight moves like a knight in Chess, capturing pawns on any squares to which it moves. The goal of the game is to capture as many pawns as possible in 15 moves. 

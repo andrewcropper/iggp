@@ -1,0 +1,10 @@
+import new_sokoban_pos_core
+
+(init (target pos15))
+(init (target pos51))
+
+(init (at pos33 x))
+(wall_at pos53)
+(init (at pos23 obj1))
+(init (at pos43 obj2))
+

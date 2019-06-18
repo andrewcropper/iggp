@@ -1,0 +1,355 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Checkers on a Barrel No Kings
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Components
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (role black)
+  (role red)
+
+
+  (<= (base (location ?x ?y ?pawn))
+      (evensquare ?x ?y)
+      (owns ?pawn ?player))
+
+  (<= (base (capturecount ?player 0))
+      (role ?player))
+
+  (<= (base (capturecount ?player ?n))
+      (role ?player)
+      (countplus ?m ?n))
+
+  (<= (base (control ?player))
+      (role ?player))
+
+  (base (step 1))
+
+  (<= (base (step ?n)) (pp ?m ?n))
+
+
+  (<= (input ?player noop)
+      (role ?player))
+
+  (<= (input red (move ?x1 ?y1 ?x2 ?y2))
+      (evensquare ?x1 ?y1)
+      (redpawnmove ?x1 ?y1 ?x2 ?y2))
+
+  (<= (input black (move ?x1 ?y1 ?x2 ?y2))
+      (evensquare ?x1 ?y1)
+      (blackpawnmove ?x1 ?y1 ?x2 ?y2))
+
+  (<= (input red (jump ?x1 ?y1 ?x3 ?y3))
+      (evensquare ?x1 ?y1)
+      (redpawnmove ?x1 ?y1 ?x2 ?y2)
+      (redpawnmove ?x2 ?y2 ?x3 ?y3)
+      (distinct ?x1 ?x3))
+
+  (<= (input black (jump ?x1 ?y1 ?x3 ?y3))
+      (evensquare ?x1 ?y1)
+      (blackpawnmove ?x1 ?y1 ?x2 ?y2)
+      (blackpawnmove ?x2 ?y2 ?x3 ?y3)
+      (distinct ?x1 ?x3))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; init
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(init (location 1 1 blackpawn))
+(init (location 3 1 blackpawn))
+(init (location 5 1 blackpawn))
+(init (location 7 1 blackpawn))
+(init (location 2 2 blackpawn))
+(init (location 4 2 blackpawn))
+(init (location 6 2 blackpawn))
+(init (location 8 2 blackpawn))
+(init (location 1 3 blackpawn))
+(init (location 3 3 blackpawn))
+(init (location 5 3 blackpawn))
+(init (location 7 3 blackpawn))
+
+(init (location 2 6 redpawn))
+(init (location 4 6 redpawn))
+(init (location 6 6 redpawn))
+(init (location 8 6 redpawn))
+(init (location 1 7 redpawn))
+(init (location 3 7 redpawn))
+(init (location 5 7 redpawn))
+(init (location 7 7 redpawn))
+(init (location 2 8 redpawn))
+(init (location 4 8 redpawn))
+(init (location 6 8 redpawn))
+(init (location 8 8 redpawn))
+
+(init (capturecount black 0))
+(init (capturecount red 0))
+
+(init (control black))
+
+(init (step 1))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; legal
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (<= (legal ?player (move ?x1 ?y1 ?x2 ?y2))
+      (true (control ?player))
+      (not (hasjump ?player))
+      (celloccupiedby ?x1 ?y1 ?player)
+      (validmove ?x1 ?y1 ?x2 ?y2)
+      (cellempty ?x2 ?y2))
+
+  (<= (legal ?player (jump ?x1 ?y1 ?x2 ?y2))
+      (true (control ?player))
+      (celloccupiedby ?x1 ?y1 ?player)
+      (validjump ?x1 ?y1 ?x2 ?y2)
+      (cellempty ?x2 ?y2))
+
+  (<= (legal ?player noop)
+      (role ?player)
+      (not (true (control ?player))))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; next
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(<= (next (location ?x2 ?y2 ?piece))
+    (does black (move ?x1 ?y1 ?x2 ?y2))
+    (true (location ?x1 ?y1 ?piece)))
+
+(<= (next (location ?x2 ?y2 ?piece))
+    (does black (jump ?x1 ?y1 ?x2 ?y2))
+    (true (location ?x1 ?y1 ?piece)))
+
+(<= (next (location ?x2 ?y2 ?piece))
+    (does red (move ?x1 ?y1 ?x2 ?y2))
+    (true (location ?x1 ?y1 ?piece)))
+
+(<= (next (location ?x2 ?y2 ?piece))
+    (does red (jump ?x1 ?y1 ?x2 ?y2))
+    (true (location ?x1 ?y1 ?piece)))
+
+(<= (next (location ?x ?y ?piece))
+    (true (location ?x ?y ?piece))
+    (does ?player (move ?x1 ?y1 ?x2 ?y2))
+    (distinctcell ?x ?y ?x1 ?y1)
+    (distinctcell ?x ?y ?x2 ?y2))
+
+(<= (next (location ?x ?y ?piece))
+    (true (location ?x ?y ?piece))
+    (does ?player (jump ?x1 ?y1 ?x2 ?y2))
+    (distinctcell ?x ?y ?x1 ?y1)
+    (distinctcell ?x ?y ?x2 ?y2)
+    (not (cellbetween ?x1 ?y1 ?x2 ?y2 ?x ?y)))
+
+(<= (next (capturecount ?player ?count))
+    (true (capturecount ?player ?count))
+    (not (true (control ?player))))
+
+(<= (next (capturecount ?player ?count))
+    (true (capturecount ?player ?count))
+    (does ?player (move ?x1 ?y1 ?x2 ?y2)))
+
+(<= (next (capturecount ?player ?count2))
+    (true (capturecount ?player ?count1))
+    (does ?player (jump ?x1 ?y1 ?x2 ?y2))
+    (countplus ?count1 ?count2))
+
+(<= (next (control black))
+    (true (control red)))
+
+(<= (next (control red))
+    (true (control black)))
+
+(<= (next (step ?tnext))
+    (true (step ?tcurrent))
+    (pp ?tcurrent ?tnext))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; goal
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(<= (goal ?player ?goal)
+    (true (capturecount ?player ?count))
+    (scoremap ?count ?goal))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; terminal
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+
+(<= terminal
+    (role ?player)
+    (not (haspiece ?player)))
+
+(<= terminal
+    (true (control ?player))
+    (not (hasmove ?player))
+    (not (hasjump ?player)))
+
+(<= terminal
+    (true (step 50)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; view definitions
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(<= (validmove ?x1 ?y1 ?x2 ?y2)
+    (true (location ?x1 ?y1 blackpawn))
+    (blackpawnmove ?x1 ?y1 ?x2 ?y2))
+
+(<= (validmove ?x1 ?y1 ?x2 ?y2)
+    (true (location ?x1 ?y1 redpawn))
+    (redpawnmove ?x1 ?y1 ?x2 ?y2))
+
+(<= (validjump ?x1 ?y1 ?x2 ?y2)
+    (true (location ?x1 ?y1 blackpawn))
+    (blackpawnjump ?x1 ?y1 ?x2 ?y2))
+
+(<= (validjump ?x1 ?y1 ?x2 ?y2)
+    (true (location ?x1 ?y1 redpawn))
+    (redpawnjump ?x1 ?y1 ?x2 ?y2))
+
+(<= (blackpawnmove ?x1 ?y1 ?x2 ?y2)
+    (plusx 1 ?x1 ?x2)
+    (plusy 1 ?y1 ?y2))
+
+(<= (blackpawnmove ?x1 ?y1 ?x2 ?y2)
+    (plusx 1 ?x2 ?x1)
+    (plusy 1 ?y1 ?y2))
+
+(<= (redpawnmove ?x1 ?y1 ?x2 ?y2)
+    (plusx 1 ?x1 ?x2)
+    (plusy 1 ?y2 ?y1))
+
+(<= (redpawnmove ?x1 ?y1 ?x2 ?y2)
+    (plusx 1 ?x2 ?x1)
+    (plusy 1 ?y2 ?y1))
+
+(<= (blackpawnjump ?x1 ?y1 ?x3 ?y3)
+    (plusx 1 ?x1 ?x2)
+    (plusx 1 ?x2 ?x3)
+    (plusy 1 ?y1 ?y2)
+    (plusy 1 ?y2 ?y3)
+    (celloccupiedby ?x2 ?y2 red))
+
+(<= (blackpawnjump ?x1 ?y1 ?x3 ?y3)
+    (plusx 1 ?x3 ?x2)
+    (plusx 1 ?x2 ?x1)
+    (plusy 1 ?y1 ?y2)
+    (plusy 1 ?y2 ?y3)
+    (celloccupiedby ?x2 ?y2 red))
+
+(<= (redpawnjump ?x1 ?y1 ?x3 ?y3)
+    (plusx 1 ?x1 ?x2)
+    (plusx 1 ?x2 ?x3)
+    (plusy 1 ?y3 ?y2)
+    (plusy 1 ?y2 ?y1)
+    (celloccupiedby ?x2 ?y2 black))
+
+(<= (redpawnjump ?x1 ?y1 ?x3 ?y3)
+    (plusx 1 ?x3 ?x2)
+    (plusx 1 ?x2 ?x1)
+    (plusy 1 ?y3 ?y2)
+    (plusy 1 ?y2 ?y1)
+    (celloccupiedby ?x2 ?y2 black))
+
+(<= (haspiece ?player)
+    (true (location ?x ?y ?piece))
+    (owns ?piece ?player))
+
+(<= (hasjump ?player)
+    (celloccupiedby ?x1 ?y1 ?player)
+    (validjump ?x1 ?y1 ?x2 ?y2)
+    (cellempty ?x2 ?y2))
+
+(<= (hasmove ?player)
+    (celloccupiedby ?x1 ?y1 ?player)
+    (validmove ?x1 ?y1 ?x2 ?y2)
+    (cellempty ?x2 ?y2))
+
+(<= (distinctcell ?x1 ?y1 ?x2 ?y2)
+    (cell ?x1 ?y1)
+    (cell ?x2 ?y2)
+    (distinct ?x1 ?x2))
+
+(<= (distinctcell ?x1 ?y1 ?x2 ?y2)
+    (cell ?x1 ?y1)
+    (cell ?x2 ?y2)
+    (distinct ?y1 ?y2))
+
+(<= (cellbetween ?x1 ?y1 ?x3 ?y3 ?x2 ?y2)
+    (between ?x1 ?x2 ?x3)
+    (between ?y1 ?y2 ?y3))
+
+(<= (celloccupiedby ?x ?y ?player)
+    (true (location ?x ?y ?piece))
+    (owns ?piece ?player))
+
+(<= (cellempty ?x ?y)
+    (cell ?x ?y)
+    (not (celloccupiedby ?x ?y black))
+    (not (celloccupiedby ?x ?y red)))
+
+(<= (cell ?x ?y)
+    (index ?x)
+    (index ?y))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; data
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(index 1) (index 2) (index 3) (index 4) (index 5) (index 6) (index 7) (index 8)
+
+(plusx 1 1 2) (plusx 1 2 3) (plusx 1 3 4) (plusx 1 4 5) (plusx 1 5 6) (plusx 1 6 7) (plusx 1 7 8)
+(plusy 1 1 2) (plusy 1 2 3) (plusy 1 3 4) (plusy 1 4 5) (plusy 1 5 6) (plusy 1 6 7) (plusy 1 7 8) (plusy 1 8 1)
+
+(between 1 2 3) (between 2 3 4) (between 3 4 5) (between 4 5 6) (between 5 6 7) (between 6 7 8) (between 7 8 1) (between 8 1 2)
+(between 3 2 1) (between 4 3 2) (between 5 4 3) (between 6 5 4) (between 7 6 5) (between 8 7 6) (between 1 8 7) (between 2 1 8)
+
+(countplus  0  1) (countplus  1  2) (countplus  2  3) (countplus  3  4)
+(countplus  4  5) (countplus  5  6) (countplus  6  7) (countplus  7  8)
+(countplus  8  9) (countplus  9 10) (countplus 10 11) (countplus 11 12)
+
+           (pp  1  2) (pp  2  3) (pp  3  4) (pp  4  5) (pp  5  6) (pp  6  7) (pp  7  8) (pp  8  9) (pp  9  10)
+(pp 10 11) (pp 11 12) (pp 12 13) (pp 13 14) (pp 14 15) (pp 15 16) (pp 16 17) (pp 17 18) (pp 18 19) (pp 19  20)
+(pp 20 21) (pp 21 22) (pp 22 23) (pp 23 24) (pp 24 25) (pp 25 26) (pp 26 27) (pp 27 28) (pp 28 29) (pp 29  30)
+(pp 30 31) (pp 31 32) (pp 32 33) (pp 33 34) (pp 34 35) (pp 35 36) (pp 36 37) (pp 37 38) (pp 38 39) (pp 39  40)
+(pp 40 41) (pp 41 42) (pp 42 43) (pp 43 44) (pp 44 45) (pp 45 46) (pp 46 47) (pp 47 48) (pp 48 49) (pp 49  50)
+(pp 50 51) (pp 51 52) (pp 52 53) (pp 53 54) (pp 54 55) (pp 55 56) (pp 56 57) (pp 57 58) (pp 58 59) (pp 59  60)
+(pp 60 61) (pp 61 62) (pp 62 63) (pp 63 64) (pp 64 65) (pp 65 66) (pp 66 67) (pp 67 68) (pp 68 69) (pp 69  70)
+(pp 70 71) (pp 71 72) (pp 72 73) (pp 73 74) (pp 74 75) (pp 75 76) (pp 76 77) (pp 77 78) (pp 78 79) (pp 79  80)
+(pp 80 81) (pp 81 82) (pp 82 83) (pp 83 84) (pp 84 85) (pp 85 86) (pp 86 87) (pp 87 88) (pp 88 89) (pp 89  90)
+(pp 90 91) (pp 91 92) (pp 92 93) (pp 93 94) (pp 94 95) (pp 95 96) (pp 96 97) (pp 97 98) (pp 98 99) (pp 99 100)
+
+(scoremap  0    0)
+(scoremap  1    8)
+(scoremap  2   16)
+(scoremap  3   24)
+(scoremap  4   32)
+(scoremap  5   40)
+(scoremap  6   48)
+(scoremap  7   56)
+(scoremap  8   64)
+(scoremap  9   72)
+(scoremap 10   80)
+(scoremap 11   90)
+(scoremap 12  100)
+
+(owns blackpawn black)
+(owns redpawn red)
+
+(odd 1) (even 2) (odd 3) (even 4) (odd 5) (even 6) (odd 7) (even 8)
+
+(<= (evensquare ?x ?y)
+    (odd ?x)
+    (odd ?y))
+
+(<= (evensquare ?x ?y)
+    (even ?x)
+    (even ?y))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

@@ -1,0 +1,1778 @@
+atoms:
+	terminal()
+
+---
+
+statics:
+	index(1)
+	index(2)
+	index(3)
+	input(black, noop)
+	input_mark(black, 1, 1)
+	input_mark(black, 1, 2)
+	input_mark(black, 1, 3)
+	input_mark(black, 2, 1)
+	input_mark(black, 2, 2)
+	input_mark(black, 2, 3)
+	input_mark(black, 3, 1)
+	input_mark(black, 3, 2)
+	input_mark(black, 3, 3)
+	input(white, noop)
+	input_mark(white, 1, 1)
+	input_mark(white, 1, 2)
+	input_mark(white, 1, 3)
+	input_mark(white, 2, 1)
+	input_mark(white, 2, 2)
+	input_mark(white, 2, 3)
+	input_mark(white, 3, 1)
+	input_mark(white, 3, 2)
+	input_mark(white, 3, 3)
+	role(black)
+	role(white)
+
+---
+
+background:
+	true_cell(1, 1, x)
+	true_cell(1, 2, b)
+	true_cell(1, 3, o)
+	true_cell(2, 1, o)
+	true_cell(2, 2, x)
+	true_cell(2, 3, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_control(white)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, x)
+	true_cell(1, 3, o)
+	true_cell(2, 1, b)
+	true_cell(2, 2, o)
+	true_cell(2, 3, o)
+	true_cell(3, 1, b)
+	true_cell(3, 2, x)
+	true_cell(3, 3, x)
+	true_control(white)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, x)
+	true_cell(1, 2, b)
+	true_cell(1, 3, o)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, x)
+	true_cell(3, 3, b)
+	true_control(black)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, o)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(3, 1, x)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_control(white)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, x)
+	true_cell(1, 2, o)
+	true_cell(1, 3, x)
+	true_cell(2, 1, o)
+	true_cell(2, 2, x)
+	true_cell(2, 3, x)
+	true_cell(3, 1, b)
+	true_cell(3, 2, o)
+	true_cell(3, 3, o)
+	true_control(white)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, x)
+	true_cell(2, 1, o)
+	true_cell(2, 2, x)
+	true_cell(2, 3, x)
+	true_cell(3, 1, o)
+	true_cell(3, 2, x)
+	true_cell(3, 3, o)
+	true_control(black)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, o)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, x)
+	true_cell(2, 3, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_control(white)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, o)
+	true_cell(1, 2, o)
+	true_cell(1, 3, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, o)
+	true_cell(2, 3, x)
+	true_cell(3, 1, x)
+	true_cell(3, 2, b)
+	true_cell(3, 3, x)
+	true_control(white)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, o)
+	true_cell(1, 3, o)
+	true_cell(2, 1, x)
+	true_cell(2, 2, x)
+	true_cell(2, 3, x)
+	true_cell(3, 1, b)
+	true_cell(3, 2, x)
+	true_cell(3, 3, o)
+	true_control(black)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, o)
+	true_cell(2, 3, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, x)
+	true_cell(3, 3, b)
+	true_control(white)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, x)
+	true_cell(1, 3, b)
+	true_cell(2, 1, o)
+	true_cell(2, 2, x)
+	true_cell(2, 3, x)
+	true_cell(3, 1, o)
+	true_cell(3, 2, x)
+	true_cell(3, 3, o)
+	true_control(black)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, x)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(3, 1, o)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_control(white)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, x)
+	true_cell(1, 2, x)
+	true_cell(1, 3, x)
+	true_cell(2, 1, b)
+	true_cell(2, 2, o)
+	true_cell(2, 3, o)
+	true_cell(3, 1, b)
+	true_cell(3, 2, o)
+	true_cell(3, 3, x)
+	true_control(black)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, 1, o)
+	true_cell(1, 2, x)
+	true_cell(1, 3, o)
+	true_cell(2, 1, b)
+	true_cell(2, 2, o)
+	true_cell(2, 3, b)
+	true_cell(3, 1, x)
+	true_cell(3, 2, x)
+	true_cell(3, 3, b)
+	true_control(white)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, x)
+	true_cell(1, 3, o)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(3, 1, x)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_control(black)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, x)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, o)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_control(white)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, o)
+	true_cell(2, 1, o)
+	true_cell(2, 2, b)
+	true_cell(2, 3, x)
+	true_cell(3, 1, x)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_control(white)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(3, 1, x)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_control(black)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(2, 1, o)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, x)
+	true_control(white)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, x)
+	true_cell(2, 3, b)
+	true_cell(3, 1, o)
+	true_cell(3, 2, x)
+	true_cell(3, 3, b)
+	true_control(black)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, o)
+	true_cell(1, 2, x)
+	true_cell(1, 3, o)
+	true_cell(2, 1, o)
+	true_cell(2, 2, x)
+	true_cell(2, 3, x)
+	true_cell(3, 1, x)
+	true_cell(3, 2, o)
+	true_cell(3, 3, x)
+	true_control(black)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, 1, o)
+	true_cell(1, 2, b)
+	true_cell(1, 3, x)
+	true_cell(2, 1, b)
+	true_cell(2, 2, o)
+	true_cell(2, 3, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, x)
+	true_cell(3, 3, b)
+	true_control(white)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, o)
+	true_cell(1, 3, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, x)
+	true_cell(2, 3, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, x)
+	true_control(black)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, o)
+	true_cell(1, 2, x)
+	true_cell(1, 3, b)
+	true_cell(2, 1, x)
+	true_cell(2, 2, b)
+	true_cell(2, 3, x)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, o)
+	true_control(black)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, o)
+	true_cell(1, 3, x)
+	true_cell(2, 1, b)
+	true_cell(2, 2, x)
+	true_cell(2, 3, o)
+	true_cell(3, 1, o)
+	true_cell(3, 2, x)
+	true_cell(3, 3, b)
+	true_control(white)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, o)
+	true_cell(1, 3, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, o)
+	true_cell(2, 3, b)
+	true_cell(3, 1, x)
+	true_cell(3, 2, x)
+	true_cell(3, 3, b)
+	true_control(white)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, x)
+	true_cell(1, 2, x)
+	true_cell(1, 3, x)
+	true_cell(2, 1, o)
+	true_cell(2, 2, x)
+	true_cell(2, 3, o)
+	true_cell(3, 1, o)
+	true_cell(3, 2, x)
+	true_cell(3, 3, o)
+	true_control(black)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, o)
+	true_cell(1, 3, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(3, 1, x)
+	true_cell(3, 2, o)
+	true_cell(3, 3, x)
+	true_control(white)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, o)
+	true_cell(1, 2, x)
+	true_cell(1, 3, x)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(3, 1, o)
+	true_cell(3, 2, x)
+	true_cell(3, 3, b)
+	true_control(black)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, o)
+	true_cell(1, 3, x)
+	true_cell(2, 1, x)
+	true_cell(2, 2, o)
+	true_cell(2, 3, x)
+	true_cell(3, 1, o)
+	true_cell(3, 2, x)
+	true_cell(3, 3, o)
+	true_control(white)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, o)
+	true_cell(1, 2, x)
+	true_cell(1, 3, b)
+	true_cell(2, 1, x)
+	true_cell(2, 2, x)
+	true_cell(2, 3, o)
+	true_cell(3, 1, o)
+	true_cell(3, 2, o)
+	true_cell(3, 3, x)
+	true_control(white)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, x)
+	true_cell(1, 2, o)
+	true_cell(1, 3, o)
+	true_cell(2, 1, b)
+	true_cell(2, 2, x)
+	true_cell(2, 3, b)
+	true_cell(3, 1, x)
+	true_cell(3, 2, o)
+	true_cell(3, 3, x)
+	true_control(black)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, 1, o)
+	true_cell(1, 2, b)
+	true_cell(1, 3, o)
+	true_cell(2, 1, o)
+	true_cell(2, 2, x)
+	true_cell(2, 3, x)
+	true_cell(3, 1, x)
+	true_cell(3, 2, x)
+	true_cell(3, 3, o)
+	true_control(white)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, o)
+	true_cell(1, 3, x)
+	true_cell(2, 1, x)
+	true_cell(2, 2, o)
+	true_cell(2, 3, x)
+	true_cell(3, 1, b)
+	true_cell(3, 2, x)
+	true_cell(3, 3, o)
+	true_control(black)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, x)
+	true_cell(1, 2, x)
+	true_cell(1, 3, o)
+	true_cell(2, 1, b)
+	true_cell(2, 2, o)
+	true_cell(2, 3, b)
+	true_cell(3, 1, o)
+	true_cell(3, 2, b)
+	true_cell(3, 3, x)
+	true_control(white)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, x)
+	true_cell(3, 1, o)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_control(white)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, x)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, x)
+	true_cell(3, 3, o)
+	true_control(black)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, o)
+	true_cell(1, 2, x)
+	true_cell(1, 3, o)
+	true_cell(2, 1, x)
+	true_cell(2, 2, x)
+	true_cell(2, 3, x)
+	true_cell(3, 1, o)
+	true_cell(3, 2, x)
+	true_cell(3, 3, o)
+	true_control(black)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(2, 1, o)
+	true_cell(2, 2, x)
+	true_cell(2, 3, b)
+	true_cell(3, 1, o)
+	true_cell(3, 2, b)
+	true_cell(3, 3, x)
+	true_control(white)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, x)
+	true_cell(2, 1, o)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(3, 1, x)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_control(black)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, o)
+	true_cell(1, 2, o)
+	true_cell(1, 3, x)
+	true_cell(2, 1, x)
+	true_cell(2, 2, x)
+	true_cell(2, 3, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, o)
+	true_control(white)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, x)
+	true_cell(1, 2, x)
+	true_cell(1, 3, o)
+	true_cell(2, 1, x)
+	true_cell(2, 2, o)
+	true_cell(2, 3, x)
+	true_cell(3, 1, b)
+	true_cell(3, 2, o)
+	true_cell(3, 3, o)
+	true_control(white)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(2, 1, x)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(3, 1, x)
+	true_cell(3, 2, o)
+	true_cell(3, 3, b)
+	true_control(black)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, x)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(2, 1, o)
+	true_cell(2, 2, b)
+	true_cell(2, 3, o)
+	true_cell(3, 1, b)
+	true_cell(3, 2, x)
+	true_cell(3, 3, b)
+	true_control(white)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, x)
+	true_cell(1, 2, x)
+	true_cell(1, 3, o)
+	true_cell(2, 1, o)
+	true_cell(2, 2, o)
+	true_cell(2, 3, x)
+	true_cell(3, 1, x)
+	true_cell(3, 2, x)
+	true_cell(3, 3, o)
+	true_control(black)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(2, 1, x)
+	true_cell(2, 2, b)
+	true_cell(2, 3, o)
+	true_cell(3, 1, b)
+	true_cell(3, 2, x)
+	true_cell(3, 3, o)
+	true_control(white)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, x)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(2, 1, o)
+	true_cell(2, 2, x)
+	true_cell(2, 3, o)
+	true_cell(3, 1, x)
+	true_cell(3, 2, x)
+	true_cell(3, 3, o)
+	true_control(black)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(2, 1, x)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, o)
+	true_control(white)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, x)
+	true_cell(1, 3, o)
+	true_cell(2, 1, x)
+	true_cell(2, 2, x)
+	true_cell(2, 3, b)
+	true_cell(3, 1, o)
+	true_cell(3, 2, o)
+	true_cell(3, 3, x)
+	true_control(black)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, o)
+	true_cell(2, 1, x)
+	true_cell(2, 2, x)
+	true_cell(2, 3, b)
+	true_cell(3, 1, o)
+	true_cell(3, 2, o)
+	true_cell(3, 3, x)
+	true_control(white)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, x)
+	true_cell(1, 2, x)
+	true_cell(1, 3, x)
+	true_cell(2, 1, b)
+	true_cell(2, 2, o)
+	true_cell(2, 3, o)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_control(black)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, 1, x)
+	true_cell(1, 2, o)
+	true_cell(1, 3, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(3, 1, o)
+	true_cell(3, 2, b)
+	true_cell(3, 3, x)
+	true_control(white)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, x)
+	true_cell(1, 2, b)
+	true_cell(1, 3, o)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, o)
+	true_cell(3, 1, b)
+	true_cell(3, 2, x)
+	true_cell(3, 3, x)
+	true_control(black)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, o)
+	true_cell(1, 3, x)
+	true_cell(2, 1, b)
+	true_cell(2, 2, x)
+	true_cell(2, 3, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_control(black)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, x)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(2, 1, x)
+	true_cell(2, 2, o)
+	true_cell(2, 3, b)
+	true_cell(3, 1, x)
+	true_cell(3, 2, b)
+	true_cell(3, 3, o)
+	true_control(black)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, 1, o)
+	true_cell(1, 2, x)
+	true_cell(1, 3, x)
+	true_cell(2, 1, o)
+	true_cell(2, 2, b)
+	true_cell(2, 3, x)
+	true_cell(3, 1, b)
+	true_cell(3, 2, o)
+	true_cell(3, 3, b)
+	true_control(white)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, o)
+	true_cell(1, 2, o)
+	true_cell(1, 3, x)
+	true_cell(2, 1, b)
+	true_cell(2, 2, x)
+	true_cell(2, 3, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, x)
+	true_control(black)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, o)
+	true_cell(1, 3, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, x)
+	true_cell(2, 3, b)
+	true_cell(3, 1, o)
+	true_cell(3, 2, x)
+	true_cell(3, 3, b)
+	true_control(white)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, x)
+	true_cell(1, 2, b)
+	true_cell(1, 3, o)
+	true_cell(2, 1, o)
+	true_cell(2, 2, x)
+	true_cell(2, 3, o)
+	true_cell(3, 1, b)
+	true_cell(3, 2, x)
+	true_cell(3, 3, x)
+	true_control(black)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, 1, x)
+	true_cell(1, 2, o)
+	true_cell(1, 3, x)
+	true_cell(2, 1, b)
+	true_cell(2, 2, o)
+	true_cell(2, 3, o)
+	true_cell(3, 1, b)
+	true_cell(3, 2, x)
+	true_cell(3, 3, b)
+	true_control(white)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, x)
+	true_cell(1, 3, o)
+	true_cell(2, 1, x)
+	true_cell(2, 2, o)
+	true_cell(2, 3, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, o)
+	true_cell(3, 3, x)
+	true_control(white)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, o)
+	true_cell(1, 2, b)
+	true_cell(1, 3, o)
+	true_cell(2, 1, b)
+	true_cell(2, 2, x)
+	true_cell(2, 3, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, x)
+	true_cell(3, 3, b)
+	true_control(white)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, x)
+	true_cell(1, 2, b)
+	true_cell(1, 3, x)
+	true_cell(2, 1, x)
+	true_cell(2, 2, o)
+	true_cell(2, 3, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, o)
+	true_control(black)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, o)
+	true_cell(1, 3, x)
+	true_cell(2, 1, o)
+	true_cell(2, 2, x)
+	true_cell(2, 3, x)
+	true_cell(3, 1, o)
+	true_cell(3, 2, b)
+	true_cell(3, 3, x)
+	true_control(black)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, 1, o)
+	true_cell(1, 2, x)
+	true_cell(1, 3, o)
+	true_cell(2, 1, x)
+	true_cell(2, 2, x)
+	true_cell(2, 3, x)
+	true_cell(3, 1, x)
+	true_cell(3, 2, o)
+	true_cell(3, 3, o)
+	true_control(black)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, 1, o)
+	true_cell(1, 2, x)
+	true_cell(1, 3, o)
+	true_cell(2, 1, b)
+	true_cell(2, 2, x)
+	true_cell(2, 3, x)
+	true_cell(3, 1, o)
+	true_cell(3, 2, o)
+	true_cell(3, 3, x)
+	true_control(white)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, o)
+	true_cell(1, 3, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, o)
+	true_cell(2, 3, x)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, x)
+	true_control(white)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, o)
+	true_cell(1, 3, o)
+	true_cell(2, 1, x)
+	true_cell(2, 2, o)
+	true_cell(2, 3, x)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, x)
+	true_control(white)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, x)
+	true_cell(1, 2, o)
+	true_cell(1, 3, o)
+	true_cell(2, 1, b)
+	true_cell(2, 2, x)
+	true_cell(2, 3, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, x)
+	true_cell(3, 3, o)
+	true_control(white)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, o)
+	true_cell(1, 3, b)
+	true_cell(2, 1, x)
+	true_cell(2, 2, b)
+	true_cell(2, 3, x)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_control(black)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, x)
+	true_cell(1, 2, o)
+	true_cell(1, 3, o)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, o)
+	true_cell(3, 1, x)
+	true_cell(3, 2, x)
+	true_cell(3, 3, x)
+	true_control(black)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, 1, o)
+	true_cell(1, 2, x)
+	true_cell(1, 3, x)
+	true_cell(2, 1, o)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(3, 1, o)
+	true_cell(3, 2, x)
+	true_cell(3, 3, b)
+	true_control(white)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, 1, o)
+	true_cell(1, 2, x)
+	true_cell(1, 3, o)
+	true_cell(2, 1, x)
+	true_cell(2, 2, b)
+	true_cell(2, 3, x)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, o)
+	true_control(white)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, x)
+	true_cell(1, 3, x)
+	true_cell(2, 1, x)
+	true_cell(2, 2, o)
+	true_cell(2, 3, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, o)
+	true_cell(3, 3, b)
+	true_control(black)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, x)
+	true_cell(1, 2, x)
+	true_cell(1, 3, o)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(3, 1, o)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_control(white)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, x)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(2, 1, o)
+	true_cell(2, 2, x)
+	true_cell(2, 3, x)
+	true_cell(3, 1, b)
+	true_cell(3, 2, o)
+	true_cell(3, 3, b)
+	true_control(black)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, x)
+	true_cell(1, 3, x)
+	true_cell(2, 1, x)
+	true_cell(2, 2, b)
+	true_cell(2, 3, o)
+	true_cell(3, 1, b)
+	true_cell(3, 2, o)
+	true_cell(3, 3, o)
+	true_control(white)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, x)
+	true_cell(1, 2, b)
+	true_cell(1, 3, o)
+	true_cell(2, 1, x)
+	true_cell(2, 2, x)
+	true_cell(2, 3, o)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_control(black)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, x)
+	true_cell(1, 2, o)
+	true_cell(1, 3, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, x)
+	true_cell(2, 3, o)
+	true_cell(3, 1, o)
+	true_cell(3, 2, x)
+	true_cell(3, 3, b)
+	true_control(white)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, o)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(2, 1, x)
+	true_cell(2, 2, o)
+	true_cell(2, 3, x)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_control(white)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, x)
+	true_cell(1, 2, b)
+	true_cell(1, 3, o)
+	true_cell(2, 1, x)
+	true_cell(2, 2, x)
+	true_cell(2, 3, o)
+	true_cell(3, 1, b)
+	true_cell(3, 2, o)
+	true_cell(3, 3, b)
+	true_control(white)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, o)
+	true_cell(2, 3, b)
+	true_cell(3, 1, x)
+	true_cell(3, 2, x)
+	true_cell(3, 3, b)
+	true_control(black)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, o)
+	true_cell(2, 1, b)
+	true_cell(2, 2, o)
+	true_cell(2, 3, x)
+	true_cell(3, 1, x)
+	true_cell(3, 2, o)
+	true_cell(3, 3, x)
+	true_control(white)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, x)
+	true_cell(1, 2, b)
+	true_cell(1, 3, o)
+	true_cell(2, 1, o)
+	true_cell(2, 2, b)
+	true_cell(2, 3, x)
+	true_cell(3, 1, o)
+	true_cell(3, 2, x)
+	true_cell(3, 3, x)
+	true_control(black)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, x)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(2, 1, o)
+	true_cell(2, 2, x)
+	true_cell(2, 3, o)
+	true_cell(3, 1, x)
+	true_cell(3, 2, b)
+	true_cell(3, 3, o)
+	true_control(white)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, x)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, o)
+	true_cell(2, 3, b)
+	true_cell(3, 1, o)
+	true_cell(3, 2, b)
+	true_cell(3, 3, x)
+	true_control(white)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, x)
+	true_cell(1, 2, o)
+	true_cell(1, 3, o)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(3, 1, x)
+	true_cell(3, 2, o)
+	true_cell(3, 3, x)
+	true_control(white)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, x)
+	true_cell(1, 2, o)
+	true_cell(1, 3, b)
+	true_cell(2, 1, x)
+	true_cell(2, 2, o)
+	true_cell(2, 3, x)
+	true_cell(3, 1, b)
+	true_cell(3, 2, x)
+	true_cell(3, 3, o)
+	true_control(black)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, x)
+	true_cell(1, 2, b)
+	true_cell(1, 3, o)
+	true_cell(2, 1, b)
+	true_cell(2, 2, o)
+	true_cell(2, 3, x)
+	true_cell(3, 1, x)
+	true_cell(3, 2, o)
+	true_cell(3, 3, x)
+	true_control(black)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, x)
+	true_cell(2, 3, o)
+	true_cell(3, 1, o)
+	true_cell(3, 2, x)
+	true_cell(3, 3, x)
+	true_control(black)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, x)
+	true_cell(1, 3, x)
+	true_cell(2, 1, b)
+	true_cell(2, 2, o)
+	true_cell(2, 3, b)
+	true_cell(3, 1, x)
+	true_cell(3, 2, o)
+	true_cell(3, 3, o)
+	true_control(white)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, x)
+	true_cell(3, 1, b)
+	true_cell(3, 2, x)
+	true_cell(3, 3, o)
+	true_control(black)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, o)
+	true_cell(1, 3, b)
+	true_cell(2, 1, o)
+	true_cell(2, 2, x)
+	true_cell(2, 3, x)
+	true_cell(3, 1, b)
+	true_cell(3, 2, x)
+	true_cell(3, 3, o)
+	true_control(white)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, x)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(2, 1, x)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, o)
+	true_control(black)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, o)
+	true_cell(1, 3, x)
+	true_cell(2, 1, b)
+	true_cell(2, 2, x)
+	true_cell(2, 3, o)
+	true_cell(3, 1, o)
+	true_cell(3, 2, x)
+	true_cell(3, 3, x)
+	true_control(black)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, 1, o)
+	true_cell(1, 2, o)
+	true_cell(1, 3, x)
+	true_cell(2, 1, b)
+	true_cell(2, 2, x)
+	true_cell(2, 3, b)
+	true_cell(3, 1, o)
+	true_cell(3, 2, x)
+	true_cell(3, 3, x)
+	true_control(black)
+
+---
+
+positives:
+
+---
+

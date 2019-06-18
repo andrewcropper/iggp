@@ -1,0 +1,115 @@
+atoms:
+	next_value(0)
+	next_value(1)
+	next_value(2)
+	next_value(3)
+	next_value(4)
+	next_value(5)
+
+---
+
+statics:
+	succ(0, 1)
+	succ(1, 2)
+	succ(2, 3)
+	succ(3, 4)
+	succ(4, 5)
+
+---
+
+background:
+	does(player, pressButton)
+	true_value(0)
+
+---
+
+positives:
+	next_value(5)
+
+---
+
+background:
+	does(player, noop)
+	true_value(3)
+
+---
+
+positives:
+	next_value(2)
+
+---
+
+background:
+	does(player, pressButton)
+	true_value(3)
+
+---
+
+positives:
+	next_value(5)
+
+---
+
+background:
+	does(player, pressButton)
+	true_value(4)
+
+---
+
+positives:
+	next_value(5)
+
+---
+
+background:
+	does(player, pressButton)
+	true_value(5)
+
+---
+
+positives:
+	next_value(5)
+
+---
+
+background:
+	does(player, noop)
+	true_value(2)
+
+---
+
+positives:
+	next_value(1)
+
+---
+
+background:
+	does(player, noop)
+
+---
+
+positives:
+
+---
+
+background:
+	does(player, pressButton)
+	true_value(2)
+
+---
+
+positives:
+	next_value(5)
+
+---
+
+background:
+	does(player, pressButton)
+
+---
+
+positives:
+	next_value(5)
+
+---
+

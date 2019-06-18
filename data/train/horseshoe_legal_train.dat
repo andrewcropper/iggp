@@ -1,0 +1,2141 @@
+atoms:
+	legal_move(black, a, a)
+	legal_move(red, a, a)
+	legal_move(black, b, a)
+	legal_move(red, b, a)
+	legal_move(black, c, a)
+	legal_move(red, c, a)
+	legal_move(black, d, a)
+	legal_move(red, d, a)
+	legal_move(black, e, a)
+	legal_move(red, e, a)
+	legal_move(black, a, b)
+	legal_move(red, a, b)
+	legal_move(black, b, b)
+	legal_move(red, b, b)
+	legal_move(black, c, b)
+	legal_move(red, c, b)
+	legal_move(black, d, b)
+	legal_move(red, d, b)
+	legal_move(black, e, b)
+	legal_move(red, e, b)
+	legal_move(black, a, c)
+	legal_move(red, a, c)
+	legal_move(black, b, c)
+	legal_move(red, b, c)
+	legal_move(black, c, c)
+	legal_move(red, c, c)
+	legal_move(black, d, c)
+	legal_move(red, d, c)
+	legal_move(black, e, c)
+	legal_move(red, e, c)
+	legal_move(black, a, d)
+	legal_move(red, a, d)
+	legal_move(black, b, d)
+	legal_move(red, b, d)
+	legal_move(black, c, d)
+	legal_move(red, c, d)
+	legal_move(black, d, d)
+	legal_move(red, d, d)
+	legal_move(black, e, d)
+	legal_move(red, e, d)
+	legal_move(black, a, e)
+	legal_move(red, a, e)
+	legal_move(black, b, e)
+	legal_move(red, b, e)
+	legal_move(black, c, e)
+	legal_move(red, c, e)
+	legal_move(black, d, e)
+	legal_move(red, d, e)
+	legal_move(black, e, e)
+	legal_move(red, e, e)
+	legal(black, noop)
+	legal(red, noop)
+
+---
+
+statics:
+	adjacent(a, b)
+	adjacent(a, c)
+	adjacent(b, a)
+	adjacent(b, c)
+	adjacent(b, e)
+	adjacent(c, a)
+	adjacent(c, b)
+	adjacent(c, d)
+	adjacent(c, e)
+	adjacent(d, c)
+	adjacent(d, e)
+	adjacent(e, b)
+	adjacent(e, c)
+	adjacent(e, d)
+	input(black, noop)
+	input_move(black, a, b)
+	input_move(black, a, c)
+	input_move(black, b, a)
+	input_move(black, b, c)
+	input_move(black, b, e)
+	input_move(black, c, a)
+	input_move(black, c, b)
+	input_move(black, c, d)
+	input_move(black, c, e)
+	input_move(black, d, c)
+	input_move(black, d, e)
+	input_move(black, e, b)
+	input_move(black, e, c)
+	input_move(black, e, d)
+	input(red, noop)
+	input_move(red, a, b)
+	input_move(red, a, c)
+	input_move(red, b, a)
+	input_move(red, b, c)
+	input_move(red, b, e)
+	input_move(red, c, a)
+	input_move(red, c, b)
+	input_move(red, c, d)
+	input_move(red, c, e)
+	input_move(red, d, c)
+	input_move(red, d, e)
+	input_move(red, e, b)
+	input_move(red, e, c)
+	input_move(red, e, d)
+	mark(black)
+	mark(blank)
+	mark(red)
+	node(a)
+	node(b)
+	node(c)
+	node(d)
+	node(e)
+	role(black)
+	role(red)
+	succ(1, 2)
+	succ(10, 11)
+	succ(11, 12)
+	succ(12, 13)
+	succ(13, 14)
+	succ(14, 15)
+	succ(15, 16)
+	succ(16, 17)
+	succ(17, 18)
+	succ(18, 19)
+	succ(19, 20)
+	succ(2, 3)
+	succ(3, 4)
+	succ(4, 5)
+	succ(5, 6)
+	succ(6, 7)
+	succ(7, 8)
+	succ(8, 9)
+	succ(9, 10)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, blank)
+	true_cell(c, red)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(red)
+	true_step(9)
+
+---
+
+positives:
+	legal(black, noop)
+	legal_move(red, c, b)
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, red)
+	true_cell(d, black)
+	true_cell(e, blank)
+	true_control(black)
+	true_step(16)
+
+---
+
+positives:
+	legal_move(black, b, e)
+	legal_move(black, d, e)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, black)
+	true_cell(d, blank)
+	true_cell(e, red)
+	true_control(black)
+	true_step(12)
+
+---
+
+positives:
+	legal_move(black, c, d)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, blank)
+	true_cell(c, red)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(black)
+	true_step(20)
+
+---
+
+positives:
+	legal_move(black, a, b)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, black)
+	true_cell(d, red)
+	true_cell(e, blank)
+	true_control(red)
+	true_step(17)
+
+---
+
+positives:
+	legal(black, noop)
+	legal_move(red, b, e)
+	legal_move(red, d, e)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, red)
+	true_cell(d, black)
+	true_cell(e, blank)
+	true_control(black)
+	true_step(20)
+
+---
+
+positives:
+	legal_move(black, d, e)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, red)
+	true_cell(d, blank)
+	true_cell(e, black)
+	true_control(black)
+	true_step(14)
+
+---
+
+positives:
+	legal_move(black, e, d)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, blank)
+	true_cell(c, black)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(black)
+	true_step(20)
+
+---
+
+positives:
+	legal_move(black, c, b)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, blank)
+	true_cell(c, black)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(red)
+	true_step(11)
+
+---
+
+positives:
+	legal(black, noop)
+	legal_move(red, a, b)
+	legal_move(red, e, b)
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, black)
+	true_cell(d, red)
+	true_cell(e, blank)
+	true_control(black)
+	true_step(18)
+
+---
+
+positives:
+	legal_move(black, b, e)
+	legal_move(black, c, e)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, black)
+	true_cell(d, blank)
+	true_cell(e, red)
+	true_control(red)
+	true_step(5)
+
+---
+
+positives:
+	legal(black, noop)
+	legal_move(red, e, d)
+
+---
+
+background:
+	true_cell(a, blank)
+	true_cell(b, red)
+	true_cell(c, black)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(red)
+	true_step(19)
+
+---
+
+positives:
+	legal(black, noop)
+	legal_move(red, b, a)
+
+---
+
+background:
+	true_cell(a, blank)
+	true_cell(b, black)
+	true_cell(c, red)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(black)
+	true_step(18)
+
+---
+
+positives:
+	legal_move(black, b, a)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, blank)
+	true_cell(b, black)
+	true_cell(c, red)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(black)
+	true_step(8)
+
+---
+
+positives:
+	legal_move(black, b, a)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, blank)
+	true_cell(c, red)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(red)
+	true_step(17)
+
+---
+
+positives:
+	legal(black, noop)
+	legal_move(red, c, b)
+	legal_move(red, e, b)
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, blank)
+	true_cell(c, black)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(black)
+	true_step(12)
+
+---
+
+positives:
+	legal_move(black, c, b)
+	legal_move(black, e, b)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, blank)
+	true_cell(c, red)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(black)
+	true_step(12)
+
+---
+
+positives:
+	legal_move(black, a, b)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, blank)
+	true_cell(c, black)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(red)
+	true_step(5)
+
+---
+
+positives:
+	legal(black, noop)
+	legal_move(red, a, b)
+	legal_move(red, e, b)
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, red)
+	true_cell(c, blank)
+	true_cell(d, black)
+	true_cell(e, black)
+	true_control(black)
+	true_step(18)
+
+---
+
+positives:
+	legal_move(black, d, c)
+	legal_move(black, e, c)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, red)
+	true_cell(c, black)
+	true_cell(d, blank)
+	true_cell(e, black)
+	true_control(red)
+	true_step(7)
+
+---
+
+positives:
+	legal(black, noop)
+
+---
+
+background:
+	true_cell(a, blank)
+	true_cell(b, red)
+	true_cell(c, black)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(black)
+	true_step(18)
+
+---
+
+positives:
+	legal_move(black, c, a)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, blank)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(black)
+	true_step(10)
+
+---
+
+positives:
+	legal_move(black, a, c)
+	legal_move(black, e, c)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, blank)
+	true_cell(c, black)
+	true_cell(d, red)
+	true_cell(e, red)
+	true_control(black)
+	true_step(12)
+
+---
+
+positives:
+	legal_move(black, a, b)
+	legal_move(black, c, b)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, red)
+	true_cell(c, black)
+	true_cell(d, black)
+	true_cell(e, blank)
+	true_control(black)
+	true_step(12)
+
+---
+
+positives:
+	legal_move(black, c, e)
+	legal_move(black, d, e)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, blank)
+	true_cell(c, black)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(red)
+	true_step(7)
+
+---
+
+positives:
+	legal(black, noop)
+	legal_move(red, a, b)
+
+---
+
+background:
+	true_cell(a, blank)
+	true_cell(b, red)
+	true_cell(c, black)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(red)
+	true_step(11)
+
+---
+
+positives:
+	legal(black, noop)
+	legal_move(red, b, a)
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, blank)
+	true_cell(c, black)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(black)
+	true_step(18)
+
+---
+
+positives:
+	legal_move(black, c, b)
+	legal_move(black, e, b)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, red)
+	true_cell(d, blank)
+	true_cell(e, black)
+	true_control(red)
+	true_step(11)
+
+---
+
+positives:
+	legal(black, noop)
+	legal_move(red, c, d)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, blank)
+	true_cell(c, red)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(black)
+	true_step(14)
+
+---
+
+positives:
+	legal_move(black, a, b)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, blank)
+	true_cell(c, red)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(red)
+	true_step(15)
+
+---
+
+positives:
+	legal(black, noop)
+	legal_move(red, c, b)
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, red)
+	true_cell(c, black)
+	true_cell(d, black)
+	true_cell(e, blank)
+	true_control(black)
+	true_step(6)
+
+---
+
+positives:
+	legal_move(black, c, e)
+	legal_move(black, d, e)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, blank)
+	true_cell(b, black)
+	true_cell(c, red)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(red)
+	true_step(9)
+
+---
+
+positives:
+	legal(black, noop)
+	legal_move(red, c, a)
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, black)
+	true_cell(d, red)
+	true_cell(e, blank)
+	true_control(red)
+	true_step(13)
+
+---
+
+positives:
+	legal(black, noop)
+	legal_move(red, d, e)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, blank)
+	true_cell(c, red)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(black)
+	true_step(8)
+
+---
+
+positives:
+	legal_move(black, a, b)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, black)
+	true_cell(d, blank)
+	true_cell(e, red)
+	true_control(black)
+	true_step(18)
+
+---
+
+positives:
+	legal_move(black, c, d)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, black)
+	true_cell(d, red)
+	true_cell(e, blank)
+	true_control(black)
+	true_step(16)
+
+---
+
+positives:
+	legal_move(black, b, e)
+	legal_move(black, c, e)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, blank)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(red)
+	true_step(9)
+
+---
+
+positives:
+	legal(black, noop)
+	legal_move(red, b, c)
+	legal_move(red, d, c)
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, blank)
+	true_cell(c, black)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(black)
+	true_step(6)
+
+---
+
+positives:
+	legal_move(black, c, b)
+	legal_move(black, e, b)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, blank)
+	true_cell(c, red)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(black)
+	true_step(16)
+
+---
+
+positives:
+	legal_move(black, a, b)
+	legal_move(black, e, b)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, black)
+	true_cell(d, red)
+	true_cell(e, blank)
+	true_control(black)
+	true_step(20)
+
+---
+
+positives:
+	legal_move(black, c, e)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, blank)
+	true_cell(b, red)
+	true_cell(c, black)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(red)
+	true_step(5)
+
+---
+
+positives:
+	legal(black, noop)
+	legal_move(red, b, a)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, red)
+	true_cell(d, black)
+	true_cell(e, blank)
+	true_control(black)
+	true_step(8)
+
+---
+
+positives:
+	legal_move(black, d, e)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, blank)
+	true_cell(c, red)
+	true_cell(d, black)
+	true_cell(e, black)
+	true_control(red)
+	true_step(17)
+
+---
+
+positives:
+	legal(black, noop)
+	legal_move(red, a, b)
+	legal_move(red, c, b)
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, blank)
+	true_cell(c, black)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(black)
+	true_step(14)
+
+---
+
+positives:
+	legal_move(black, c, b)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, blank)
+	true_cell(c, red)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(red)
+	true_step(19)
+
+---
+
+positives:
+	legal(black, noop)
+	legal_move(red, c, b)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, red)
+	true_cell(d, black)
+	true_cell(e, blank)
+	true_control(black)
+	true_step(14)
+
+---
+
+positives:
+	legal_move(black, d, e)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, blank)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(red)
+	true_step(19)
+
+---
+
+positives:
+	legal(black, noop)
+	legal_move(red, b, c)
+	legal_move(red, d, c)
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, black)
+	true_cell(d, blank)
+	true_cell(e, red)
+	true_control(black)
+	true_step(8)
+
+---
+
+positives:
+	legal_move(black, c, d)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, red)
+	true_cell(d, blank)
+	true_cell(e, black)
+	true_control(red)
+	true_step(19)
+
+---
+
+positives:
+	legal(black, noop)
+	legal_move(red, c, d)
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, red)
+	true_cell(c, black)
+	true_cell(d, blank)
+	true_cell(e, black)
+	true_control(red)
+	true_step(13)
+
+---
+
+positives:
+	legal(black, noop)
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, blank)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(black)
+	true_step(18)
+
+---
+
+positives:
+	legal_move(black, b, c)
+	legal_move(black, e, c)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, black)
+	true_cell(d, blank)
+	true_cell(e, red)
+	true_control(black)
+	true_step(14)
+
+---
+
+positives:
+	legal_move(black, c, d)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, blank)
+	true_cell(b, red)
+	true_cell(c, black)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(black)
+	true_step(18)
+
+---
+
+positives:
+	legal_move(black, c, a)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, blank)
+	true_cell(b, red)
+	true_cell(c, black)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(red)
+	true_step(13)
+
+---
+
+positives:
+	legal(black, noop)
+	legal_move(red, b, a)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, black)
+	true_cell(d, red)
+	true_cell(e, blank)
+	true_control(red)
+	true_step(11)
+
+---
+
+positives:
+	legal(black, noop)
+	legal_move(red, b, e)
+	legal_move(red, d, e)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, blank)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(red)
+	true_step(15)
+
+---
+
+positives:
+	legal(black, noop)
+	legal_move(red, b, c)
+	legal_move(red, d, c)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, black)
+	true_cell(d, blank)
+	true_cell(e, red)
+	true_control(black)
+	true_step(6)
+
+---
+
+positives:
+	legal_move(black, c, d)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, blank)
+	true_cell(b, red)
+	true_cell(c, black)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(black)
+	true_step(6)
+
+---
+
+positives:
+	legal_move(black, c, a)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, blank)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(red)
+	true_step(17)
+
+---
+
+positives:
+	legal(black, noop)
+	legal_move(red, a, c)
+	legal_move(red, d, c)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, red)
+	true_cell(d, black)
+	true_cell(e, blank)
+	true_control(red)
+	true_step(17)
+
+---
+
+positives:
+	legal(black, noop)
+	legal_move(red, b, e)
+	legal_move(red, c, e)
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, black)
+	true_cell(d, red)
+	true_cell(e, blank)
+	true_control(red)
+	true_step(19)
+
+---
+
+positives:
+	legal(black, noop)
+	legal_move(red, d, e)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, black)
+	true_cell(c, red)
+	true_cell(d, blank)
+	true_cell(e, red)
+	true_control(black)
+	true_step(12)
+
+---
+
+positives:
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, black)
+	true_cell(d, red)
+	true_cell(e, blank)
+	true_control(red)
+	true_step(7)
+
+---
+
+positives:
+	legal(black, noop)
+	legal_move(red, d, e)
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, red)
+	true_cell(d, black)
+	true_cell(e, blank)
+	true_control(black)
+	true_step(20)
+
+---
+
+positives:
+	legal_move(black, b, e)
+	legal_move(black, d, e)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, red)
+	true_cell(d, blank)
+	true_cell(e, black)
+	true_control(black)
+	true_step(20)
+
+---
+
+positives:
+	legal_move(black, e, d)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, black)
+	true_cell(c, blank)
+	true_cell(d, red)
+	true_cell(e, red)
+	true_control(red)
+	true_step(19)
+
+---
+
+positives:
+	legal(black, noop)
+	legal_move(red, d, c)
+	legal_move(red, e, c)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, black)
+	true_cell(c, blank)
+	true_cell(d, red)
+	true_cell(e, red)
+	true_control(black)
+	true_step(18)
+
+---
+
+positives:
+	legal_move(black, a, c)
+	legal_move(black, b, c)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, blank)
+	true_cell(b, red)
+	true_cell(c, black)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(black)
+	true_step(20)
+
+---
+
+positives:
+	legal_move(black, c, a)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, blank)
+	true_cell(c, red)
+	true_cell(d, black)
+	true_cell(e, black)
+	true_control(black)
+	true_step(20)
+
+---
+
+positives:
+	legal_move(black, e, b)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, blank)
+	true_cell(b, black)
+	true_cell(c, black)
+	true_cell(d, red)
+	true_cell(e, red)
+	true_control(red)
+	true_step(13)
+
+---
+
+positives:
+	legal(black, noop)
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, blank)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(red)
+	true_step(9)
+
+---
+
+positives:
+	legal(black, noop)
+	legal_move(red, a, c)
+	legal_move(red, e, c)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, black)
+	true_cell(c, red)
+	true_cell(d, blank)
+	true_cell(e, red)
+	true_control(black)
+	true_step(8)
+
+---
+
+positives:
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, blank)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(red)
+	true_step(7)
+
+---
+
+positives:
+	legal(black, noop)
+	legal_move(red, b, c)
+	legal_move(red, e, c)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, black)
+	true_cell(c, blank)
+	true_cell(d, red)
+	true_cell(e, red)
+	true_control(black)
+	true_step(12)
+
+---
+
+positives:
+	legal_move(black, a, c)
+	legal_move(black, b, c)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, red)
+	true_cell(c, black)
+	true_cell(d, blank)
+	true_cell(e, black)
+	true_control(red)
+	true_step(19)
+
+---
+
+positives:
+	legal(black, noop)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, black)
+	true_cell(c, red)
+	true_cell(d, blank)
+	true_cell(e, red)
+	true_control(black)
+	true_step(20)
+
+---
+
+positives:
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, blank)
+	true_cell(c, black)
+	true_cell(d, red)
+	true_cell(e, red)
+	true_control(black)
+	true_step(6)
+
+---
+
+positives:
+	legal_move(black, a, b)
+	legal_move(black, c, b)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, blank)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(red)
+	true_step(13)
+
+---
+
+positives:
+	legal(black, noop)
+	legal_move(red, a, c)
+	legal_move(red, d, c)
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, red)
+	true_cell(d, blank)
+	true_cell(e, black)
+	true_control(black)
+	true_step(2)
+
+---
+
+positives:
+	legal_move(black, e, d)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, black)
+	true_cell(c, red)
+	true_cell(d, red)
+	true_cell(e, blank)
+	true_control(black)
+	true_step(8)
+
+---
+
+positives:
+	legal_move(black, b, e)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, blank)
+	true_cell(b, black)
+	true_cell(c, black)
+	true_cell(d, red)
+	true_cell(e, red)
+	true_control(red)
+	true_step(7)
+
+---
+
+positives:
+	legal(black, noop)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, red)
+	true_cell(d, blank)
+	true_cell(e, black)
+	true_control(red)
+	true_step(15)
+
+---
+
+positives:
+	legal(black, noop)
+	legal_move(red, c, d)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, red)
+	true_cell(d, black)
+	true_cell(e, blank)
+	true_control(black)
+	true_step(12)
+
+---
+
+positives:
+	legal_move(black, d, e)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, blank)
+	true_cell(b, black)
+	true_cell(c, red)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(black)
+	true_step(10)
+
+---
+
+positives:
+	legal_move(black, b, a)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, red)
+	true_cell(d, blank)
+	true_cell(e, black)
+	true_control(red)
+	true_step(17)
+
+---
+
+positives:
+	legal(black, noop)
+	legal_move(red, c, d)
+
+---
+
+background:
+	true_cell(a, blank)
+	true_cell(b, black)
+	true_cell(c, red)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(black)
+	true_step(16)
+
+---
+
+positives:
+	legal_move(black, b, a)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, blank)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(black)
+	true_step(16)
+
+---
+
+positives:
+	legal_move(black, b, c)
+	legal_move(black, d, c)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, blank)
+	true_cell(b, red)
+	true_cell(c, red)
+	true_cell(d, black)
+	true_cell(e, black)
+	true_control(black)
+	true_step(20)
+
+---
+
+positives:
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, blank)
+	true_cell(c, black)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(black)
+	true_step(16)
+
+---
+
+positives:
+	legal_move(black, c, b)
+	legal_move(black, e, b)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, blank)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(black)
+	true_step(20)
+
+---
+
+positives:
+	legal_move(black, a, c)
+	legal_move(black, e, c)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, blank)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(black)
+	true_step(12)
+
+---
+
+positives:
+	legal_move(black, b, c)
+	legal_move(black, e, c)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, blank)
+	true_cell(c, red)
+	true_cell(d, black)
+	true_cell(e, black)
+	true_control(black)
+	true_step(8)
+
+---
+
+positives:
+	legal_move(black, e, b)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, black)
+	true_cell(c, red)
+	true_cell(d, blank)
+	true_cell(e, red)
+	true_control(black)
+	true_step(18)
+
+---
+
+positives:
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, blank)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(red)
+	true_step(1)
+
+---
+
+positives:
+	legal(black, noop)
+	legal_move(red, a, c)
+	legal_move(red, d, c)
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, black)
+	true_cell(d, blank)
+	true_cell(e, red)
+	true_control(black)
+	true_step(20)
+
+---
+
+positives:
+	legal_move(black, c, d)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, red)
+	true_cell(d, black)
+	true_cell(e, blank)
+	true_control(red)
+	true_step(3)
+
+---
+
+positives:
+	legal(black, noop)
+	legal_move(red, c, e)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, black)
+	true_cell(d, red)
+	true_cell(e, blank)
+	true_control(red)
+	true_step(5)
+
+---
+
+positives:
+	legal(black, noop)
+	legal_move(red, b, e)
+	legal_move(red, d, e)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, blank)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(black)
+	true_step(4)
+
+---
+
+positives:
+	legal_move(black, a, c)
+	legal_move(black, e, c)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, blank)
+	true_cell(c, red)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(black)
+	true_step(10)
+
+---
+
+positives:
+	legal_move(black, a, b)
+	legal_move(black, e, b)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, blank)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(black)
+	true_step(16)
+
+---
+
+positives:
+	legal_move(black, a, c)
+	legal_move(black, e, c)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, black)
+	true_cell(d, red)
+	true_cell(e, blank)
+	true_control(red)
+	true_step(15)
+
+---
+
+positives:
+	legal(black, noop)
+	legal_move(red, b, e)
+	legal_move(red, d, e)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, black)
+	true_cell(d, blank)
+	true_cell(e, red)
+	true_control(red)
+	true_step(19)
+
+---
+
+positives:
+	legal(black, noop)
+	legal_move(red, e, d)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, red)
+	true_cell(d, blank)
+	true_cell(e, black)
+	true_control(black)
+	true_step(20)
+
+---
+
+positives:
+	legal_move(black, e, d)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, blank)
+	true_cell(c, red)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(red)
+	true_step(11)
+
+---
+
+positives:
+	legal(black, noop)
+	legal_move(red, c, b)
+	legal_move(red, e, b)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, blank)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(black)
+	true_step(12)
+
+---
+
+positives:
+	legal_move(black, a, c)
+	legal_move(black, d, c)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, blank)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(black)
+	true_step(14)
+
+---
+
+positives:
+	legal_move(black, a, c)
+	legal_move(black, e, c)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, blank)
+	true_cell(b, red)
+	true_cell(c, black)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(black)
+	true_step(8)
+
+---
+
+positives:
+	legal_move(black, c, a)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, blank)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(red)
+	true_step(15)
+
+---
+
+positives:
+	legal(black, noop)
+	legal_move(red, a, c)
+	legal_move(red, e, c)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, red)
+	true_cell(d, blank)
+	true_cell(e, black)
+	true_control(black)
+	true_step(16)
+
+---
+
+positives:
+	legal_move(black, e, d)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, red)
+	true_cell(d, black)
+	true_cell(e, blank)
+	true_control(red)
+	true_step(9)
+
+---
+
+positives:
+	legal(black, noop)
+	legal_move(red, c, e)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, red)
+	true_cell(d, blank)
+	true_cell(e, black)
+	true_control(red)
+	true_step(13)
+
+---
+
+positives:
+	legal(black, noop)
+	legal_move(red, c, d)
+
+---
+
+background:
+	true_cell(a, blank)
+	true_cell(b, red)
+	true_cell(c, red)
+	true_cell(d, black)
+	true_cell(e, black)
+	true_control(black)
+	true_step(8)
+
+---
+
+positives:
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, blank)
+	true_cell(c, black)
+	true_cell(d, red)
+	true_cell(e, red)
+	true_control(red)
+	true_step(13)
+
+---
+
+positives:
+	legal(black, noop)
+	legal_move(red, e, b)
+
+---
+
+background:
+	true_cell(a, blank)
+	true_cell(b, black)
+	true_cell(c, red)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(black)
+	true_step(20)
+
+---
+
+positives:
+	legal_move(black, b, a)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, blank)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(black)
+	true_step(4)
+
+---
+
+positives:
+	legal_move(black, b, c)
+	legal_move(black, d, c)
+	legal(red, noop)
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, black)
+	true_cell(d, blank)
+	true_cell(e, red)
+	true_control(black)
+	true_step(18)
+
+---
+
+positives:
+	legal_move(black, c, d)
+	legal(red, noop)
+
+---
+

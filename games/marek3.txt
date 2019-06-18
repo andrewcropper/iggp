@@ -1,0 +1,15 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Mareks' example 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(small Bill)
+(muscular Bill)
+(big Mary)
+(person Bill)
+(person Mary)
+
+(<= (strong ?x) (big ?x) (not (weak ?x)))
+
+(<= (strong ?x) (small ?x) (muscular ?x) (not (weak ?x)))
+
+(<= (weak ?x) (person ?x) (not (muscular ?x)))

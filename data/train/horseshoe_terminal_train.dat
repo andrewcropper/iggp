@@ -1,0 +1,1842 @@
+atoms:
+	terminal()
+
+---
+
+statics:
+	adjacent(a, b)
+	adjacent(a, c)
+	adjacent(b, a)
+	adjacent(b, c)
+	adjacent(b, e)
+	adjacent(c, a)
+	adjacent(c, b)
+	adjacent(c, d)
+	adjacent(c, e)
+	adjacent(d, c)
+	adjacent(d, e)
+	adjacent(e, b)
+	adjacent(e, c)
+	adjacent(e, d)
+	input(black, noop)
+	input_move(black, a, b)
+	input_move(black, a, c)
+	input_move(black, b, a)
+	input_move(black, b, c)
+	input_move(black, b, e)
+	input_move(black, c, a)
+	input_move(black, c, b)
+	input_move(black, c, d)
+	input_move(black, c, e)
+	input_move(black, d, c)
+	input_move(black, d, e)
+	input_move(black, e, b)
+	input_move(black, e, c)
+	input_move(black, e, d)
+	input(red, noop)
+	input_move(red, a, b)
+	input_move(red, a, c)
+	input_move(red, b, a)
+	input_move(red, b, c)
+	input_move(red, b, e)
+	input_move(red, c, a)
+	input_move(red, c, b)
+	input_move(red, c, d)
+	input_move(red, c, e)
+	input_move(red, d, c)
+	input_move(red, d, e)
+	input_move(red, e, b)
+	input_move(red, e, c)
+	input_move(red, e, d)
+	mark(black)
+	mark(blank)
+	mark(red)
+	node(a)
+	node(b)
+	node(c)
+	node(d)
+	node(e)
+	role(black)
+	role(red)
+	succ(1, 2)
+	succ(10, 11)
+	succ(11, 12)
+	succ(12, 13)
+	succ(13, 14)
+	succ(14, 15)
+	succ(15, 16)
+	succ(16, 17)
+	succ(17, 18)
+	succ(18, 19)
+	succ(19, 20)
+	succ(2, 3)
+	succ(3, 4)
+	succ(4, 5)
+	succ(5, 6)
+	succ(6, 7)
+	succ(7, 8)
+	succ(8, 9)
+	succ(9, 10)
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, red)
+	true_cell(c, black)
+	true_cell(d, blank)
+	true_cell(e, black)
+	true_control(red)
+	true_step(13)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(a, blank)
+	true_cell(b, red)
+	true_cell(c, red)
+	true_cell(d, black)
+	true_cell(e, black)
+	true_control(black)
+	true_step(20)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, black)
+	true_cell(d, red)
+	true_cell(e, blank)
+	true_control(black)
+	true_step(20)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, blank)
+	true_cell(c, black)
+	true_cell(d, red)
+	true_cell(e, red)
+	true_control(black)
+	true_step(16)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, blank)
+	true_cell(b, red)
+	true_cell(c, black)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(black)
+	true_step(18)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, blank)
+	true_cell(c, red)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(black)
+	true_step(16)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, black)
+	true_cell(d, blank)
+	true_cell(e, red)
+	true_control(black)
+	true_step(20)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(a, blank)
+	true_cell(b, black)
+	true_cell(c, red)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(red)
+	true_step(9)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, red)
+	true_cell(d, black)
+	true_cell(e, blank)
+	true_control(black)
+	true_step(8)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, black)
+	true_cell(d, red)
+	true_cell(e, blank)
+	true_control(red)
+	true_step(17)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, blank)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(red)
+	true_step(15)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, red)
+	true_cell(d, blank)
+	true_cell(e, black)
+	true_control(black)
+	true_step(20)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, black)
+	true_cell(d, red)
+	true_cell(e, blank)
+	true_control(red)
+	true_step(11)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, red)
+	true_cell(c, black)
+	true_cell(d, black)
+	true_cell(e, blank)
+	true_control(black)
+	true_step(12)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, blank)
+	true_cell(c, red)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(black)
+	true_step(12)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, red)
+	true_cell(d, black)
+	true_cell(e, blank)
+	true_control(black)
+	true_step(12)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, blank)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(black)
+	true_step(10)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, blank)
+	true_cell(c, black)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(black)
+	true_step(16)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, black)
+	true_cell(c, red)
+	true_cell(d, red)
+	true_cell(e, blank)
+	true_control(red)
+	true_step(11)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, black)
+	true_cell(d, blank)
+	true_cell(e, red)
+	true_control(red)
+	true_step(11)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, blank)
+	true_cell(b, black)
+	true_cell(c, red)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(black)
+	true_step(20)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, black)
+	true_cell(d, red)
+	true_cell(e, blank)
+	true_control(red)
+	true_step(15)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, black)
+	true_cell(d, blank)
+	true_cell(e, red)
+	true_control(black)
+	true_step(18)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, blank)
+	true_cell(c, black)
+	true_cell(d, red)
+	true_cell(e, red)
+	true_control(red)
+	true_step(13)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, black)
+	true_cell(d, blank)
+	true_cell(e, red)
+	true_control(black)
+	true_step(6)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, blank)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(red)
+	true_step(19)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, blank)
+	true_cell(c, black)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(red)
+	true_step(11)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, black)
+	true_cell(c, blank)
+	true_cell(d, red)
+	true_cell(e, red)
+	true_control(red)
+	true_step(7)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, black)
+	true_cell(c, red)
+	true_cell(d, blank)
+	true_cell(e, red)
+	true_control(black)
+	true_step(20)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(a, blank)
+	true_cell(b, black)
+	true_cell(c, red)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(black)
+	true_step(10)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, blank)
+	true_cell(b, red)
+	true_cell(c, black)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(red)
+	true_step(11)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, blank)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(black)
+	true_step(10)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, blank)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(red)
+	true_step(17)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, blank)
+	true_cell(b, red)
+	true_cell(c, black)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(red)
+	true_step(19)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, black)
+	true_cell(d, blank)
+	true_cell(e, red)
+	true_control(black)
+	true_step(12)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, red)
+	true_cell(c, blank)
+	true_cell(d, black)
+	true_cell(e, black)
+	true_control(black)
+	true_step(18)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, blank)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(black)
+	true_step(16)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, black)
+	true_cell(d, blank)
+	true_cell(e, red)
+	true_control(red)
+	true_step(13)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, black)
+	true_cell(c, blank)
+	true_cell(d, red)
+	true_cell(e, red)
+	true_control(black)
+	true_step(12)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, blank)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(red)
+	true_step(19)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, red)
+	true_cell(d, blank)
+	true_cell(e, black)
+	true_control(black)
+	true_step(10)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, blank)
+	true_cell(b, red)
+	true_cell(c, red)
+	true_cell(d, black)
+	true_cell(e, black)
+	true_control(black)
+	true_step(14)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, blank)
+	true_cell(c, red)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(black)
+	true_step(8)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, blank)
+	true_cell(b, black)
+	true_cell(c, black)
+	true_cell(d, red)
+	true_cell(e, red)
+	true_control(red)
+	true_step(17)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, red)
+	true_cell(d, blank)
+	true_cell(e, black)
+	true_control(red)
+	true_step(19)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, red)
+	true_cell(d, black)
+	true_cell(e, blank)
+	true_control(black)
+	true_step(10)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, blank)
+	true_cell(c, red)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(red)
+	true_step(11)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, blank)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(black)
+	true_step(20)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, black)
+	true_cell(c, red)
+	true_cell(d, blank)
+	true_cell(e, red)
+	true_control(black)
+	true_step(12)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, black)
+	true_cell(d, red)
+	true_cell(e, blank)
+	true_control(black)
+	true_step(16)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, black)
+	true_cell(d, red)
+	true_cell(e, blank)
+	true_control(black)
+	true_step(18)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, red)
+	true_cell(c, blank)
+	true_cell(d, black)
+	true_cell(e, black)
+	true_control(red)
+	true_step(13)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, blank)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(red)
+	true_step(19)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, blank)
+	true_cell(c, red)
+	true_cell(d, black)
+	true_cell(e, black)
+	true_control(black)
+	true_step(8)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, blank)
+	true_cell(b, red)
+	true_cell(c, black)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(black)
+	true_step(20)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, blank)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(black)
+	true_step(12)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, blank)
+	true_cell(c, black)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(red)
+	true_step(19)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, blank)
+	true_cell(c, red)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(red)
+	true_step(19)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, black)
+	true_cell(d, red)
+	true_cell(e, blank)
+	true_control(black)
+	true_step(14)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, blank)
+	true_cell(b, black)
+	true_cell(c, red)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(black)
+	true_step(16)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, red)
+	true_cell(d, blank)
+	true_cell(e, black)
+	true_control(black)
+	true_step(14)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, blank)
+	true_cell(c, black)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(black)
+	true_step(18)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, black)
+	true_cell(c, red)
+	true_cell(d, red)
+	true_cell(e, blank)
+	true_control(red)
+	true_step(17)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, black)
+	true_cell(d, blank)
+	true_cell(e, red)
+	true_control(red)
+	true_step(15)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, blank)
+	true_cell(b, black)
+	true_cell(c, red)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(red)
+	true_step(19)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, red)
+	true_cell(c, black)
+	true_cell(d, black)
+	true_cell(e, blank)
+	true_control(black)
+	true_step(18)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, red)
+	true_cell(d, black)
+	true_cell(e, blank)
+	true_control(black)
+	true_step(20)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, red)
+	true_cell(c, blank)
+	true_cell(d, black)
+	true_cell(e, black)
+	true_control(red)
+	true_step(19)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, blank)
+	true_cell(b, red)
+	true_cell(c, black)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(red)
+	true_step(17)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, red)
+	true_cell(d, black)
+	true_cell(e, blank)
+	true_control(red)
+	true_step(15)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, blank)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(black)
+	true_step(4)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, blank)
+	true_cell(b, black)
+	true_cell(c, red)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(black)
+	true_step(8)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, blank)
+	true_cell(b, black)
+	true_cell(c, black)
+	true_cell(d, red)
+	true_cell(e, red)
+	true_control(red)
+	true_step(7)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, red)
+	true_cell(c, black)
+	true_cell(d, black)
+	true_cell(e, blank)
+	true_control(black)
+	true_step(6)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, red)
+	true_cell(d, black)
+	true_cell(e, blank)
+	true_control(red)
+	true_step(9)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, blank)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(red)
+	true_step(7)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, red)
+	true_cell(c, blank)
+	true_cell(d, black)
+	true_cell(e, black)
+	true_control(red)
+	true_step(7)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, blank)
+	true_cell(c, black)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(black)
+	true_step(14)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, blank)
+	true_cell(b, black)
+	true_cell(c, black)
+	true_cell(d, red)
+	true_cell(e, red)
+	true_control(red)
+	true_step(13)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, red)
+	true_cell(d, black)
+	true_cell(e, blank)
+	true_control(red)
+	true_step(17)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, blank)
+	true_cell(b, red)
+	true_cell(c, black)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(black)
+	true_step(12)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, blank)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(red)
+	true_step(13)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, blank)
+	true_cell(c, black)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(black)
+	true_step(20)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, red)
+	true_cell(d, black)
+	true_cell(e, blank)
+	true_control(black)
+	true_step(20)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, black)
+	true_cell(c, blank)
+	true_cell(d, red)
+	true_cell(e, red)
+	true_control(black)
+	true_step(18)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, blank)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(red)
+	true_step(9)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, blank)
+	true_cell(c, red)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(red)
+	true_step(3)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, black)
+	true_cell(d, red)
+	true_cell(e, blank)
+	true_control(red)
+	true_step(13)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, black)
+	true_cell(d, red)
+	true_cell(e, blank)
+	true_control(red)
+	true_step(17)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, black)
+	true_cell(c, red)
+	true_cell(d, blank)
+	true_cell(e, red)
+	true_control(black)
+	true_step(18)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, blank)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(black)
+	true_step(14)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, blank)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(black)
+	true_step(14)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, black)
+	true_cell(c, blank)
+	true_cell(d, red)
+	true_cell(e, red)
+	true_control(red)
+	true_step(19)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, black)
+	true_cell(d, blank)
+	true_cell(e, red)
+	true_control(black)
+	true_step(18)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, red)
+	true_cell(d, black)
+	true_cell(e, blank)
+	true_control(black)
+	true_step(14)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, red)
+	true_cell(d, blank)
+	true_cell(e, black)
+	true_control(red)
+	true_step(17)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, red)
+	true_cell(d, blank)
+	true_cell(e, black)
+	true_control(black)
+	true_step(20)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, blank)
+	true_cell(c, red)
+	true_cell(d, black)
+	true_cell(e, black)
+	true_control(black)
+	true_step(14)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, red)
+	true_cell(d, black)
+	true_cell(e, blank)
+	true_control(black)
+	true_step(16)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, blank)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(black)
+	true_step(4)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, blank)
+	true_cell(c, black)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(red)
+	true_step(17)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, red)
+	true_cell(d, black)
+	true_cell(e, blank)
+	true_control(red)
+	true_step(11)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, blank)
+	true_cell(b, black)
+	true_cell(c, red)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(red)
+	true_step(17)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, black)
+	true_cell(c, red)
+	true_cell(d, blank)
+	true_cell(e, red)
+	true_control(black)
+	true_step(8)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, blank)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(red)
+	true_step(19)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, blank)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(red)
+	true_step(15)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, blank)
+	true_cell(b, red)
+	true_cell(c, black)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(black)
+	true_step(14)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, blank)
+	true_cell(c, black)
+	true_cell(d, red)
+	true_cell(e, black)
+	true_control(red)
+	true_step(7)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, red)
+	true_cell(d, blank)
+	true_cell(e, black)
+	true_control(red)
+	true_step(11)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, black)
+	true_cell(d, red)
+	true_cell(e, blank)
+	true_control(black)
+	true_step(6)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, red)
+	true_cell(b, black)
+	true_cell(c, black)
+	true_cell(d, blank)
+	true_cell(e, red)
+	true_control(red)
+	true_step(5)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, blank)
+	true_cell(b, black)
+	true_cell(c, red)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(red)
+	true_step(15)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, black)
+	true_cell(c, red)
+	true_cell(d, red)
+	true_cell(e, blank)
+	true_control(black)
+	true_step(14)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, blank)
+	true_cell(d, black)
+	true_cell(e, red)
+	true_control(red)
+	true_step(13)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, red)
+	true_cell(c, red)
+	true_cell(d, black)
+	true_cell(e, blank)
+	true_control(black)
+	true_step(18)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(a, black)
+	true_cell(b, blank)
+	true_cell(c, black)
+	true_cell(d, red)
+	true_cell(e, red)
+	true_control(red)
+	true_step(19)
+
+---
+
+positives:
+
+---
+

@@ -1,0 +1,59 @@
+atoms:
+	terminal()
+
+---
+
+statics:
+	input(robot, a)
+	input(robot, b)
+	input(robot, c)
+	input(robot, d)
+	input(robot, e)
+	input(robot, f)
+	input(robot, g)
+	input(robot, h)
+	role(robot)
+	successor(1, 2)
+	successor(2, 3)
+	successor(3, 4)
+	successor(4, 5)
+	successor(5, 6)
+	successor(6, 7)
+	successor(7, 8)
+
+---
+
+background:
+	true(p)
+	true(q1)
+	true_step(7)
+
+---
+
+positives:
+
+---
+
+background:
+	true(q1)
+	true(q2)
+	true_step(2)
+
+---
+
+positives:
+
+---
+
+background:
+	true(p)
+	true(q1)
+	true_step(8)
+
+---
+
+positives:
+	terminal()
+
+---
+

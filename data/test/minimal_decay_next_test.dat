@@ -1,0 +1,51 @@
+atoms:
+	next_value(0)
+	next_value(1)
+	next_value(2)
+	next_value(3)
+	next_value(4)
+	next_value(5)
+
+---
+
+statics:
+	succ(0, 1)
+	succ(1, 2)
+	succ(2, 3)
+	succ(3, 4)
+	succ(4, 5)
+
+---
+
+background:
+	does(player, noop)
+	true_value(4)
+
+---
+
+positives:
+	next_value(3)
+
+---
+
+background:
+	does(player, noop)
+	true_value(0)
+
+---
+
+positives:
+
+---
+
+background:
+	does(player, pressButton)
+	true_value(1)
+
+---
+
+positives:
+	next_value(5)
+
+---
+

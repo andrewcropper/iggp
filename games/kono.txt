@@ -1,0 +1,316 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Kono
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; components
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (role red)
+  (role black)
+
+
+  (<= (base (cell ?m ?n ?mark))
+      (index ?m)
+      (index ?n)
+      (mark ?mark))
+
+  (<= (base (score ?role 0))
+      (role ?role))
+
+  (<= (base (score ?role ?n))
+      (role ?role)
+      (incr ?m ?n))
+
+  (<= (base (control ?role))
+      (role ?role))
+
+  (<= (base (step 1)))
+
+  (<= (base (step ?n))
+      (succ ?m ?n))
+
+
+  (<= (input ?role (move ?u ?v ?x ?y))
+      (role ?role)
+      (doublet ?u ?v ?x ?y))
+
+  (<= (input ?role (jump ?u ?v ?w ?x ?y ?z))
+      (role ?role)
+      (triplet ?u ?v ?w ?x ?y ?z))
+
+  (<= (input ?role noop)
+      (role ?role))
+
+
+  (index 1)
+  (index 2)
+  (index 3)
+  (index 4)
+
+  (mark black)
+  (mark red)
+  (mark blank)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; init
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (init (cell 1 1 black))
+  (init (cell 1 2 black))
+  (init (cell 1 3 black))
+  (init (cell 1 4 black))
+  (init (cell 2 1 black))
+  (init (cell 2 2 black))
+  (init (cell 2 3 black))
+  (init (cell 2 4 black))
+  (init (cell 3 1 red))
+  (init (cell 3 2 red))
+  (init (cell 3 3 red))
+  (init (cell 3 4 red))
+  (init (cell 4 1 red))
+  (init (cell 4 2 red))
+  (init (cell 4 3 red))
+  (init (cell 4 4 red))
+  (init (score red 0))
+  (init (score black 0))
+  (init (control red))
+  (init (step 1))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; legal
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (<= (legal ?role (move ?u ?v ?x ?y))
+      (true (control ?role))
+      (true (cell ?u ?v ?role))
+      (doublet ?u ?v ?x ?y)
+      (true (cell ?x ?y blank)))
+
+  (<= (legal red (jump ?u ?v ?w ?x ?y ?z))
+      (true (control red))
+      (true (cell ?u ?v red))
+      (triplet ?u ?v ?w ?x ?y ?z)
+      (true (cell ?w ?x red))
+      (true (cell ?y ?z black)))
+
+  (<= (legal black (jump ?u ?v ?w ?x ?y ?z))
+      (true (control black))
+      (true (cell ?u ?v black))
+      (triplet ?u ?v ?w ?x ?y ?z)
+      (true (cell ?w ?x black))
+      (true (cell ?y ?z red)))
+
+  (<= (legal red noop)
+      (true (control black)))
+
+  (<= (legal black noop)
+      (true (control red)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; next
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (<= (next (cell ?u ?v blank))
+      (does ?role (move ?u ?v ?x ?y)))
+
+  (<= (next (cell ?x ?y ?role))
+      (does ?role (move ?u ?v ?x ?y)))
+
+  (<= (next (cell ?m ?n ?mark))
+      (does ?role (move ?u ?v ?x ?y))
+      (true (cell ?m ?n ?mark))
+      (distinctcell ?m ?n ?u ?v)
+      (distinctcell ?m ?n ?x ?y))
+
+  (<= (next (cell ?u ?v blank))
+      (does ?role (jump ?u ?v ?w ?x ?y ?z)))
+
+  (<= (next (cell ?y ?z ?role))
+      (does ?role (jump ?u ?v ?w ?x ?y ?z)))
+
+  (<= (next (cell ?m ?n ?mark))
+      (does ?role (jump ?u ?v ?w ?x ?y ?z))
+      (true (cell ?m ?n ?mark))
+      (distinctcell ?m ?n ?u ?v)
+      (distinctcell ?m ?n ?y ?z))
+
+  (<= (next (score ?role ?n))
+      (does ?anyone (move ?u ?v ?x ?y))
+      (true (score ?role ?n)))
+
+  (<= (next (score ?role ?n))
+      (does ?role (jump ?u ?v ?w ?x ?y ?z))
+      (true (score ?role ?m))
+      (incr ?m ?n))
+
+  (<= (next (score ?role ?n))
+      (does ?role noop)
+      (true (score ?role ?n)))
+
+  (<= (next (control black))
+      (true (control red)))
+
+  (<= (next (control red))
+      (true (control black)))
+
+  (<= (next (step ?n))
+      (true (step ?m))
+      (succ ?m ?n))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; goal
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (<= (goal ?role ?n) (true (score ?role ?n)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; terminal
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (<= terminal (true (score ?role 100)))
+
+  (<= terminal
+      (true (control ?role))
+      (not (haslegalmove ?role)))
+
+  (<= terminal (true (step 30)))
+  
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Views
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (<= (distinctcell ?u ?v ?x ?y)
+      (index ?u)
+      (index ?x)
+      (distinct ?u ?x)
+      (index ?v)
+      (index ?y))
+
+  (<= (distinctcell ?u ?v ?x ?y)
+      (index ?v)
+      (index ?y)
+      (distinct ?v ?y)
+      (index ?u)
+      (index ?x))
+
+
+  (<= (doublet ?u ?v ?x ?y)
+      (horizontal ?u ?v ?x ?y))
+
+  (<= (doublet ?u ?v ?x ?y)
+      (horizontal ?x ?y ?u ?v))
+
+  (<= (doublet ?u ?v ?x ?y)
+      (vertical ?u ?v ?x ?y))
+
+  (<= (doublet ?u ?v ?x ?y)
+      (vertical ?x ?y ?u ?v))
+
+  (<= (doublet ?u ?v ?x ?y)
+      (slash ?u ?v ?x ?y))
+
+  (<= (doublet ?u ?v ?x ?y)
+      (slash ?x ?y ?u ?v))
+
+  (<= (doublet ?u ?v ?x ?y)
+      (backslash ?u ?v ?x ?y))
+
+  (<= (doublet ?u ?v ?x ?y)
+      (backslash ?x ?y ?u ?v))
+
+
+  (<= (triplet ?u ?v ?w ?x ?y ?z)
+      (horizontal ?u ?v ?w ?x)
+      (horizontal ?w ?x ?y ?z))
+
+  (<= (triplet ?u ?v ?w ?x ?y ?z)
+      (horizontal ?y ?z ?w ?x)
+      (horizontal ?w ?x ?u ?v))
+
+  (<= (triplet ?u ?v ?w ?x ?y ?z)
+      (vertical ?u ?v ?w ?x)
+      (vertical ?w ?x ?y ?z))
+
+  (<= (triplet ?u ?v ?w ?x ?y ?z)
+      (vertical ?y ?z ?w ?x)
+      (vertical ?w ?x ?u ?v))
+
+  (<= (triplet ?u ?v ?w ?x ?y ?z)
+      (slash ?u ?v ?w ?x)
+      (slash ?w ?x ?y ?z))
+
+  (<= (triplet ?u ?v ?w ?x ?y ?z)
+      (slash ?y ?z ?w ?x)
+      (slash ?w ?x ?u ?v))
+
+  (<= (triplet ?u ?v ?w ?x ?y ?z)
+      (backslash ?u ?v ?w ?x)
+      (backslash ?w ?x ?y ?z))
+
+  (<= (triplet ?u ?v ?w ?x ?y ?z)
+      (backslash ?y ?z ?w ?x)
+      (backslash ?w ?x ?u ?v))
+
+
+  (<= (horizontal ?u ?v ?x ?v)
+      (nextspot ?u ?x)
+      (index ?v))
+
+  (<= (vertical ?u ?v ?u ?y)
+      (nextspot ?v ?y)
+      (index ?u))
+
+
+  (<= (haslegalmove ?role)
+      (legal ?role ?move))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Data
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (nextspot 1 2)
+  (nextspot 2 3)
+  (nextspot 3 4)
+
+  (incr  0  12)
+  (incr 12  25)
+  (incr 25  37)
+  (incr 37  50)
+  (incr 50  62)
+  (incr 62  75)
+  (incr 75  87)
+  (incr 87 100)
+
+  (succ  1   2)
+  (succ  2   3)
+  (succ  3   4)
+  (succ  4   5)
+  (succ  5   6)
+  (succ  6   7)
+  (succ  7   8)
+  (succ  8   9)
+  (succ  9  10)
+  (succ 10  11)
+  (succ 11  12)
+  (succ 12  13)
+  (succ 13  14)
+  (succ 14  15)
+  (succ 15  16)
+  (succ 16  17)
+  (succ 17  18)
+  (succ 18  19)
+  (succ 19  20)
+  (succ 20  21)
+  (succ 21  22)
+  (succ 22  23)
+  (succ 23  24)
+  (succ 24  25)
+  (succ 25  26)
+  (succ 26  27)
+  (succ 27  28)
+  (succ 28  29)
+  (succ 29  30)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

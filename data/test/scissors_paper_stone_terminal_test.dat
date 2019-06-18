@@ -1,0 +1,64 @@
+atoms:
+	terminal()
+
+---
+
+statics:
+	beats(paper, stone)
+	beats(scissors, paper)
+	beats(stone, scissors)
+	player(p1)
+	player(p2)
+	succ(0, 1)
+	succ(1, 2)
+	succ(2, 3)
+
+---
+
+background:
+	true_score(p1, 0)
+	true_score(p2, 1)
+	true_step(1)
+
+---
+
+positives:
+
+---
+
+background:
+	true_score(p1, 1)
+	true_score(p2, 0)
+	true_step(3)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_score(p1, 0)
+	true_score(p2, 0)
+	true_step(3)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_score(p1, 3)
+	true_score(p2, 0)
+	true_step(3)
+
+---
+
+positives:
+	terminal()
+
+---
+

@@ -1,0 +1,90 @@
+atoms:
+	legal(p1, paper)
+	legal(p2, paper)
+	legal(p1, scissors)
+	legal(p2, scissors)
+	legal(p1, stone)
+	legal(p2, stone)
+
+---
+
+statics:
+	beats(paper, stone)
+	beats(scissors, paper)
+	beats(stone, scissors)
+	player(p1)
+	player(p2)
+	succ(0, 1)
+	succ(1, 2)
+	succ(2, 3)
+
+---
+
+background:
+	true_score(p1, 2)
+	true_score(p2, 0)
+	true_step(2)
+
+---
+
+positives:
+	legal(p1, paper)
+	legal(p1, scissors)
+	legal(p1, stone)
+	legal(p2, paper)
+	legal(p2, scissors)
+	legal(p2, stone)
+
+---
+
+background:
+	true_score(p1, 1)
+	true_score(p2, 1)
+	true_step(2)
+
+---
+
+positives:
+	legal(p1, paper)
+	legal(p1, scissors)
+	legal(p1, stone)
+	legal(p2, paper)
+	legal(p2, scissors)
+	legal(p2, stone)
+
+---
+
+background:
+	true_score(p1, 0)
+	true_score(p2, 1)
+	true_step(1)
+
+---
+
+positives:
+	legal(p1, paper)
+	legal(p1, scissors)
+	legal(p1, stone)
+	legal(p2, paper)
+	legal(p2, scissors)
+	legal(p2, stone)
+
+---
+
+background:
+	true_score(p1, 1)
+	true_score(p2, 0)
+	true_step(2)
+
+---
+
+positives:
+	legal(p1, paper)
+	legal(p1, scissors)
+	legal(p1, stone)
+	legal(p2, paper)
+	legal(p2, scissors)
+	legal(p2, stone)
+
+---
+

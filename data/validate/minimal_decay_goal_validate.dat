@@ -1,0 +1,28 @@
+atoms:
+	goal(player, 0)
+	goal(player, 1)
+	goal(player, 2)
+	goal(player, 3)
+	goal(player, 4)
+	goal(player, 5)
+
+---
+
+statics:
+	succ(0, 1)
+	succ(1, 2)
+	succ(2, 3)
+	succ(3, 4)
+	succ(4, 5)
+
+---
+
+background:
+	true_value(5)
+
+---
+
+positives:
+
+---
+

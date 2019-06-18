@@ -1,0 +1,360 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Hex
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; components
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (role red)
+  (role green)
+  (role blue)
+
+  (<= (base (cell ?m ?n ?role))
+      (row ?m)
+      (col ?n)
+      (role ?role))
+
+  (<= (base (connected ?k ?m ?n))
+      (succ ?k ?o)
+      (row ?m)
+      (col ?n))
+
+  (<= (base (owner ?k ?role))
+      (succ ?k ?o)
+      (role ?role))
+
+  (<= (base (step ?k))
+      (succ ?k ?o))
+
+  (<= (base (control ?role))
+      (role ?role))
+
+
+  (<= (input ?role (place ?m ?n))
+      (role ?role)
+      (row ?m)
+      (col ?n))
+
+  (<= (input ?role noop)
+      (role ?role))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; init
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (init (control red))
+  (init (step 1))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; legal
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (<= (legal ?role (place ?m ?n))
+      (true (control ?role))
+      (row ?m)
+      (col ?n)
+      (not (imaginary ?m ?n))
+      (not (true (cell ?m ?n red)))
+      (not (true (cell ?m ?n green)))
+      (not (true (cell ?m ?n blue))))
+
+  (<= (legal ?role noop)
+      (role ?role)
+      (not (true (control ?role))))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; next
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (<= (next (cell ?m ?n ?role))
+      (does ?role (place ?m ?n)))
+
+  (<= (next (cell ?m ?n ?role))
+      (true (cell ?m ?n ?role)))
+
+
+  (<= (next (step ?n))
+      (true (step ?m))
+      (succ ?m ?n))
+
+
+  (<= (next (owner ?k ?role))
+      (true (step ?k))
+      (true (control ?role)))
+
+  (<= (next (owner ?k ?role))
+      (true (owner ?k ?role)))
+
+
+  (<= (next (connected ?k ?m ?n))
+      (does ?role (place ?m ?n))
+      (true (step ?k)))
+
+  (<= (next (connected ?k ?m ?n))
+      (transfer ?e)
+      (true (connected ?e ?m ?n))
+      (true (step ?k)))
+
+  (<= (next (connected ?k ?m ?n))
+      (true (connected ?k ?m ?n))
+      (not (transfer ?k)))
+
+
+  (<= (next (control red))
+      (true (control blue)))
+
+  (<= (next (control green))
+      (true (control red)))
+
+  (<= (next (control blue))
+      (true (control green)))
+
+
+  (<= (transfer ?k)
+      (does ?role (place ?x ?y))
+      (true (owner ?k ?role))
+      (true (connected ?k ?m ?n))
+      (adjacent ?x ?y ?m ?n))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; goal
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (<= (goal red 100) redpath)
+  (<= (goal red 0) (not redpath))
+
+  (<= (goal green 100) greenpath)
+  (<= (goal green 0) (not greenpath))
+
+  (<= (goal blue 100) bluepath)
+  (<= (goal blue 0) (not bluepath))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; terminal
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (<= terminal redpath)
+  (<= terminal greenpath)
+  (<= terminal bluepath)
+  (<= terminal (true (step 61)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Views
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (<= (adjacent ?j ?k ?j ?n)
+      (nextcol ?k ?n)
+      (row ?j))
+
+  (<= (adjacent ?j ?k ?j ?n)
+      (nextcol ?n ?k)
+      (row ?j))
+
+  (<= (adjacent ?j ?k ?m ?k)
+      (nextrow ?j ?m)
+      (col ?k))
+
+  (<= (adjacent ?j ?k ?m ?k)
+      (nextrow ?m ?j)
+      (col ?k))
+
+  (<= (adjacent ?j ?k ?m ?n)
+      (nextrow ?m ?j)
+      (nextcol ?k ?n))
+
+  (<= (adjacent ?j ?k ?m ?n)
+      (nextrow ?j ?m)
+      (nextcol ?n ?k))
+
+
+  (<= redpath
+      (redbeg ?i ?j)
+      (true (connected ?k ?i ?j))
+      (middle ?m ?n)
+      (true (connected ?k ?m ?n))
+      (true (owner ?k red)))
+
+  (<= redpath
+      (redend ?i ?j)
+      (true (connected ?k ?i ?j))
+      (middle ?m ?n)
+      (true (connected ?k ?m ?n))
+      (true (owner ?k red)))
+
+  (<= greenpath
+      (true (connected ?k a ?i))
+      (middle ?m ?n)
+      (true (connected ?k ?m ?n))
+      (true (owner ?k green)))
+
+  (<= greenpath
+      (true (connected ?k i ?j))
+      (middle ?m ?n)
+      (true (connected ?k ?m ?n))
+      (true (owner ?k green)))
+
+  (<= bluepath
+      (true (connected ?k ?i 1))
+      (middle ?m ?n)
+      (true (connected ?k ?m ?n))
+      (true (owner ?k blue)))
+
+  (<= bluepath
+      (true (connected ?k ?j 9))
+      (middle ?m ?n)
+      (true (connected ?k ?m ?n))
+      (true (owner ?k blue)))
+
+
+  (redbeg a 5)
+  (redbeg b 4)
+  (redbeg c 3)
+  (redbeg d 2)
+  (redbeg e 1)
+  (redend e 9)
+  (redend f 8)
+  (redend g 7)
+  (redend h 6)
+  (redend i 5)
+
+  (middle d 5)
+  (middle d 6)
+  (middle e 4)
+  (middle e 6)
+  (middle f 4)
+  (middle f 5)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Data
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (row a)
+  (row b)
+  (row c)
+  (row d)
+  (row e)
+  (row f)
+  (row g)
+  (row h)
+  (row i)
+
+  (col 1)
+  (col 2)
+  (col 3)
+  (col 4)
+  (col 5)
+  (col 6)
+  (col 7)
+  (col 8)
+  (col 9)
+
+  (nextrow a b)
+  (nextrow b c)
+  (nextrow c d)
+  (nextrow d e)
+  (nextrow e f)
+  (nextrow f g)
+  (nextrow g h)
+  (nextrow h i)
+
+  (nextcol 1 2)
+  (nextcol 2 3)
+  (nextcol 3 4)
+  (nextcol 4 5)
+  (nextcol 5 6)
+  (nextcol 6 7)
+  (nextcol 7 8)
+  (nextcol 8 9)
+
+  (imaginary a 1)
+  (imaginary a 2)
+  (imaginary a 3)
+  (imaginary a 4)
+  (imaginary b 1)
+  (imaginary b 2)
+  (imaginary b 3)
+  (imaginary c 1)
+  (imaginary c 2)
+  (imaginary d 1)
+  (imaginary e 5)
+  (imaginary f 9)
+  (imaginary g 8)
+  (imaginary g 9)
+  (imaginary h 7)
+  (imaginary h 8)
+  (imaginary h 9)
+  (imaginary i 6)
+  (imaginary i 7)
+  (imaginary i 8)
+  (imaginary i 9)
+
+  (succ 1 2)
+  (succ 2 3)
+  (succ 3 4)
+  (succ 4 5)
+  (succ 5 6)
+  (succ 6 7)
+  (succ 7 8)
+  (succ 8 9)
+  (succ 9 10)
+  (succ 10 11)
+  (succ 11 12)
+  (succ 12 13)
+  (succ 13 14)
+  (succ 14 15)
+  (succ 15 16)
+  (succ 16 17)
+  (succ 17 18)
+  (succ 18 19)
+  (succ 19 20)
+  (succ 20 21)
+  (succ 21 22)
+  (succ 22 23)
+  (succ 23 24)
+  (succ 24 25)
+  (succ 25 26)
+  (succ 26 27)
+  (succ 27 28)
+  (succ 28 29)
+  (succ 29 30)
+  (succ 30 31)
+  (succ 31 32)
+  (succ 32 33)
+  (succ 33 34)
+  (succ 34 35)
+  (succ 35 36)
+  (succ 36 37)
+  (succ 37 38)
+  (succ 38 39)
+  (succ 39 40)
+  (succ 40 41)
+  (succ 41 42)
+  (succ 42 43)
+  (succ 43 44)
+  (succ 44 45)
+  (succ 45 46)
+  (succ 46 47)
+  (succ 47 48)
+  (succ 48 49)
+  (succ 49 50)
+  (succ 50 51)
+  (succ 51 52)
+  (succ 52 53)
+  (succ 53 54)
+  (succ 54 55)
+  (succ 55 56)
+  (succ 56 57)
+  (succ 57 58)
+  (succ 58 59)
+  (succ 59 60)
+  (succ 60 61)
+  (succ 61 62)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+
+
+

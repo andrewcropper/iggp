@@ -1,0 +1,6 @@
+import sokoban_core
+
+(init (target 3 2))
+(init (at 2 2 obj1))
+(init (at 1 2 x))
+

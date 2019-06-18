@@ -1,0 +1,222 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Sudoku
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Components
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (role robot)
+
+  (<= (base (cell ?i ?j ?k ?l ?r))
+      (index ?i)
+      (index ?j)
+      (index ?k)
+      (index ?l)
+      (filler ?r))
+
+  (<= (input robot (mark ?i ?j ?k ?l ?r))
+      (index ?i)
+      (index ?j)
+      (index ?k)
+      (index ?l)
+      (digit ?r))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; init
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (init (cell 1 1 1 1 b))
+  (init (cell 1 1 1 2 b))
+  (init (cell 1 1 1 3 b))
+  (init (cell 1 1 2 1 b))
+  (init (cell 1 1 2 2 b))
+  (init (cell 1 1 2 3 3))
+  (init (cell 1 1 3 1 b))
+  (init (cell 1 1 3 2 8))
+  (init (cell 1 1 3 3 b))
+  (init (cell 1 2 1 1 b))
+  (init (cell 1 2 1 2 7))
+  (init (cell 1 2 1 3 5))
+  (init (cell 1 2 2 1 b))
+  (init (cell 1 2 2 2 b))
+  (init (cell 1 2 2 3 b))
+  (init (cell 1 2 3 1 6))
+  (init (cell 1 2 3 2 b))
+  (init (cell 1 2 3 3 b))
+  (init (cell 1 3 1 1 6))
+  (init (cell 1 3 1 2 3))
+  (init (cell 1 3 1 3 b))
+  (init (cell 1 3 2 1 b))
+  (init (cell 1 3 2 2 b))
+  (init (cell 1 3 2 3 b))
+  (init (cell 1 3 3 1 b))
+  (init (cell 1 3 3 2 b))
+  (init (cell 1 3 3 3 2))
+  (init (cell 2 1 1 1 2))
+  (init (cell 2 1 1 2 9))
+  (init (cell 2 1 1 3 b))
+  (init (cell 2 1 2 1 b))
+  (init (cell 2 1 2 2 b))
+  (init (cell 2 1 2 3 b))
+  (init (cell 2 1 3 1 3))
+  (init (cell 2 1 3 2 b))
+  (init (cell 2 1 3 3 b))
+  (init (cell 2 2 1 1 b))
+  (init (cell 2 2 1 2 b))
+  (init (cell 2 2 1 3 b))
+  (init (cell 2 2 2 1 2))
+  (init (cell 2 2 2 2 b))
+  (init (cell 2 2 2 3 6))
+  (init (cell 2 2 3 1 b))
+  (init (cell 2 2 3 2 b))
+  (init (cell 2 2 3 3 b))
+  (init (cell 2 3 1 1 b))
+  (init (cell 2 3 1 2 b))
+  (init (cell 2 3 1 3 3))
+  (init (cell 2 3 2 1 b))
+  (init (cell 2 3 2 2 b))
+  (init (cell 2 3 2 3 b))
+  (init (cell 2 3 3 1 b))
+  (init (cell 2 3 3 2 7))
+  (init (cell 2 3 3 3 1))
+  (init (cell 3 1 1 1 9))
+  (init (cell 3 1 1 2 b))
+  (init (cell 3 1 1 3 b))
+  (init (cell 3 1 2 1 b))
+  (init (cell 3 1 2 2 b))
+  (init (cell 3 1 2 3 b))
+  (init (cell 3 1 3 1 b))
+  (init (cell 3 1 3 2 2))
+  (init (cell 3 1 3 3 8))
+  (init (cell 3 2 1 1 b))
+  (init (cell 3 2 1 2 b))
+  (init (cell 3 2 1 3 4))
+  (init (cell 3 2 2 1 b))
+  (init (cell 3 2 2 2 b))
+  (init (cell 3 2 2 3 b))
+  (init (cell 3 2 3 1 5))
+  (init (cell 3 2 3 2 1))
+  (init (cell 3 2 3 3 b))
+  (init (cell 3 3 1 1 b))
+  (init (cell 3 3 1 2 5))
+  (init (cell 3 3 1 3 b))
+  (init (cell 3 3 2 1 1))
+  (init (cell 3 3 2 2 b))
+  (init (cell 3 3 2 3 b))
+  (init (cell 3 3 3 1 b))
+  (init (cell 3 3 3 2 b))
+  (init (cell 3 3 3 3 b))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; legal
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (<= (legal robot (mark ?i ?j ?k ?l ?x))
+      (true (cell ?i ?j ?k ?l b))
+      (digit ?x)
+      (not (row ?i ?k ?x))
+      (not (col ?j ?l ?x))
+      (not (square ?i ?j ?x)))
+
+  (<= (row ?i ?k ?x) (true (cell ?i 1 ?k 1 ?x)))
+  (<= (row ?i ?k ?x) (true (cell ?i 1 ?k 2 ?x)))
+  (<= (row ?i ?k ?x) (true (cell ?i 1 ?k 3 ?x)))
+  (<= (row ?i ?k ?x) (true (cell ?i 2 ?k 1 ?x)))
+  (<= (row ?i ?k ?x) (true (cell ?i 2 ?k 2 ?x)))
+  (<= (row ?i ?k ?x) (true (cell ?i 2 ?k 3 ?x)))
+  (<= (row ?i ?k ?x) (true (cell ?i 3 ?k 1 ?x)))
+  (<= (row ?i ?k ?x) (true (cell ?i 3 ?k 2 ?x)))
+  (<= (row ?i ?k ?x) (true (cell ?i 3 ?k 3 ?x)))
+
+  (<= (col ?j ?l ?x) (true (cell 1 ?j 1 ?l ?x)))
+  (<= (col ?j ?l ?x) (true (cell 1 ?j 2 ?l ?x)))
+  (<= (col ?j ?l ?x) (true (cell 1 ?j 3 ?l ?x)))
+  (<= (col ?j ?l ?x) (true (cell 2 ?j 1 ?l ?x)))
+  (<= (col ?j ?l ?x) (true (cell 2 ?j 2 ?l ?x)))
+  (<= (col ?j ?l ?x) (true (cell 2 ?j 3 ?l ?x)))
+  (<= (col ?j ?l ?x) (true (cell 3 ?j 1 ?l ?x)))
+  (<= (col ?j ?l ?x) (true (cell 3 ?j 2 ?l ?x)))
+  (<= (col ?j ?l ?x) (true (cell 3 ?j 3 ?l ?x)))
+
+  (<= (square ?i ?j ?x) (true (cell ?i ?j 1 1 ?x)))
+  (<= (square ?i ?j ?x) (true (cell ?i ?j 1 2 ?x)))
+  (<= (square ?i ?j ?x) (true (cell ?i ?j 1 3 ?x)))
+  (<= (square ?i ?j ?x) (true (cell ?i ?j 2 1 ?x)))
+  (<= (square ?i ?j ?x) (true (cell ?i ?j 2 2 ?x)))
+  (<= (square ?i ?j ?x) (true (cell ?i ?j 2 3 ?x)))
+  (<= (square ?i ?j ?x) (true (cell ?i ?j 3 1 ?x)))
+  (<= (square ?i ?j ?x) (true (cell ?i ?j 3 2 ?x)))
+  (<= (square ?i ?j ?x) (true (cell ?i ?j 3 3 ?x)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; next
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (<= (next (cell ?i ?j ?k ?l ?x))
+      (does ?role (mark ?i ?j ?k ?l ?x)))
+
+  (<= (next (cell ?i ?j ?k ?l ?x))
+      (true (cell ?i ?j ?k ?l ?x))
+      (does ?role (mark ?s ?t ?u ?v ?y))
+      (distinct ?s ?i))
+
+  (<= (next (cell ?i ?j ?k ?l ?x))
+      (true (cell ?i ?j ?k ?l ?x))
+      (does ?role (mark ?s ?t ?u ?v ?y))
+      (distinct ?t ?j))
+
+  (<= (next (cell ?i ?j ?k ?l ?x))
+      (true (cell ?i ?j ?k ?l ?x))
+      (does ?role (mark ?s ?t ?u ?v ?y))
+      (distinct ?u ?k))
+
+  (<= (next (cell ?i ?j ?k ?l ?x))
+      (true (cell ?i ?j ?k ?l ?x))
+      (does ?role (mark ?s ?t ?u ?v ?y))
+      (distinct ?v ?l))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; goal
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (<= (goal robot 100) (not open))
+  (<= (goal robot 0) open)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; terminal
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (<= terminal (not playable))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Views
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (<= (filler ?x) (digit ?x))
+  (filler b)
+
+  (<= open (true (cell ?i ?j ?k ?l b)))
+
+  (<= playable (legal robot (mark ?i ?j ?k ?l ?x)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Data
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (index 1)
+  (index 2)
+  (index 3)
+
+  (digit 1)
+  (digit 2)
+  (digit 3)
+  (digit 4)
+  (digit 5)
+  (digit 6)
+  (digit 7)
+  (digit 8)
+  (digit 9)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

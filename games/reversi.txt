@@ -1,0 +1,338 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Reversi
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Alex Landau original, modified slightly by mrg
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(role blue)
+(role red)
+
+
+(<= (base (cell ?x ?y ?color))
+    (index ?x)
+    (index ?y)
+    (role ?color))
+
+(<= (base (control ?player))
+    (role ?player))
+
+
+(<= (input ?player (move ?x ?y))
+    (role ?player)
+    (index ?x)
+    (index ?y))
+
+(<= (input ?player noop)
+    (role ?player))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; init
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(init (cell 4 4 blue))
+(init (cell 4 5 red))
+(init (cell 5 4 red))
+(init (cell 5 5 blue))
+(init (control blue))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; legal
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(<= (legal ?player noop)
+    (true (control ?opponent))
+    (opponent ?player ?opponent))
+
+(<= (legal ?player noop)
+    (role ?player)
+    (not (playercanmove ?player)))
+
+(<= (legal ?player (move ?x ?y))
+    (true (control ?player))
+    (playercanmoveat ?player ?x ?y))
+
+
+(<= (playercanmove ?player)
+    (playercanmoveat ?player ?anyx ?anyy))
+
+(<= (playercanmoveat ?color ?x ?y)
+    (empty ?x ?y)
+    (opponent ?color ?othercolor)
+    (nextcellindir ?x ?y ?dir ?x2 ?y2)
+    (true (cell ?x2 ?y2 ?othercolor))
+    (hasothercolorindir ?x2 ?y2 ?dir))
+
+
+(<= (nextcellindir ?x1 ?y1 ?dir ?x2 ?y2)
+    (index ?x1)
+    (index ?y1)
+    (dir ?dir ?xdelta ?ydelta)
+    (add ?x1 ?xdelta ?x2)
+    (add ?y1 ?ydelta ?y2))
+
+
+(<= (hasothercolorindir ?x1 ?y1 ?dir)
+    (true (cell ?x1 ?y1 ?color))
+    (opponent ?color ?othercolor)
+    (nextcellindir ?x1 ?y1 ?dir ?x2 ?y2)
+    (true (cell ?x2 ?y2 ?othercolor)))
+
+(<= (hasothercolorindir ?x1 ?y1 ?dir)
+    (true (cell ?x1 ?y1 ?color))
+    (nextcellindir ?x1 ?y1 ?dir ?x2 ?y2)
+    (true (cell ?x2 ?y2 ?color))
+    (hasothercolorindir ?x2 ?y2 ?dir))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; next
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(<= (next (cell ?x ?y ?color))
+    (true (cell ?x ?y ?color))
+    (not (affectedcell ?x ?y)))
+
+(<= (next (cell ?x ?y ?color))
+    (does ?color (move ?x ?y)))
+
+(<= (next (cell ?x ?y ?color))
+    (does ?color (move ?anyx ?anyy))
+    (affectedcell ?x ?y))
+
+(<= (next (control ?nextplayer))
+    (true (control ?curplayer))
+    (opponent ?curplayer ?nextplayer))
+
+
+(<= (affectedcell ?x ?y)
+    (affected ?x ?y ?anydir ?anycolor))
+
+
+(<= (affected ?x2 ?y2 ?dir ?othercolor)
+    (does ?player (move ?x1 ?y1))
+    (opponent ?player ?othercolor)
+    (nextcellindir ?x1 ?y1 ?dir ?x2 ?y2)
+    (hasothercolorindir ?x2 ?y2 ?dir)
+    (true (cell ?x2 ?y2 ?othercolor)))
+
+(<= (affected ?x2 ?y2 ?dir ?color)
+    (hasothercolorindir ?x2 ?y2 ?dir)
+    (oppdir ?dir ?oppdir)
+    (nextcellindir ?x2 ?y2 ?oppdir ?x1 ?y1)
+    (affected ?x1 ?y1 ?dir ?color)
+    (true (cell ?x2 ?y2 ?color)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; goal
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(<= (goal ?player 100)
+    (winner ?player))
+
+(<= (goal ?player 0)
+    (winner ?opponent)
+    (opponent ?player ?opponent))
+
+(<= (goal ?player 50)
+    (role ?player)
+    (not (winner blue))
+    (not (winner red)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; terminal
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(<= terminal
+    (not (playercanmove blue))
+    (not (playercanmove red)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; views
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(<= (empty ?x ?y)
+    (index ?x)
+    (index ?y)
+    (not (occupied ?x ?y)))
+
+(<= (occupied ?x ?y)
+    (true (cell ?x ?y ?anycolor)))
+
+
+(<= (winner blue)
+    (totalcount blue ?bluecount)
+    (totalcount red ?redcount)
+    (lessthan ?redcount ?bluecount))
+
+(<= (winner red)
+    (totalcount blue ?bluecount)
+    (totalcount red ?redcount)
+    (lessthan ?bluecount ?redcount))
+
+
+(<= (totalcount ?color ?n8)
+    (addrow ?color 1 0 ?n1)
+    (addrow ?color 2 ?n1 ?n2)
+    (addrow ?color 3 ?n2 ?n3)
+    (addrow ?color 4 ?n3 ?n4)
+    (addrow ?color 5 ?n4 ?n5)
+    (addrow ?color 6 ?n5 ?n6)
+    (addrow ?color 7 ?n6 ?n7)
+    (addrow ?color 8 ?n7 ?n8))
+
+(<= (addrow ?color ?y ?m ?n8)
+    (addcell ?color 1 ?y ?m ?n1)
+    (addcell ?color 2 ?y ?n1 ?n2)
+    (addcell ?color 3 ?y ?n2 ?n3)
+    (addcell ?color 4 ?y ?n3 ?n4)
+    (addcell ?color 5 ?y ?n4 ?n5)
+    (addcell ?color 6 ?y ?n5 ?n6)
+    (addcell ?color 7 ?y ?n6 ?n7)
+    (addcell ?color 8 ?y ?n7 ?n8))
+
+(<= (addcell ?color ?x ?y ?m ?n)
+    (true (cell ?x ?y ?color))
+    (succ ?m ?n))
+
+(<= (addcell ?color ?x ?y ?n ?n)
+    (index ?x)
+    (index ?y)
+    (role ?color)
+    (not (true (cell ?x ?y ?color)))
+    (succ ?n ?m))
+
+
+
+(<= (lessthan ?x ?y)
+    (succ ?x ?y))
+
+(<= (lessthan ?x ?z)
+    (succ ?x ?y)
+    (lessthan ?y ?z))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; data
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(opponent blue red)
+(opponent red blue)
+
+(oppdir nw se)
+(oppdir ne sw)
+(oppdir se nw)
+(oppdir sw ne)
+(oppdir n s)
+(oppdir e w)
+(oppdir s n)
+(oppdir w e)
+
+(dir n 0 p1)
+(dir s 0 n1)
+(dir e p1 0)
+(dir w n1 0)
+(dir nw n1 p1)
+(dir ne p1 p1)
+(dir se p1 n1)
+(dir sw n1 n1)
+
+(add 1 p1 2)
+(add 2 p1 3)
+(add 3 p1 4)
+(add 4 p1 5)
+(add 5 p1 6)
+(add 6 p1 7)
+(add 7 p1 8)
+(add 1 0 1)
+(add 2 0 2)
+(add 3 0 3)
+(add 4 0 4)
+(add 5 0 5)
+(add 6 0 6)
+(add 7 0 7)
+(add 8 0 8)
+(add 8 n1 7)
+(add 7 n1 6)
+(add 6 n1 5)
+(add 5 n1 4)
+(add 4 n1 3)
+(add 3 n1 2)
+(add 2 n1 1)
+
+(index 1)
+(index 2)
+(index 3)
+(index 4)
+(index 5)
+(index 6)
+(index 7)
+(index 8)
+
+(succ 0 1)
+(succ 1 2)
+(succ 2 3)
+(succ 3 4)
+(succ 4 5)
+(succ 5 6)
+(succ 6 7)
+(succ 7 8)
+(succ 8 9)
+(succ 9 10)
+(succ 10 11)
+(succ 11 12)
+(succ 12 13)
+(succ 13 14)
+(succ 14 15)
+(succ 15 16)
+(succ 16 17)
+(succ 17 18)
+(succ 18 19)
+(succ 19 20)
+(succ 20 21)
+(succ 21 22)
+(succ 22 23)
+(succ 23 24)
+(succ 24 25)
+(succ 25 26)
+(succ 26 27)
+(succ 27 28)
+(succ 28 29)
+(succ 29 30)
+(succ 30 31)
+(succ 31 32)
+(succ 32 33)
+(succ 33 34)
+(succ 34 35)
+(succ 35 36)
+(succ 36 37)
+(succ 37 38)
+(succ 38 39)
+(succ 39 40)
+(succ 40 41)
+(succ 41 42)
+(succ 42 43)
+(succ 43 44)
+(succ 44 45)
+(succ 45 46)
+(succ 46 47)
+(succ 47 48)
+(succ 48 49)
+(succ 49 50)
+(succ 50 51)
+(succ 51 52)
+(succ 52 53)
+(succ 53 54)
+(succ 54 55)
+(succ 55 56)
+(succ 56 57)
+(succ 57 58)
+(succ 58 59)
+(succ 59 60)
+(succ 60 61)
+(succ 61 62)
+(succ 62 63)
+(succ 63 64)
+(succ 64 65)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

@@ -1,0 +1,217 @@
+atoms:
+	legal(black, end_game)
+	legal(white, end_game)
+	legal(black, lay_claim)
+	legal(white, lay_claim)
+	legal(black, noop)
+	legal(white, noop)
+
+---
+
+statics:
+	opponent(black, white)
+	opponent(white, black)
+	role(black)
+	role(white)
+	succ(0, 5)
+	succ(10, 15)
+	succ(15, 20)
+	succ(20, 25)
+	succ(25, 30)
+	succ(30, 35)
+	succ(35, 40)
+	succ(40, 45)
+	succ(45, 50)
+	succ(5, 10)
+	succ(50, 55)
+	succ(55, 60)
+	succ(60, 65)
+	succ(65, 70)
+	succ(70, 75)
+	succ(75, 80)
+	succ(80, 85)
+	succ(85, 90)
+	succ(90, 95)
+	succ(95, 100)
+
+---
+
+background:
+	true_claim_made_by(white)
+	true_control(black)
+	true_score(black, 65)
+	true_score(white, 60)
+
+---
+
+positives:
+	legal(black, end_game)
+	legal(black, lay_claim)
+	legal(white, noop)
+
+---
+
+background:
+	true_control(white)
+	true_score(black, 80)
+	true_score(white, 80)
+
+---
+
+positives:
+	legal(black, noop)
+	legal(white, end_game)
+	legal(white, lay_claim)
+
+---
+
+background:
+	true_claim_made_by(black)
+	true_control(white)
+	true_score(black, 60)
+	true_score(white, 60)
+
+---
+
+positives:
+	legal(black, noop)
+	legal(white, end_game)
+	legal(white, lay_claim)
+
+---
+
+background:
+	true_claim_made_by(white)
+	true_control(black)
+	true_score(black, 80)
+	true_score(white, 75)
+
+---
+
+positives:
+	legal(black, end_game)
+	legal(black, lay_claim)
+	legal(white, noop)
+
+---
+
+background:
+	true_claim_made_by(white)
+	true_control(black)
+	true_score(black, 70)
+	true_score(white, 65)
+
+---
+
+positives:
+	legal(black, end_game)
+	legal(black, lay_claim)
+	legal(white, noop)
+
+---
+
+background:
+	true_claim_made_by(black)
+	true_control(white)
+	true_score(black, 75)
+	true_score(white, 75)
+
+---
+
+positives:
+	legal(black, noop)
+	legal(white, end_game)
+	legal(white, lay_claim)
+
+---
+
+background:
+	true_control(white)
+	true_gameOver()
+	true_score(black, 60)
+	true_score(white, 80)
+
+---
+
+positives:
+	legal(black, noop)
+	legal(white, end_game)
+	legal(white, lay_claim)
+
+---
+
+background:
+	true_claim_made_by(black)
+	true_control(white)
+	true_score(black, 70)
+	true_score(white, 70)
+
+---
+
+positives:
+	legal(black, noop)
+	legal(white, end_game)
+	legal(white, lay_claim)
+
+---
+
+background:
+	true_control(white)
+	true_gameOver()
+	true_score(black, 70)
+	true_score(white, 90)
+
+---
+
+positives:
+	legal(black, noop)
+	legal(white, end_game)
+	legal(white, lay_claim)
+
+---
+
+background:
+	true_control(black)
+	true_gameOver()
+	true_score(black, 95)
+	true_score(white, 70)
+
+---
+
+positives:
+	legal(black, end_game)
+	legal(black, lay_claim)
+	legal(white, noop)
+
+---
+
+background:
+	true_control(black)
+	true_gameOver()
+	true_score(black, 90)
+	true_score(white, 65)
+
+---
+
+positives:
+	legal(black, end_game)
+	legal(black, lay_claim)
+	legal(white, noop)
+
+---
+
+background:
+	true_control(black)
+	true_gameOver()
+	true_score(black, 80)
+	true_score(white, 80)
+
+---
+
+positives:
+	legal(black, end_game)
+	legal(black, lay_claim)
+	legal(white, noop)
+
+---
+

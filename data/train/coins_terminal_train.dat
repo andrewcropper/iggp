@@ -1,0 +1,1107 @@
+atoms:
+	terminal()
+
+---
+
+statics:
+	role(you)
+	succ(1, 2)
+	succ(2, 3)
+	succ(3, 4)
+	succ(4, 5)
+	succ(5, 6)
+	succ(6, 7)
+	succ(7, 8)
+
+---
+
+background:
+	true_cell(1, onecoin)
+	true_cell(2, zerocoins)
+	true_cell(3, onecoin)
+	true_cell(4, onecoin)
+	true_cell(5, zerocoins)
+	true_cell(6, twocoins)
+	true_cell(7, onecoin)
+	true_cell(8, twocoins)
+	true_step(3)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, twocoins)
+	true_cell(2, twocoins)
+	true_cell(3, twocoins)
+	true_cell(4, zerocoins)
+	true_cell(5, onecoin)
+	true_cell(6, zerocoins)
+	true_cell(7, onecoin)
+	true_cell(8, zerocoins)
+	true_step(4)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, onecoin)
+	true_cell(2, onecoin)
+	true_cell(3, zerocoins)
+	true_cell(4, onecoin)
+	true_cell(5, onecoin)
+	true_cell(6, twocoins)
+	true_cell(7, onecoin)
+	true_cell(8, onecoin)
+	true_step(2)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, onecoin)
+	true_cell(2, twocoins)
+	true_cell(3, onecoin)
+	true_cell(4, onecoin)
+	true_cell(5, zerocoins)
+	true_cell(6, zerocoins)
+	true_cell(7, onecoin)
+	true_cell(8, twocoins)
+	true_step(3)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, onecoin)
+	true_cell(2, twocoins)
+	true_cell(3, twocoins)
+	true_cell(4, onecoin)
+	true_cell(5, zerocoins)
+	true_cell(6, onecoin)
+	true_cell(7, zerocoins)
+	true_cell(8, onecoin)
+	true_step(3)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, onecoin)
+	true_cell(2, twocoins)
+	true_cell(3, twocoins)
+	true_cell(4, zerocoins)
+	true_cell(5, zerocoins)
+	true_cell(6, zerocoins)
+	true_cell(7, onecoin)
+	true_cell(8, twocoins)
+	true_step(4)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, onecoin)
+	true_cell(2, zerocoins)
+	true_cell(3, onecoin)
+	true_cell(4, twocoins)
+	true_cell(5, zerocoins)
+	true_cell(6, twocoins)
+	true_cell(7, zerocoins)
+	true_cell(8, twocoins)
+	true_step(4)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, onecoin)
+	true_cell(2, twocoins)
+	true_cell(3, onecoin)
+	true_cell(4, onecoin)
+	true_cell(5, zerocoins)
+	true_cell(6, onecoin)
+	true_cell(7, onecoin)
+	true_cell(8, onecoin)
+	true_step(2)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, onecoin)
+	true_cell(2, onecoin)
+	true_cell(3, onecoin)
+	true_cell(4, zerocoins)
+	true_cell(5, onecoin)
+	true_cell(6, onecoin)
+	true_cell(7, twocoins)
+	true_cell(8, onecoin)
+	true_step(2)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, onecoin)
+	true_cell(2, onecoin)
+	true_cell(3, twocoins)
+	true_cell(4, twocoins)
+	true_cell(5, zerocoins)
+	true_cell(6, onecoin)
+	true_cell(7, zerocoins)
+	true_cell(8, onecoin)
+	true_step(3)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, twocoins)
+	true_cell(2, twocoins)
+	true_cell(3, zerocoins)
+	true_cell(4, onecoin)
+	true_cell(5, zerocoins)
+	true_cell(6, onecoin)
+	true_cell(7, onecoin)
+	true_cell(8, onecoin)
+	true_step(3)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, zerocoins)
+	true_cell(2, onecoin)
+	true_cell(3, onecoin)
+	true_cell(4, zerocoins)
+	true_cell(5, twocoins)
+	true_cell(6, twocoins)
+	true_cell(7, twocoins)
+	true_cell(8, zerocoins)
+	true_step(4)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, twocoins)
+	true_cell(2, onecoin)
+	true_cell(3, twocoins)
+	true_cell(4, zerocoins)
+	true_cell(5, twocoins)
+	true_cell(6, zerocoins)
+	true_cell(7, onecoin)
+	true_cell(8, zerocoins)
+	true_step(4)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, onecoin)
+	true_cell(2, zerocoins)
+	true_cell(3, twocoins)
+	true_cell(4, twocoins)
+	true_cell(5, onecoin)
+	true_cell(6, zerocoins)
+	true_cell(7, onecoin)
+	true_cell(8, onecoin)
+	true_step(3)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, onecoin)
+	true_cell(2, twocoins)
+	true_cell(3, zerocoins)
+	true_cell(4, twocoins)
+	true_cell(5, zerocoins)
+	true_cell(6, twocoins)
+	true_cell(7, onecoin)
+	true_cell(8, zerocoins)
+	true_step(4)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, onecoin)
+	true_cell(2, onecoin)
+	true_cell(3, zerocoins)
+	true_cell(4, onecoin)
+	true_cell(5, zerocoins)
+	true_cell(6, onecoin)
+	true_cell(7, twocoins)
+	true_cell(8, twocoins)
+	true_step(3)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, zerocoins)
+	true_cell(2, onecoin)
+	true_cell(3, onecoin)
+	true_cell(4, twocoins)
+	true_cell(5, onecoin)
+	true_cell(6, onecoin)
+	true_cell(7, onecoin)
+	true_cell(8, onecoin)
+	true_step(2)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, onecoin)
+	true_cell(2, twocoins)
+	true_cell(3, onecoin)
+	true_cell(4, zerocoins)
+	true_cell(5, zerocoins)
+	true_cell(6, onecoin)
+	true_cell(7, onecoin)
+	true_cell(8, twocoins)
+	true_step(3)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, onecoin)
+	true_cell(2, onecoin)
+	true_cell(3, zerocoins)
+	true_cell(4, onecoin)
+	true_cell(5, zerocoins)
+	true_cell(6, twocoins)
+	true_cell(7, twocoins)
+	true_cell(8, onecoin)
+	true_step(3)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, twocoins)
+	true_cell(2, onecoin)
+	true_cell(3, onecoin)
+	true_cell(4, zerocoins)
+	true_cell(5, onecoin)
+	true_cell(6, onecoin)
+	true_cell(7, onecoin)
+	true_cell(8, onecoin)
+	true_step(2)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, onecoin)
+	true_cell(2, twocoins)
+	true_cell(3, twocoins)
+	true_cell(4, zerocoins)
+	true_cell(5, zerocoins)
+	true_cell(6, onecoin)
+	true_cell(7, zerocoins)
+	true_cell(8, twocoins)
+	true_step(4)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, zerocoins)
+	true_cell(2, onecoin)
+	true_cell(3, zerocoins)
+	true_cell(4, onecoin)
+	true_cell(5, zerocoins)
+	true_cell(6, twocoins)
+	true_cell(7, twocoins)
+	true_cell(8, twocoins)
+	true_step(4)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, onecoin)
+	true_cell(2, twocoins)
+	true_cell(3, onecoin)
+	true_cell(4, zerocoins)
+	true_cell(5, zerocoins)
+	true_cell(6, zerocoins)
+	true_cell(7, twocoins)
+	true_cell(8, twocoins)
+	true_step(4)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, zerocoins)
+	true_cell(2, onecoin)
+	true_cell(3, zerocoins)
+	true_cell(4, twocoins)
+	true_cell(5, zerocoins)
+	true_cell(6, twocoins)
+	true_cell(7, onecoin)
+	true_cell(8, twocoins)
+	true_step(4)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, onecoin)
+	true_cell(2, onecoin)
+	true_cell(3, onecoin)
+	true_cell(4, twocoins)
+	true_cell(5, twocoins)
+	true_cell(6, zerocoins)
+	true_cell(7, onecoin)
+	true_cell(8, zerocoins)
+	true_step(3)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, zerocoins)
+	true_cell(2, onecoin)
+	true_cell(3, onecoin)
+	true_cell(4, zerocoins)
+	true_cell(5, twocoins)
+	true_cell(6, onecoin)
+	true_cell(7, twocoins)
+	true_cell(8, onecoin)
+	true_step(3)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, onecoin)
+	true_cell(2, twocoins)
+	true_cell(3, twocoins)
+	true_cell(4, twocoins)
+	true_cell(5, zerocoins)
+	true_cell(6, zerocoins)
+	true_cell(7, onecoin)
+	true_cell(8, zerocoins)
+	true_step(4)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, zerocoins)
+	true_cell(2, onecoin)
+	true_cell(3, twocoins)
+	true_cell(4, twocoins)
+	true_cell(5, zerocoins)
+	true_cell(6, onecoin)
+	true_cell(7, onecoin)
+	true_cell(8, onecoin)
+	true_step(3)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, twocoins)
+	true_cell(2, onecoin)
+	true_cell(3, zerocoins)
+	true_cell(4, zerocoins)
+	true_cell(5, onecoin)
+	true_cell(6, onecoin)
+	true_cell(7, twocoins)
+	true_cell(8, onecoin)
+	true_step(3)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, zerocoins)
+	true_cell(2, twocoins)
+	true_cell(3, twocoins)
+	true_cell(4, zerocoins)
+	true_cell(5, zerocoins)
+	true_cell(6, zerocoins)
+	true_cell(7, twocoins)
+	true_cell(8, twocoins)
+	true_step(5)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, onecoin)
+	true_cell(2, twocoins)
+	true_cell(3, onecoin)
+	true_cell(4, zerocoins)
+	true_cell(5, onecoin)
+	true_cell(6, zerocoins)
+	true_cell(7, twocoins)
+	true_cell(8, onecoin)
+	true_step(3)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, onecoin)
+	true_cell(2, twocoins)
+	true_cell(3, twocoins)
+	true_cell(4, zerocoins)
+	true_cell(5, onecoin)
+	true_cell(6, zerocoins)
+	true_cell(7, onecoin)
+	true_cell(8, onecoin)
+	true_step(3)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, onecoin)
+	true_cell(2, zerocoins)
+	true_cell(3, onecoin)
+	true_cell(4, twocoins)
+	true_cell(5, twocoins)
+	true_cell(6, zerocoins)
+	true_cell(7, onecoin)
+	true_cell(8, onecoin)
+	true_step(3)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, twocoins)
+	true_cell(2, twocoins)
+	true_cell(3, zerocoins)
+	true_cell(4, onecoin)
+	true_cell(5, zerocoins)
+	true_cell(6, zerocoins)
+	true_cell(7, onecoin)
+	true_cell(8, twocoins)
+	true_step(4)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, zerocoins)
+	true_cell(2, twocoins)
+	true_cell(3, twocoins)
+	true_cell(4, twocoins)
+	true_cell(5, zerocoins)
+	true_cell(6, onecoin)
+	true_cell(7, onecoin)
+	true_cell(8, zerocoins)
+	true_step(4)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, twocoins)
+	true_cell(2, zerocoins)
+	true_cell(3, twocoins)
+	true_cell(4, zerocoins)
+	true_cell(5, twocoins)
+	true_cell(6, onecoin)
+	true_cell(7, zerocoins)
+	true_cell(8, onecoin)
+	true_step(4)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, onecoin)
+	true_cell(2, twocoins)
+	true_cell(3, onecoin)
+	true_cell(4, twocoins)
+	true_cell(5, zerocoins)
+	true_cell(6, onecoin)
+	true_cell(7, onecoin)
+	true_cell(8, zerocoins)
+	true_step(3)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, twocoins)
+	true_cell(2, onecoin)
+	true_cell(3, onecoin)
+	true_cell(4, zerocoins)
+	true_cell(5, zerocoins)
+	true_cell(6, onecoin)
+	true_cell(7, twocoins)
+	true_cell(8, onecoin)
+	true_step(3)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, twocoins)
+	true_cell(2, onecoin)
+	true_cell(3, zerocoins)
+	true_cell(4, zerocoins)
+	true_cell(5, twocoins)
+	true_cell(6, twocoins)
+	true_cell(7, onecoin)
+	true_cell(8, zerocoins)
+	true_step(4)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, onecoin)
+	true_cell(2, onecoin)
+	true_cell(3, zerocoins)
+	true_cell(4, onecoin)
+	true_cell(5, twocoins)
+	true_cell(6, twocoins)
+	true_cell(7, zerocoins)
+	true_cell(8, onecoin)
+	true_step(3)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, onecoin)
+	true_cell(2, onecoin)
+	true_cell(3, onecoin)
+	true_cell(4, onecoin)
+	true_cell(5, twocoins)
+	true_cell(6, onecoin)
+	true_cell(7, onecoin)
+	true_cell(8, zerocoins)
+	true_step(2)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, twocoins)
+	true_cell(2, onecoin)
+	true_cell(3, zerocoins)
+	true_cell(4, onecoin)
+	true_cell(5, zerocoins)
+	true_cell(6, zerocoins)
+	true_cell(7, twocoins)
+	true_cell(8, twocoins)
+	true_step(4)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, zerocoins)
+	true_cell(2, onecoin)
+	true_cell(3, onecoin)
+	true_cell(4, zerocoins)
+	true_cell(5, twocoins)
+	true_cell(6, zerocoins)
+	true_cell(7, twocoins)
+	true_cell(8, twocoins)
+	true_step(4)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, twocoins)
+	true_cell(2, twocoins)
+	true_cell(3, zerocoins)
+	true_cell(4, zerocoins)
+	true_cell(5, zerocoins)
+	true_cell(6, onecoin)
+	true_cell(7, twocoins)
+	true_cell(8, onecoin)
+	true_step(4)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, twocoins)
+	true_cell(2, onecoin)
+	true_cell(3, zerocoins)
+	true_cell(4, onecoin)
+	true_cell(5, zerocoins)
+	true_cell(6, twocoins)
+	true_cell(7, onecoin)
+	true_cell(8, onecoin)
+	true_step(3)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, onecoin)
+	true_cell(2, onecoin)
+	true_cell(3, twocoins)
+	true_cell(4, onecoin)
+	true_cell(5, zerocoins)
+	true_cell(6, onecoin)
+	true_cell(7, zerocoins)
+	true_cell(8, twocoins)
+	true_step(3)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, onecoin)
+	true_cell(2, zerocoins)
+	true_cell(3, twocoins)
+	true_cell(4, twocoins)
+	true_cell(5, zerocoins)
+	true_cell(6, onecoin)
+	true_cell(7, zerocoins)
+	true_cell(8, twocoins)
+	true_step(4)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, twocoins)
+	true_cell(2, onecoin)
+	true_cell(3, twocoins)
+	true_cell(4, zerocoins)
+	true_cell(5, onecoin)
+	true_cell(6, onecoin)
+	true_cell(7, zerocoins)
+	true_cell(8, onecoin)
+	true_step(3)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, twocoins)
+	true_cell(2, twocoins)
+	true_cell(3, twocoins)
+	true_cell(4, zerocoins)
+	true_cell(5, zerocoins)
+	true_cell(6, onecoin)
+	true_cell(7, zerocoins)
+	true_cell(8, onecoin)
+	true_step(4)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, onecoin)
+	true_cell(2, zerocoins)
+	true_cell(3, onecoin)
+	true_cell(4, zerocoins)
+	true_cell(5, zerocoins)
+	true_cell(6, twocoins)
+	true_cell(7, twocoins)
+	true_cell(8, twocoins)
+	true_step(4)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, twocoins)
+	true_cell(2, onecoin)
+	true_cell(3, onecoin)
+	true_cell(4, zerocoins)
+	true_cell(5, twocoins)
+	true_cell(6, onecoin)
+	true_cell(7, onecoin)
+	true_cell(8, zerocoins)
+	true_step(3)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, zerocoins)
+	true_cell(2, twocoins)
+	true_cell(3, twocoins)
+	true_cell(4, onecoin)
+	true_cell(5, zerocoins)
+	true_cell(6, zerocoins)
+	true_cell(7, onecoin)
+	true_cell(8, twocoins)
+	true_step(4)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, twocoins)
+	true_cell(2, onecoin)
+	true_cell(3, zerocoins)
+	true_cell(4, zerocoins)
+	true_cell(5, zerocoins)
+	true_cell(6, twocoins)
+	true_cell(7, twocoins)
+	true_cell(8, onecoin)
+	true_step(4)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, zerocoins)
+	true_cell(2, onecoin)
+	true_cell(3, onecoin)
+	true_cell(4, twocoins)
+	true_cell(5, zerocoins)
+	true_cell(6, onecoin)
+	true_cell(7, onecoin)
+	true_cell(8, twocoins)
+	true_step(3)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, onecoin)
+	true_cell(2, onecoin)
+	true_cell(3, onecoin)
+	true_cell(4, onecoin)
+	true_cell(5, zerocoins)
+	true_cell(6, onecoin)
+	true_cell(7, onecoin)
+	true_cell(8, twocoins)
+	true_step(2)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, twocoins)
+	true_cell(2, twocoins)
+	true_cell(3, onecoin)
+	true_cell(4, zerocoins)
+	true_cell(5, zerocoins)
+	true_cell(6, onecoin)
+	true_cell(7, zerocoins)
+	true_cell(8, twocoins)
+	true_step(4)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, zerocoins)
+	true_cell(2, onecoin)
+	true_cell(3, onecoin)
+	true_cell(4, twocoins)
+	true_cell(5, twocoins)
+	true_cell(6, onecoin)
+	true_cell(7, onecoin)
+	true_cell(8, zerocoins)
+	true_step(3)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, zerocoins)
+	true_cell(2, onecoin)
+	true_cell(3, twocoins)
+	true_cell(4, twocoins)
+	true_cell(5, zerocoins)
+	true_cell(6, zerocoins)
+	true_cell(7, onecoin)
+	true_cell(8, twocoins)
+	true_step(4)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, zerocoins)
+	true_cell(2, twocoins)
+	true_cell(3, twocoins)
+	true_cell(4, zerocoins)
+	true_cell(5, zerocoins)
+	true_cell(6, onecoin)
+	true_cell(7, onecoin)
+	true_cell(8, twocoins)
+	true_step(4)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, onecoin)
+	true_cell(2, onecoin)
+	true_cell(3, onecoin)
+	true_cell(4, zerocoins)
+	true_cell(5, twocoins)
+	true_cell(6, twocoins)
+	true_cell(7, onecoin)
+	true_cell(8, zerocoins)
+	true_step(3)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_cell(1, zerocoins)
+	true_cell(2, twocoins)
+	true_cell(3, twocoins)
+	true_cell(4, onecoin)
+	true_cell(5, zerocoins)
+	true_cell(6, onecoin)
+	true_cell(7, onecoin)
+	true_cell(8, onecoin)
+	true_step(3)
+
+---
+
+positives:
+
+---
+
+background:
+	true_cell(1, onecoin)
+	true_cell(2, onecoin)
+	true_cell(3, onecoin)
+	true_cell(4, zerocoins)
+	true_cell(5, onecoin)
+	true_cell(6, zerocoins)
+	true_cell(7, twocoins)
+	true_cell(8, twocoins)
+	true_step(3)
+
+---
+
+positives:
+
+---
+

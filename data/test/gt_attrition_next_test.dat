@@ -1,0 +1,159 @@
+atoms:
+	next_claim_made_by(black)
+	next_claim_made_by(white)
+	next_control(black)
+	next_control(white)
+	next_gameOver()
+	next_score(black, 0)
+	next_score(white, 0)
+	next_score(black, 10)
+	next_score(white, 10)
+	next_score(black, 100)
+	next_score(white, 100)
+	next_score(black, 15)
+	next_score(white, 15)
+	next_score(black, 20)
+	next_score(white, 20)
+	next_score(black, 25)
+	next_score(white, 25)
+	next_score(black, 30)
+	next_score(white, 30)
+	next_score(black, 35)
+	next_score(white, 35)
+	next_score(black, 40)
+	next_score(white, 40)
+	next_score(black, 45)
+	next_score(white, 45)
+	next_score(black, 5)
+	next_score(white, 5)
+	next_score(black, 50)
+	next_score(white, 50)
+	next_score(black, 55)
+	next_score(white, 55)
+	next_score(black, 60)
+	next_score(white, 60)
+	next_score(black, 65)
+	next_score(white, 65)
+	next_score(black, 70)
+	next_score(white, 70)
+	next_score(black, 75)
+	next_score(white, 75)
+	next_score(black, 80)
+	next_score(white, 80)
+	next_score(black, 85)
+	next_score(white, 85)
+	next_score(black, 90)
+	next_score(white, 90)
+	next_score(black, 95)
+	next_score(white, 95)
+
+---
+
+statics:
+	opponent(black, white)
+	opponent(white, black)
+	role(black)
+	role(white)
+	succ(0, 5)
+	succ(10, 15)
+	succ(15, 20)
+	succ(20, 25)
+	succ(25, 30)
+	succ(30, 35)
+	succ(35, 40)
+	succ(40, 45)
+	succ(45, 50)
+	succ(5, 10)
+	succ(50, 55)
+	succ(55, 60)
+	succ(60, 65)
+	succ(65, 70)
+	succ(70, 75)
+	succ(75, 80)
+	succ(80, 85)
+	succ(85, 90)
+	succ(90, 95)
+	succ(95, 100)
+
+---
+
+background:
+	does(black, noop)
+	does(white, end_game)
+	true_claim_made_by(black)
+	true_control(white)
+	true_score(black, 75)
+	true_score(white, 75)
+
+---
+
+positives:
+	next_control(black)
+	next_gameOver()
+	next_score(black, 100)
+	next_score(white, 75)
+
+---
+
+background:
+	does(black, end_game)
+	does(white, noop)
+	true_claim_made_by(white)
+	true_control(black)
+	true_score(black, 75)
+	true_score(white, 70)
+
+---
+
+positives:
+	next_control(white)
+	next_gameOver()
+	next_score(black, 75)
+	next_score(white, 95)
+
+---
+
+background:
+	does(black, end_game)
+	does(white, noop)
+	true_claim_made_by(white)
+	true_control(black)
+	true_score(black, 80)
+	true_score(white, 75)
+
+---
+
+positives:
+	next_control(white)
+	next_gameOver()
+	next_score(black, 80)
+	next_score(white, 100)
+
+---
+
+background:
+	true_control(black)
+	true_gameOver()
+	true_score(black, 95)
+	true_score(white, 70)
+
+---
+
+positives:
+	next_control(white)
+
+---
+
+background:
+	true_control(white)
+	true_gameOver()
+	true_score(black, 80)
+	true_score(white, 100)
+
+---
+
+positives:
+	next_control(black)
+
+---
+

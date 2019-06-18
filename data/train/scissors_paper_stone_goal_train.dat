@@ -1,0 +1,193 @@
+atoms:
+	goal(p1, 0)
+	goal(p2, 0)
+	goal(p1, 1)
+	goal(p2, 1)
+	goal(p1, 2)
+	goal(p2, 2)
+	goal(p1, 3)
+	goal(p2, 3)
+
+---
+
+statics:
+	beats(paper, stone)
+	beats(scissors, paper)
+	beats(stone, scissors)
+	player(p1)
+	player(p2)
+	succ(0, 1)
+	succ(1, 2)
+	succ(2, 3)
+
+---
+
+background:
+	true_score(p1, 1)
+	true_score(p2, 1)
+	true_step(3)
+
+---
+
+positives:
+	goal(p1, 1)
+	goal(p2, 1)
+
+---
+
+background:
+	true_score(p1, 3)
+	true_score(p2, 0)
+	true_step(3)
+
+---
+
+positives:
+	goal(p1, 3)
+	goal(p2, 0)
+
+---
+
+background:
+	true_score(p1, 0)
+	true_score(p2, 1)
+	true_step(2)
+
+---
+
+positives:
+	goal(p1, 0)
+	goal(p2, 1)
+
+---
+
+background:
+	true_score(p1, 2)
+	true_score(p2, 0)
+	true_step(2)
+
+---
+
+positives:
+	goal(p1, 2)
+	goal(p2, 0)
+
+---
+
+background:
+	true_score(p1, 0)
+	true_score(p2, 2)
+	true_step(3)
+
+---
+
+positives:
+	goal(p1, 0)
+	goal(p2, 2)
+
+---
+
+background:
+	true_score(p1, 2)
+	true_score(p2, 1)
+	true_step(3)
+
+---
+
+positives:
+	goal(p1, 2)
+	goal(p2, 1)
+
+---
+
+background:
+	true_score(p1, 0)
+	true_score(p2, 0)
+	true_step(2)
+
+---
+
+positives:
+	goal(p1, 0)
+	goal(p2, 0)
+
+---
+
+background:
+	true_score(p1, 1)
+	true_score(p2, 0)
+	true_step(1)
+
+---
+
+positives:
+	goal(p1, 1)
+	goal(p2, 0)
+
+---
+
+background:
+	true_score(p1, 0)
+	true_score(p2, 1)
+	true_step(3)
+
+---
+
+positives:
+	goal(p1, 0)
+	goal(p2, 1)
+
+---
+
+background:
+	true_score(p1, 1)
+	true_score(p2, 2)
+	true_step(3)
+
+---
+
+positives:
+	goal(p1, 1)
+	goal(p2, 2)
+
+---
+
+background:
+	true_score(p1, 0)
+	true_score(p2, 0)
+	true_step(0)
+
+---
+
+positives:
+	goal(p1, 0)
+	goal(p2, 0)
+
+---
+
+background:
+	true_score(p1, 1)
+	true_score(p2, 0)
+	true_step(2)
+
+---
+
+positives:
+	goal(p1, 1)
+	goal(p2, 0)
+
+---
+
+background:
+	true_score(p1, 0)
+	true_score(p2, 2)
+	true_step(2)
+
+---
+
+positives:
+	goal(p1, 0)
+	goal(p2, 2)
+
+---
+

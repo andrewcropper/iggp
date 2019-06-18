@@ -1,0 +1,142 @@
+atoms:
+	terminal()
+
+---
+
+statics:
+	even(0)
+	even(10)
+	even(2)
+	even(4)
+	even(6)
+	even(8)
+	num(0)
+	num(1)
+	num(10)
+	num(2)
+	num(3)
+	num(4)
+	num(5)
+	num(6)
+	num(7)
+	num(8)
+	num(9)
+	succ(0, 1)
+	succ(1, 2)
+	succ(2, 3)
+	succ(3, 4)
+	succ(4, 5)
+	succ(5, 6)
+	succ(6, 7)
+	succ(7, 8)
+	succ(8, 9)
+	succ(9, 10)
+
+---
+
+background:
+	true_chosen(6)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_chosen(6)
+	true_chosen(9)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_chosen(3)
+	true_chosen(5)
+	true_chosen(9)
+
+---
+
+positives:
+
+---
+
+background:
+	true_chosen(1)
+	true_chosen(7)
+
+---
+
+positives:
+
+---
+
+background:
+	true_chosen(4)
+	true_chosen(7)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_chosen(1)
+	true_chosen(9)
+
+---
+
+positives:
+
+---
+
+background:
+	true_chosen(0)
+	true_chosen(7)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_chosen(8)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_chosen(1)
+	true_chosen(5)
+	true_chosen(7)
+
+---
+
+positives:
+
+---
+
+background:
+	true_chosen(2)
+	true_chosen(5)
+
+---
+
+positives:
+	terminal()
+
+---
+

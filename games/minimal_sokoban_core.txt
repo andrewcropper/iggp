@@ -1,0 +1,137 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Sokoban
+;;; 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(role black)
+
+(<= (base (at ?p ?obj)) (bounds ?p) (object ?obj))
+
+(<= (base (target ?p)) (bounds ?p))
+
+(<= (input ?r noop) (role ?r))
+(<= (input ?r left) (role ?r))
+(<= (input ?r right) (role ?r))
+(<= (input ?r up) (role ?r))
+(<= (input ?r down) (role ?r))
+
+(object x)
+(object obj1)
+(object obj2)
+
+(is_box obj1)
+(is_box obj2)
+
+(controls black x)
+(player_obj x)
+
+(<= (legal ?r noop) (controls ?r ?obj))
+
+(<= (legal ?r ?a) (controls ?r ?obj) (true (at ?p ?obj)) (dir ?p ?a ?p2) (aux_clear ?p2))
+
+(<= (legal ?r ?a) (controls ?r ?obj) (true (at ?p ?obj)) (dir ?p ?a ?p2) (aux_box_at ?p2) (dir ?p2 ?a ?p3) (aux_clear ?p3))
+
+(<= (aux_box_moves_dir ?box ?a) (controls ?r ?obj) (true (at ?p ?obj)) (does ?r ?a) (dir ?p ?a ?p2) (true (at ?p2 ?box)) (is_box ?box) (dir ?p2 ?a ?p3) (aux_clear ?p3))
+
+(<= (aux_is_moving ?box) (aux_box_moves_dir ?box ?dir))
+
+(<= (next (at ?p ?obj)) (true (at ?p ?obj)) (does ?r ?a) (not (player_obj ?obj)) (not (aux_is_moving ?obj)))
+
+(<= (next (at ?p ?obj)) (true (at ?p ?obj)) (does ?r noop) (controls ?r ?obj))
+
+(<= (next (at ?p ?obj)) (true (at ?p2 ?obj)) (does ?r ?a) (controls ?r ?obj) (dir ?p2 ?a ?p))
+
+(<= (next (at ?p ?obj)) (true (at ?p2 ?obj)) (aux_box_moves_dir ?obj ?a) (dir ?p2 ?a ?p))
+
+(<= (next (target ?p)) (true (target ?p)))
+
+(<= (aux_clear ?p) (bounds ?p) (not (aux_something_at ?p)))
+
+(<= (aux_something_at ?p) (true (at ?p ?obj)))
+(<= (aux_something_at ?p) (wall_at ?p))
+
+(<= (aux_box_at ?p) (true (at ?p ?obj)) (is_box ?obj))
+
+(<= (goal ?r 100) (reward ?r))
+
+(<= (reward ?r) (role ?r) (not (aux_box_out_of_place ?r)))
+
+(<= (aux_box_out_of_place ?r) (role ?r) (is_box ?box) (true (at ?xp ?box)) (not (true (target ?p))))
+
+(<= terminal (role ?r) (not (aux_box_out_of_place ?r)))
+
+(is_noop noop)
+
+(bounds pos11)
+(bounds pos12)
+(bounds pos13)
+(bounds pos14)
+(bounds pos15)
+(bounds pos21)
+(bounds pos22)
+(bounds pos23)
+(bounds pos24)
+(bounds pos25)
+(bounds pos31)
+(bounds pos32)
+(bounds pos33)
+(bounds pos34)
+(bounds pos35)
+(bounds pos41)
+(bounds pos42)
+(bounds pos43)
+(bounds pos44)
+(bounds pos45)
+(bounds pos51)
+(bounds pos52)
+(bounds pos53)
+(bounds pos54)
+(bounds pos55)
+
+(dir pos21 left pos11)
+(dir pos31 left pos21)
+(dir pos41 left pos31)
+(dir pos51 left pos41)
+(dir pos22 left pos12)
+(dir pos32 left pos22)
+(dir pos42 left pos32)
+(dir pos52 left pos42)
+(dir pos23 left pos13)
+(dir pos33 left pos23)
+(dir pos43 left pos33)
+(dir pos53 left pos43)
+(dir pos24 left pos14)
+(dir pos34 left pos24)
+(dir pos44 left pos34)
+(dir pos54 left pos44)
+(dir pos25 left pos15)
+(dir pos35 left pos25)
+(dir pos45 left pos35)
+(dir pos55 left pos45)
+
+(<= (dir ?P1 right ?P2) (dir ?P2 left ?P1))
+
+(dir pos11 up pos12)
+(dir pos12 up pos13)
+(dir pos13 up pos14)
+(dir pos14 up pos15)
+(dir pos21 up pos22)
+(dir pos22 up pos23)
+(dir pos23 up pos24)
+(dir pos24 up pos25)
+(dir pos31 up pos32)
+(dir pos32 up pos33)
+(dir pos33 up pos34)
+(dir pos34 up pos35)
+(dir pos41 up pos42)
+(dir pos42 up pos43)
+(dir pos43 up pos44)
+(dir pos44 up pos45)
+(dir pos51 up pos52)
+(dir pos52 up pos53)
+(dir pos53 up pos54)
+(dir pos54 up pos55)
+
+(<= (dir ?P1 down ?P2) (dir ?P2 up ?P1))
+
+

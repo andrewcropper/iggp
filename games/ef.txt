@@ -1,0 +1,79 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; E-F games. Spoiler tries to find a difference between the structures.
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(role spoiler)
+(role duplicator)
+
+(init (control spoiler))
+
+(init (step 0) )
+
+(<= (next (control duplicator)) (true (control spoiler)))
+(<= (next (control spoiler)) (true (control duplicator)))
+
+(succ 0 1)
+(succ 1 2)
+(succ 2 3)
+(succ 3 4)
+(succ 4 5)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Setup
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(num_steps 2)
+
+(graph_node a 1)
+(graph_node a 2)
+(graph_node b 1)
+(graph_node b 2)
+(graph_node b 3)
+
+(adj a 1 2)
+(adj b 1 2)
+(adj b 2 3)
+;(adj b 1 3)
+
+(other a b)
+(other b a)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Rules
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(<= (graph ?X) (graph_node ?X ?N))
+
+(<= (adj ?G ?X ?Y) (adj ?G ?Y ?X))
+
+(<= (legal spoiler noop) (true (control duplicator)))
+    
+(<= (legal duplicator noop) (true (control spoiler)))
+    
+(<= (legal spoiler (choose ?G ?N)) (graph_node ?G ?N) (true (control spoiler)))
+
+(<= (legal duplicator (choose ?G ?N)) (true (step ?T)) (true (choice ?T spoiler ?Other ?M)) (other ?G ?Other) (graph_node ?G ?N) (true (control duplicator)))
+
+(<= (next (step ?N)) (true (step ?M)) (does duplicator (choose ?X ?Y)) (succ ?M ?N))
+(<= (next (step ?N)) (true (step ?N)) (does spoiler (choose ?X ?Y)))
+
+(<= (next (choice ?T ?Agent ?G ?N)) (true (choice ?T ?Agent ?G ?N)))
+
+(<= (next (choice ?T ?Agent ?G ?N)) (true (step ?T)) (does ?Agent (choose ?G ?N)))
+
+(<= terminal (true (step ?T)) (num_steps ?T))
+
+(<= (move_a ?T ?N) (true (choice ?T ?Agent a ?N)))
+(<= (move_b ?T ?N) (true (choice ?T ?Agent b ?N)))
+
+(<= equality_failure (move_a ?T1 ?A) (move_a ?T2 ?A) (move_b ?T1 ?B1) (move_b ?T2 ?B2) (distinct ?B1 ?B2))
+
+(<= equality_failure (move_b ?T1 ?B) (move_b ?T2 ?B) (move_a ?T1 ?A1) (move_a ?T2 ?A2) (distinct ?A1 ?A2))
+
+(<= adjacency_failure (move_a ?T1 ?A1) (move_a ?T2 ?A2) (adj a ?A1 ?A2) (move_b ?T1 ?B1) (move_b ?T2 ?B2) (not (adj b ?B1 ?B2)))
+
+(<= adjacency_failure (move_a ?T1 ?A1) (move_a ?T2 ?A2) (not (adj a ?A1 ?A2)) (move_b ?T1 ?B1) (move_b ?T2 ?B2) (adj b ?B1 ?B2))
+
+(<= (goal spoiler 100) equality_failure)
+(<= (goal spoiler 50) adjacency_failure)
+

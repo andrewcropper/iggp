@@ -1,0 +1,64 @@
+atoms:
+	legal(black, continue)
+	legal(white, continue)
+	legal(black, finish)
+	legal(white, finish)
+	legal(black, noop)
+	legal(white, noop)
+
+---
+
+statics:
+	role(black)
+	role(white)
+	succ(0, 5)
+	succ(10, 15)
+	succ(15, 20)
+	succ(20, 25)
+	succ(25, 30)
+	succ(30, 35)
+	succ(35, 40)
+	succ(40, 45)
+	succ(45, 50)
+	succ(5, 10)
+	succ(50, 55)
+	succ(55, 60)
+	succ(60, 65)
+	succ(65, 70)
+	succ(70, 75)
+	succ(75, 80)
+	succ(80, 85)
+	succ(85, 90)
+	succ(90, 95)
+	succ(95, 100)
+
+---
+
+background:
+	true_blackPayoff(10)
+	true_control(white)
+	true_whitePayoff(15)
+
+---
+
+positives:
+	legal(black, noop)
+	legal(white, continue)
+	legal(white, finish)
+
+---
+
+background:
+	true_blackPayoff(25)
+	true_control(black)
+	true_whitePayoff(10)
+
+---
+
+positives:
+	legal(black, continue)
+	legal(black, finish)
+	legal(white, noop)
+
+---
+

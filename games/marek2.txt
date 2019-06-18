@@ -1,0 +1,13 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Marek's example 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(policeman Eric)
+(detective Frank)
+(rich Frank)
+
+(<= (takes_bribes ?x) (detective ?x) (not (honest ?x)))
+
+(<= (honest ?x) (policeman ?x) (not (rich ?x)))
+
+(<= (policeman ?x) (detective ?x))

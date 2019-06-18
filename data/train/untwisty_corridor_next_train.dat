@@ -1,0 +1,695 @@
+atoms:
+	next(p)
+	next(q1)
+	next(q2)
+	next(q3)
+	next(q4)
+	next(q5)
+	next(q6)
+	next(q7)
+	next(q8)
+	next_step(1)
+	next_step(2)
+	next_step(3)
+	next_step(4)
+	next_step(5)
+	next_step(6)
+	next_step(7)
+	next_step(8)
+
+---
+
+statics:
+	input(robot, a)
+	input(robot, b)
+	input(robot, c)
+	input(robot, d)
+	input(robot, e)
+	input(robot, f)
+	input(robot, g)
+	input(robot, h)
+	role(robot)
+	successor(1, 2)
+	successor(2, 3)
+	successor(3, 4)
+	successor(4, 5)
+	successor(5, 6)
+	successor(6, 7)
+	successor(7, 8)
+
+---
+
+background:
+	does(robot, g)
+	true(p)
+	true(q1)
+	true_step(7)
+
+---
+
+positives:
+	next(p)
+	next(q1)
+	next_step(8)
+
+---
+
+background:
+	does(robot, f)
+	true(p)
+	true(q1)
+	true_step(4)
+
+---
+
+positives:
+	next(p)
+	next(q1)
+	next_step(5)
+
+---
+
+background:
+	does(robot, g)
+	true(p)
+	true(q1)
+	true_step(5)
+
+---
+
+positives:
+	next(p)
+	next(q1)
+	next_step(6)
+
+---
+
+background:
+	does(robot, c)
+	true(q1)
+	true(q2)
+	true_step(2)
+
+---
+
+positives:
+	next(p)
+	next(q1)
+	next_step(3)
+
+---
+
+background:
+	does(robot, a)
+	true(p)
+	true(q1)
+	true_step(6)
+
+---
+
+positives:
+	next(p)
+	next(q1)
+	next_step(7)
+
+---
+
+background:
+	does(robot, a)
+	true(p)
+	true(q1)
+	true_step(3)
+
+---
+
+positives:
+	next(p)
+	next(q1)
+	next_step(4)
+
+---
+
+background:
+	does(robot, d)
+	true(p)
+	true(q1)
+	true_step(5)
+
+---
+
+positives:
+	next(p)
+	next(q1)
+	next_step(6)
+
+---
+
+background:
+	does(robot, g)
+	true(p)
+	true(q1)
+	true_step(4)
+
+---
+
+positives:
+	next(p)
+	next(q1)
+	next_step(5)
+
+---
+
+background:
+	does(robot, e)
+	true(q1)
+	true_step(1)
+
+---
+
+positives:
+	next(p)
+	next(q1)
+	next_step(2)
+
+---
+
+background:
+	does(robot, a)
+	true(p)
+	true(q1)
+	true_step(7)
+
+---
+
+positives:
+	next(p)
+	next(q1)
+	next_step(8)
+
+---
+
+background:
+	does(robot, f)
+	true(q1)
+	true_step(1)
+
+---
+
+positives:
+	next(p)
+	next(q1)
+	next_step(2)
+
+---
+
+background:
+	does(robot, d)
+	true(q1)
+	true(q2)
+	true_step(2)
+
+---
+
+positives:
+	next(p)
+	next(q1)
+	next_step(3)
+
+---
+
+background:
+	does(robot, e)
+	true(q1)
+	true(q2)
+	true_step(2)
+
+---
+
+positives:
+	next(p)
+	next(q1)
+	next_step(3)
+
+---
+
+background:
+	does(robot, d)
+	true(p)
+	true(q1)
+	true_step(2)
+
+---
+
+positives:
+	next(p)
+	next(q1)
+	next_step(3)
+
+---
+
+background:
+	does(robot, c)
+	true(p)
+	true(q1)
+	true_step(3)
+
+---
+
+positives:
+	next(p)
+	next(q1)
+	next_step(4)
+
+---
+
+background:
+	does(robot, c)
+	true(p)
+	true(q1)
+	true_step(5)
+
+---
+
+positives:
+	next(p)
+	next(q1)
+	next_step(6)
+
+---
+
+background:
+	does(robot, c)
+	true(p)
+	true(q1)
+	true_step(6)
+
+---
+
+positives:
+	next(p)
+	next(q1)
+	next_step(7)
+
+---
+
+background:
+	does(robot, d)
+	true(q1)
+	true(q2)
+	true(q3)
+	true_step(3)
+
+---
+
+positives:
+	next(p)
+	next(q1)
+	next_step(4)
+
+---
+
+background:
+	does(robot, e)
+	true(p)
+	true(q1)
+	true_step(7)
+
+---
+
+positives:
+	next(p)
+	next(q1)
+	next_step(8)
+
+---
+
+background:
+	does(robot, f)
+	true(p)
+	true(q1)
+	true_step(6)
+
+---
+
+positives:
+	next(p)
+	next(q1)
+	next_step(7)
+
+---
+
+background:
+	does(robot, a)
+	true(p)
+	true(q1)
+	true_step(2)
+
+---
+
+positives:
+	next(p)
+	next(q1)
+	next_step(3)
+
+---
+
+background:
+	does(robot, d)
+	true(p)
+	true(q1)
+	true_step(6)
+
+---
+
+positives:
+	next(p)
+	next(q1)
+	next_step(7)
+
+---
+
+background:
+	does(robot, a)
+	true(p)
+	true(q1)
+	true_step(5)
+
+---
+
+positives:
+	next(p)
+	next(q1)
+	next_step(6)
+
+---
+
+background:
+	does(robot, b)
+	true(p)
+	true(q1)
+	true_step(5)
+
+---
+
+positives:
+	next(p)
+	next(q1)
+	next_step(6)
+
+---
+
+background:
+	does(robot, e)
+	true(p)
+	true(q1)
+	true_step(6)
+
+---
+
+positives:
+	next(p)
+	next(q1)
+	next_step(7)
+
+---
+
+background:
+	does(robot, f)
+	true(q1)
+	true(q2)
+	true(q3)
+	true(q4)
+	true_step(4)
+
+---
+
+positives:
+	next(p)
+	next(q1)
+	next_step(5)
+
+---
+
+background:
+	does(robot, h)
+	true(p)
+	true(q1)
+	true_step(2)
+
+---
+
+positives:
+	next(p)
+	next(q1)
+	next_step(3)
+
+---
+
+background:
+	does(robot, f)
+	true(p)
+	true(q1)
+	true_step(5)
+
+---
+
+positives:
+	next(p)
+	next(q1)
+	next_step(6)
+
+---
+
+background:
+	true(p)
+	true(q1)
+	true_step(8)
+
+---
+
+positives:
+	next(p)
+
+---
+
+background:
+	does(robot, h)
+	true(p)
+	true(q1)
+	true_step(5)
+
+---
+
+positives:
+	next(p)
+	next(q1)
+	next_step(6)
+
+---
+
+background:
+	does(robot, f)
+	true(p)
+	true(q1)
+	true_step(2)
+
+---
+
+positives:
+	next(p)
+	next(q1)
+	next_step(3)
+
+---
+
+background:
+	does(robot, b)
+	true(q1)
+	true(q2)
+	true_step(2)
+
+---
+
+positives:
+	next(p)
+	next(q1)
+	next_step(3)
+
+---
+
+background:
+	does(robot, a)
+	true(p)
+	true(q1)
+	true_step(4)
+
+---
+
+positives:
+	next(p)
+	next(q1)
+	next_step(5)
+
+---
+
+background:
+	does(robot, c)
+	true(q1)
+	true_step(1)
+
+---
+
+positives:
+	next(p)
+	next(q1)
+	next_step(2)
+
+---
+
+background:
+	does(robot, c)
+	true(p)
+	true(q1)
+	true_step(4)
+
+---
+
+positives:
+	next(p)
+	next(q1)
+	next_step(5)
+
+---
+
+background:
+	does(robot, d)
+	true(p)
+	true(q1)
+	true_step(7)
+
+---
+
+positives:
+	next(p)
+	next(q1)
+	next_step(8)
+
+---
+
+background:
+	does(robot, h)
+	true(q1)
+	true_step(1)
+
+---
+
+positives:
+	next(q1)
+	next(q2)
+	next_step(2)
+
+---
+
+background:
+	does(robot, c)
+	true(p)
+	true(q1)
+	true_step(7)
+
+---
+
+positives:
+	next(p)
+	next(q1)
+	next_step(8)
+
+---
+
+background:
+	does(robot, b)
+	true(p)
+	true(q1)
+	true_step(6)
+
+---
+
+positives:
+	next(p)
+	next(q1)
+	next_step(7)
+
+---
+
+background:
+	does(robot, g)
+	true(q1)
+	true_step(1)
+
+---
+
+positives:
+	next(p)
+	next(q1)
+	next_step(2)
+
+---
+
+background:
+	does(robot, g)
+	true(p)
+	true(q1)
+	true_step(2)
+
+---
+
+positives:
+	next(p)
+	next(q1)
+	next_step(3)
+
+---
+
+background:
+	does(robot, b)
+	true(p)
+	true(q1)
+	true_step(3)
+
+---
+
+positives:
+	next(p)
+	next(q1)
+	next_step(4)
+
+---
+
+background:
+	does(robot, d)
+	true(q1)
+	true_step(1)
+
+---
+
+positives:
+	next(p)
+	next(q1)
+	next_step(2)
+
+---
+
+background:
+	does(robot, b)
+	true(p)
+	true(q1)
+	true_step(7)
+
+---
+
+positives:
+	next(p)
+	next(q1)
+	next_step(8)
+
+---
+

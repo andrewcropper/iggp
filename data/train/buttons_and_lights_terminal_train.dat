@@ -1,0 +1,235 @@
+atoms:
+	terminal()
+
+---
+
+statics:
+	input(robot, a)
+	input(robot, b)
+	input(robot, c)
+	role(robot)
+	successor(1, 2)
+	successor(2, 3)
+	successor(3, 4)
+	successor(4, 5)
+	successor(5, 6)
+	successor(6, 7)
+
+---
+
+background:
+	true(7)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true(7)
+	true(r)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true(3)
+	true(p)
+
+---
+
+positives:
+
+---
+
+background:
+	true(7)
+	true(p)
+	true(q)
+	true(r)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true(7)
+	true(p)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true(5)
+	true(q)
+
+---
+
+positives:
+
+---
+
+background:
+	true(5)
+
+---
+
+positives:
+
+---
+
+background:
+	true(7)
+	true(q)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true(3)
+
+---
+
+positives:
+
+---
+
+background:
+	true(4)
+	true(r)
+
+---
+
+positives:
+
+---
+
+background:
+	true(2)
+
+---
+
+positives:
+
+---
+
+background:
+	true(6)
+	true(p)
+	true(r)
+
+---
+
+positives:
+
+---
+
+background:
+	true(5)
+	true(p)
+
+---
+
+positives:
+
+---
+
+background:
+	true(1)
+
+---
+
+positives:
+
+---
+
+background:
+	true(5)
+	true(p)
+	true(r)
+
+---
+
+positives:
+
+---
+
+background:
+	true(4)
+
+---
+
+positives:
+
+---
+
+background:
+	true(7)
+	true(p)
+	true(q)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true(6)
+	true(q)
+	true(r)
+
+---
+
+positives:
+
+---
+
+background:
+	true(6)
+	true(q)
+
+---
+
+positives:
+
+---
+
+background:
+	true(6)
+	true(r)
+
+---
+
+positives:
+
+---
+
+background:
+	true(6)
+	true(p)
+
+---
+
+positives:
+
+---
+

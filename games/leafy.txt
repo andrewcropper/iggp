@@ -1,0 +1,75 @@
+; leafy mcfallface - Jerry Cain
+(role red)
+(role blue)
+(<= (base (leaf ?X ?Y)) (index ?X) (index ?Y))
+(<= (base (isplayer ?X ?Y ?P)) (index ?X) (index ?Y) (role ?P))
+(<= (input ?P (move ?X ?Y)) (role ?P) (index ?X) (index ?Y))
+(index 1)
+(index 2)
+(index 3)
+(index 4)
+(index 5)
+(index 6)
+(index 7)
+(index 8)
+(init (isplayer 1 1 red))
+(init (isplayer 8 8 blue))
+(<= (init (leaf ?X ?Y)) (index ?X) (index ?Y))
+(<= (legal ?P (move ?X ?Y)) (true (leaf ?X ?Y)) (role ?P) (close ?N ?X) (true (isplayer ?N ?Y ?P)))
+(<= (legal ?P (move ?X ?Y)) (true (leaf ?X ?Y)) (role ?P) (close ?N ?Y) (true (isplayer ?X ?N ?P)))
+
+legal_move(P,X,Y):-
+    my_true_leaf(X,Y),
+    close(N,X),
+    my_true_isplayer(N,Y,P).
+
+legal_move(P,X,Y):-
+    my_true_leaf(X,Y),
+    close(N,Y),
+    my_true_isplayer(N,Y,P).
+
+
+pos(legal_move(0,red, 1, 8)).
+
+(close 1 2)
+(close 2 3)
+(close 3 4)
+(close 4 5)
+(close 5 6)
+(close 6 7)
+(close 7 8)
+(close 2 1)
+(close 3 2)
+(close 4 3)
+(close 5 4)
+(close 6 5)
+(close 7 6)
+(close 8 7)
+
+next_isplayer(A,B,C):-does(P,A,B)
+
+(<= (next (isplayer ?X ?Y ?P)) (does ?P (move ?X ?Y)))
+(<= (next (leaf ?X ?Y)) (true (leaf ?X ?Y)) (not (true (isplayer ?X ?Y red))) (not (true (isplayer ?X ?Y blue))))
+(<= (goal red 0) (not (hasmove red)) (hasmove blue))
+(<= (goal blue 100) (not (hasmove red)) (hasmove blue))
+
+
+
+
+(<= (goal red 100) (not (hasmove blue)) (hasmove red))
+(<= (goal blue 0) (not (hasmove blue)) (hasmove red))
+
+(<= (goal ?role 50) (role ?role) (not (hasmove red)) (not (hasmove blue)))
+(<= (goal ?role 50) (role ?role) (hasmove red) (hasmove blue))
+
+(<= terminal (not (hasmove red)))
+(<= terminal (not (hasmove blue)))
+(<= (hasmove ?P) (legal ?P ?A))
+
+goal(red,50):-legal(P)
+
+pos(goal(4,red, 50)).
+pos(goal(4,blue, 50)).
+
+
+terminal:-not_hasmove()

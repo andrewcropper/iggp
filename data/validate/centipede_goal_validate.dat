@@ -1,0 +1,5018 @@
+atoms:
+	goal(black, 0)
+	goal(black, 1)
+	goal(black, 10)
+	goal(black, 100)
+	goal(black, 2)
+	goal(black, 3)
+	goal(black, 4)
+	goal(black, 5)
+	goal(black, 6)
+	goal(black, 7)
+	goal(black, 8)
+
+---
+
+statics:
+	bounds(1)
+	bounds(2)
+	bounds(3)
+	bounds(4)
+	bounds(5)
+	bounds(6)
+	bounds(7)
+	bounds(8)
+	bullet(o)
+	centipede(c)
+	controls(black, x)
+	has_pred(2)
+	has_pred(3)
+	has_pred(4)
+	has_pred(5)
+	has_pred(6)
+	has_pred(7)
+	has_pred(8)
+	has_succ(1)
+	has_succ(2)
+	has_succ(3)
+	has_succ(4)
+	has_succ(5)
+	has_succ(6)
+	has_succ(7)
+	input(black, fire)
+	input(black, left)
+	input(black, noop)
+	input(black, right)
+	is_dir(left)
+	is_dir(right)
+	is_fire(fire)
+	is_left(left)
+	is_noop(noop)
+	is_right(right)
+	object(c)
+	object(o)
+	object(x)
+	role(black)
+	succ(1, 2)
+	succ(2, 3)
+	succ(3, 4)
+	succ(4, 5)
+	succ(5, 6)
+	succ(6, 7)
+	succ(7, 8)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(6, 4, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 1, x)
+	true_at(2, 3, o)
+	true_at(7, 7, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 1, x)
+	true_at(4, 6, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 1, x)
+	true_at(2, 3, c)
+	true_at(3, 8, o)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(1, 2, o)
+	true_at(7, 2, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 1, x)
+	true_at(3, 2, o)
+	true_at(5, 6, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, c)
+	true_at(8, 1, x)
+	true_at(8, 6, o)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 0)
+
+---
+
+background:
+	true_at(2, 6, c)
+	true_at(3, 1, x)
+	true_at(4, 3, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 3, o)
+	true_at(3, 1, x)
+	true_at(3, 7, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, c)
+	true_at(5, 1, x)
+	true_at(6, 8, o)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 0)
+
+---
+
+background:
+	true_at(2, 1, x)
+	true_at(2, 5, o)
+	true_at(3, 7, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(4, 1, x)
+	true_at(4, 2, o)
+	true_at(8, 6, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(1, 5, o)
+	true_at(4, 6, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 2, c)
+	true_at(8, 1, x)
+	true_at(8, 5, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, c)
+	true_at(7, 1, x)
+	true_at(7, 2, o)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 0)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(1, 3, o)
+	true_at(6, 8, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(5, 4, o)
+	true_at(6, 1, x)
+	true_at(8, 3, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(1, 5, c)
+	true_at(2, 4, o)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(7, 1, x)
+	true_at(7, 7, o)
+	true_at(8, 4, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 7, c)
+	true_at(4, 1, x)
+	true_at(4, 5, o)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 1, x)
+	true_at(5, 3, c)
+	true_at(5, 5, o)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(5, 1, x)
+	true_at(5, 2, c)
+	true_at(5, 6, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 5, c)
+	true_at(3, 6, o)
+	true_at(5, 1, x)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 3, c)
+	true_at(6, 1, x)
+	true_at(7, 5, o)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(4, 1, x)
+	true_at(7, 2, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 5, o)
+	true_at(2, 6, c)
+	true_at(3, 1, x)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(4, 3, c)
+	true_at(5, 5, o)
+	true_at(6, 1, x)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 1, x)
+	true_at(3, 7, o)
+	true_at(7, 3, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 8, c)
+	true_at(2, 1, x)
+	true_at(2, 4, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(4, 1, x)
+	true_at(5, 7, o)
+	true_at(7, 3, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 6, c)
+	true_at(5, 1, x)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, c)
+	true_at(7, 1, x)
+	true_at(8, 4, o)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 0)
+
+---
+
+background:
+	true_at(6, 1, x)
+	true_at(8, 4, c)
+	true_at(8, 6, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 6, o)
+	true_at(2, 1, x)
+	true_at(3, 6, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 7, o)
+	true_at(2, 1, x)
+	true_at(6, 2, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(1, 3, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 2, c)
+	true_at(7, 4, o)
+	true_at(8, 1, x)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 1, x)
+	true_at(2, 6, c)
+	true_at(5, 5, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 5, c)
+	true_at(2, 1, x)
+	true_at(2, 6, o)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(4, 8, o)
+	true_at(5, 3, c)
+	true_at(7, 1, x)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(5, 1, x)
+	true_at(5, 2, o)
+	true_at(6, 4, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(6, 8, o)
+	true_at(7, 5, c)
+	true_at(8, 1, x)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(5, 5, o)
+	true_at(7, 1, x)
+	true_at(7, 5, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(4, 1, x)
+	true_at(4, 2, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(5, 1, x)
+	true_at(6, 6, c)
+	true_at(7, 4, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 1, x)
+	true_at(3, 6, o)
+	true_at(7, 5, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(3, 4, o)
+	true_at(4, 3, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(4, 1, x)
+	true_at(5, 4, o)
+	true_at(7, 2, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 1, x)
+	true_at(3, 3, o)
+	true_at(7, 5, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(7, 1, x)
+	true_at(7, 4, c)
+	true_at(7, 8, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(4, 1, x)
+	true_at(4, 4, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 6, c)
+	true_at(2, 6, o)
+	true_at(3, 1, x)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(1, 3, o)
+	true_at(4, 7, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(7, 6, c)
+	true_at(8, 1, x)
+	true_at(8, 2, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 3, c)
+	true_at(3, 1, x)
+	true_at(5, 5, o)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(1, 3, o)
+	true_at(7, 4, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(5, 6, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(5, 1, x)
+	true_at(5, 5, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 6, c)
+	true_at(1, 6, o)
+	true_at(3, 1, x)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(6, 3, c)
+	true_at(7, 1, x)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(1, 6, o)
+	true_at(1, 8, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(4, 1, x)
+	true_at(5, 4, o)
+	true_at(6, 2, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 1, x)
+	true_at(5, 7, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(4, 1, x)
+	true_at(5, 5, o)
+	true_at(6, 4, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(5, 1, x)
+	true_at(7, 2, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 1, x)
+	true_at(6, 5, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(5, 1, x)
+	true_at(5, 8, o)
+	true_at(8, 5, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(7, 1, x)
+	true_at(7, 4, o)
+	true_at(8, 6, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(6, 6, o)
+	true_at(7, 1, x)
+	true_at(8, 2, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 1, x)
+	true_at(2, 3, o)
+	true_at(8, 3, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 2, c)
+	true_at(5, 1, x)
+	true_at(6, 6, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 1, x)
+	true_at(2, 3, o)
+	true_at(3, 7, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 4, c)
+	true_at(2, 1, x)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 2, c)
+	true_at(5, 1, x)
+	true_at(5, 5, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 2, c)
+	true_at(1, 8, o)
+	true_at(3, 1, x)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 1, x)
+	true_at(2, 6, o)
+	true_at(2, 8, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 8, o)
+	true_at(4, 1, x)
+	true_at(8, 5, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 5, c)
+	true_at(1, 8, o)
+	true_at(2, 1, x)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 6, o)
+	true_at(2, 1, x)
+	true_at(5, 4, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 1, x)
+	true_at(2, 2, o)
+	true_at(5, 6, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(4, 8, o)
+	true_at(6, 1, x)
+	true_at(8, 6, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 1, x)
+	true_at(2, 7, o)
+	true_at(5, 6, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 7, o)
+	true_at(2, 1, x)
+	true_at(7, 6, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(4, 3, c)
+	true_at(5, 7, o)
+	true_at(8, 1, x)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(1, 2, o)
+	true_at(7, 7, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(4, 4, c)
+	true_at(8, 1, x)
+	true_at(8, 5, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 5, o)
+	true_at(2, 1, x)
+	true_at(3, 8, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 5, o)
+	true_at(2, 1, x)
+
+---
+
+positives:
+	goal(black, 100)
+
+---
+
+background:
+	true_at(6, 1, x)
+	true_at(6, 5, o)
+	true_at(8, 4, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 6, o)
+	true_at(3, 1, x)
+	true_at(3, 8, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(8, 1, x)
+	true_at(8, 5, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 4, c)
+	true_at(8, 1, x)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(5, 5, c)
+	true_at(6, 6, o)
+	true_at(8, 1, x)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, c)
+	true_at(2, 1, x)
+	true_at(3, 7, o)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 0)
+
+---
+
+background:
+	true_at(3, 6, c)
+	true_at(6, 1, x)
+	true_at(7, 7, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 6, c)
+	true_at(3, 4, o)
+	true_at(5, 1, x)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 1, x)
+	true_at(3, 2, o)
+	true_at(3, 5, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(5, 5, o)
+	true_at(7, 1, x)
+	true_at(8, 2, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 1, x)
+	true_at(3, 5, o)
+	true_at(3, 7, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 6, o)
+	true_at(4, 1, x)
+	true_at(8, 3, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 8, o)
+	true_at(4, 1, x)
+	true_at(7, 6, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 8, o)
+	true_at(5, 1, x)
+	true_at(7, 6, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 8, c)
+	true_at(4, 1, x)
+	true_at(5, 3, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 4, c)
+	true_at(6, 1, x)
+	true_at(7, 3, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(1, 7, o)
+	true_at(4, 2, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(4, 1, x)
+	true_at(6, 5, o)
+	true_at(6, 6, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(2, 5, o)
+	true_at(7, 6, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(6, 4, c)
+	true_at(8, 1, x)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 5, o)
+	true_at(3, 1, x)
+	true_at(7, 3, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 1, x)
+	true_at(3, 7, o)
+	true_at(5, 2, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 5, o)
+	true_at(2, 8, c)
+	true_at(4, 1, x)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(4, 7, o)
+	true_at(5, 1, x)
+	true_at(7, 7, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 1, x)
+	true_at(5, 8, o)
+	true_at(7, 6, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 7, o)
+	true_at(4, 1, x)
+	true_at(5, 6, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 1, x)
+	true_at(2, 2, o)
+	true_at(8, 2, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 1, x)
+	true_at(2, 5, c)
+	true_at(2, 7, o)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 1, x)
+	true_at(4, 3, c)
+	true_at(5, 8, o)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(4, 3, o)
+	true_at(5, 1, x)
+	true_at(6, 5, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 5, o)
+	true_at(2, 1, x)
+	true_at(4, 8, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 1, x)
+	true_at(2, 7, o)
+	true_at(5, 2, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 1, x)
+	true_at(3, 3, c)
+	true_at(3, 4, o)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(6, 1, x)
+	true_at(7, 4, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 1, x)
+	true_at(3, 4, o)
+	true_at(8, 2, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 1, x)
+	true_at(2, 5, c)
+	true_at(3, 3, o)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 5, o)
+	true_at(3, 1, x)
+	true_at(5, 5, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 1, x)
+	true_at(3, 2, c)
+	true_at(3, 4, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 3, c)
+	true_at(5, 4, o)
+	true_at(7, 1, x)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(1, 6, o)
+	true_at(7, 5, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 5, c)
+	true_at(2, 6, o)
+	true_at(3, 1, x)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(4, 2, c)
+	true_at(8, 1, x)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(6, 5, c)
+	true_at(8, 1, x)
+	true_at(8, 3, o)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 1, x)
+	true_at(2, 5, o)
+	true_at(3, 4, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 1, x)
+	true_at(8, 5, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(8, 2, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 1, x)
+	true_at(4, 6, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 4, c)
+	true_at(2, 1, x)
+	true_at(4, 7, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(5, 4, c)
+	true_at(8, 1, x)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 1, x)
+	true_at(5, 5, o)
+	true_at(7, 7, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(3, 4, o)
+	true_at(5, 4, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(5, 5, c)
+	true_at(8, 1, x)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 7, o)
+	true_at(4, 1, x)
+	true_at(7, 4, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 5, c)
+	true_at(5, 1, x)
+	true_at(8, 5, o)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(4, 3, c)
+	true_at(6, 1, x)
+	true_at(7, 7, o)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 4, c)
+	true_at(4, 1, x)
+	true_at(5, 7, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 1, x)
+	true_at(4, 6, c)
+	true_at(4, 8, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 4, o)
+	true_at(2, 1, x)
+	true_at(8, 7, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(4, 1, x)
+	true_at(4, 4, o)
+	true_at(8, 2, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 1, x)
+	true_at(3, 7, o)
+	true_at(6, 3, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(5, 1, x)
+	true_at(5, 6, o)
+	true_at(6, 5, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 8, o)
+	true_at(2, 1, x)
+	true_at(2, 7, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 1, x)
+	true_at(3, 4, o)
+	true_at(7, 2, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 4, c)
+	true_at(4, 1, x)
+	true_at(5, 4, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 4, o)
+	true_at(4, 1, x)
+	true_at(5, 7, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 6, o)
+	true_at(4, 1, x)
+	true_at(6, 4, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 6, o)
+	true_at(2, 1, x)
+	true_at(3, 8, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 6, c)
+	true_at(6, 7, o)
+	true_at(7, 1, x)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 1, x)
+	true_at(2, 6, o)
+	true_at(7, 7, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(1, 3, o)
+	true_at(6, 7, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(6, 1, x)
+	true_at(6, 5, c)
+	true_at(7, 8, o)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 1, x)
+	true_at(4, 6, o)
+	true_at(6, 6, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 8, c)
+	true_at(1, 8, o)
+	true_at(2, 1, x)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 5, c)
+	true_at(3, 5, o)
+	true_at(6, 1, x)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 3, c)
+	true_at(4, 1, x)
+	true_at(5, 3, o)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(1, 6, o)
+
+---
+
+positives:
+	goal(black, 100)
+
+---
+
+background:
+	true_at(2, 8, c)
+	true_at(5, 1, x)
+	true_at(5, 2, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 1, x)
+	true_at(3, 4, c)
+	true_at(3, 6, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 1, x)
+	true_at(3, 6, o)
+	true_at(5, 3, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 3, c)
+	true_at(5, 1, x)
+	true_at(5, 5, o)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 1, x)
+	true_at(3, 3, o)
+
+---
+
+positives:
+	goal(black, 100)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(1, 2, o)
+	true_at(2, 7, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 1, x)
+	true_at(4, 4, o)
+	true_at(7, 5, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(4, 3, c)
+	true_at(5, 1, x)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 1, x)
+	true_at(3, 4, o)
+	true_at(4, 4, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(4, 4, c)
+	true_at(7, 1, x)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(6, 3, o)
+	true_at(7, 1, x)
+	true_at(7, 5, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(4, 1, x)
+	true_at(4, 4, c)
+	true_at(4, 4, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(4, 3, c)
+	true_at(5, 7, o)
+	true_at(7, 1, x)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 6, c)
+	true_at(6, 1, x)
+	true_at(7, 8, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 1, x)
+	true_at(3, 3, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 1, x)
+	true_at(3, 3, o)
+	true_at(4, 4, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(4, 8, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(4, 8, o)
+	true_at(6, 1, x)
+	true_at(7, 5, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(4, 1, x)
+	true_at(6, 4, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(2, 7, c)
+	true_at(2, 7, o)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(4, 1, x)
+	true_at(5, 4, o)
+	true_at(6, 5, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(5, 1, x)
+	true_at(5, 2, c)
+	true_at(5, 2, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 5, o)
+	true_at(3, 1, x)
+	true_at(8, 6, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 5, c)
+	true_at(5, 1, x)
+	true_at(5, 2, o)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(5, 2, c)
+	true_at(8, 1, x)
+	true_at(8, 2, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 4, o)
+	true_at(2, 1, x)
+	true_at(3, 6, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(6, 1, x)
+	true_at(6, 4, c)
+	true_at(6, 5, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(4, 3, o)
+	true_at(5, 1, x)
+	true_at(8, 7, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(1, 2, o)
+	true_at(8, 4, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 5, c)
+	true_at(3, 1, x)
+	true_at(3, 7, o)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 2, c)
+	true_at(6, 1, x)
+	true_at(6, 2, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 1, x)
+	true_at(7, 2, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 1, x)
+	true_at(4, 3, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, c)
+	true_at(3, 1, x)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 0)
+
+---
+
+background:
+	true_at(2, 7, c)
+	true_at(6, 1, x)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(1, 8, o)
+	true_at(7, 6, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(4, 2, c)
+	true_at(6, 4, o)
+	true_at(8, 1, x)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 8, o)
+	true_at(4, 6, c)
+	true_at(5, 1, x)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 8, o)
+	true_at(2, 1, x)
+	true_at(3, 6, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 1, x)
+	true_at(3, 3, o)
+	true_at(8, 3, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 1, x)
+	true_at(3, 4, c)
+	true_at(3, 7, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(1, 7, o)
+	true_at(3, 7, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(4, 1, x)
+	true_at(5, 6, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 6, o)
+	true_at(6, 1, x)
+	true_at(8, 2, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(6, 1, x)
+	true_at(6, 2, o)
+	true_at(8, 5, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 3, c)
+	true_at(2, 7, o)
+	true_at(3, 1, x)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(1, 6, c)
+	true_at(1, 8, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(8, 1, x)
+	true_at(8, 2, o)
+	true_at(8, 3, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 3, o)
+	true_at(3, 1, x)
+	true_at(7, 3, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(4, 1, x)
+	true_at(4, 5, o)
+	true_at(8, 5, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(5, 2, c)
+	true_at(8, 1, x)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 7, o)
+	true_at(4, 1, x)
+	true_at(4, 6, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 5, c)
+	true_at(7, 1, x)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 1, x)
+	true_at(2, 4, o)
+	true_at(4, 4, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 5, o)
+	true_at(5, 1, x)
+	true_at(7, 5, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(4, 4, c)
+	true_at(6, 1, x)
+	true_at(6, 7, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(1, 8, o)
+
+---
+
+positives:
+	goal(black, 100)
+
+---
+
+background:
+	true_at(2, 6, o)
+	true_at(4, 1, x)
+
+---
+
+positives:
+	goal(black, 100)
+
+---
+
+background:
+	true_at(2, 8, o)
+	true_at(4, 1, x)
+	true_at(5, 7, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(4, 6, c)
+	true_at(4, 8, o)
+	true_at(5, 1, x)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 4, c)
+	true_at(4, 6, o)
+	true_at(7, 1, x)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 5, c)
+	true_at(3, 7, o)
+	true_at(6, 1, x)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 3, o)
+	true_at(2, 7, c)
+	true_at(3, 1, x)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, c)
+	true_at(4, 1, x)
+	true_at(5, 3, o)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 0)
+
+---
+
+background:
+	true_at(2, 2, c)
+	true_at(5, 5, o)
+	true_at(7, 1, x)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 1, x)
+	true_at(4, 5, o)
+	true_at(5, 6, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 8, o)
+	true_at(6, 1, x)
+	true_at(8, 6, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(4, 1, x)
+	true_at(6, 7, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 3, c)
+	true_at(4, 4, o)
+	true_at(5, 1, x)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(4, 1, x)
+	true_at(5, 4, c)
+	true_at(5, 4, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 5, c)
+	true_at(2, 1, x)
+	true_at(5, 6, o)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 1, x)
+	true_at(3, 3, o)
+	true_at(4, 2, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 5, o)
+	true_at(2, 1, x)
+	true_at(6, 7, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 1, x)
+	true_at(2, 5, o)
+	true_at(8, 7, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 1, x)
+	true_at(4, 7, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 6, o)
+	true_at(3, 1, x)
+	true_at(6, 2, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 4, o)
+	true_at(4, 1, x)
+	true_at(5, 6, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 7, o)
+	true_at(5, 1, x)
+	true_at(7, 4, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(1, 2, c)
+	true_at(1, 4, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(1, 7, o)
+	true_at(4, 4, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(1, 6, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(3, 5, o)
+	true_at(8, 4, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 5, c)
+	true_at(6, 1, x)
+	true_at(7, 3, o)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 7, o)
+	true_at(3, 1, x)
+	true_at(5, 5, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 2, c)
+	true_at(4, 1, x)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(4, 6, c)
+	true_at(6, 1, x)
+	true_at(6, 2, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 7, c)
+	true_at(4, 1, x)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 6, c)
+	true_at(4, 1, x)
+	true_at(4, 7, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 6, c)
+	true_at(4, 1, x)
+	true_at(6, 4, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(4, 1, x)
+	true_at(4, 7, c)
+	true_at(5, 4, o)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(8, 8, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 4, o)
+	true_at(2, 6, c)
+	true_at(3, 1, x)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(6, 1, x)
+	true_at(6, 5, c)
+	true_at(7, 6, o)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 4, o)
+	true_at(5, 1, x)
+	true_at(5, 4, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(4, 3, o)
+	true_at(5, 1, x)
+	true_at(5, 4, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(4, 1, x)
+	true_at(4, 6, o)
+	true_at(7, 6, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 8, o)
+	true_at(6, 2, c)
+	true_at(8, 1, x)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(1, 2, o)
+	true_at(2, 5, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(2, 4, o)
+	true_at(5, 3, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(4, 1, x)
+	true_at(8, 5, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 2, c)
+	true_at(5, 1, x)
+	true_at(7, 5, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 8, o)
+	true_at(4, 1, x)
+	true_at(7, 3, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(4, 3, c)
+	true_at(7, 8, o)
+	true_at(8, 1, x)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(5, 1, x)
+	true_at(6, 4, o)
+	true_at(6, 5, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 7, o)
+	true_at(2, 2, c)
+	true_at(3, 1, x)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 6, o)
+	true_at(4, 1, x)
+	true_at(4, 2, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(8, 1, x)
+	true_at(8, 2, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(5, 4, c)
+	true_at(6, 1, x)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(3, 8, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(7, 1, x)
+	true_at(8, 2, c)
+	true_at(8, 5, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(1, 5, o)
+	true_at(8, 7, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(4, 1, x)
+	true_at(4, 3, o)
+	true_at(8, 3, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(6, 6, c)
+	true_at(8, 1, x)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 1, x)
+	true_at(4, 7, o)
+	true_at(8, 5, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 6, c)
+	true_at(6, 1, x)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(1, 3, o)
+	true_at(4, 8, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 7, o)
+	true_at(5, 1, x)
+	true_at(8, 7, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 6, o)
+	true_at(3, 1, x)
+	true_at(8, 3, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 2, c)
+	true_at(5, 6, o)
+	true_at(6, 1, x)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 6, o)
+	true_at(3, 1, x)
+	true_at(7, 6, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 1, x)
+	true_at(2, 4, o)
+	true_at(8, 4, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 1, x)
+	true_at(3, 8, o)
+	true_at(4, 6, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 1, x)
+	true_at(2, 3, o)
+	true_at(6, 7, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(1, 2, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 1, x)
+	true_at(7, 2, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 1, x)
+	true_at(4, 2, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 2, c)
+	true_at(3, 1, x)
+	true_at(3, 8, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(5, 3, c)
+	true_at(7, 8, o)
+	true_at(8, 1, x)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 1, x)
+	true_at(3, 4, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(3, 4, c)
+	true_at(3, 6, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(4, 1, x)
+	true_at(4, 8, o)
+	true_at(5, 4, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 7, c)
+	true_at(3, 5, o)
+	true_at(4, 1, x)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 7, c)
+	true_at(4, 1, x)
+	true_at(4, 7, o)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 4, c)
+	true_at(7, 1, x)
+	true_at(7, 5, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 2, c)
+	true_at(5, 1, x)
+	true_at(5, 2, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, c)
+	true_at(5, 1, x)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 0)
+
+---
+
+background:
+	true_at(3, 5, c)
+	true_at(4, 1, x)
+	true_at(5, 8, o)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 1, x)
+	true_at(2, 2, o)
+	true_at(5, 4, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 4, c)
+	true_at(4, 5, o)
+	true_at(6, 1, x)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(2, 8, o)
+	true_at(3, 7, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 1, x)
+	true_at(2, 2, o)
+	true_at(4, 8, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, c)
+	true_at(5, 1, x)
+	true_at(5, 2, o)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 0)
+
+---
+
+background:
+	true_at(5, 7, c)
+	true_at(7, 1, x)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 1, x)
+	true_at(2, 8, o)
+	true_at(5, 5, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(5, 3, o)
+	true_at(6, 1, x)
+
+---
+
+positives:
+	goal(black, 100)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(1, 6, o)
+	true_at(2, 8, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 8, c)
+	true_at(2, 1, x)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 3, c)
+	true_at(7, 1, x)
+	true_at(7, 6, o)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 6, o)
+	true_at(1, 7, c)
+	true_at(3, 1, x)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 8, c)
+	true_at(5, 1, x)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 4, c)
+	true_at(4, 1, x)
+	true_at(6, 5, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 4, c)
+	true_at(7, 1, x)
+	true_at(7, 8, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 8, o)
+	true_at(4, 5, c)
+	true_at(6, 1, x)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(5, 8, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 7, o)
+	true_at(3, 1, x)
+	true_at(5, 6, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(5, 4, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 4, c)
+	true_at(7, 8, o)
+	true_at(8, 1, x)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 5, c)
+	true_at(6, 1, x)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 4, o)
+	true_at(3, 1, x)
+	true_at(3, 7, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 6, o)
+	true_at(4, 1, x)
+	true_at(8, 4, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 1, x)
+	true_at(8, 5, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(6, 1, x)
+	true_at(7, 8, o)
+	true_at(8, 5, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 4, o)
+	true_at(1, 8, c)
+	true_at(2, 1, x)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 6, c)
+	true_at(6, 1, x)
+	true_at(6, 2, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 6, c)
+	true_at(6, 8, o)
+	true_at(8, 1, x)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(5, 1, x)
+	true_at(5, 2, o)
+	true_at(8, 4, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 6, o)
+	true_at(2, 1, x)
+	true_at(8, 4, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 6, c)
+	true_at(8, 1, x)
+	true_at(8, 2, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(5, 1, x)
+	true_at(5, 8, o)
+	true_at(6, 3, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(1, 5, o)
+	true_at(5, 4, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 1, x)
+	true_at(2, 4, o)
+	true_at(3, 6, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, c)
+	true_at(4, 1, x)
+	true_at(4, 3, o)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 0)
+
+---
+
+background:
+	true_at(2, 1, x)
+	true_at(3, 7, c)
+	true_at(5, 6, o)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 8, c)
+	true_at(3, 1, x)
+	true_at(3, 2, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 1, x)
+	true_at(3, 5, c)
+	true_at(8, 7, o)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 3, c)
+	true_at(5, 5, o)
+	true_at(6, 1, x)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 5, o)
+	true_at(3, 1, x)
+	true_at(3, 5, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 2, c)
+	true_at(7, 1, x)
+	true_at(8, 5, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 1, x)
+	true_at(2, 8, o)
+	true_at(4, 6, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(2, 3, o)
+	true_at(6, 7, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 7, o)
+	true_at(4, 1, x)
+	true_at(5, 3, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(5, 1, x)
+	true_at(6, 4, c)
+	true_at(8, 6, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(1, 8, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(1, 6, o)
+	true_at(8, 7, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(7, 6, o)
+	true_at(8, 1, x)
+	true_at(8, 5, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(5, 1, x)
+	true_at(5, 2, o)
+	true_at(8, 7, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 1, x)
+	true_at(2, 8, o)
+	true_at(3, 3, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 5, o)
+	true_at(1, 7, c)
+	true_at(2, 1, x)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 6, c)
+	true_at(5, 1, x)
+	true_at(6, 3, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 4, c)
+	true_at(4, 1, x)
+	true_at(4, 5, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 1, x)
+	true_at(2, 2, o)
+	true_at(6, 8, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 6, o)
+	true_at(3, 1, x)
+	true_at(3, 2, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 8, o)
+	true_at(4, 1, x)
+	true_at(7, 4, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(4, 1, x)
+	true_at(4, 4, c)
+	true_at(5, 7, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(3, 6, o)
+	true_at(4, 3, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(4, 1, x)
+	true_at(4, 2, o)
+	true_at(5, 6, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(7, 1, x)
+	true_at(8, 3, c)
+	true_at(8, 4, o)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 1, x)
+	true_at(3, 2, o)
+	true_at(3, 3, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(1, 4, o)
+	true_at(1, 5, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 5, c)
+	true_at(3, 1, x)
+	true_at(5, 7, o)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 8, o)
+	true_at(2, 1, x)
+	true_at(5, 2, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(6, 4, c)
+	true_at(8, 1, x)
+	true_at(8, 8, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 1, x)
+	true_at(2, 2, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(4, 1, x)
+	true_at(6, 3, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(4, 4, c)
+	true_at(5, 1, x)
+	true_at(5, 5, o)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 7, c)
+	true_at(3, 1, x)
+	true_at(3, 6, o)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 7, c)
+	true_at(5, 4, o)
+	true_at(7, 1, x)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 3, c)
+	true_at(3, 1, x)
+	true_at(4, 6, o)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(2, 5, o)
+	true_at(7, 5, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 8, o)
+	true_at(5, 1, x)
+
+---
+
+positives:
+	goal(black, 100)
+
+---
+
+background:
+	true_at(5, 1, x)
+	true_at(5, 5, o)
+	true_at(5, 7, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, c)
+	true_at(5, 7, o)
+	true_at(6, 1, x)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 0)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(1, 4, o)
+	true_at(3, 8, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 6, o)
+	true_at(4, 1, x)
+	true_at(6, 4, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 1, c)
+	true_at(1, 1, x)
+	true_at(1, 2, o)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 0)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(1, 2, o)
+	true_at(7, 5, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(4, 1, x)
+	true_at(6, 3, c)
+	true_at(6, 5, o)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 1, x)
+	true_at(4, 4, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(5, 3, c)
+	true_at(7, 1, x)
+	true_at(7, 4, o)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(1, 4, c)
+	true_at(6, 4, o)
+	true_at(8, 1, x)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 1, x)
+	true_at(5, 4, o)
+	true_at(6, 7, c)
+	true_dir(c, right)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(3, 1, x)
+	true_at(5, 4, o)
+	true_at(7, 6, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+
+background:
+	true_at(2, 5, o)
+	true_at(3, 1, x)
+	true_at(3, 8, c)
+	true_dir(c, left)
+
+---
+
+positives:
+	goal(black, 10)
+
+---
+

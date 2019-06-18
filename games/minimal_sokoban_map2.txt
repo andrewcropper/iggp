@@ -1,0 +1,10 @@
+import minimal_sokoban_core
+
+(init (target pos13))
+
+(init (at pos11 x))
+(wall_at pos12)
+(wall_at pos22)
+(wall_at pos32)
+(init (at pos43 obj1))
+

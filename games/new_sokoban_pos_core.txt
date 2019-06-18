@@ -1,0 +1,168 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Sokoban
+;;; 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(role black)
+
+(<= (base (at ?p ?obj)) (bounds ?p) (object ?obj))
+
+(<= (base (target ?p)) (bounds ?p))
+
+(<= (input ?r noop) (role ?r))
+(<= (input ?r left) (role ?r))
+(<= (input ?r right) (role ?r))
+(<= (input ?r up) (role ?r))
+(<= (input ?r down) (role ?r))
+
+(dir left)
+(dir right)
+(dir up)
+(dir down)
+
+(object x)
+(object wall)
+(object obj1)
+(object obj2)
+
+(is_box obj1)
+(is_box obj2)
+
+(controls black x)
+(player_obj x)
+
+(<= (legal ?r noop) (controls ?r ?obj))
+(<= (legal ?r left) (controls ?r ?obj) (true (at ?p ?obj)) (left_of ?p ?p2) (aux_clear ?p2))
+(<= (legal ?r right) (controls ?r ?obj) (true (at ?p ?obj)) (right_of ?p ?p2) (aux_clear ?p2))
+(<= (legal ?r up) (controls ?r ?obj) (true (at ?p ?obj)) (above ?p ?p2) (aux_clear ?p2))
+(<= (legal ?r down) (controls ?r ?obj) (true (at ?p ?obj)) (below ?p ?p2) (aux_clear ?p2))
+
+(<= (legal ?r left) (controls ?r ?obj) (true (at ?p ?obj)) (left_of ?p ?p2) (aux_box_at ?p2) (left_of ?p2 ?p3) (aux_clear ?p3))
+(<= (legal ?r right) (controls ?r ?obj) (true (at ?p ?obj)) (right_of ?p ?p2) (aux_box_at ?p2) (right_of ?p2 ?p3) (aux_clear ?p3))
+(<= (legal ?r up) (controls ?r ?obj) (true (at ?p ?obj)) (above ?p ?p2) (aux_box_at ?p2) (above ?p2 ?p3) (aux_clear ?p3))
+(<= (legal ?r down) (controls ?r ?obj) (true (at ?p ?obj)) (below ?p ?p2) (aux_box_at ?p2) (below ?p2 ?p3) (aux_clear ?p3))
+
+(<= (aux_box_moves_dir ?box left) (controls ?r ?obj) (true (at ?p ?obj)) (does ?r left) (left_of ?p ?p2) (true (at ?p2 ?box)) (is_box ?box) (left_of ?p2 ?p3) (aux_clear ?p3))
+(<= (aux_box_moves_dir ?box right) (controls ?r ?obj) (true (at ?p ?obj)) (does ?r right) (right_of ?p ?p2) (true (at ?p2 ?box)) (is_box ?box) (right_of ?p2 ?p3) (aux_clear ?p3))
+(<= (aux_box_moves_dir ?box up) (controls ?r ?obj) (true (at ?p ?obj)) (does ?r up) (above ?p ?p2) (true (at ?p2 ?box)) (is_box ?box) (above ?p2 ?p3) (aux_clear ?p3))
+(<= (aux_box_moves_dir ?box down) (controls ?r ?obj) (true (at ?p ?obj)) (does ?r down) (below ?p ?p2) (true (at ?p2 ?box)) (is_box ?box) (below ?p2 ?p3) (aux_clear ?p3))
+
+(<= (aux_is_moving ?box) (aux_box_moves_dir ?box ?dir))
+
+(<= (next (at ?p ?obj)) (true (at ?p ?obj)) (does ?r ?a) (not (player_obj ?obj)) (not (aux_is_moving ?obj)))
+
+(<= (next (at ?p ?obj)) (true (at ?p ?obj)) (does ?r noop) (controls ?r ?obj))
+
+(<= (next (at ?p ?obj)) (true (at ?p2 ?obj)) (does ?r left) (controls ?r ?obj) (left_of ?p2 ?p))
+
+(<= (next (at ?p ?obj)) (true (at ?p2 ?obj)) (does ?r right) (controls ?r ?obj) (right_of ?p2 ?p))
+
+(<= (next (at ?p ?obj)) (true (at ?p2 ?obj)) (does ?r up) (controls ?r ?obj) (above ?p2 ?p))
+
+(<= (next (at ?p ?obj)) (true (at ?p2 ?obj)) (does ?r down) (controls ?r ?obj) (below ?p2 ?p))
+
+(<= (next (at ?p ?obj)) (true (at ?p2 ?obj)) (aux_box_moves_dir ?obj left) (left_of ?p2 ?p))
+
+(<= (next (at ?p ?obj)) (true (at ?p2 ?obj)) (aux_box_moves_dir ?obj right) (right_of ?p2 ?p))
+
+(<= (next (at ?p ?obj)) (true (at ?p2 ?obj)) (aux_box_moves_dir ?obj up) (above ?p2 ?p))
+
+(<= (next (at ?p ?obj)) (true (at ?p2 ?obj)) (aux_box_moves_dir ?obj down) (below ?p2 ?p))
+
+(<= (next (target ?p)) (true (target ?p)))
+
+(<= (aux_clear ?p) (bounds ?p) (not (aux_something_at ?p)))
+
+(<= (aux_something_at ?p) (true (at ?p ?obj)))
+(<= (aux_something_at ?p) (wall_at ?p))
+
+(<= (aux_box_at ?p) (true (at ?p ?obj)) (is_box ?obj))
+
+(<= (goal ?r 100) (reward ?r))
+
+(<= (reward ?r) (role ?r) (not (aux_box_out_of_place ?r)))
+
+(<= (aux_box_out_of_place ?r) (role ?r) (is_box ?box) (true (at ?xp ?box)) (not (true (target ?p))))
+
+(<= terminal (role ?r) (not (aux_box_out_of_place ?r)))
+
+(is_left left)
+(is_right right)
+(is_up up)
+(is_down down)
+(is_noop noop)
+
+(bounds pos11)
+(bounds pos12)
+(bounds pos13)
+(bounds pos14)
+(bounds pos15)
+(bounds pos21)
+(bounds pos22)
+(bounds pos23)
+(bounds pos24)
+(bounds pos25)
+(bounds pos31)
+(bounds pos32)
+(bounds pos33)
+(bounds pos34)
+(bounds pos35)
+(bounds pos41)
+(bounds pos42)
+(bounds pos43)
+(bounds pos44)
+(bounds pos45)
+(bounds pos51)
+(bounds pos52)
+(bounds pos53)
+(bounds pos54)
+(bounds pos55)
+
+(left_of pos21 pos11)
+(left_of pos31 pos21)
+(left_of pos41 pos31)
+(left_of pos51 pos41)
+(left_of pos22 pos12)
+(left_of pos32 pos22)
+(left_of pos42 pos32)
+(left_of pos52 pos42)
+(left_of pos23 pos13)
+(left_of pos33 pos23)
+(left_of pos43 pos33)
+(left_of pos53 pos43)
+(left_of pos24 pos14)
+(left_of pos34 pos24)
+(left_of pos44 pos34)
+(left_of pos54 pos44)
+(left_of pos25 pos15)
+(left_of pos35 pos25)
+(left_of pos45 pos35)
+(left_of pos55 pos45)
+
+(<= (right_of ?P1 ?P2) (left_of ?P2 ?P1))
+
+(above pos11 pos12)
+(above pos12 pos13)
+(above pos13 pos14)
+(above pos14 pos15)
+(above pos21 pos22)
+(above pos22 pos23)
+(above pos23 pos24)
+(above pos24 pos25)
+(above pos31 pos32)
+(above pos32 pos33)
+(above pos33 pos34)
+(above pos34 pos35)
+(above pos41 pos42)
+(above pos42 pos43)
+(above pos43 pos44)
+(above pos44 pos45)
+(above pos51 pos52)
+(above pos52 pos53)
+(above pos53 pos54)
+(above pos54 pos55)
+
+(<= (below ?P1 ?P2) (above ?P2 ?P1))
+
+
+

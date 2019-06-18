@@ -1,0 +1,265 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;
+;;; Breakthrough Small
+;;;
+;;; This version of Breakthrough integrates MG's bugfix:
+;;;     There was no goal or terminal clause for the case
+;;;     that one player has lost all pieces!
+;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Components
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (role white)
+  (role black)
+
+
+  (<= (base (cell ?x ?y ?w))
+      (index ?x)
+      (index ?y)
+      (role ?w))
+
+  (<= (base (control ?w))
+      (role ?w))
+
+
+  (<= (input white (move ?u ?v ?u ?y))
+      (index ?u)
+      (index ?v)
+      (succ ?v ?y))
+
+  (<= (input white (move ?u ?v ?x ?y))
+      (index ?u)
+      (index ?v)
+      (succ ?u ?x)
+      (succ ?v ?y))
+
+  (<= (input white (move ?u ?v ?x ?y))
+      (index ?u)
+      (index ?v)
+      (succ ?x ?u)
+      (succ ?v ?y))
+
+  (<= (input black (move ?u ?v ?u ?y))
+      (role ?r)
+      (index ?u)
+      (index ?v)
+      (succ ?y ?v))
+
+  (<= (input black (move ?u ?v ?x ?y))
+      (index ?u)
+      (index ?v)
+      (succ ?u ?x)
+      (succ ?y ?v))
+
+  (<= (input ?r (move ?u ?v ?x ?y))
+      (role ?r)
+      (index ?u)
+      (index ?v)
+      (succ ?x ?u)
+      (succ ?y ?v))
+
+  (<= (input ?r noop)
+      (role ?r))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; INIT Relations
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(init (cell 1 1 white))
+(init (cell 2 1 white))
+(init (cell 3 1 white))
+(init (cell 4 1 white))
+(init (cell 5 1 white))
+(init (cell 6 1 white))
+(init (cell 1 2 white))
+(init (cell 2 2 white))
+(init (cell 3 2 white))
+(init (cell 4 2 white))
+(init (cell 5 2 white))
+(init (cell 6 2 white))
+
+(init (cell 1 5 black))
+(init (cell 2 5 black))
+(init (cell 3 5 black))
+(init (cell 4 5 black))
+(init (cell 5 5 black))
+(init (cell 6 5 black))
+(init (cell 1 6 black))
+(init (cell 2 6 black))
+(init (cell 3 6 black))
+(init (cell 4 6 black))
+(init (cell 5 6 black))
+(init (cell 6 6 black))
+
+(init (control white))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; LEGAL Relations
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(<= (legal white (move ?x ?y1 ?x ?y2))
+    (true (control white))
+    (true (cell ?x ?y1 white))
+    (plusplus ?y1 ?y2)
+    (cellempty ?x ?y2))
+(<= (legal white (move ?x1 ?y1 ?x2 ?y2))
+    (true (control white))
+    (true (cell ?x1 ?y1 white))
+    (plusplus ?y1 ?y2)
+    (plusplus ?x1 ?x2)
+    (not (true (cell ?x2 ?y2 white))))
+(<= (legal white (move ?x1 ?y1 ?x2 ?y2))
+    (true (control white))
+    (true (cell ?x1 ?y1 white))
+    (plusplus ?y1 ?y2)
+    (plusplus ?x2 ?x1)
+    (not (true (cell ?x2 ?y2 white))))
+
+(<= (legal black (move ?x ?y1 ?x ?y2))
+    (true (control black))
+    (true (cell ?x ?y1 black))
+    (plusplus ?y2 ?y1)
+    (cellempty ?x ?y2))
+(<= (legal black (move ?x1 ?y1 ?x2 ?y2))
+    (true (control black))
+    (true (cell ?x1 ?y1 black))
+    (plusplus ?y2 ?y1)
+    (plusplus ?x1 ?x2)
+    (not (true (cell ?x2 ?y2 black))))
+(<= (legal black (move ?x1 ?y1 ?x2 ?y2))
+    (true (control black))
+    (true (cell ?x1 ?y1 black))
+    (plusplus ?y2 ?y1)
+    (plusplus ?x2 ?x1)
+    (not (true (cell ?x2 ?y2 black))))
+    
+(<= (legal white noop)
+    (true (control black)))
+(<= (legal black noop)
+    (true (control white)))
+    
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; NEXT Relations
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+    
+(<= (next (cell ?x2 ?y2 ?player))
+    (role ?player)
+    (does ?player (move ?x1 ?y1 ?x2 ?y2)))
+(<= (next (cell ?x3 ?y3 ?state))
+    (true (cell ?x3 ?y3 ?state))
+    (role ?player)
+    (does ?player (move ?x1 ?y1 ?x2 ?y2))
+    (distinctCell ?x1 ?y1 ?x3 ?y3)
+    (distinctCell ?x2 ?y2 ?x3 ?y3))
+    
+(<= (next (control white))
+    (true (control black)))
+(<= (next (control black))
+    (true (control white)))
+    
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; TERMINAL Relations
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(<= terminal 
+    whitewin)
+(<= terminal
+    blackwin)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; GOAL Relations
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(<= (goal white 100)
+    whitewin)
+(<= (goal white 0)
+    (not whitewin))
+    
+(<= (goal black 100)
+    blackwin)
+(<= (goal black 0)
+    (not blackwin))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; View Definitions
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(<= (cell ?x ?y)
+    (index ?x)
+    (index ?y))
+    
+(<= (cellempty ?x ?y)
+    (cell ?x ?y)
+    (not (true (cell ?x ?y white)))
+    (not (true (cell ?x ?y black))))
+    
+(<= (distinctCell ?x1 ?y1 ?x2 ?y2)
+    (cell ?x1 ?y1)
+    (cell ?x2 ?y2)
+    (distinct ?x1 ?x2))
+(<= (distinctCell ?x1 ?y1 ?x2 ?y2)
+    (cell ?x1 ?y1)
+    (cell ?x2 ?y2)
+    (distinct ?y1 ?y2))
+    
+(<= whitewin
+    (index ?x)
+    (true (cell ?x 6 white)))
+(<= blackwin
+    (index ?x)
+    (true (cell ?x 1 black)))
+    
+; MG's bugfix    
+(<= whitewin
+  (not blackcell))
+(<= blackwin
+  (not whitecell))
+(<= whitecell
+  (cell ?x ?y)
+  (true (cell ?x ?y white)))
+(<= blackcell
+  (cell ?x ?y)
+  (true (cell ?x ?y black)))    
+    
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Static Relations
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(index 1) (index 2) (index 3) (index 4) (index 5) (index 6)
+(plusplus 1 2)  (plusplus 2 3)  (plusplus 3 4)  (plusplus 4 5)  (plusplus 5 6)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Bases and inputs
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(<= (base (cell ?x ?y ?player))
+  (index ?x)
+  (index ?y)
+  (role ?player))
+(<= (base (control ?player))
+  (role ?player))
+  
+(<= (input white (move ?x ?y1 ?x ?y2))
+  (index ?x)
+    (plusplus ?y1 ?y2))
+(<= (input white (move ?x1 ?y1 ?x2 ?y2))
+    (plusplus ?y1 ?y2)
+    (plusplus ?x1 ?x2))
+(<= (input white (move ?x1 ?y1 ?x2 ?y2))
+    (plusplus ?y1 ?y2)
+    (plusplus ?x2 ?x1))
+
+(<= (input black (move ?x ?y1 ?x ?y2))
+  (index ?x)
+    (plusplus ?y2 ?y1))
+(<= (input black (move ?x1 ?y1 ?x2 ?y2))
+    (plusplus ?y2 ?y1)
+    (plusplus ?x1 ?x2))
+(<= (input black (move ?x1 ?y1 ?x2 ?y2))
+    (plusplus ?y2 ?y1)
+    (plusplus ?x2 ?x1))
+  
+(<= (input ?player noop)
+  (role ?player))

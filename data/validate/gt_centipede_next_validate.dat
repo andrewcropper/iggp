@@ -1,0 +1,119 @@
+atoms:
+	next_blackPayoff(0)
+	next_blackPayoff(10)
+	next_blackPayoff(100)
+	next_blackPayoff(15)
+	next_blackPayoff(20)
+	next_blackPayoff(25)
+	next_blackPayoff(30)
+	next_blackPayoff(35)
+	next_blackPayoff(40)
+	next_blackPayoff(45)
+	next_blackPayoff(5)
+	next_blackPayoff(50)
+	next_blackPayoff(55)
+	next_blackPayoff(60)
+	next_blackPayoff(65)
+	next_blackPayoff(70)
+	next_blackPayoff(75)
+	next_blackPayoff(80)
+	next_blackPayoff(85)
+	next_blackPayoff(90)
+	next_blackPayoff(95)
+	next_claim_made_by(black)
+	next_claim_made_by(white)
+	next_control(black)
+	next_control(white)
+	next_gameOver()
+	next_whitePayoff(0)
+	next_whitePayoff(10)
+	next_whitePayoff(100)
+	next_whitePayoff(15)
+	next_whitePayoff(20)
+	next_whitePayoff(25)
+	next_whitePayoff(30)
+	next_whitePayoff(35)
+	next_whitePayoff(40)
+	next_whitePayoff(45)
+	next_whitePayoff(5)
+	next_whitePayoff(50)
+	next_whitePayoff(55)
+	next_whitePayoff(60)
+	next_whitePayoff(65)
+	next_whitePayoff(70)
+	next_whitePayoff(75)
+	next_whitePayoff(80)
+	next_whitePayoff(85)
+	next_whitePayoff(90)
+	next_whitePayoff(95)
+
+---
+
+statics:
+	role(black)
+	role(white)
+	succ(0, 5)
+	succ(10, 15)
+	succ(15, 20)
+	succ(20, 25)
+	succ(25, 30)
+	succ(30, 35)
+	succ(35, 40)
+	succ(40, 45)
+	succ(45, 50)
+	succ(5, 10)
+	succ(50, 55)
+	succ(55, 60)
+	succ(60, 65)
+	succ(65, 70)
+	succ(70, 75)
+	succ(75, 80)
+	succ(80, 85)
+	succ(85, 90)
+	succ(90, 95)
+	succ(95, 100)
+
+---
+
+background:
+	true_blackPayoff(20)
+	true_control(black)
+	true_gameOver()
+	true_whitePayoff(25)
+
+---
+
+positives:
+	next_control(white)
+
+---
+
+background:
+	does(black, continue)
+	does(white, noop)
+	true_blackPayoff(15)
+	true_control(black)
+	true_whitePayoff(0)
+
+---
+
+positives:
+	next_blackPayoff(10)
+	next_control(white)
+	next_whitePayoff(15)
+
+---
+
+background:
+	true_blackPayoff(10)
+	true_control(black)
+	true_gameOver()
+	true_whitePayoff(15)
+
+---
+
+positives:
+	next_control(white)
+
+---
+

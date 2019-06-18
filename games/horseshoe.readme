@@ -1,0 +1,1 @@
+Horseshoe is a game played on a horseshoe-shaped grid. Red pieces start on the top, and black pieces start on the bottom. Pieces can move one step along lines connecting nodes to the blank node. The object of the game is to maneuver so that one's opponent has no legal moves. The game terminates on step 20 or when one of the players cannot move. 

@@ -1,0 +1,1739 @@
+atoms:
+	next_color(r1, blue)
+	next_color(r2, blue)
+	next_color(r3, blue)
+	next_color(r4, blue)
+	next_color(r5, blue)
+	next_color(r6, blue)
+	next_color(r1, green)
+	next_color(r2, green)
+	next_color(r3, green)
+	next_color(r4, green)
+	next_color(r5, green)
+	next_color(r6, green)
+	next_color(r1, red)
+	next_color(r2, red)
+	next_color(r3, red)
+	next_color(r4, red)
+	next_color(r5, red)
+	next_color(r6, red)
+	next_color(r1, yellow)
+	next_color(r2, yellow)
+	next_color(r3, yellow)
+	next_color(r4, yellow)
+	next_color(r5, yellow)
+	next_color(r6, yellow)
+
+---
+
+statics:
+	hue(blue)
+	hue(green)
+	hue(red)
+	hue(yellow)
+	input_mark(robot, r1, blue)
+	input_mark(robot, r1, green)
+	input_mark(robot, r1, red)
+	input_mark(robot, r1, yellow)
+	input_mark(robot, r2, blue)
+	input_mark(robot, r2, green)
+	input_mark(robot, r2, red)
+	input_mark(robot, r2, yellow)
+	input_mark(robot, r3, blue)
+	input_mark(robot, r3, green)
+	input_mark(robot, r3, red)
+	input_mark(robot, r3, yellow)
+	input_mark(robot, r4, blue)
+	input_mark(robot, r4, green)
+	input_mark(robot, r4, red)
+	input_mark(robot, r4, yellow)
+	input_mark(robot, r5, blue)
+	input_mark(robot, r5, green)
+	input_mark(robot, r5, red)
+	input_mark(robot, r5, yellow)
+	input_mark(robot, r6, blue)
+	input_mark(robot, r6, green)
+	input_mark(robot, r6, red)
+	input_mark(robot, r6, yellow)
+	region(r1)
+	region(r2)
+	region(r3)
+	region(r4)
+	region(r5)
+	region(r6)
+	role(robot)
+
+---
+
+background:
+	does_mark(robot, r1, yellow)
+	true_color(r2, red)
+	true_color(r5, yellow)
+
+---
+
+positives:
+	next_color(r1, yellow)
+	next_color(r2, red)
+	next_color(r5, yellow)
+
+---
+
+background:
+	does_mark(robot, r2, blue)
+	true_color(r1, red)
+	true_color(r3, red)
+	true_color(r4, red)
+	true_color(r5, green)
+	true_color(r6, yellow)
+
+---
+
+positives:
+	next_color(r1, red)
+	next_color(r2, blue)
+	next_color(r3, red)
+	next_color(r4, red)
+	next_color(r5, green)
+	next_color(r6, yellow)
+
+---
+
+background:
+	does_mark(robot, r6, green)
+	true_color(r1, blue)
+	true_color(r2, red)
+	true_color(r3, yellow)
+	true_color(r4, green)
+	true_color(r5, blue)
+
+---
+
+positives:
+	next_color(r1, blue)
+	next_color(r2, red)
+	next_color(r3, yellow)
+	next_color(r4, green)
+	next_color(r5, blue)
+	next_color(r6, green)
+
+---
+
+background:
+	does_mark(robot, r1, yellow)
+	true_color(r2, blue)
+	true_color(r4, green)
+	true_color(r5, red)
+	true_color(r6, green)
+
+---
+
+positives:
+	next_color(r1, yellow)
+	next_color(r2, blue)
+	next_color(r4, green)
+	next_color(r5, red)
+	next_color(r6, green)
+
+---
+
+background:
+	does_mark(robot, r3, blue)
+	true_color(r4, red)
+
+---
+
+positives:
+	next_color(r3, blue)
+	next_color(r4, red)
+
+---
+
+background:
+	does_mark(robot, r1, green)
+	true_color(r4, yellow)
+	true_color(r5, blue)
+
+---
+
+positives:
+	next_color(r1, green)
+	next_color(r4, yellow)
+	next_color(r5, blue)
+
+---
+
+background:
+	does_mark(robot, r5, blue)
+	true_color(r3, red)
+	true_color(r4, red)
+	true_color(r6, yellow)
+
+---
+
+positives:
+	next_color(r3, red)
+	next_color(r4, red)
+	next_color(r5, blue)
+	next_color(r6, yellow)
+
+---
+
+background:
+	does_mark(robot, r3, yellow)
+	true_color(r5, green)
+
+---
+
+positives:
+	next_color(r3, yellow)
+	next_color(r5, green)
+
+---
+
+background:
+	does_mark(robot, r1, yellow)
+	true_color(r2, red)
+	true_color(r3, red)
+	true_color(r4, green)
+	true_color(r5, red)
+
+---
+
+positives:
+	next_color(r1, yellow)
+	next_color(r2, red)
+	next_color(r3, red)
+	next_color(r4, green)
+	next_color(r5, red)
+
+---
+
+background:
+	does_mark(robot, r4, red)
+	true_color(r1, yellow)
+	true_color(r2, red)
+	true_color(r5, yellow)
+
+---
+
+positives:
+	next_color(r1, yellow)
+	next_color(r2, red)
+	next_color(r4, red)
+	next_color(r5, yellow)
+
+---
+
+background:
+	does_mark(robot, r3, green)
+	true_color(r1, red)
+	true_color(r2, yellow)
+	true_color(r4, red)
+	true_color(r5, green)
+	true_color(r6, green)
+
+---
+
+positives:
+	next_color(r1, red)
+	next_color(r2, yellow)
+	next_color(r3, green)
+	next_color(r4, red)
+	next_color(r5, green)
+	next_color(r6, green)
+
+---
+
+background:
+	does_mark(robot, r5, blue)
+	true_color(r1, green)
+	true_color(r2, yellow)
+	true_color(r3, green)
+	true_color(r4, yellow)
+	true_color(r6, red)
+
+---
+
+positives:
+	next_color(r1, green)
+	next_color(r2, yellow)
+	next_color(r3, green)
+	next_color(r4, yellow)
+	next_color(r5, blue)
+	next_color(r6, red)
+
+---
+
+background:
+	true_color(r1, yellow)
+	true_color(r2, red)
+	true_color(r3, red)
+	true_color(r4, red)
+	true_color(r5, yellow)
+	true_color(r6, yellow)
+
+---
+
+positives:
+	next_color(r1, yellow)
+	next_color(r2, red)
+	next_color(r3, red)
+	next_color(r4, red)
+	next_color(r5, yellow)
+	next_color(r6, yellow)
+
+---
+
+background:
+	does_mark(robot, r4, red)
+	true_color(r3, yellow)
+	true_color(r5, green)
+
+---
+
+positives:
+	next_color(r3, yellow)
+	next_color(r4, red)
+	next_color(r5, green)
+
+---
+
+background:
+	does_mark(robot, r1, blue)
+	true_color(r6, blue)
+
+---
+
+positives:
+	next_color(r1, blue)
+	next_color(r6, blue)
+
+---
+
+background:
+	does_mark(robot, r3, green)
+	true_color(r5, blue)
+
+---
+
+positives:
+	next_color(r3, green)
+	next_color(r5, blue)
+
+---
+
+background:
+	does_mark(robot, r5, yellow)
+	true_color(r1, yellow)
+	true_color(r2, red)
+	true_color(r3, red)
+	true_color(r4, red)
+	true_color(r6, yellow)
+
+---
+
+positives:
+	next_color(r1, yellow)
+	next_color(r2, red)
+	next_color(r3, red)
+	next_color(r4, red)
+	next_color(r5, yellow)
+	next_color(r6, yellow)
+
+---
+
+background:
+	does_mark(robot, r5, yellow)
+	true_color(r2, red)
+	true_color(r3, blue)
+	true_color(r4, green)
+	true_color(r6, yellow)
+
+---
+
+positives:
+	next_color(r2, red)
+	next_color(r3, blue)
+	next_color(r4, green)
+	next_color(r5, yellow)
+	next_color(r6, yellow)
+
+---
+
+background:
+	does_mark(robot, r6, red)
+	true_color(r5, green)
+
+---
+
+positives:
+	next_color(r5, green)
+	next_color(r6, red)
+
+---
+
+background:
+	does_mark(robot, r4, red)
+	true_color(r2, red)
+	true_color(r3, red)
+	true_color(r5, blue)
+
+---
+
+positives:
+	next_color(r2, red)
+	next_color(r3, red)
+	next_color(r4, red)
+	next_color(r5, blue)
+
+---
+
+background:
+	does_mark(robot, r1, green)
+	true_color(r2, yellow)
+	true_color(r3, blue)
+	true_color(r4, yellow)
+	true_color(r5, yellow)
+	true_color(r6, blue)
+
+---
+
+positives:
+	next_color(r1, green)
+	next_color(r2, yellow)
+	next_color(r3, blue)
+	next_color(r4, yellow)
+	next_color(r5, yellow)
+	next_color(r6, blue)
+
+---
+
+background:
+	does_mark(robot, r2, yellow)
+	true_color(r1, yellow)
+	true_color(r3, red)
+	true_color(r4, green)
+	true_color(r5, red)
+	true_color(r6, green)
+
+---
+
+positives:
+	next_color(r1, yellow)
+	next_color(r2, yellow)
+	next_color(r3, red)
+	next_color(r4, green)
+	next_color(r5, red)
+	next_color(r6, green)
+
+---
+
+background:
+	does_mark(robot, r4, red)
+	true_color(r6, blue)
+
+---
+
+positives:
+	next_color(r4, red)
+	next_color(r6, blue)
+
+---
+
+background:
+	does_mark(robot, r3, blue)
+	true_color(r1, blue)
+	true_color(r2, red)
+	true_color(r4, red)
+	true_color(r5, red)
+	true_color(r6, red)
+
+---
+
+positives:
+	next_color(r1, blue)
+	next_color(r2, red)
+	next_color(r3, blue)
+	next_color(r4, red)
+	next_color(r5, red)
+	next_color(r6, red)
+
+---
+
+background:
+	does_mark(robot, r4, yellow)
+	true_color(r1, yellow)
+	true_color(r2, blue)
+	true_color(r3, green)
+	true_color(r5, yellow)
+	true_color(r6, blue)
+
+---
+
+positives:
+	next_color(r1, yellow)
+	next_color(r2, blue)
+	next_color(r3, green)
+	next_color(r4, yellow)
+	next_color(r5, yellow)
+	next_color(r6, blue)
+
+---
+
+background:
+	does_mark(robot, r4, blue)
+	true_color(r1, yellow)
+	true_color(r2, red)
+	true_color(r3, green)
+	true_color(r6, red)
+
+---
+
+positives:
+	next_color(r1, yellow)
+	next_color(r2, red)
+	next_color(r3, green)
+	next_color(r4, blue)
+	next_color(r6, red)
+
+---
+
+background:
+	does_mark(robot, r4, yellow)
+	true_color(r1, red)
+	true_color(r2, yellow)
+	true_color(r3, yellow)
+	true_color(r5, red)
+	true_color(r6, blue)
+
+---
+
+positives:
+	next_color(r1, red)
+	next_color(r2, yellow)
+	next_color(r3, yellow)
+	next_color(r4, yellow)
+	next_color(r5, red)
+	next_color(r6, blue)
+
+---
+
+background:
+	does_mark(robot, r3, blue)
+	true_color(r1, blue)
+
+---
+
+positives:
+	next_color(r1, blue)
+	next_color(r3, blue)
+
+---
+
+background:
+	does_mark(robot, r6, yellow)
+	true_color(r1, blue)
+	true_color(r2, blue)
+	true_color(r3, green)
+	true_color(r4, green)
+	true_color(r5, blue)
+
+---
+
+positives:
+	next_color(r1, blue)
+	next_color(r2, blue)
+	next_color(r3, green)
+	next_color(r4, green)
+	next_color(r5, blue)
+	next_color(r6, yellow)
+
+---
+
+background:
+	true_color(r1, green)
+	true_color(r2, red)
+	true_color(r3, yellow)
+	true_color(r4, red)
+	true_color(r5, blue)
+	true_color(r6, blue)
+
+---
+
+positives:
+	next_color(r1, green)
+	next_color(r2, red)
+	next_color(r3, yellow)
+	next_color(r4, red)
+	next_color(r5, blue)
+	next_color(r6, blue)
+
+---
+
+background:
+	does_mark(robot, r3, red)
+	true_color(r1, red)
+	true_color(r2, yellow)
+
+---
+
+positives:
+	next_color(r1, red)
+	next_color(r2, yellow)
+	next_color(r3, red)
+
+---
+
+background:
+	does_mark(robot, r5, green)
+	true_color(r6, yellow)
+
+---
+
+positives:
+	next_color(r5, green)
+	next_color(r6, yellow)
+
+---
+
+background:
+	does_mark(robot, r2, blue)
+	true_color(r1, green)
+	true_color(r3, yellow)
+	true_color(r4, red)
+	true_color(r6, green)
+
+---
+
+positives:
+	next_color(r1, green)
+	next_color(r2, blue)
+	next_color(r3, yellow)
+	next_color(r4, red)
+	next_color(r6, green)
+
+---
+
+background:
+	does_mark(robot, r4, green)
+	true_color(r1, blue)
+	true_color(r2, red)
+	true_color(r3, yellow)
+	true_color(r5, blue)
+	true_color(r6, red)
+
+---
+
+positives:
+	next_color(r1, blue)
+	next_color(r2, red)
+	next_color(r3, yellow)
+	next_color(r4, green)
+	next_color(r5, blue)
+	next_color(r6, red)
+
+---
+
+background:
+	does_mark(robot, r5, red)
+	true_color(r4, red)
+
+---
+
+positives:
+	next_color(r4, red)
+	next_color(r5, red)
+
+---
+
+background:
+	does_mark(robot, r4, yellow)
+	true_color(r2, green)
+	true_color(r6, green)
+
+---
+
+positives:
+	next_color(r2, green)
+	next_color(r4, yellow)
+	next_color(r6, green)
+
+---
+
+background:
+	true_color(r1, blue)
+	true_color(r2, blue)
+	true_color(r3, blue)
+	true_color(r4, green)
+	true_color(r5, green)
+	true_color(r6, green)
+
+---
+
+positives:
+	next_color(r1, blue)
+	next_color(r2, blue)
+	next_color(r3, blue)
+	next_color(r4, green)
+	next_color(r5, green)
+	next_color(r6, green)
+
+---
+
+background:
+	does_mark(robot, r5, green)
+	true_color(r1, red)
+	true_color(r2, yellow)
+	true_color(r3, yellow)
+
+---
+
+positives:
+	next_color(r1, red)
+	next_color(r2, yellow)
+	next_color(r3, yellow)
+	next_color(r5, green)
+
+---
+
+background:
+	does_mark(robot, r2, red)
+	true_color(r6, yellow)
+
+---
+
+positives:
+	next_color(r2, red)
+	next_color(r6, yellow)
+
+---
+
+background:
+	does_mark(robot, r6, red)
+	true_color(r2, red)
+	true_color(r4, red)
+
+---
+
+positives:
+	next_color(r2, red)
+	next_color(r4, red)
+	next_color(r6, red)
+
+---
+
+background:
+	true_color(r1, blue)
+	true_color(r2, red)
+	true_color(r3, blue)
+	true_color(r4, green)
+	true_color(r5, yellow)
+	true_color(r6, yellow)
+
+---
+
+positives:
+	next_color(r1, blue)
+	next_color(r2, red)
+	next_color(r3, blue)
+	next_color(r4, green)
+	next_color(r5, yellow)
+	next_color(r6, yellow)
+
+---
+
+background:
+	does_mark(robot, r5, blue)
+	true_color(r4, green)
+
+---
+
+positives:
+	next_color(r4, green)
+	next_color(r5, blue)
+
+---
+
+background:
+	does_mark(robot, r2, blue)
+	true_color(r1, blue)
+	true_color(r3, blue)
+	true_color(r4, yellow)
+	true_color(r5, green)
+	true_color(r6, red)
+
+---
+
+positives:
+	next_color(r1, blue)
+	next_color(r2, blue)
+	next_color(r3, blue)
+	next_color(r4, yellow)
+	next_color(r5, green)
+	next_color(r6, red)
+
+---
+
+background:
+	does_mark(robot, r5, yellow)
+	true_color(r2, red)
+
+---
+
+positives:
+	next_color(r2, red)
+	next_color(r5, yellow)
+
+---
+
+background:
+	does_mark(robot, r4, green)
+	true_color(r1, blue)
+	true_color(r2, yellow)
+	true_color(r3, green)
+	true_color(r5, green)
+	true_color(r6, blue)
+
+---
+
+positives:
+	next_color(r1, blue)
+	next_color(r2, yellow)
+	next_color(r3, green)
+	next_color(r4, green)
+	next_color(r5, green)
+	next_color(r6, blue)
+
+---
+
+background:
+	does_mark(robot, r2, red)
+	true_color(r5, green)
+
+---
+
+positives:
+	next_color(r2, red)
+	next_color(r5, green)
+
+---
+
+background:
+	does_mark(robot, r6, red)
+	true_color(r1, blue)
+	true_color(r2, green)
+	true_color(r4, green)
+
+---
+
+positives:
+	next_color(r1, blue)
+	next_color(r2, green)
+	next_color(r4, green)
+	next_color(r6, red)
+
+---
+
+background:
+	does_mark(robot, r2, red)
+	true_color(r1, red)
+	true_color(r3, yellow)
+	true_color(r4, blue)
+	true_color(r5, blue)
+	true_color(r6, blue)
+
+---
+
+positives:
+	next_color(r1, red)
+	next_color(r2, red)
+	next_color(r3, yellow)
+	next_color(r4, blue)
+	next_color(r5, blue)
+	next_color(r6, blue)
+
+---
+
+background:
+	does_mark(robot, r5, green)
+	true_color(r2, red)
+	true_color(r3, blue)
+	true_color(r4, blue)
+	true_color(r6, blue)
+
+---
+
+positives:
+	next_color(r2, red)
+	next_color(r3, blue)
+	next_color(r4, blue)
+	next_color(r5, green)
+	next_color(r6, blue)
+
+---
+
+background:
+	does_mark(robot, r5, blue)
+	true_color(r2, green)
+	true_color(r4, red)
+	true_color(r6, blue)
+
+---
+
+positives:
+	next_color(r2, green)
+	next_color(r4, red)
+	next_color(r5, blue)
+	next_color(r6, blue)
+
+---
+
+background:
+	does_mark(robot, r1, blue)
+	true_color(r2, green)
+	true_color(r4, blue)
+	true_color(r5, green)
+
+---
+
+positives:
+	next_color(r1, blue)
+	next_color(r2, green)
+	next_color(r4, blue)
+	next_color(r5, green)
+
+---
+
+background:
+	does_mark(robot, r1, blue)
+	true_color(r4, blue)
+	true_color(r6, red)
+
+---
+
+positives:
+	next_color(r1, blue)
+	next_color(r4, blue)
+	next_color(r6, red)
+
+---
+
+background:
+	does_mark(robot, r6, blue)
+	true_color(r1, green)
+	true_color(r3, red)
+	true_color(r4, blue)
+
+---
+
+positives:
+	next_color(r1, green)
+	next_color(r3, red)
+	next_color(r4, blue)
+	next_color(r6, blue)
+
+---
+
+background:
+	does_mark(robot, r3, red)
+	true_color(r1, blue)
+	true_color(r2, blue)
+	true_color(r4, red)
+	true_color(r5, green)
+	true_color(r6, red)
+
+---
+
+positives:
+	next_color(r1, blue)
+	next_color(r2, blue)
+	next_color(r3, red)
+	next_color(r4, red)
+	next_color(r5, green)
+	next_color(r6, red)
+
+---
+
+background:
+	does_mark(robot, r6, blue)
+	true_color(r1, green)
+	true_color(r5, green)
+
+---
+
+positives:
+	next_color(r1, green)
+	next_color(r5, green)
+	next_color(r6, blue)
+
+---
+
+background:
+	does_mark(robot, r3, blue)
+
+---
+
+positives:
+	next_color(r3, blue)
+
+---
+
+background:
+	does_mark(robot, r2, yellow)
+	true_color(r3, green)
+	true_color(r4, red)
+	true_color(r5, yellow)
+
+---
+
+positives:
+	next_color(r2, yellow)
+	next_color(r3, green)
+	next_color(r4, red)
+	next_color(r5, yellow)
+
+---
+
+background:
+	does_mark(robot, r2, yellow)
+	true_color(r1, blue)
+	true_color(r3, blue)
+	true_color(r4, blue)
+	true_color(r5, green)
+	true_color(r6, yellow)
+
+---
+
+positives:
+	next_color(r1, blue)
+	next_color(r2, yellow)
+	next_color(r3, blue)
+	next_color(r4, blue)
+	next_color(r5, green)
+	next_color(r6, yellow)
+
+---
+
+background:
+	does_mark(robot, r1, green)
+	true_color(r2, red)
+	true_color(r3, blue)
+	true_color(r4, blue)
+	true_color(r5, green)
+	true_color(r6, red)
+
+---
+
+positives:
+	next_color(r1, green)
+	next_color(r2, red)
+	next_color(r3, blue)
+	next_color(r4, blue)
+	next_color(r5, green)
+	next_color(r6, red)
+
+---
+
+background:
+	does_mark(robot, r2, blue)
+
+---
+
+positives:
+	next_color(r2, blue)
+
+---
+
+background:
+	true_color(r1, yellow)
+	true_color(r2, red)
+	true_color(r3, green)
+	true_color(r4, blue)
+	true_color(r5, yellow)
+	true_color(r6, red)
+
+---
+
+positives:
+	next_color(r1, yellow)
+	next_color(r2, red)
+	next_color(r3, green)
+	next_color(r4, blue)
+	next_color(r5, yellow)
+	next_color(r6, red)
+
+---
+
+background:
+	true_color(r1, green)
+	true_color(r2, yellow)
+	true_color(r3, yellow)
+	true_color(r4, yellow)
+	true_color(r5, green)
+	true_color(r6, blue)
+
+---
+
+positives:
+	next_color(r1, green)
+	next_color(r2, yellow)
+	next_color(r3, yellow)
+	next_color(r4, yellow)
+	next_color(r5, green)
+	next_color(r6, blue)
+
+---
+
+background:
+	does_mark(robot, r2, red)
+	true_color(r4, green)
+	true_color(r5, red)
+
+---
+
+positives:
+	next_color(r2, red)
+	next_color(r4, green)
+	next_color(r5, red)
+
+---
+
+background:
+	does_mark(robot, r2, red)
+	true_color(r3, yellow)
+	true_color(r4, green)
+	true_color(r5, blue)
+
+---
+
+positives:
+	next_color(r2, red)
+	next_color(r3, yellow)
+	next_color(r4, green)
+	next_color(r5, blue)
+
+---
+
+background:
+	does_mark(robot, r3, blue)
+	true_color(r2, red)
+	true_color(r6, yellow)
+
+---
+
+positives:
+	next_color(r2, red)
+	next_color(r3, blue)
+	next_color(r6, yellow)
+
+---
+
+background:
+	does_mark(robot, r4, green)
+	true_color(r1, yellow)
+	true_color(r5, blue)
+	true_color(r6, yellow)
+
+---
+
+positives:
+	next_color(r1, yellow)
+	next_color(r4, green)
+	next_color(r5, blue)
+	next_color(r6, yellow)
+
+---
+
+background:
+	true_color(r1, blue)
+	true_color(r2, yellow)
+	true_color(r3, green)
+	true_color(r4, green)
+	true_color(r5, green)
+	true_color(r6, blue)
+
+---
+
+positives:
+	next_color(r1, blue)
+	next_color(r2, yellow)
+	next_color(r3, green)
+	next_color(r4, green)
+	next_color(r5, green)
+	next_color(r6, blue)
+
+---
+
+background:
+	true_color(r1, blue)
+	true_color(r2, green)
+	true_color(r3, yellow)
+	true_color(r4, green)
+	true_color(r5, yellow)
+	true_color(r6, yellow)
+
+---
+
+positives:
+	next_color(r1, blue)
+	next_color(r2, green)
+	next_color(r3, yellow)
+	next_color(r4, green)
+	next_color(r5, yellow)
+	next_color(r6, yellow)
+
+---
+
+background:
+	true_color(r1, blue)
+	true_color(r2, red)
+	true_color(r3, yellow)
+	true_color(r4, green)
+	true_color(r5, red)
+	true_color(r6, blue)
+
+---
+
+positives:
+	next_color(r1, blue)
+	next_color(r2, red)
+	next_color(r3, yellow)
+	next_color(r4, green)
+	next_color(r5, red)
+	next_color(r6, blue)
+
+---
+
+background:
+	does_mark(robot, r3, blue)
+	true_color(r1, blue)
+	true_color(r5, yellow)
+	true_color(r6, blue)
+
+---
+
+positives:
+	next_color(r1, blue)
+	next_color(r3, blue)
+	next_color(r5, yellow)
+	next_color(r6, blue)
+
+---
+
+background:
+	does_mark(robot, r5, yellow)
+	true_color(r2, red)
+	true_color(r6, yellow)
+
+---
+
+positives:
+	next_color(r2, red)
+	next_color(r5, yellow)
+	next_color(r6, yellow)
+
+---
+
+background:
+	does_mark(robot, r6, blue)
+	true_color(r2, red)
+	true_color(r3, yellow)
+	true_color(r4, blue)
+	true_color(r5, green)
+
+---
+
+positives:
+	next_color(r2, red)
+	next_color(r3, yellow)
+	next_color(r4, blue)
+	next_color(r5, green)
+	next_color(r6, blue)
+
+---
+
+background:
+	true_color(r1, blue)
+	true_color(r2, red)
+	true_color(r3, yellow)
+	true_color(r4, green)
+	true_color(r5, blue)
+	true_color(r6, green)
+
+---
+
+positives:
+	next_color(r1, blue)
+	next_color(r2, red)
+	next_color(r3, yellow)
+	next_color(r4, green)
+	next_color(r5, blue)
+	next_color(r6, green)
+
+---
+
+background:
+	does_mark(robot, r3, blue)
+	true_color(r2, yellow)
+	true_color(r5, yellow)
+	true_color(r6, blue)
+
+---
+
+positives:
+	next_color(r2, yellow)
+	next_color(r3, blue)
+	next_color(r5, yellow)
+	next_color(r6, blue)
+
+---
+
+background:
+	does_mark(robot, r2, yellow)
+	true_color(r1, red)
+	true_color(r6, yellow)
+
+---
+
+positives:
+	next_color(r1, red)
+	next_color(r2, yellow)
+	next_color(r6, yellow)
+
+---
+
+background:
+	does_mark(robot, r3, blue)
+	true_color(r4, blue)
+	true_color(r6, blue)
+
+---
+
+positives:
+	next_color(r3, blue)
+	next_color(r4, blue)
+	next_color(r6, blue)
+
+---
+
+background:
+	true_color(r1, green)
+	true_color(r2, red)
+	true_color(r3, red)
+	true_color(r4, blue)
+	true_color(r5, blue)
+	true_color(r6, blue)
+
+---
+
+positives:
+	next_color(r1, green)
+	next_color(r2, red)
+	next_color(r3, red)
+	next_color(r4, blue)
+	next_color(r5, blue)
+	next_color(r6, blue)
+
+---
+
+background:
+	does_mark(robot, r5, blue)
+	true_color(r1, green)
+	true_color(r2, blue)
+	true_color(r3, yellow)
+	true_color(r4, green)
+	true_color(r6, red)
+
+---
+
+positives:
+	next_color(r1, green)
+	next_color(r2, blue)
+	next_color(r3, yellow)
+	next_color(r4, green)
+	next_color(r5, blue)
+	next_color(r6, red)
+
+---
+
+background:
+	does_mark(robot, r3, blue)
+	true_color(r2, green)
+	true_color(r4, yellow)
+	true_color(r6, green)
+
+---
+
+positives:
+	next_color(r2, green)
+	next_color(r3, blue)
+	next_color(r4, yellow)
+	next_color(r6, green)
+
+---
+
+background:
+	does_mark(robot, r5, yellow)
+	true_color(r1, red)
+	true_color(r6, red)
+
+---
+
+positives:
+	next_color(r1, red)
+	next_color(r5, yellow)
+	next_color(r6, red)
+
+---
+
+background:
+	does_mark(robot, r6, blue)
+	true_color(r1, red)
+	true_color(r2, red)
+	true_color(r3, red)
+	true_color(r5, red)
+
+---
+
+positives:
+	next_color(r1, red)
+	next_color(r2, red)
+	next_color(r3, red)
+	next_color(r5, red)
+	next_color(r6, blue)
+
+---
+
+background:
+	does_mark(robot, r5, yellow)
+	true_color(r1, blue)
+	true_color(r2, green)
+	true_color(r3, yellow)
+	true_color(r4, green)
+
+---
+
+positives:
+	next_color(r1, blue)
+	next_color(r2, green)
+	next_color(r3, yellow)
+	next_color(r4, green)
+	next_color(r5, yellow)
+
+---
+
+background:
+	does_mark(robot, r3, blue)
+	true_color(r1, green)
+	true_color(r2, green)
+	true_color(r4, red)
+
+---
+
+positives:
+	next_color(r1, green)
+	next_color(r2, green)
+	next_color(r3, blue)
+	next_color(r4, red)
+
+---
+
+background:
+	does_mark(robot, r5, red)
+
+---
+
+positives:
+	next_color(r5, red)
+
+---
+
+background:
+	true_color(r1, green)
+	true_color(r2, red)
+	true_color(r3, yellow)
+	true_color(r4, blue)
+	true_color(r5, green)
+	true_color(r6, blue)
+
+---
+
+positives:
+	next_color(r1, green)
+	next_color(r2, red)
+	next_color(r3, yellow)
+	next_color(r4, blue)
+	next_color(r5, green)
+	next_color(r6, blue)
+
+---
+
+background:
+	does_mark(robot, r5, blue)
+	true_color(r1, blue)
+	true_color(r2, yellow)
+	true_color(r3, yellow)
+	true_color(r4, red)
+	true_color(r6, red)
+
+---
+
+positives:
+	next_color(r1, blue)
+	next_color(r2, yellow)
+	next_color(r3, yellow)
+	next_color(r4, red)
+	next_color(r5, blue)
+	next_color(r6, red)
+
+---
+
+background:
+	does_mark(robot, r5, yellow)
+	true_color(r2, yellow)
+
+---
+
+positives:
+	next_color(r2, yellow)
+	next_color(r5, yellow)
+
+---
+
+background:
+	true_color(r1, red)
+	true_color(r2, red)
+	true_color(r3, yellow)
+	true_color(r4, blue)
+	true_color(r5, blue)
+	true_color(r6, yellow)
+
+---
+
+positives:
+	next_color(r1, red)
+	next_color(r2, red)
+	next_color(r3, yellow)
+	next_color(r4, blue)
+	next_color(r5, blue)
+	next_color(r6, yellow)
+
+---
+
+background:
+	does_mark(robot, r4, blue)
+	true_color(r1, red)
+	true_color(r2, red)
+	true_color(r5, yellow)
+	true_color(r6, red)
+
+---
+
+positives:
+	next_color(r1, red)
+	next_color(r2, red)
+	next_color(r4, blue)
+	next_color(r5, yellow)
+	next_color(r6, red)
+
+---
+
+background:
+	does_mark(robot, r1, green)
+	true_color(r2, yellow)
+	true_color(r6, yellow)
+
+---
+
+positives:
+	next_color(r1, green)
+	next_color(r2, yellow)
+	next_color(r6, yellow)
+
+---
+
+background:
+	true_color(r1, blue)
+	true_color(r2, blue)
+	true_color(r3, red)
+	true_color(r4, red)
+	true_color(r5, green)
+	true_color(r6, red)
+
+---
+
+positives:
+	next_color(r1, blue)
+	next_color(r2, blue)
+	next_color(r3, red)
+	next_color(r4, red)
+	next_color(r5, green)
+	next_color(r6, red)
+
+---
+
+background:
+	does_mark(robot, r2, yellow)
+	true_color(r1, blue)
+	true_color(r3, green)
+	true_color(r5, green)
+	true_color(r6, blue)
+
+---
+
+positives:
+	next_color(r1, blue)
+	next_color(r2, yellow)
+	next_color(r3, green)
+	next_color(r5, green)
+	next_color(r6, blue)
+
+---
+
+background:
+	does_mark(robot, r2, blue)
+	true_color(r1, green)
+	true_color(r3, yellow)
+
+---
+
+positives:
+	next_color(r1, green)
+	next_color(r2, blue)
+	next_color(r3, yellow)
+
+---
+
+background:
+	true_color(r1, green)
+	true_color(r2, green)
+	true_color(r3, yellow)
+	true_color(r4, blue)
+	true_color(r5, blue)
+	true_color(r6, red)
+
+---
+
+positives:
+	next_color(r1, green)
+	next_color(r2, green)
+	next_color(r3, yellow)
+	next_color(r4, blue)
+	next_color(r5, blue)
+	next_color(r6, red)
+
+---
+
+background:
+	does_mark(robot, r2, yellow)
+	true_color(r6, green)
+
+---
+
+positives:
+	next_color(r2, yellow)
+	next_color(r6, green)
+
+---
+
+background:
+	does_mark(robot, r3, red)
+	true_color(r6, green)
+
+---
+
+positives:
+	next_color(r3, red)
+	next_color(r6, green)
+
+---
+
+background:
+	does_mark(robot, r5, green)
+	true_color(r3, green)
+	true_color(r6, blue)
+
+---
+
+positives:
+	next_color(r3, green)
+	next_color(r5, green)
+	next_color(r6, blue)
+
+---
+
+background:
+	does_mark(robot, r4, red)
+	true_color(r2, green)
+	true_color(r6, blue)
+
+---
+
+positives:
+	next_color(r2, green)
+	next_color(r4, red)
+	next_color(r6, blue)
+
+---
+
+background:
+	does_mark(robot, r4, green)
+
+---
+
+positives:
+	next_color(r4, green)
+
+---
+
+background:
+	does_mark(robot, r3, yellow)
+	true_color(r2, red)
+	true_color(r5, green)
+
+---
+
+positives:
+	next_color(r2, red)
+	next_color(r3, yellow)
+	next_color(r5, green)
+
+---
+
+background:
+	does_mark(robot, r4, blue)
+	true_color(r2, red)
+	true_color(r3, yellow)
+	true_color(r5, yellow)
+	true_color(r6, yellow)
+
+---
+
+positives:
+	next_color(r2, red)
+	next_color(r3, yellow)
+	next_color(r4, blue)
+	next_color(r5, yellow)
+	next_color(r6, yellow)
+
+---
+
+background:
+	does_mark(robot, r5, green)
+	true_color(r2, blue)
+	true_color(r3, red)
+	true_color(r4, green)
+	true_color(r6, green)
+
+---
+
+positives:
+	next_color(r2, blue)
+	next_color(r3, red)
+	next_color(r4, green)
+	next_color(r5, green)
+	next_color(r6, green)
+
+---
+

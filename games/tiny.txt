@@ -1,0 +1,23 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Tiny
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; From http://giga16.ru.is/giga16-paper1.pdf
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(role player)
+
+(light p)
+(light q)
+
+(<= (legal player (turnOn ?x)) (light ?x) (not (true (on ?x))))
+(<= (next (on ?x)) (does player (turnOn ?x)))
+(<= (next (on ?x)) (true (on ?x)))
+
+(<= terminal (true (on p)) (true (on q)))
+
+(<= (goal player 100) (true (on p)) (true (on q)))
+
+(init (control player))
+
+(<= (next (control player)) (true (control player)))

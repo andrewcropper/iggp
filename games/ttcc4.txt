@@ -1,0 +1,626 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Tic Tac Chess Checkers Four
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; components
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (role white)
+  (role black)
+
+
+  (<= (base (cell ?x ?y ?piece))
+      (start ?piece ?x ?y))
+
+  (<= (base (cell ?x ?y ?piece))
+      (onboard ?x ?y)
+      (piece ?piece pawn ?color))
+
+  (<= (base (cell ?x ?y ?piece))
+      (onboard ?x ?y)
+      (piece ?piece knight ?color))
+
+  (<= (base (cell ?x ?y ?piece))
+      (onboard ?x ?y)
+      (oddsquare ?x ?y)
+      (piece ?piece checker ?color))
+
+  (<= (base (cell ?x ?y ?piece))
+      (index ?x)
+      (chute ?y)
+      (piece ?piece disk ?color))
+
+  (<= (base (control ?player))
+      (role ?player))
+
+  (base (step 1))
+
+  (<= (base (step ?n))
+      (succ ?m ?n))
+
+
+  (<= (input ?player (drop ?y))
+      (role ?player)
+      (chute ?y))
+    
+  (<= (input ?player (pawnmove ?x1 ?y1 ?x2 ?y2))
+      (piece ?piece pawn ?player)
+      (active ?piece ?x1 ?y1)
+      (orthogonal ?x1 ?y1 ?x2 ?y2)
+      (onboard ?x2 ?y2))
+
+  (<= (input ?player (pawnmove ?x1 ?y1 ?x2 ?y2))
+      (piece ?piece pawn ?player)
+      (active ?piece ?x1 ?y1)
+      (diagonal ?x1 ?y1 ?x2 ?y2)
+      (onboard ?x2 ?y2))
+    
+  (<= (input ?player (knightmove ?x1 ?y1 ?x2 ?y2))
+      (piece ?piece knight ?player)
+      (active ?piece ?x1 ?y1)
+      (ell ?x1 ?y1 ?x2 ?y2)
+      (onboard ?x2 ?y2))
+
+  (<= (input ?player (checkermove ?x1 ?y1 ?x2 ?y2))
+      (piece ?piece checker ?player)
+      (active ?piece ?x1 ?y1)
+      (diagonal ?x1 ?y1 ?x2 ?y2)
+      (onboard ?x2 ?y2)
+      (oddsquare ?x2 ?y2))
+
+  (<= (input ?player (jump ?x1 ?y1 ?x2 ?y2 ?x3 ?y3))
+      (piece ?piece checker ?player)
+      (active ?piece ?x1 ?y1)
+      (jumpable ?x1 ?y1 ?x2 ?y2 ?x3 ?y3)
+      (onboard ?x3 ?y3)
+      (oddsquare ?x2 ?y2))
+
+  (<= (input ?player noop)
+      (role ?player))
+
+  (<= (active ?piece ?x ?y) (start ?piece ?x ?y))
+  (<= (active ?piece ?x ?y) (piece ?piece ?type ?role) (onboard ?x ?y))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; init
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (init (cell 3 1 whiteknight))
+  (init (cell 4 1 whitechecker))
+  (init (cell 5 1 whitepawn))
+
+  (init (cell 3 7 blackpawn))
+  (init (cell 4 7 blackchecker))
+  (init (cell 5 7 blackknight))
+
+  (init (step 1))
+
+  (init (control white))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; legal
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(<= (legal ?player ?move)
+    (true (control ?player))
+    (legal2 ?player ?move))
+
+(<= (legal ?player noop)
+    (role ?player)
+    (not (true (control ?player))))
+
+(<= (legal ?player noop)
+    (true (control ?player))
+    (not (haslegalmove ?player)))
+
+
+  (<= (legal2 ?player (drop ?y))
+      (role ?player)
+      (chute ?y)
+      (emptycell 1 ?y))
+
+
+  (<= (legal2 ?player (pawnmove ?x1 ?y1 ?x2 ?y2))
+      (true (cell ?x1 ?y1 ?piece))
+      (piece ?piece pawn ?player)
+      (orthogonal ?x1 ?y1 ?x2 ?y2)
+      (onboard ?x2 ?y2)
+      (emptycell ?x2 ?y2))
+
+  (<= (legal2 ?player1 (pawnmove ?x1 ?y1 ?x2 ?y2))
+      (true (cell ?x1 ?y1 ?piece1))
+      (piece ?piece1 pawn ?player1)
+      (diagonal ?x1 ?y1 ?x2 ?y2)
+      (onboard ?x2 ?y2)
+      (true (cell ?x2 ?y2 ?piece2))
+      (piece ?piece2 ?type ?player2)
+      (distinct ?player1 ?player2))
+
+
+  (<= (legal2 ?player (knightmove ?x1 ?y1 ?x2 ?y2))
+      (true (cell ?x1 ?y1 ?piece))
+      (piece ?piece knight ?player)
+      (ell ?x1 ?y1 ?x2 ?y2)
+      (onboard ?x2 ?y2)
+      (emptycell ?x2 ?y2))
+
+  (<= (legal2 ?player1 (knightmove ?x1 ?y1 ?x2 ?y2))
+      (true (cell ?x1 ?y1 ?piece1))
+      (piece ?piece1 knight ?player1)
+      (ell ?x1 ?y1 ?x2 ?y2)
+      (onboard ?x2 ?y2)
+      (true (cell ?x2 ?y2 ?piece2))
+      (piece ?piece2 ?type ?player2)
+      (distinct ?player1 ?player2))
+
+
+  (<= (legal2 ?player (checkermove ?x1 ?y1 ?x2 ?y2))
+      (true (cell ?x1 ?y1 ?piece))
+      (piece ?piece checker ?player)
+      (diagonal ?x1 ?y1 ?x2 ?y2)
+      (onboard ?x2 ?y2)
+      (emptycell ?x2 ?y2))
+
+
+  (<= (legal2 ?player1 (jump ?x1 ?y1 ?x2 ?y2 ?x3 ?y3))
+      (true (cell ?x1 ?y1 ?piece1))
+      (piece ?piece1 checker ?player1)
+      (jumpable ?x1 ?y1 ?x2 ?y2 ?x3 ?y3)
+      (true (cell ?x2 ?y2 ?piece2))
+      (piece ?piece2 ?ignore ?player2)
+      (distinct ?player1 ?player2)
+      (onboard ?x3 ?y3)
+      (emptycell ?x3 ?y3))
+
+
+  (<= (haslegalmove ?player)
+      (legal2 ?player ?move))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; next
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (<= (next (cell ?x ?y ?piece))
+      (does ?player (drop ?y))
+      (lowpoint ?x ?y)
+      (piece ?piece disk ?player))
+
+  (<= (next (cell ?x ?y ?piece))
+      (does ?player (drop ?chute))
+      (true (cell ?x ?y ?piece)))
+
+
+  (<= (next (cell ?x2 ?y2 ?piece))
+      (does ?player (pawnmove ?x1 ?y1 ?x2 ?y2))
+      (piece ?piece pawn ?player))
+
+  (<= (next (cell ?x ?y ?piece))
+      (does ?player (pawnmove ?u1 ?v1 ?u2 ?v2))
+      (distinctcell ?x ?y ?u1 ?v1)
+      (distinctcell ?x ?y ?u2 ?v2)
+      (true (cell ?x ?y ?piece)))
+
+  (<= (next (cell ?xstart ?ystart ?piece))
+      (does ?player (pawnmove ?x1 ?y1 ?x2 ?y2))
+      (true (cell ?x2 ?y2 ?piece))
+      (start ?piece ?xstart ?ystart))
+
+
+  (<= (next (cell ?x2 ?y2 ?piece))
+      (does ?player (knightmove ?x1 ?y1 ?x2 ?y2))
+      (piece ?piece knight ?player))    
+
+  (<= (next (cell ?x ?y ?piece))
+      (does ?player (knightmove ?u1 ?v1 ?u2 ?v2))
+      (distinctcell ?x ?y ?u1 ?v1)
+      (distinctcell ?x ?y ?u2 ?v2)
+      (true (cell ?x ?y ?piece)))
+
+  (<= (next (cell ?xstart ?ystart ?piece))
+      (does ?player (knightmove ?x1 ?y1 ?x2 ?y2))
+      (true (cell ?x2 ?y2 ?piece))
+      (start ?piece ?xstart ?ystart))
+
+
+
+  (<= (next (cell ?x2 ?y2 ?piece))
+    (does ?player (checkermove ?x1 ?y1 ?x2 ?y2))
+    (piece ?piece checker ?player)) 
+
+  (<= (next (cell ?x ?y ?piece))
+      (does ?player (checkermove ?u1 ?v1 ?u2 ?v2))
+      (distinctcell ?x ?y ?u1 ?v1)
+      (distinctcell ?x ?y ?u2 ?v2)
+      (true (cell ?x ?y ?piece)))
+
+
+  (<= (next (cell ?x3 ?y3 ?piece))
+      (does ?player (jump ?x1 ?y1 ?x2 ?y2 ?x3 ?y3))
+      (piece ?piece checker ?player))
+
+  (<= (next (cell ?xany ?yany ?piece))
+      (does ?player (jump ?x1 ?y1 ?x2 ?y2 ?x3 ?y3))
+      (distinctcell ?xany ?yany ?x1 ?y1)
+      (distinctcell ?xany ?yany ?x2 ?y2)
+      (true (cell ?xany ?yany ?piece)))
+    
+  (<= (next (cell ?xstart ?ystart ?piece))
+      (does ?player (jump ?x1 ?y1 ?x2 ?y2 ?x3 ?y3))
+      (true (cell ?x2 ?y2 ?piece))
+      (start ?piece ?xstart ?ystart))
+
+
+  (<= (next (cell ?x ?y ?piece))
+      (true (control ?player))
+      (does ?player noop)
+      (true (cell ?x ?y ?piece)))
+
+
+  (<= (next (step ?t2))
+      (true (step ?t1))
+      (succ ?t1 ?t2))
+
+
+  (<= (next (control white)) (true (control black)))
+  (<= (next (control black)) (true (control white)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; goal
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (<= (goal ?player 100)
+      (line ?player))
+
+  (<= (goal white 50)
+      (not (line white))
+      (not (line black)))
+
+  (<= (goal black 50)
+      (not (line white))
+      (not (line black)))
+
+  (<= (goal white 0)
+      (line black))
+
+  (<= (goal black 0)
+      (line white))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; terminal
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (<= terminal (line ?player))
+  (<= terminal (true (step 91)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; views
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (<= (orthogonal ?x1 ?y ?x2 ?y)
+      (plus1 ?x1 ?x2)
+      (index ?y))
+
+  (<= (orthogonal ?x1 ?y ?x2 ?y)
+      (plus1 ?x2 ?x1)
+      (index ?y))
+
+  (<= (orthogonal ?x ?y1 ?x ?y2)
+      (plus1 ?y1 ?y2)
+      (index ?x))
+
+  (<= (orthogonal ?x ?y1 ?x ?y2)
+      (plus1 ?y2 ?y1)
+      (index ?x))
+
+
+  (<= (diagonal ?x1 ?y1 ?x2 ?y2)
+      (plus1 ?x1 ?x2)
+      (plus1 ?y1 ?y2))
+
+  (<= (diagonal ?x1 ?y1 ?x2 ?y2)
+      (plus1 ?x1 ?x2)
+      (plus1 ?y2 ?y1))
+
+  (<= (diagonal ?x1 ?y1 ?x2 ?y2)
+      (plus1 ?x2 ?x1)
+      (plus1 ?y1 ?y2))
+
+  (<= (diagonal ?x1 ?y1 ?x2 ?y2)
+      (plus1 ?x2 ?x1)
+      (plus1 ?y2 ?y1))
+
+
+  (<= (ell ?x1 ?y1 ?x2 ?y2)
+      (plus2 ?x2 ?x1)
+      (plus1 ?y1 ?y2))
+
+  (<= (ell ?x1 ?y1 ?x2 ?y2)
+      (plus1 ?x2 ?x1)
+      (plus2 ?y1 ?y2))
+
+  (<= (ell ?x1 ?y1 ?x2 ?y2)
+      (plus1 ?x1 ?x2)
+      (plus2 ?y1 ?y2))
+
+  (<= (ell ?x1 ?y1 ?x2 ?y2)
+      (plus2 ?x1 ?x2)
+      (plus1 ?y1 ?y2))
+
+  (<= (ell ?x1 ?y1 ?x2 ?y2)
+      (plus2 ?x2 ?x1)
+      (plus1 ?y2 ?y1))
+
+  (<= (ell ?x1 ?y1 ?x2 ?y2)
+      (plus1 ?x2 ?x1)
+      (plus2 ?y2 ?y1))
+
+  (<= (ell ?x1 ?y1 ?x2 ?y2)
+      (plus1 ?x1 ?x2)
+      (plus2 ?y2 ?y1))
+
+  (<= (ell ?x1 ?y1 ?x2 ?y2)
+      (plus2 ?x1 ?x2)
+      (plus1 ?y2 ?y1))
+
+
+  (<= (jumpable ?x1 ?y1 ?x2 ?y2 ?x3 ?y3)
+      (plus1 ?x1 ?x2)
+      (plus1 ?y1 ?y2)
+      (plus1 ?x2 ?x3)
+      (plus1 ?y2 ?y3))
+
+  (<= (jumpable ?x1 ?y1 ?x2 ?y2 ?x3 ?y3)
+      (plus1 ?x1 ?x2)
+      (plus1 ?y2 ?y1)
+      (plus1 ?x2 ?x3)
+      (plus1 ?y3 ?y2))
+
+  (<= (jumpable ?x1 ?y1 ?x2 ?y2 ?x3 ?y3)
+      (plus1 ?x2 ?x1)
+      (plus1 ?y1 ?y2)
+      (plus1 ?x3 ?x2)
+      (plus1 ?y2 ?y3))
+
+  (<= (jumpable ?x1 ?y1 ?x2 ?y2 ?x3 ?y3)
+      (plus1 ?x2 ?x1)
+      (plus1 ?y2 ?y1)
+      (plus1 ?x3 ?x2)
+      (plus1 ?y3 ?y2))
+
+
+  (<= (lowpoint ?x ?y)
+      (lowpointfrom 1 ?y ?x ?y))
+
+  (<= (lowpointfrom 7 ?y 7 ?y)
+      (index ?y))
+
+  (<= (lowpointfrom ?x1 ?y ?x1 ?y)
+      (plus1 ?x1 ?x2)
+      (true (cell ?x2 ?y ?piece)))
+
+  (<= (lowpointfrom ?x1 ?y ?x3 ?y)
+      (plus1 ?x1 ?x2)
+      (emptycell ?x2 ?y)
+      (lowpointfrom ?x2 ?y ?x3 ?y)
+      (index ?y))
+
+
+  (<= (onboard ?x ?y)
+      (cell ?x ?y)
+      (distinct ?x 1)
+      (distinct ?x 7)
+      (distinct ?y 1)
+      (distinct ?y 7))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (<= (controls ?x ?y ?role)
+      (true (cell ?x ?y ?piece))
+      (piece ?piece ?type ?role))
+
+  (<= (cell ?x ?y)
+      (index ?x)
+      (index ?y))
+
+  (<= (distinctcell ?x1 ?y1 ?x2 ?y2)
+    (cell ?x1 ?y1)
+    (cell ?x2 ?y2)
+    (distinct ?x1 ?x2))
+  (<= (distinctcell ?x1 ?y1 ?x2 ?y2)
+    (cell ?x1 ?y1)
+    (cell ?x2 ?y2)
+    (distinct ?y1 ?y2))
+
+  (<= (emptycell ?x ?y)
+      (cell ?x ?y)
+      (not (controls ?x ?y white))
+      (not (controls ?x ?y black)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (<= (line ?player) (row ?player))
+  (<= (line ?player) (column ?player))
+  (<= (line ?player) (diag ?player))
+
+
+  (<= (row ?player)
+      (controls 3 3 ?player)
+      (controls 3 4 ?player)
+      (controls 3 5 ?player))
+
+  (<= (row ?player)
+      (controls 4 3 ?player)
+      (controls 4 4 ?player)
+      (controls 4 5 ?player))
+
+  (<= (row ?player)
+      (controls 5 3 ?player)
+      (controls 5 4 ?player)
+      (controls 5 5 ?player))
+
+
+  (<= (column ?player)
+      (controls 3 3 ?player)
+      (controls 4 3 ?player)
+      (controls 5 3 ?player))
+
+  (<= (column ?player)
+      (controls 3 4 ?player)
+      (controls 4 4 ?player)
+      (controls 5 4 ?player))
+
+  (<= (column ?player)
+      (controls 3 5 ?player)
+      (controls 4 5 ?player)
+      (controls 5 5 ?player))
+
+
+  (<= (diag ?player)
+      (controls 3 3 ?player)
+      (controls 4 4 ?player)
+      (controls 5 5 ?player))
+
+  (<= (diag ?player)
+      (controls 3 5 ?player)
+      (controls 4 4 ?player)
+      (controls 5 3 ?player))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (<= (oddsquare ?x ?y)
+      (oddidx ?x)
+      (evenidx ?y))
+
+  (<= (oddsquare ?x ?y)
+      (oddidx ?y)
+      (evenidx ?x))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; static relations
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (rotation white black)
+  (rotation black white)
+
+  (start whitepawn 5 1)
+  (start whitechecker 4 1)
+  (start whiteknight 3 1)
+  (start blackpawn 3 7)
+  (start blackchecker 4 7)
+  (start blackknight 5 7)
+
+  (piece whitedisk disk white)       (piece blackdisk disk black)
+  (piece whitepawn pawn white)       (piece blackpawn pawn black)
+  (piece whitechecker checker white) (piece blackchecker checker black)
+  (piece whiteknight knight white)   (piece blackknight knight black)
+
+  (chute 3)
+  (chute 4)
+  (chute 5)
+
+  (index 1)
+  (index 2)
+  (index 3)
+  (index 4)
+  (index 5)
+  (index 6)
+  (index 7)
+
+  (plus1 1 2)
+  (plus1 2 3)
+  (plus1 3 4)
+  (plus1 4 5)
+  (plus1 5 6)
+  (plus1 6 7)
+
+  (plus2 1 3)
+  (plus2 2 4)
+  (plus2 3 5)
+  (plus2 4 6)
+  (plus2 5 7)
+
+  (oddidx 1)
+  (oddidx 3)
+  (oddidx 5)
+  (oddidx 7)
+
+  (evenidx 2)
+  (evenidx 4)
+  (evenidx 6)
+
+  (succ  1  2)
+  (succ  2  3)
+  (succ  3  4)
+  (succ  4  5)
+  (succ  5  6)
+  (succ  6  7)
+  (succ  7  8)
+  (succ  8  9)
+  (succ  9 10)
+  (succ 10 11)
+  (succ 11 12)
+  (succ 12 13)
+  (succ 13 14)
+  (succ 14 15)
+  (succ 15 16)
+  (succ 16 17)
+  (succ 17 18)
+  (succ 18 19)
+  (succ 19 20)
+  (succ 20 21)
+  (succ 21 22)
+  (succ 22 23)
+  (succ 23 24)
+  (succ 24 25)
+  (succ 25 26)
+  (succ 26 27)
+  (succ 27 28)
+  (succ 28 29)
+  (succ 29 30)
+  (succ 30 31)
+  (succ 31 32)
+  (succ 32 33)
+  (succ 33 34)
+  (succ 34 35)
+  (succ 35 36)
+  (succ 36 37)
+  (succ 37 38)
+  (succ 38 39)
+  (succ 39 40)
+  (succ 40 41)
+(succ 41 42) (succ 42 43) (succ 43 44) (succ 44 45) (succ 45 46) (succ 46 47) (succ 47 48) (succ 48 49) (succ 49 50) (succ 50 51)
+(succ 51 52) (succ 52 53) (succ 53 54) (succ 54 55) (succ 55 56) (succ 56 57) (succ 57 58) (succ 58 59) (succ 59 60) (succ 60 61)
+(succ 61 62)
+  (succ 62 63)
+  (succ 63 64)
+  (succ 64 65)
+  (succ 65 66)
+  (succ 66 67)
+  (succ 67 68)
+  (succ 68 69)
+  (succ 69 70)
+  (succ 70 71)
+  (succ 71 72)
+  (succ 72 73)
+  (succ 73 74)
+  (succ 74 75)
+  (succ 75 76)
+  (succ 76 77)
+  (succ 77 78)
+  (succ 78 79)
+  (succ 79 80)
+  (succ 80 81)
+  (succ 81 82)
+  (succ 82 83)
+  (succ 83 84)
+  (succ 84 85)
+  (succ 85 86)
+  (succ 86 87)
+  (succ 87 88)
+  (succ 88 89)
+  (succ 89 90)
+  (succ 90 91)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

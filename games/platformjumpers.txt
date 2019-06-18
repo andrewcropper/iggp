@@ -1,0 +1,214 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Platform Jumpers
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Components
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (role red)
+  (role blue)
+
+  (<= (base (cell ?r ?i ?j)) (role ?r) (index ?i) (index ?j))
+  (<= (base (jumper ?r ?i ?j)) (role ?r) (index ?i) (index ?j))
+  (<= (base (rowed ?i)) (index ?i))
+  (<= (base (coled ?j)) (index ?j))
+  (<= (base (control ?r)) (role ?r))
+
+  (<= (input ?r (jump ?i ?j ?m ?n)) (role ?r) (index ?i) (index ?j) (index ?m) (index ?n))
+  (<= (input ?r (row ?i)) (role ?r) (index ?i))
+  (<= (input ?r (col ?j)) (role ?r) (index ?j))
+  (<= (input ?r noop) (role ?r))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; init
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (init (jumper red 1 1))
+  (init (jumper red 1 3))
+  (init (jumper red 1 5))
+  (init (jumper red 1 7))
+  (init (jumper red 1 9))
+  (init (jumper blue 10 2))
+  (init (jumper blue 10 4))
+  (init (jumper blue 10 6))
+  (init (jumper blue 10 8))
+  (init (jumper blue 10 10))
+
+  (init (coled 5))
+  (init (coled 6))
+
+  (init (cell blue 1 5))
+  (init (cell blue 2 5))
+  (init (cell blue 3 5))
+  (init (cell blue 4 5))
+  (init (cell blue 5 5))
+  (init (cell blue 6 5))
+  (init (cell blue 7 5))
+  (init (cell blue 8 5))
+  (init (cell blue 9 5))
+  (init (cell blue 10 5))
+  (init (cell red 1 6))
+  (init (cell red 2 6))
+  (init (cell red 3 6))
+  (init (cell red 4 6))
+  (init (cell red 5 6))
+  (init (cell red 6 6))
+  (init (cell red 7 6))
+  (init (cell red 8 6))
+  (init (cell red 9 6))
+  (init (cell red 10 6))
+
+  (init (control red))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; legal
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (<= (legal ?r (row ?i))
+      (legal_row ?r ?i))
+
+  (<= (legal ?r (col ?j))
+      (legal_col ?r ?j))
+
+  (<= (legal ?r (jump ?i ?j ?m ?n))
+      (legal_jump ?r ?i ?j ?m ?n))
+
+  (<= (legal ?r noop)
+      (role ?r)
+      (not (has_action ?r)))
+
+
+
+  (<= (legal_row ?r ?i)
+      (true (control ?r))
+      (index ?i)
+      (not (true (rowed ?i))))
+
+  (<= (legal_col ?r ?j)
+      (true (control ?r))
+      (index ?j)
+      (not (true (coled ?j))))
+
+  (<= (legal_jump ?p ?i ?j ?m ?n)
+      (true (control ?p))
+      (not (more_marks ?p))
+      (true (jumper ?p ?m ?n))
+      (valid_move ?p ?i ?j ?m ?n)
+      (same_color ?i ?j ?m ?n)
+      (not (has_piece ?i ?j)))
+
+
+  (<= (valid_move red ?i ?j ?m ?n) (knights_move_down ?i ?j ?m ?n))
+  (<= (valid_move red ?i ?j ?m ?n) (slow_move_down ?i ?j ?m ?n))
+  (<= (valid_move blue ?i ?j ?m ?n) (knights_move_up ?i ?j ?m ?n))
+  (<= (valid_move blue ?i ?j ?m ?n) (slow_move_up ?i ?j ?m ?n))
+
+  (<= (knights_move_up ?i ?j ?m ?n) (board_succ_two ?i ?m) (board_succ ?j ?n))
+  (<= (knights_move_up ?i ?j ?m ?n) (board_succ ?i ?m) (board_succ_two ?j ?n))
+  (<= (knights_move_up ?i ?j ?m ?n) (board_succ_two ?i ?m) (board_succ ?n ?j))
+  (<= (knights_move_up ?i ?j ?m ?n) (board_succ ?i ?m) (board_succ_two ?n ?j))
+  (<= (slow_move_up ?i ?j ?m ?j) (board_succ ?i ?m) (index ?j))
+  (<= (slow_move_up ?i ?j ?m ?n) (board_succ ?i ?m) (board_succ ?j ?n))
+  (<= (slow_move_up ?i ?j ?m ?n) (board_succ ?i ?m) (board_succ ?n ?j))
+  (<= (knights_move_down ?i ?j ?m ?n) (board_succ_two ?m ?i) (board_succ ?n ?j))
+  (<= (knights_move_down ?i ?j ?m ?n) (board_succ ?m ?i) (board_succ_two ?n ?j))
+  (<= (knights_move_down ?i ?j ?m ?n) (board_succ_two ?m ?i) (board_succ ?j ?n))
+  (<= (knights_move_down ?i ?j ?m ?n) (board_succ ?m ?i) (board_succ_two ?j ?n))
+  (<= (slow_move_down ?i ?j ?m ?j) (board_succ ?m ?i) (index ?j))
+  (<= (slow_move_down ?i ?j ?m ?n) (board_succ ?m ?i) (board_succ ?j ?n))
+  (<= (slow_move_down ?i ?j ?m ?n) (board_succ ?m ?i) (board_succ ?n ?j))
+
+  (<= (same_color ?i ?j ?m ?n) (true (cell ?c ?i ?j)) (true (cell ?c ?m ?n)))
+
+  (<= (has_piece ?i ?j) (true (jumper ?r ?i ?j)))
+
+  (<= (more_marks ?r) (legal_row ?r ?i))
+  (<= (more_marks ?r) (legal_col ?r ?j))
+
+  (<= (has_action ?r) (more_marks ?r))
+  (<= (has_action ?r) (legal_jump ?r ?i ?j ?m ?n))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; next
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (<= (next (cell ?r ?i ?j)) (true (cell ?r ?i ?j)))
+  (<= (next (cell ?r ?i ?j)) (does ?r (row ?i)) (index ?j) (not (filled ?i ?j)))
+  (<= (next (cell ?r ?i ?j)) (does ?r (col ?j)) (index ?i) (not (filled ?i ?j)))
+
+  (<= (next (rowed ?i)) (does ?r (row ?i)))
+  (<= (next (coled ?j)) (does ?r (col ?j)))
+  (<= (next (rowed ?i)) (true (rowed ?i)))
+  (<= (next (coled ?j)) (true (coled ?j)))
+
+  (<= (next (jumper ?p ?i ?j)) (does ?p (jump ?i ?j ?m ?n)))
+  (<= (next (jumper ?p ?i ?j)) (true (jumper ?p ?i ?j)) (not (moved ?i ?j)))
+
+  (<= (next (control red)) (true (control blue)))
+  (<= (next (control blue)) (true (control red)))
+
+  (<= (filled ?i ?j) (true (cell ?r ?i ?j)))
+  (<= (moved ?m ?n) (does ?p (jump ?i ?j ?m ?n)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; goal
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (<= (goal red 100) (pos_achieved red))
+  (<= (goal red 50) (not (pos_achieved red)) (not (pos_achieved blue)))
+  (<= (goal red 0) (not (pos_achieved red)) (pos_achieved blue))
+
+  (<= (goal blue 100) (pos_achieved blue))
+  (<= (goal blue 50) (not (pos_achieved red)) (not (pos_achieved blue)))
+  (<= (goal blue 0) (pos_achieved red) (not (pos_achieved blue)))
+
+  (<= (pos_achieved ?r) (true (jumper ?r ?i ?j)) (goal_row ?r ?i))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; terminal
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (<= terminal (pos_achieved ?r)) 
+  (<= terminal (not (has_action red)) (not (has_action blue)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Data
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (goal_row red 10) 
+  (goal_row blue 1)
+
+  (index 1)
+  (index 2)
+  (index 3)
+  (index 4)
+  (index 5)
+  (index 6)
+  (index 7)
+  (index 8)
+  (index 9)
+  (index 10)
+
+  (board_succ 1 2)
+  (board_succ 2 3)
+  (board_succ 3 4)
+  (board_succ 4 5)
+  (board_succ 5 6)
+  (board_succ 6 7)
+  (board_succ 7 8)
+  (board_succ 8 9)
+  (board_succ 9 10)
+
+  (board_succ_two 1 3)
+  (board_succ_two 2 4)
+  (board_succ_two 3 5)
+  (board_succ_two 4 6)
+  (board_succ_two 5 7)
+  (board_succ_two 6 8)
+  (board_succ_two 7 9)
+  (board_succ_two 8 10)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

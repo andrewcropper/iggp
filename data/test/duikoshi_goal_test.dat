@@ -1,0 +1,5987 @@
+atoms:
+	goal(green, 0)
+	goal(red, 0)
+	goal(green, 100)
+	goal(red, 100)
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+statics:
+	filler(1)
+	filler(2)
+	filler(3)
+	filler(4)
+	filler(b)
+	index(1)
+	index(2)
+	index(3)
+	index(4)
+	input(green, noop)
+	input_mark(green, 1, 1, 1)
+	input_mark(green, 1, 1, 2)
+	input_mark(green, 1, 1, 3)
+	input_mark(green, 1, 1, 4)
+	input_mark(green, 1, 2, 1)
+	input_mark(green, 1, 2, 2)
+	input_mark(green, 1, 2, 3)
+	input_mark(green, 1, 2, 4)
+	input_mark(green, 1, 3, 1)
+	input_mark(green, 1, 3, 2)
+	input_mark(green, 1, 3, 3)
+	input_mark(green, 1, 3, 4)
+	input_mark(green, 1, 4, 1)
+	input_mark(green, 1, 4, 2)
+	input_mark(green, 1, 4, 3)
+	input_mark(green, 1, 4, 4)
+	input_mark(green, 2, 1, 1)
+	input_mark(green, 2, 1, 2)
+	input_mark(green, 2, 1, 3)
+	input_mark(green, 2, 1, 4)
+	input_mark(green, 2, 2, 1)
+	input_mark(green, 2, 2, 2)
+	input_mark(green, 2, 2, 3)
+	input_mark(green, 2, 2, 4)
+	input_mark(green, 2, 3, 1)
+	input_mark(green, 2, 3, 2)
+	input_mark(green, 2, 3, 3)
+	input_mark(green, 2, 3, 4)
+	input_mark(green, 2, 4, 1)
+	input_mark(green, 2, 4, 2)
+	input_mark(green, 2, 4, 3)
+	input_mark(green, 2, 4, 4)
+	input_mark(green, 3, 1, 1)
+	input_mark(green, 3, 1, 2)
+	input_mark(green, 3, 1, 3)
+	input_mark(green, 3, 1, 4)
+	input_mark(green, 3, 2, 1)
+	input_mark(green, 3, 2, 2)
+	input_mark(green, 3, 2, 3)
+	input_mark(green, 3, 2, 4)
+	input_mark(green, 3, 3, 1)
+	input_mark(green, 3, 3, 2)
+	input_mark(green, 3, 3, 3)
+	input_mark(green, 3, 3, 4)
+	input_mark(green, 3, 4, 1)
+	input_mark(green, 3, 4, 2)
+	input_mark(green, 3, 4, 3)
+	input_mark(green, 3, 4, 4)
+	input_mark(green, 4, 1, 1)
+	input_mark(green, 4, 1, 2)
+	input_mark(green, 4, 1, 3)
+	input_mark(green, 4, 1, 4)
+	input_mark(green, 4, 2, 1)
+	input_mark(green, 4, 2, 2)
+	input_mark(green, 4, 2, 3)
+	input_mark(green, 4, 2, 4)
+	input_mark(green, 4, 3, 1)
+	input_mark(green, 4, 3, 2)
+	input_mark(green, 4, 3, 3)
+	input_mark(green, 4, 3, 4)
+	input_mark(green, 4, 4, 1)
+	input_mark(green, 4, 4, 2)
+	input_mark(green, 4, 4, 3)
+	input_mark(green, 4, 4, 4)
+	input(red, noop)
+	input_mark(red, 1, 1, 1)
+	input_mark(red, 1, 1, 2)
+	input_mark(red, 1, 1, 3)
+	input_mark(red, 1, 1, 4)
+	input_mark(red, 1, 2, 1)
+	input_mark(red, 1, 2, 2)
+	input_mark(red, 1, 2, 3)
+	input_mark(red, 1, 2, 4)
+	input_mark(red, 1, 3, 1)
+	input_mark(red, 1, 3, 2)
+	input_mark(red, 1, 3, 3)
+	input_mark(red, 1, 3, 4)
+	input_mark(red, 1, 4, 1)
+	input_mark(red, 1, 4, 2)
+	input_mark(red, 1, 4, 3)
+	input_mark(red, 1, 4, 4)
+	input_mark(red, 2, 1, 1)
+	input_mark(red, 2, 1, 2)
+	input_mark(red, 2, 1, 3)
+	input_mark(red, 2, 1, 4)
+	input_mark(red, 2, 2, 1)
+	input_mark(red, 2, 2, 2)
+	input_mark(red, 2, 2, 3)
+	input_mark(red, 2, 2, 4)
+	input_mark(red, 2, 3, 1)
+	input_mark(red, 2, 3, 2)
+	input_mark(red, 2, 3, 3)
+	input_mark(red, 2, 3, 4)
+	input_mark(red, 2, 4, 1)
+	input_mark(red, 2, 4, 2)
+	input_mark(red, 2, 4, 3)
+	input_mark(red, 2, 4, 4)
+	input_mark(red, 3, 1, 1)
+	input_mark(red, 3, 1, 2)
+	input_mark(red, 3, 1, 3)
+	input_mark(red, 3, 1, 4)
+	input_mark(red, 3, 2, 1)
+	input_mark(red, 3, 2, 2)
+	input_mark(red, 3, 2, 3)
+	input_mark(red, 3, 2, 4)
+	input_mark(red, 3, 3, 1)
+	input_mark(red, 3, 3, 2)
+	input_mark(red, 3, 3, 3)
+	input_mark(red, 3, 3, 4)
+	input_mark(red, 3, 4, 1)
+	input_mark(red, 3, 4, 2)
+	input_mark(red, 3, 4, 3)
+	input_mark(red, 3, 4, 4)
+	input_mark(red, 4, 1, 1)
+	input_mark(red, 4, 1, 2)
+	input_mark(red, 4, 1, 3)
+	input_mark(red, 4, 1, 4)
+	input_mark(red, 4, 2, 1)
+	input_mark(red, 4, 2, 2)
+	input_mark(red, 4, 2, 3)
+	input_mark(red, 4, 2, 4)
+	input_mark(red, 4, 3, 1)
+	input_mark(red, 4, 3, 2)
+	input_mark(red, 4, 3, 3)
+	input_mark(red, 4, 3, 4)
+	input_mark(red, 4, 4, 1)
+	input_mark(red, 4, 4, 2)
+	input_mark(red, 4, 4, 3)
+	input_mark(red, 4, 4, 4)
+	role(green)
+	role(red)
+
+---
+
+background:
+	true_cell(1, 1, 4)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, 1)
+	true_cell(2, 1, 1)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 2)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, 4)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, b)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 1)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 4)
+	true_cell(1, 4, b)
+	true_cell(2, 1, 4)
+	true_cell(2, 2, 3)
+	true_cell(2, 3, 1)
+	true_cell(2, 4, b)
+	true_cell(3, 1, 2)
+	true_cell(3, 2, 4)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, 3)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 4)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 4)
+	true_cell(1, 2, 2)
+	true_cell(1, 3, 1)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 4)
+	true_cell(2, 4, 3)
+	true_cell(3, 1, b)
+	true_cell(3, 2, 1)
+	true_cell(3, 3, 2)
+	true_cell(3, 4, 4)
+	true_cell(4, 1, 2)
+	true_cell(4, 2, 3)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 1)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, 3)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, b)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 4)
+	true_cell(1, 2, 3)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, 2)
+	true_cell(3, 1, b)
+	true_cell(3, 2, 2)
+	true_cell(3, 3, 4)
+	true_cell(3, 4, 3)
+	true_cell(4, 1, 2)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 1)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 1)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 2)
+	true_cell(2, 4, 3)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, 1)
+	true_cell(4, 1, b)
+	true_cell(4, 2, 3)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 4)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 4)
+	true_cell(3, 4, 2)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 4)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, 1)
+	true_cell(2, 1, 3)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 1)
+	true_cell(2, 4, 4)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 3)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 2)
+	true_cell(4, 4, b)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 1)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, 2)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 2)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 1)
+	true_cell(4, 4, 4)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, 3)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 3)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 1)
+	true_cell(1, 2, 4)
+	true_cell(1, 3, b)
+	true_cell(1, 4, 3)
+	true_cell(2, 1, 2)
+	true_cell(2, 2, 3)
+	true_cell(2, 3, 4)
+	true_cell(2, 4, 1)
+	true_cell(3, 1, 4)
+	true_cell(3, 2, 2)
+	true_cell(3, 3, 3)
+	true_cell(3, 4, b)
+	true_cell(4, 1, 3)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 2)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 2)
+	true_cell(2, 4, b)
+	true_cell(3, 1, 1)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 2)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 1)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 2)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 1)
+	true_cell(4, 4, 4)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 1)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, b)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 4)
+	true_cell(1, 2, 2)
+	true_cell(1, 3, 3)
+	true_cell(1, 4, b)
+	true_cell(2, 1, 3)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 4)
+	true_cell(2, 4, 2)
+	true_cell(3, 1, 1)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 2)
+	true_cell(3, 4, 4)
+	true_cell(4, 1, b)
+	true_cell(4, 2, 3)
+	true_cell(4, 3, 1)
+	true_cell(4, 4, b)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, 2)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 1)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, 1)
+	true_cell(4, 1, b)
+	true_cell(4, 2, 4)
+	true_cell(4, 3, 3)
+	true_cell(4, 4, b)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 1)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, 4)
+	true_cell(2, 2, 3)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 4)
+	true_cell(3, 4, 2)
+	true_cell(4, 1, 2)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 2)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 1)
+	true_cell(1, 4, 4)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 3)
+	true_cell(2, 3, b)
+	true_cell(2, 4, 1)
+	true_cell(3, 1, b)
+	true_cell(3, 2, 1)
+	true_cell(3, 3, 2)
+	true_cell(3, 4, b)
+	true_cell(4, 1, 1)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 4)
+	true_cell(4, 4, 3)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 2)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 4)
+	true_cell(1, 4, 3)
+	true_cell(2, 1, 1)
+	true_cell(2, 2, 2)
+	true_cell(2, 3, b)
+	true_cell(2, 4, 4)
+	true_cell(3, 1, 3)
+	true_cell(3, 2, 4)
+	true_cell(3, 3, 1)
+	true_cell(3, 4, 2)
+	true_cell(4, 1, 4)
+	true_cell(4, 2, 3)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 1)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 1)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, 2)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 3)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 2)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 1)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 2)
+	true_cell(1, 4, 3)
+	true_cell(2, 1, 4)
+	true_cell(2, 2, 3)
+	true_cell(2, 3, b)
+	true_cell(2, 4, 1)
+	true_cell(3, 1, b)
+	true_cell(3, 2, 1)
+	true_cell(3, 3, 4)
+	true_cell(3, 4, 2)
+	true_cell(4, 1, 2)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 1)
+	true_cell(4, 4, b)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 4)
+	true_cell(1, 2, 1)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, 3)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, 2)
+	true_cell(3, 3, 1)
+	true_cell(3, 4, b)
+	true_cell(4, 1, 1)
+	true_cell(4, 2, 4)
+	true_cell(4, 3, 3)
+	true_cell(4, 4, 2)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 4)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 1)
+	true_cell(1, 4, 2)
+	true_cell(2, 1, 2)
+	true_cell(2, 2, 3)
+	true_cell(2, 3, b)
+	true_cell(2, 4, 4)
+	true_cell(3, 1, 3)
+	true_cell(3, 2, 4)
+	true_cell(3, 3, 2)
+	true_cell(3, 4, 1)
+	true_cell(4, 1, 1)
+	true_cell(4, 2, 2)
+	true_cell(4, 3, 4)
+	true_cell(4, 4, 3)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 100)
+	goal(red, 0)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, 1)
+	true_cell(2, 1, 3)
+	true_cell(2, 2, 2)
+	true_cell(2, 3, 1)
+	true_cell(2, 4, 4)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 4)
+	true_cell(3, 4, 3)
+	true_cell(4, 1, 1)
+	true_cell(4, 2, 4)
+	true_cell(4, 3, 3)
+	true_cell(4, 4, 2)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 1)
+	true_cell(1, 2, 4)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 1)
+	true_cell(2, 3, 4)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, 3)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, 4)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 2)
+	true_cell(4, 4, b)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 4)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, 2)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 1)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, 3)
+	true_cell(1, 3, 4)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 2)
+	true_cell(2, 4, 3)
+	true_cell(3, 1, 1)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, 4)
+	true_cell(4, 2, 1)
+	true_cell(4, 3, 3)
+	true_cell(4, 4, 2)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, 2)
+	true_cell(1, 3, 3)
+	true_cell(1, 4, 4)
+	true_cell(2, 1, 4)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 2)
+	true_cell(2, 4, 3)
+	true_cell(3, 1, 3)
+	true_cell(3, 2, 1)
+	true_cell(3, 3, 4)
+	true_cell(3, 4, 2)
+	true_cell(4, 1, 2)
+	true_cell(4, 2, 4)
+	true_cell(4, 3, 1)
+	true_cell(4, 4, b)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 3)
+	true_cell(1, 4, 2)
+	true_cell(2, 1, 2)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 4)
+	true_cell(2, 4, 1)
+	true_cell(3, 1, b)
+	true_cell(3, 2, 3)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, 3)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 1)
+	true_cell(4, 4, 4)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 1)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, 2)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 3)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, b)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 4)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 1)
+	true_cell(1, 4, 2)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 3)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, 2)
+	true_cell(3, 3, b)
+	true_cell(3, 4, 1)
+	true_cell(4, 1, 1)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 3)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 2)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, 1)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 4)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 4)
+	true_cell(1, 2, 1)
+	true_cell(1, 3, 2)
+	true_cell(1, 4, 3)
+	true_cell(2, 1, 3)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, 4)
+	true_cell(3, 1, b)
+	true_cell(3, 2, 2)
+	true_cell(3, 3, 1)
+	true_cell(3, 4, b)
+	true_cell(4, 1, 1)
+	true_cell(4, 2, 4)
+	true_cell(4, 3, 3)
+	true_cell(4, 4, 2)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 100)
+	goal(red, 0)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, 2)
+	true_cell(3, 1, 1)
+	true_cell(3, 2, 3)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 2)
+	true_cell(4, 4, 4)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 4)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 3)
+	true_cell(4, 4, 2)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, 3)
+	true_cell(1, 3, 2)
+	true_cell(1, 4, 4)
+	true_cell(2, 1, 3)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, 1)
+	true_cell(3, 1, b)
+	true_cell(3, 2, 4)
+	true_cell(3, 3, 1)
+	true_cell(3, 4, b)
+	true_cell(4, 1, 1)
+	true_cell(4, 2, 2)
+	true_cell(4, 3, 4)
+	true_cell(4, 4, 3)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, 2)
+	true_cell(1, 3, 4)
+	true_cell(1, 4, 1)
+	true_cell(2, 1, 3)
+	true_cell(2, 2, 4)
+	true_cell(2, 3, 1)
+	true_cell(2, 4, b)
+	true_cell(3, 1, 1)
+	true_cell(3, 2, 3)
+	true_cell(3, 3, b)
+	true_cell(3, 4, 2)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 2)
+	true_cell(4, 4, 3)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 2)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 2)
+	true_cell(2, 3, b)
+	true_cell(2, 4, 4)
+	true_cell(3, 1, 3)
+	true_cell(3, 2, 1)
+	true_cell(3, 3, 4)
+	true_cell(3, 4, b)
+	true_cell(4, 1, 4)
+	true_cell(4, 2, 3)
+	true_cell(4, 3, 2)
+	true_cell(4, 4, 1)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 2)
+	true_cell(1, 2, 1)
+	true_cell(1, 3, 3)
+	true_cell(1, 4, b)
+	true_cell(2, 1, 4)
+	true_cell(2, 2, 3)
+	true_cell(2, 3, 2)
+	true_cell(2, 4, b)
+	true_cell(3, 1, 1)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 4)
+	true_cell(3, 4, 3)
+	true_cell(4, 1, 3)
+	true_cell(4, 2, 2)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 4)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, 3)
+	true_cell(1, 3, b)
+	true_cell(1, 4, 4)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 2)
+	true_cell(2, 3, 3)
+	true_cell(2, 4, b)
+	true_cell(3, 1, 3)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 4)
+	true_cell(3, 4, b)
+	true_cell(4, 1, 4)
+	true_cell(4, 2, 1)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 3)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 1)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 2)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 2)
+	true_cell(2, 3, b)
+	true_cell(2, 4, 3)
+	true_cell(3, 1, b)
+	true_cell(3, 2, 4)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, 3)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 1)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, 2)
+	true_cell(2, 1, 1)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, 3)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 1)
+	true_cell(4, 4, 3)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, 4)
+	true_cell(1, 3, 3)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 2)
+	true_cell(2, 4, b)
+	true_cell(3, 1, 1)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, 4)
+	true_cell(4, 1, 2)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 4)
+	true_cell(4, 4, 1)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, 2)
+	true_cell(4, 1, 2)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, 1)
+	true_cell(4, 1, b)
+	true_cell(4, 2, 4)
+	true_cell(4, 3, 3)
+	true_cell(4, 4, b)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, 4)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, 4)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 1)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 3)
+	true_cell(2, 3, 2)
+	true_cell(2, 4, 1)
+	true_cell(3, 1, b)
+	true_cell(3, 2, 2)
+	true_cell(3, 3, 4)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 1)
+	true_cell(4, 4, 4)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 2)
+	true_cell(1, 4, 1)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 1)
+	true_cell(2, 3, 4)
+	true_cell(2, 4, b)
+	true_cell(3, 1, 4)
+	true_cell(3, 2, 3)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, 2)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 3)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 1)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, 4)
+	true_cell(3, 1, 3)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, 4)
+	true_cell(4, 2, 1)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 2)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 2)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, 2)
+	true_cell(4, 3, b)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 3)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 4)
+	true_cell(1, 4, 2)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, 4)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, 2)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 1)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 3)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 2)
+	true_cell(2, 3, b)
+	true_cell(2, 4, 3)
+	true_cell(3, 1, 2)
+	true_cell(3, 2, 3)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, 1)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 2)
+	true_cell(1, 2, 3)
+	true_cell(1, 3, 1)
+	true_cell(1, 4, 4)
+	true_cell(2, 1, 4)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 2)
+	true_cell(2, 4, 3)
+	true_cell(3, 1, 3)
+	true_cell(3, 2, 1)
+	true_cell(3, 3, 4)
+	true_cell(3, 4, 2)
+	true_cell(4, 1, b)
+	true_cell(4, 2, 4)
+	true_cell(4, 3, 3)
+	true_cell(4, 4, 1)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 100)
+	goal(red, 0)
+
+---
+
+background:
+	true_cell(1, 1, 3)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 4)
+	true_cell(1, 4, 2)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 2)
+	true_cell(2, 4, 3)
+	true_cell(3, 1, 4)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, 2)
+	true_cell(4, 2, 3)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 1)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 4)
+	true_cell(1, 2, 2)
+	true_cell(1, 3, 3)
+	true_cell(1, 4, 1)
+	true_cell(2, 1, 3)
+	true_cell(2, 2, 1)
+	true_cell(2, 3, 4)
+	true_cell(2, 4, 2)
+	true_cell(3, 1, 1)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 2)
+	true_cell(3, 4, 3)
+	true_cell(4, 1, 2)
+	true_cell(4, 2, 4)
+	true_cell(4, 3, 1)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 100)
+	goal(red, 0)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, 1)
+	true_cell(1, 3, 2)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, 1)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, 2)
+	true_cell(4, 1, b)
+	true_cell(4, 2, 2)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 4)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 1)
+	true_cell(1, 2, 2)
+	true_cell(1, 3, 3)
+	true_cell(1, 4, 4)
+	true_cell(2, 1, 4)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 2)
+	true_cell(2, 4, 3)
+	true_cell(3, 1, 3)
+	true_cell(3, 2, 1)
+	true_cell(3, 3, 4)
+	true_cell(3, 4, 2)
+	true_cell(4, 1, 2)
+	true_cell(4, 2, 4)
+	true_cell(4, 3, 1)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 100)
+	goal(red, 0)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, 4)
+	true_cell(1, 3, 3)
+	true_cell(1, 4, 2)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 2)
+	true_cell(2, 3, 1)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, 3)
+	true_cell(3, 3, 4)
+	true_cell(3, 4, b)
+	true_cell(4, 1, 2)
+	true_cell(4, 2, 1)
+	true_cell(4, 3, b)
+	true_cell(4, 4, b)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 1)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 4)
+	true_cell(1, 4, 2)
+	true_cell(2, 1, 4)
+	true_cell(2, 2, 3)
+	true_cell(2, 3, 1)
+	true_cell(2, 4, b)
+	true_cell(3, 1, 2)
+	true_cell(3, 2, 4)
+	true_cell(3, 3, 3)
+	true_cell(3, 4, b)
+	true_cell(4, 1, 3)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 2)
+	true_cell(4, 4, 4)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 3)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, b)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 1)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 2)
+	true_cell(2, 3, b)
+	true_cell(2, 4, 3)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 2)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 2)
+	true_cell(1, 4, b)
+	true_cell(2, 1, 2)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 4)
+	true_cell(2, 4, b)
+	true_cell(3, 1, 3)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 1)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, 1)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 4)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 4)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 2)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 4)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, b)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 4)
+	true_cell(1, 2, 3)
+	true_cell(1, 3, 2)
+	true_cell(1, 4, 1)
+	true_cell(2, 1, 3)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 1)
+	true_cell(2, 4, b)
+	true_cell(3, 1, 2)
+	true_cell(3, 2, 4)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, 1)
+	true_cell(4, 2, 2)
+	true_cell(4, 3, 3)
+	true_cell(4, 4, b)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 3)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 1)
+	true_cell(2, 3, b)
+	true_cell(2, 4, 2)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, 4)
+	true_cell(4, 1, b)
+	true_cell(4, 2, 2)
+	true_cell(4, 3, b)
+	true_cell(4, 4, b)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 4)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 1)
+	true_cell(1, 4, 3)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 1)
+	true_cell(2, 3, 3)
+	true_cell(2, 4, 4)
+	true_cell(3, 1, 1)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 4)
+	true_cell(3, 4, 2)
+	true_cell(4, 1, 3)
+	true_cell(4, 2, 4)
+	true_cell(4, 3, 2)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, 4)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, 4)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 2)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 3)
+	true_cell(4, 4, 4)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 3)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 4)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 3)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, 3)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 2)
+	true_cell(1, 2, 4)
+	true_cell(1, 3, 3)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 3)
+	true_cell(2, 3, b)
+	true_cell(2, 4, 2)
+	true_cell(3, 1, 3)
+	true_cell(3, 2, 1)
+	true_cell(3, 3, 4)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, 2)
+	true_cell(4, 3, 1)
+	true_cell(4, 4, 4)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, 1)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, 3)
+	true_cell(4, 1, b)
+	true_cell(4, 2, 2)
+	true_cell(4, 3, b)
+	true_cell(4, 4, b)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 1)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, 2)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 2)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, 2)
+	true_cell(2, 1, 2)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, 3)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, 3)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 1)
+	true_cell(4, 4, 4)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 4)
+	true_cell(1, 2, 3)
+	true_cell(1, 3, 1)
+	true_cell(1, 4, 2)
+	true_cell(2, 1, 3)
+	true_cell(2, 2, 2)
+	true_cell(2, 3, 4)
+	true_cell(2, 4, b)
+	true_cell(3, 1, 1)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 2)
+	true_cell(3, 4, 3)
+	true_cell(4, 1, 2)
+	true_cell(4, 2, 4)
+	true_cell(4, 3, 3)
+	true_cell(4, 4, 1)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 100)
+	goal(red, 0)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, 2)
+	true_cell(1, 3, 3)
+	true_cell(1, 4, b)
+	true_cell(2, 1, 3)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 4)
+	true_cell(2, 4, 2)
+	true_cell(3, 1, 1)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 2)
+	true_cell(3, 4, 4)
+	true_cell(4, 1, b)
+	true_cell(4, 2, 3)
+	true_cell(4, 3, 1)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, 1)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, b)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 1)
+	true_cell(2, 3, b)
+	true_cell(2, 4, 3)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, 1)
+	true_cell(4, 1, 1)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 4)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, 4)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 2)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, 4)
+	true_cell(4, 1, 2)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 4)
+	true_cell(4, 4, 1)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, 4)
+	true_cell(1, 3, b)
+	true_cell(1, 4, 3)
+	true_cell(2, 1, 2)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 4)
+	true_cell(2, 4, 1)
+	true_cell(3, 1, b)
+	true_cell(3, 2, 2)
+	true_cell(3, 3, 3)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 2)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 3)
+	true_cell(1, 2, 1)
+	true_cell(1, 3, 2)
+	true_cell(1, 4, 4)
+	true_cell(2, 1, 1)
+	true_cell(2, 2, 4)
+	true_cell(2, 3, 3)
+	true_cell(2, 4, b)
+	true_cell(3, 1, 4)
+	true_cell(3, 2, 3)
+	true_cell(3, 3, b)
+	true_cell(3, 4, 1)
+	true_cell(4, 1, 2)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 1)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 3)
+	true_cell(1, 2, 1)
+	true_cell(1, 3, 2)
+	true_cell(1, 4, b)
+	true_cell(2, 1, 1)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 3)
+	true_cell(2, 4, 4)
+	true_cell(3, 1, 2)
+	true_cell(3, 2, 3)
+	true_cell(3, 3, 4)
+	true_cell(3, 4, 1)
+	true_cell(4, 1, 4)
+	true_cell(4, 2, 2)
+	true_cell(4, 3, 1)
+	true_cell(4, 4, 3)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 100)
+	goal(red, 0)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, 4)
+	true_cell(1, 3, 1)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 2)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, 4)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 4)
+	true_cell(4, 4, 1)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 3)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 1)
+	true_cell(2, 3, b)
+	true_cell(2, 4, 2)
+	true_cell(3, 1, 2)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, 4)
+	true_cell(4, 1, b)
+	true_cell(4, 2, 2)
+	true_cell(4, 3, b)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 3)
+	true_cell(1, 2, 2)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, 2)
+	true_cell(2, 2, 4)
+	true_cell(2, 3, 1)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 4)
+	true_cell(3, 4, 2)
+	true_cell(4, 1, 1)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 2)
+	true_cell(4, 4, b)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, 2)
+	true_cell(1, 3, 3)
+	true_cell(1, 4, b)
+	true_cell(2, 1, 3)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, 4)
+	true_cell(4, 1, b)
+	true_cell(4, 2, 3)
+	true_cell(4, 3, 1)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, 2)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, 1)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 4)
+	true_cell(2, 4, b)
+	true_cell(3, 1, 3)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 3)
+	true_cell(4, 4, 2)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 1)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, 2)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, 4)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 3)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 3)
+	true_cell(1, 4, b)
+	true_cell(2, 1, 3)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 4)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 2)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, 4)
+	true_cell(4, 3, b)
+	true_cell(4, 4, b)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 4)
+	true_cell(1, 2, 2)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, 1)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 4)
+	true_cell(2, 4, b)
+	true_cell(3, 1, 3)
+	true_cell(3, 2, 1)
+	true_cell(3, 3, 2)
+	true_cell(3, 4, 4)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 3)
+	true_cell(4, 4, 2)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, 3)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 1)
+	true_cell(2, 4, 2)
+	true_cell(3, 1, b)
+	true_cell(3, 2, 2)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, 3)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 4)
+	true_cell(4, 4, 1)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 3)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 1)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 4)
+	true_cell(2, 3, 2)
+	true_cell(2, 4, 3)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, 1)
+	true_cell(4, 1, 1)
+	true_cell(4, 2, 3)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 4)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, 1)
+	true_cell(1, 3, b)
+	true_cell(1, 4, 3)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 4)
+	true_cell(2, 3, 1)
+	true_cell(2, 4, 2)
+	true_cell(3, 1, b)
+	true_cell(3, 2, 2)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, 3)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 4)
+	true_cell(4, 4, 1)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 1)
+	true_cell(1, 2, 4)
+	true_cell(1, 3, 2)
+	true_cell(1, 4, b)
+	true_cell(2, 1, 4)
+	true_cell(2, 2, 1)
+	true_cell(2, 3, 3)
+	true_cell(2, 4, 2)
+	true_cell(3, 1, 2)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 4)
+	true_cell(3, 4, 3)
+	true_cell(4, 1, 3)
+	true_cell(4, 2, 2)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 1)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 0)
+	goal(red, 100)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 2)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, 1)
+	true_cell(3, 1, b)
+	true_cell(3, 2, 4)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, 2)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 3)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 4)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 1)
+	true_cell(1, 4, b)
+	true_cell(2, 1, 3)
+	true_cell(2, 2, 2)
+	true_cell(2, 3, 4)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, 3)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 1)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 4)
+	true_cell(1, 2, 1)
+	true_cell(1, 3, b)
+	true_cell(1, 4, 2)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 2)
+	true_cell(2, 3, 3)
+	true_cell(2, 4, 4)
+	true_cell(3, 1, 1)
+	true_cell(3, 2, 3)
+	true_cell(3, 3, 4)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, 4)
+	true_cell(4, 3, 1)
+	true_cell(4, 4, 3)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 2)
+	true_cell(1, 2, 4)
+	true_cell(1, 3, 3)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 1)
+	true_cell(2, 3, 4)
+	true_cell(2, 4, 3)
+	true_cell(3, 1, 4)
+	true_cell(3, 2, 2)
+	true_cell(3, 3, 1)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, 3)
+	true_cell(4, 3, 2)
+	true_cell(4, 4, 1)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 100)
+	goal(red, 0)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, 1)
+	true_cell(1, 3, 2)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 4)
+	true_cell(2, 3, b)
+	true_cell(2, 4, 1)
+	true_cell(3, 1, 2)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 4)
+	true_cell(3, 4, 3)
+	true_cell(4, 1, 3)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 2)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 3)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 1)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 4)
+	true_cell(2, 4, 1)
+	true_cell(3, 1, 1)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 2)
+	true_cell(3, 4, 3)
+	true_cell(4, 1, 2)
+	true_cell(4, 2, 1)
+	true_cell(4, 3, 3)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 1)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 3)
+	true_cell(2, 3, 2)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 1)
+	true_cell(4, 4, 4)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, 2)
+	true_cell(1, 3, 3)
+	true_cell(1, 4, b)
+	true_cell(2, 1, 3)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 4)
+	true_cell(2, 4, b)
+	true_cell(3, 1, 1)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 2)
+	true_cell(3, 4, 4)
+	true_cell(4, 1, b)
+	true_cell(4, 2, 3)
+	true_cell(4, 3, 1)
+	true_cell(4, 4, b)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 1)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, 4)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, 1)
+	true_cell(4, 3, 4)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, 4)
+	true_cell(1, 3, 2)
+	true_cell(1, 4, 1)
+	true_cell(2, 1, 3)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 1)
+	true_cell(2, 4, 4)
+	true_cell(3, 1, 1)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 4)
+	true_cell(3, 4, 3)
+	true_cell(4, 1, 4)
+	true_cell(4, 2, 2)
+	true_cell(4, 3, 3)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 100)
+	goal(red, 0)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, 1)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 3)
+	true_cell(2, 3, 1)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, 4)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 2)
+	true_cell(1, 2, 4)
+	true_cell(1, 3, 1)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 1)
+	true_cell(2, 3, 4)
+	true_cell(2, 4, 3)
+	true_cell(3, 1, 4)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, 1)
+	true_cell(4, 1, 1)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 2)
+	true_cell(4, 4, 4)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, 4)
+	true_cell(1, 3, b)
+	true_cell(1, 4, 3)
+	true_cell(2, 1, 1)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 2)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, 3)
+	true_cell(3, 3, 1)
+	true_cell(3, 4, 4)
+	true_cell(4, 1, 2)
+	true_cell(4, 2, 1)
+	true_cell(4, 3, 3)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 100)
+	goal(red, 0)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 2)
+	true_cell(1, 4, 1)
+	true_cell(2, 1, 2)
+	true_cell(2, 2, 3)
+	true_cell(2, 3, 1)
+	true_cell(2, 4, 4)
+	true_cell(3, 1, b)
+	true_cell(3, 2, 4)
+	true_cell(3, 3, b)
+	true_cell(3, 4, 3)
+	true_cell(4, 1, 4)
+	true_cell(4, 2, 1)
+	true_cell(4, 3, 3)
+	true_cell(4, 4, 2)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, 4)
+	true_cell(1, 3, 3)
+	true_cell(1, 4, 2)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 2)
+	true_cell(2, 3, 1)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, 3)
+	true_cell(3, 3, 4)
+	true_cell(3, 4, b)
+	true_cell(4, 1, 2)
+	true_cell(4, 2, 1)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 3)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 4)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, 1)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 1)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 3)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 2)
+	true_cell(4, 4, b)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 3)
+	true_cell(1, 2, 1)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 1)
+	true_cell(2, 4, 3)
+	true_cell(3, 1, 4)
+	true_cell(3, 2, 3)
+	true_cell(3, 3, 2)
+	true_cell(3, 4, b)
+	true_cell(4, 1, 2)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 3)
+	true_cell(4, 4, 4)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, 2)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 3)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, 1)
+	true_cell(4, 1, 1)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 4)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 2)
+	true_cell(1, 2, 1)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, 3)
+	true_cell(2, 2, 2)
+	true_cell(2, 3, b)
+	true_cell(2, 4, 1)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 1)
+	true_cell(3, 4, 4)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 4)
+	true_cell(4, 4, 3)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 4)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, b)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 1)
+	true_cell(1, 4, 4)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 4)
+	true_cell(2, 4, 3)
+	true_cell(3, 1, b)
+	true_cell(3, 2, 2)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 2)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, 3)
+	true_cell(1, 3, 1)
+	true_cell(1, 4, 2)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, 2)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, 4)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, b)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 2)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 3)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 4)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 4)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, 2)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, 1)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, 1)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 4)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 4)
+	true_cell(1, 2, 2)
+	true_cell(1, 3, 1)
+	true_cell(1, 4, b)
+	true_cell(2, 1, 1)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 4)
+	true_cell(2, 4, 3)
+	true_cell(3, 1, 3)
+	true_cell(3, 2, 1)
+	true_cell(3, 3, 2)
+	true_cell(3, 4, 4)
+	true_cell(4, 1, b)
+	true_cell(4, 2, 4)
+	true_cell(4, 3, 3)
+	true_cell(4, 4, 2)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 0)
+	goal(red, 100)
+
+---
+
+background:
+	true_cell(1, 1, 3)
+	true_cell(1, 2, 2)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, 2)
+	true_cell(2, 2, 4)
+	true_cell(2, 3, 1)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 4)
+	true_cell(3, 4, 2)
+	true_cell(4, 1, 1)
+	true_cell(4, 2, 3)
+	true_cell(4, 3, 2)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 4)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, 1)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 3)
+	true_cell(3, 4, 2)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 1)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 4)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, 2)
+	true_cell(4, 2, 3)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 1)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 3)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 1)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 2)
+	true_cell(2, 4, 3)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, 1)
+	true_cell(4, 1, b)
+	true_cell(4, 2, 3)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 4)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, 3)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, 3)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 4)
+	true_cell(4, 4, b)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 1)
+	true_cell(1, 2, 2)
+	true_cell(1, 3, 4)
+	true_cell(1, 4, 3)
+	true_cell(2, 1, 3)
+	true_cell(2, 2, 1)
+	true_cell(2, 3, b)
+	true_cell(2, 4, 4)
+	true_cell(3, 1, 4)
+	true_cell(3, 2, 3)
+	true_cell(3, 3, 2)
+	true_cell(3, 4, 1)
+	true_cell(4, 1, 2)
+	true_cell(4, 2, 4)
+	true_cell(4, 3, 3)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 100)
+	goal(red, 0)
+
+---
+
+background:
+	true_cell(1, 1, 4)
+	true_cell(1, 2, 2)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, 1)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 4)
+	true_cell(2, 4, 3)
+	true_cell(3, 1, 3)
+	true_cell(3, 2, 1)
+	true_cell(3, 3, 2)
+	true_cell(3, 4, 4)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 3)
+	true_cell(4, 4, 2)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 3)
+	true_cell(1, 2, 4)
+	true_cell(1, 3, 2)
+	true_cell(1, 4, 1)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 1)
+	true_cell(2, 3, 4)
+	true_cell(2, 4, b)
+	true_cell(3, 1, 4)
+	true_cell(3, 2, 3)
+	true_cell(3, 3, 1)
+	true_cell(3, 4, 2)
+	true_cell(4, 1, b)
+	true_cell(4, 2, 2)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 3)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, 4)
+	true_cell(1, 3, b)
+	true_cell(1, 4, 3)
+	true_cell(2, 1, 3)
+	true_cell(2, 2, 1)
+	true_cell(2, 3, 4)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 2)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, 3)
+	true_cell(4, 3, b)
+	true_cell(4, 4, b)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, 1)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 2)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, 3)
+	true_cell(4, 1, b)
+	true_cell(4, 2, 1)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 4)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 4)
+	true_cell(2, 3, 1)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, 3)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 4)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 2)
+	true_cell(1, 2, 4)
+	true_cell(1, 3, 1)
+	true_cell(1, 4, b)
+	true_cell(2, 1, 1)
+	true_cell(2, 2, 3)
+	true_cell(2, 3, 2)
+	true_cell(2, 4, 4)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 3)
+	true_cell(3, 4, 2)
+	true_cell(4, 1, b)
+	true_cell(4, 2, 1)
+	true_cell(4, 3, 4)
+	true_cell(4, 4, 3)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 1)
+	true_cell(1, 2, 4)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, 3)
+	true_cell(2, 2, 1)
+	true_cell(2, 3, 4)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, 3)
+	true_cell(3, 3, b)
+	true_cell(3, 4, 1)
+	true_cell(4, 1, 4)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 2)
+	true_cell(4, 4, b)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 2)
+	true_cell(1, 2, 4)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 1)
+	true_cell(2, 3, 4)
+	true_cell(2, 4, 3)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, 1)
+	true_cell(4, 1, 1)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 2)
+	true_cell(4, 4, 4)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, 3)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 1)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, 2)
+	true_cell(4, 2, 4)
+	true_cell(4, 3, b)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 4)
+	true_cell(1, 2, 3)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, 2)
+	true_cell(3, 1, b)
+	true_cell(3, 2, 2)
+	true_cell(3, 3, 4)
+	true_cell(3, 4, 3)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 1)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, 1)
+	true_cell(1, 3, b)
+	true_cell(1, 4, 2)
+	true_cell(2, 1, 1)
+	true_cell(2, 2, 3)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, 3)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 2)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 1)
+	true_cell(4, 4, 3)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 1)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, 3)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 1)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 4)
+	true_cell(3, 4, b)
+	true_cell(4, 1, 2)
+	true_cell(4, 2, 4)
+	true_cell(4, 3, 3)
+	true_cell(4, 4, b)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 1)
+	true_cell(1, 2, 4)
+	true_cell(1, 3, b)
+	true_cell(1, 4, 3)
+	true_cell(2, 1, 2)
+	true_cell(2, 2, 3)
+	true_cell(2, 3, 4)
+	true_cell(2, 4, 1)
+	true_cell(3, 1, 4)
+	true_cell(3, 2, 2)
+	true_cell(3, 3, 3)
+	true_cell(3, 4, b)
+	true_cell(4, 1, 3)
+	true_cell(4, 2, 1)
+	true_cell(4, 3, 2)
+	true_cell(4, 4, b)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 2)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 3)
+	true_cell(1, 4, b)
+	true_cell(2, 1, 4)
+	true_cell(2, 2, 3)
+	true_cell(2, 3, 2)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 4)
+	true_cell(3, 4, 3)
+	true_cell(4, 1, 3)
+	true_cell(4, 2, 2)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 4)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 2)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 3)
+	true_cell(1, 4, 1)
+	true_cell(2, 1, 1)
+	true_cell(2, 2, 3)
+	true_cell(2, 3, 2)
+	true_cell(2, 4, 4)
+	true_cell(3, 1, 4)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 1)
+	true_cell(3, 4, 3)
+	true_cell(4, 1, 3)
+	true_cell(4, 2, 1)
+	true_cell(4, 3, 4)
+	true_cell(4, 4, 2)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 4)
+	true_cell(1, 2, 3)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, 3)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, 2)
+	true_cell(3, 1, b)
+	true_cell(3, 2, 2)
+	true_cell(3, 3, 4)
+	true_cell(3, 4, 3)
+	true_cell(4, 1, 2)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 1)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 4)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, 2)
+	true_cell(2, 2, 4)
+	true_cell(2, 3, 1)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, 3)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 4)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, 4)
+	true_cell(1, 3, b)
+	true_cell(1, 4, 3)
+	true_cell(2, 1, 2)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 4)
+	true_cell(2, 4, 1)
+	true_cell(3, 1, b)
+	true_cell(3, 2, 2)
+	true_cell(3, 3, 3)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, b)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, 4)
+	true_cell(2, 1, 2)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, 4)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 3)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, 4)
+	true_cell(4, 3, 1)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, 1)
+	true_cell(1, 3, b)
+	true_cell(1, 4, 4)
+	true_cell(2, 1, 3)
+	true_cell(2, 2, 4)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 2)
+	true_cell(4, 4, b)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 4)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 2)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 3)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 2)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, 1)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 2)
+	true_cell(3, 4, 1)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, b)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, 1)
+	true_cell(1, 3, 4)
+	true_cell(1, 4, 3)
+	true_cell(2, 1, 2)
+	true_cell(2, 2, 3)
+	true_cell(2, 3, 1)
+	true_cell(2, 4, 4)
+	true_cell(3, 1, 4)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 2)
+	true_cell(3, 4, 1)
+	true_cell(4, 1, 1)
+	true_cell(4, 2, 4)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 2)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 4)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 3)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, 4)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, b)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 2)
+	true_cell(1, 4, 1)
+	true_cell(2, 1, 3)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 1)
+	true_cell(2, 4, b)
+	true_cell(3, 1, 2)
+	true_cell(3, 2, 4)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, 1)
+	true_cell(4, 2, 2)
+	true_cell(4, 3, 3)
+	true_cell(4, 4, b)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, 1)
+	true_cell(2, 2, 3)
+	true_cell(2, 3, 4)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, 1)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 4)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, 1)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, 4)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, 2)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 3)
+	true_cell(4, 4, 4)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, 2)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 1)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 3)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, 4)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, 1)
+	true_cell(4, 3, 4)
+	true_cell(4, 4, 2)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, 1)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, b)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 1)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 4)
+	true_cell(1, 4, 2)
+	true_cell(2, 1, 4)
+	true_cell(2, 2, 3)
+	true_cell(2, 3, 1)
+	true_cell(2, 4, b)
+	true_cell(3, 1, 2)
+	true_cell(3, 2, 4)
+	true_cell(3, 3, 3)
+	true_cell(3, 4, b)
+	true_cell(4, 1, 3)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 4)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, 1)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, b)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, 1)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 2)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 4)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 1)
+	true_cell(1, 4, b)
+	true_cell(2, 1, 3)
+	true_cell(2, 2, 2)
+	true_cell(2, 3, 4)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 2)
+	true_cell(3, 4, 3)
+	true_cell(4, 1, 2)
+	true_cell(4, 2, 4)
+	true_cell(4, 3, 3)
+	true_cell(4, 4, 1)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 3)
+	true_cell(1, 2, 1)
+	true_cell(1, 3, 2)
+	true_cell(1, 4, 4)
+	true_cell(2, 1, 2)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, 4)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 3)
+	true_cell(3, 4, 1)
+	true_cell(4, 1, b)
+	true_cell(4, 2, 4)
+	true_cell(4, 3, 1)
+	true_cell(4, 4, 2)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, 1)
+	true_cell(1, 3, b)
+	true_cell(1, 4, 4)
+	true_cell(2, 1, 1)
+	true_cell(2, 2, 4)
+	true_cell(2, 3, 3)
+	true_cell(2, 4, b)
+	true_cell(3, 1, 4)
+	true_cell(3, 2, 3)
+	true_cell(3, 3, b)
+	true_cell(3, 4, 1)
+	true_cell(4, 1, 2)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 1)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 1)
+	true_cell(1, 2, 3)
+	true_cell(1, 3, b)
+	true_cell(1, 4, 4)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 2)
+	true_cell(2, 3, 3)
+	true_cell(2, 4, b)
+	true_cell(3, 1, 3)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 4)
+	true_cell(3, 4, 1)
+	true_cell(4, 1, 4)
+	true_cell(4, 2, 1)
+	true_cell(4, 3, 2)
+	true_cell(4, 4, 3)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 100)
+	goal(red, 0)
+
+---
+
+background:
+	true_cell(1, 1, 1)
+	true_cell(1, 2, 4)
+	true_cell(1, 3, 3)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 1)
+	true_cell(2, 3, b)
+	true_cell(2, 4, 2)
+	true_cell(3, 1, 2)
+	true_cell(3, 2, 3)
+	true_cell(3, 3, b)
+	true_cell(3, 4, 4)
+	true_cell(4, 1, 4)
+	true_cell(4, 2, 2)
+	true_cell(4, 3, 1)
+	true_cell(4, 4, 3)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, 4)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, 1)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, 3)
+	true_cell(3, 3, b)
+	true_cell(3, 4, 4)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 1)
+	true_cell(1, 4, 2)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, 2)
+	true_cell(3, 3, b)
+	true_cell(3, 4, 1)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 3)
+	true_cell(4, 4, b)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, 4)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, 4)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 1)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, 4)
+	true_cell(1, 3, 1)
+	true_cell(1, 4, 2)
+	true_cell(2, 1, 1)
+	true_cell(2, 2, 3)
+	true_cell(2, 3, 4)
+	true_cell(2, 4, b)
+	true_cell(3, 1, 4)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 3)
+	true_cell(3, 4, 1)
+	true_cell(4, 1, 3)
+	true_cell(4, 2, 1)
+	true_cell(4, 3, 2)
+	true_cell(4, 4, 4)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 3)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 2)
+	true_cell(1, 4, 1)
+	true_cell(2, 1, 2)
+	true_cell(2, 2, 3)
+	true_cell(2, 3, 1)
+	true_cell(2, 4, 4)
+	true_cell(3, 1, 1)
+	true_cell(3, 2, 4)
+	true_cell(3, 3, b)
+	true_cell(3, 4, 3)
+	true_cell(4, 1, 4)
+	true_cell(4, 2, 1)
+	true_cell(4, 3, 3)
+	true_cell(4, 4, 2)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 100)
+	goal(red, 0)
+
+---
+
+background:
+	true_cell(1, 1, 4)
+	true_cell(1, 2, 1)
+	true_cell(1, 3, 2)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 4)
+	true_cell(2, 3, 1)
+	true_cell(2, 4, 3)
+	true_cell(3, 1, 2)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, 4)
+	true_cell(4, 1, b)
+	true_cell(4, 2, 2)
+	true_cell(4, 3, b)
+	true_cell(4, 4, b)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, 3)
+	true_cell(1, 3, 1)
+	true_cell(1, 4, 2)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 3)
+	true_cell(2, 4, b)
+	true_cell(3, 1, 1)
+	true_cell(3, 2, 2)
+	true_cell(3, 3, 4)
+	true_cell(3, 4, 3)
+	true_cell(4, 1, 4)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 1)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 1)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, 1)
+	true_cell(4, 3, b)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 4)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, 1)
+	true_cell(2, 1, 3)
+	true_cell(2, 2, 2)
+	true_cell(2, 3, 1)
+	true_cell(2, 4, 4)
+	true_cell(3, 1, b)
+	true_cell(3, 2, 4)
+	true_cell(3, 3, 3)
+	true_cell(3, 4, 2)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 2)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, 4)
+	true_cell(1, 3, b)
+	true_cell(1, 4, 3)
+	true_cell(2, 1, 2)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 4)
+	true_cell(2, 4, 1)
+	true_cell(3, 1, 4)
+	true_cell(3, 2, 2)
+	true_cell(3, 3, 3)
+	true_cell(3, 4, b)
+	true_cell(4, 1, 3)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 2)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 4)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, 3)
+	true_cell(3, 2, 2)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, b)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 1)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, 2)
+	true_cell(3, 3, b)
+	true_cell(3, 4, 1)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 3)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 2)
+	true_cell(1, 2, 1)
+	true_cell(1, 3, 4)
+	true_cell(1, 4, 3)
+	true_cell(2, 1, 4)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 1)
+	true_cell(2, 4, 2)
+	true_cell(3, 1, b)
+	true_cell(3, 2, 3)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, 3)
+	true_cell(4, 2, 4)
+	true_cell(4, 3, b)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 1)
+	true_cell(1, 2, 4)
+	true_cell(1, 3, 2)
+	true_cell(1, 4, b)
+	true_cell(2, 1, 4)
+	true_cell(2, 2, 1)
+	true_cell(2, 3, 3)
+	true_cell(2, 4, 2)
+	true_cell(3, 1, b)
+	true_cell(3, 2, 2)
+	true_cell(3, 3, 1)
+	true_cell(3, 4, 4)
+	true_cell(4, 1, 2)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 4)
+	true_cell(4, 4, 3)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 4)
+	true_cell(1, 2, 1)
+	true_cell(1, 3, 2)
+	true_cell(1, 4, 3)
+	true_cell(2, 1, 3)
+	true_cell(2, 2, 4)
+	true_cell(2, 3, 1)
+	true_cell(2, 4, b)
+	true_cell(3, 1, 1)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 4)
+	true_cell(3, 4, 2)
+	true_cell(4, 1, b)
+	true_cell(4, 2, 2)
+	true_cell(4, 3, 3)
+	true_cell(4, 4, 4)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 2)
+	true_cell(1, 4, 1)
+	true_cell(2, 1, 2)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 4)
+	true_cell(2, 4, b)
+	true_cell(3, 1, 3)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 1)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, 1)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 4)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 2)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, 2)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, 2)
+	true_cell(1, 3, 4)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, 2)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 1)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 4)
+	true_cell(1, 2, 3)
+	true_cell(1, 3, 2)
+	true_cell(1, 4, b)
+	true_cell(2, 1, 1)
+	true_cell(2, 2, 2)
+	true_cell(2, 3, 4)
+	true_cell(2, 4, 3)
+	true_cell(3, 1, 3)
+	true_cell(3, 2, 1)
+	true_cell(3, 3, b)
+	true_cell(3, 4, 4)
+	true_cell(4, 1, 2)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 3)
+	true_cell(4, 4, 1)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, 1)
+	true_cell(2, 2, 3)
+	true_cell(2, 3, 4)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 3)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, 1)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 4)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 4)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 2)
+	true_cell(1, 4, 1)
+	true_cell(2, 1, 3)
+	true_cell(2, 2, 2)
+	true_cell(2, 3, 1)
+	true_cell(2, 4, 4)
+	true_cell(3, 1, b)
+	true_cell(3, 2, 1)
+	true_cell(3, 3, 4)
+	true_cell(3, 4, 3)
+	true_cell(4, 1, 1)
+	true_cell(4, 2, 4)
+	true_cell(4, 3, 3)
+	true_cell(4, 4, 2)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, 3)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 1)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, 2)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, b)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 2)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, 3)
+	true_cell(2, 1, 1)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, 4)
+	true_cell(3, 1, 3)
+	true_cell(3, 2, 4)
+	true_cell(3, 3, 1)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, 3)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 1)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 2)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, 4)
+	true_cell(3, 1, b)
+	true_cell(3, 2, 3)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, 2)
+	true_cell(4, 3, b)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 2)
+	true_cell(1, 4, 1)
+	true_cell(2, 1, 3)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 1)
+	true_cell(2, 4, b)
+	true_cell(3, 1, 2)
+	true_cell(3, 2, 4)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 3)
+	true_cell(4, 4, b)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, 1)
+	true_cell(1, 3, b)
+	true_cell(1, 4, 4)
+	true_cell(2, 1, 1)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, 3)
+	true_cell(3, 1, 4)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 1)
+	true_cell(3, 4, 2)
+	true_cell(4, 1, 3)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 2)
+	true_cell(4, 4, b)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 1)
+	true_cell(1, 2, 2)
+	true_cell(1, 3, b)
+	true_cell(1, 4, 3)
+	true_cell(2, 1, 3)
+	true_cell(2, 2, 1)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 4)
+	true_cell(3, 4, b)
+	true_cell(4, 1, 2)
+	true_cell(4, 2, 4)
+	true_cell(4, 3, 3)
+	true_cell(4, 4, b)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, 4)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, 1)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, 4)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 1)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 1)
+	true_cell(1, 2, 4)
+	true_cell(1, 3, b)
+	true_cell(1, 4, 3)
+	true_cell(2, 1, 3)
+	true_cell(2, 2, 1)
+	true_cell(2, 3, 4)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 2)
+	true_cell(3, 4, 1)
+	true_cell(4, 1, b)
+	true_cell(4, 2, 3)
+	true_cell(4, 3, 1)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 2)
+	true_cell(1, 2, 1)
+	true_cell(1, 3, b)
+	true_cell(1, 4, 3)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 4)
+	true_cell(2, 3, 1)
+	true_cell(2, 4, 2)
+	true_cell(3, 1, 4)
+	true_cell(3, 2, 2)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, 3)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 4)
+	true_cell(4, 4, 1)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 2)
+	true_cell(1, 2, 3)
+	true_cell(1, 3, 4)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 2)
+	true_cell(2, 4, 3)
+	true_cell(3, 1, 1)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, 4)
+	true_cell(4, 1, 4)
+	true_cell(4, 2, 1)
+	true_cell(4, 3, 3)
+	true_cell(4, 4, 2)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, 2)
+	true_cell(1, 3, 4)
+	true_cell(1, 4, b)
+	true_cell(2, 1, 3)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, 2)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 1)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 1)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 3)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, 1)
+	true_cell(1, 3, 2)
+	true_cell(1, 4, 4)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 4)
+	true_cell(2, 3, 3)
+	true_cell(2, 4, 1)
+	true_cell(3, 1, 2)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 4)
+	true_cell(3, 4, 3)
+	true_cell(4, 1, 3)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 1)
+	true_cell(4, 4, 2)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 100)
+	goal(red, 0)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 1)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 1)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 2)
+	true_cell(1, 2, 1)
+	true_cell(1, 3, 3)
+	true_cell(1, 4, 4)
+	true_cell(2, 1, 3)
+	true_cell(2, 2, 4)
+	true_cell(2, 3, b)
+	true_cell(2, 4, 1)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 2)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, 4)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, 1)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, 3)
+	true_cell(3, 3, b)
+	true_cell(3, 4, 4)
+	true_cell(4, 1, 2)
+	true_cell(4, 2, 1)
+	true_cell(4, 3, b)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, 4)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 4)
+	true_cell(2, 4, 1)
+	true_cell(3, 1, b)
+	true_cell(3, 2, 2)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 4)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 3)
+	true_cell(1, 4, b)
+	true_cell(2, 1, 1)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 4)
+	true_cell(2, 4, 3)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 1)
+	true_cell(3, 4, 2)
+	true_cell(4, 1, b)
+	true_cell(4, 2, 2)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 4)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 2)
+	true_cell(1, 2, 3)
+	true_cell(1, 3, 1)
+	true_cell(1, 4, b)
+	true_cell(2, 1, 1)
+	true_cell(2, 2, b)
+	true_cell(2, 3, 2)
+	true_cell(2, 4, 4)
+	true_cell(3, 1, 3)
+	true_cell(3, 2, 2)
+	true_cell(3, 3, 4)
+	true_cell(3, 4, b)
+	true_cell(4, 1, 4)
+	true_cell(4, 2, 1)
+	true_cell(4, 3, 3)
+	true_cell(4, 4, 2)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 4)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 2)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 2)
+	true_cell(2, 3, b)
+	true_cell(2, 4, 3)
+	true_cell(3, 1, b)
+	true_cell(3, 2, 1)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, 2)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 1)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 4)
+	true_cell(1, 2, 3)
+	true_cell(1, 3, b)
+	true_cell(1, 4, 1)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 3)
+	true_cell(3, 4, 2)
+	true_cell(4, 1, 2)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 2)
+	true_cell(2, 3, b)
+	true_cell(2, 4, 4)
+	true_cell(3, 1, 3)
+	true_cell(3, 2, 1)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, 3)
+	true_cell(4, 3, 2)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 2)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, 2)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 4)
+	true_cell(3, 4, 3)
+	true_cell(4, 1, 3)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 2)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 1)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 2)
+	true_cell(4, 4, 1)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 2)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 3)
+	true_cell(1, 4, 1)
+	true_cell(2, 1, 3)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 2)
+	true_cell(3, 4, 3)
+	true_cell(4, 1, b)
+	true_cell(4, 2, 1)
+	true_cell(4, 3, 4)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 1)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, b)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, 2)
+	true_cell(3, 3, b)
+	true_cell(3, 4, 4)
+	true_cell(4, 1, 4)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 3)
+	true_cell(4, 4, b)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 1)
+	true_cell(1, 2, b)
+	true_cell(1, 3, 2)
+	true_cell(1, 4, b)
+	true_cell(2, 1, 4)
+	true_cell(2, 2, 1)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, 4)
+	true_cell(3, 4, 3)
+	true_cell(4, 1, b)
+	true_cell(4, 2, 2)
+	true_cell(4, 3, b)
+	true_cell(4, 4, 1)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 2)
+	true_cell(1, 2, 4)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 1)
+	true_cell(2, 3, b)
+	true_cell(2, 4, 3)
+	true_cell(3, 1, b)
+	true_cell(3, 2, b)
+	true_cell(3, 3, b)
+	true_cell(3, 4, 1)
+	true_cell(4, 1, 1)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 2)
+	true_cell(4, 4, 4)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, 2)
+	true_cell(1, 3, 1)
+	true_cell(1, 4, 4)
+	true_cell(2, 1, 1)
+	true_cell(2, 2, 3)
+	true_cell(2, 3, 2)
+	true_cell(2, 4, b)
+	true_cell(3, 1, 3)
+	true_cell(3, 2, 4)
+	true_cell(3, 3, b)
+	true_cell(3, 4, 1)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 4)
+	true_cell(4, 4, 2)
+	true_control(green)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, b)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, b)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 3)
+	true_cell(2, 3, b)
+	true_cell(2, 4, b)
+	true_cell(3, 1, b)
+	true_cell(3, 2, 2)
+	true_cell(3, 3, b)
+	true_cell(3, 4, b)
+	true_cell(4, 1, b)
+	true_cell(4, 2, b)
+	true_cell(4, 3, b)
+	true_cell(4, 4, b)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+
+background:
+	true_cell(1, 1, 1)
+	true_cell(1, 2, b)
+	true_cell(1, 3, b)
+	true_cell(1, 4, 3)
+	true_cell(2, 1, b)
+	true_cell(2, 2, 3)
+	true_cell(2, 3, 2)
+	true_cell(2, 4, 1)
+	true_cell(3, 1, b)
+	true_cell(3, 2, 2)
+	true_cell(3, 3, 4)
+	true_cell(3, 4, b)
+	true_cell(4, 1, 2)
+	true_cell(4, 2, b)
+	true_cell(4, 3, 1)
+	true_cell(4, 4, 4)
+	true_control(red)
+
+---
+
+positives:
+	goal(green, 50)
+	goal(red, 50)
+
+---
+

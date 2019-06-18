@@ -1,0 +1,58 @@
+atoms:
+	legal(player, noop)
+	legal(player, pressButton)
+
+---
+
+statics:
+	succ(0, 1)
+	succ(1, 2)
+	succ(2, 3)
+	succ(3, 4)
+	succ(4, 5)
+
+---
+
+background:
+
+---
+
+positives:
+	legal(player, noop)
+	legal(player, pressButton)
+
+---
+
+background:
+	true_value(1)
+
+---
+
+positives:
+	legal(player, noop)
+	legal(player, pressButton)
+
+---
+
+background:
+	true_value(3)
+
+---
+
+positives:
+	legal(player, noop)
+	legal(player, pressButton)
+
+---
+
+background:
+	true_value(4)
+
+---
+
+positives:
+	legal(player, noop)
+	legal(player, pressButton)
+
+---
+

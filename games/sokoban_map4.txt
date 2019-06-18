@@ -1,0 +1,12 @@
+import sokoban_core
+
+(init (target 1 1))
+(init (at 2 1 obj1))
+(init (at 3 1 x))
+(init (at 1 2 wall))
+(init (at 2 2 wall))
+(init (at 3 2 wall))
+(init (at 4 2 wall))
+(init (at 5 2 wall))
+(init (at 4 1 wall))
+

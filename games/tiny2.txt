@@ -1,0 +1,32 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Tiny2
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; From http://logic.stanford.edu/ggp/notes/chapter_09.html
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(role white)
+(base s)
+(input white a)
+(input white b)
+(legal white a)
+(legal white b)
+
+(<= p (does white a) (true s))
+(<= q (not p))
+(<= r q)
+(<= r (does white b))
+(<= (next s) r)
+
+
+(<= (goal white 100) (true s))
+(<= (goal white 0) (not (true s)))
+
+(<= terminal q)
+
+(init s)
+
+(init (control white))
+
+(<= (next (control white)) (true (control white)))
+

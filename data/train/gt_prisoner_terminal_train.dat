@@ -1,0 +1,8279 @@
+atoms:
+	terminal()
+
+---
+
+statics:
+	role(black)
+	role(white)
+	succ(0, 1)
+	succ(1, 2)
+	succ(10, 11)
+	succ(11, 12)
+	succ(12, 13)
+	succ(13, 14)
+	succ(14, 15)
+	succ(15, 16)
+	succ(16, 17)
+	succ(17, 18)
+	succ(18, 19)
+	succ(19, 20)
+	succ(2, 3)
+	succ(20, 21)
+	succ(21, 22)
+	succ(22, 23)
+	succ(23, 24)
+	succ(24, 25)
+	succ(25, 26)
+	succ(26, 27)
+	succ(27, 28)
+	succ(28, 29)
+	succ(29, 30)
+	succ(3, 4)
+	succ(30, 31)
+	succ(31, 32)
+	succ(32, 33)
+	succ(33, 34)
+	succ(34, 35)
+	succ(35, 36)
+	succ(36, 37)
+	succ(37, 38)
+	succ(38, 39)
+	succ(39, 40)
+	succ(4, 5)
+	succ(40, 41)
+	succ(41, 42)
+	succ(42, 43)
+	succ(43, 44)
+	succ(44, 45)
+	succ(45, 46)
+	succ(46, 47)
+	succ(47, 48)
+	succ(48, 49)
+	succ(49, 50)
+	succ(5, 6)
+	succ(50, 51)
+	succ(51, 52)
+	succ(52, 53)
+	succ(53, 54)
+	succ(54, 55)
+	succ(55, 56)
+	succ(56, 57)
+	succ(57, 58)
+	succ(58, 59)
+	succ(59, 60)
+	succ(6, 7)
+	succ(60, 61)
+	succ(61, 62)
+	succ(62, 63)
+	succ(63, 64)
+	succ(64, 65)
+	succ(65, 66)
+	succ(66, 67)
+	succ(67, 68)
+	succ(68, 69)
+	succ(69, 70)
+	succ(7, 8)
+	succ(70, 71)
+	succ(71, 72)
+	succ(72, 73)
+	succ(73, 74)
+	succ(74, 75)
+	succ(75, 76)
+	succ(76, 77)
+	succ(77, 78)
+	succ(78, 79)
+	succ(79, 80)
+	succ(8, 9)
+	succ(80, 81)
+	succ(81, 82)
+	succ(82, 83)
+	succ(83, 84)
+	succ(84, 85)
+	succ(85, 86)
+	succ(86, 87)
+	succ(87, 88)
+	succ(88, 89)
+	succ(89, 90)
+	succ(9, 10)
+	succ(90, 91)
+	succ(91, 92)
+	succ(92, 93)
+	succ(93, 94)
+	succ(94, 95)
+	succ(95, 96)
+	succ(96, 97)
+	succ(97, 98)
+	succ(98, 99)
+	succ(99, 100)
+
+---
+
+background:
+	true_blackScore(15)
+	true_maxRounds(20)
+	true_rounds(8)
+	true_whiteScore(25)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(8)
+	true_maxRounds(20)
+	true_rounds(4)
+	true_whiteScore(13)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(11)
+	true_maxRounds(20)
+	true_rounds(7)
+	true_whiteScore(21)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(29)
+	true_maxRounds(20)
+	true_rounds(9)
+	true_whiteScore(14)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(32)
+	true_maxRounds(20)
+	true_rounds(11)
+	true_whiteScore(12)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(37)
+	true_maxRounds(20)
+	true_rounds(17)
+	true_whiteScore(47)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(14)
+	true_maxRounds(20)
+	true_rounds(6)
+	true_whiteScore(9)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(44)
+	true_maxRounds(20)
+	true_rounds(19)
+	true_whiteScore(44)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(45)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(35)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(30)
+	true_maxRounds(20)
+	true_rounds(14)
+	true_whiteScore(30)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(12)
+	true_maxRounds(20)
+	true_rounds(10)
+	true_whiteScore(27)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(18)
+	true_maxRounds(20)
+	true_rounds(5)
+	true_whiteScore(8)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(14)
+	true_maxRounds(20)
+	true_rounds(6)
+	true_whiteScore(19)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(22)
+	true_maxRounds(20)
+	true_rounds(10)
+	true_whiteScore(12)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(16)
+	true_maxRounds(20)
+	true_rounds(10)
+	true_whiteScore(21)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(10)
+	true_maxRounds(20)
+	true_rounds(6)
+	true_whiteScore(15)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(22)
+	true_maxRounds(20)
+	true_rounds(19)
+	true_whiteScore(47)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(43)
+	true_maxRounds(20)
+	true_rounds(14)
+	true_whiteScore(28)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(28)
+	true_maxRounds(20)
+	true_rounds(12)
+	true_whiteScore(18)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(6)
+	true_maxRounds(20)
+	true_rounds(3)
+	true_whiteScore(6)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(18)
+	true_maxRounds(20)
+	true_rounds(8)
+	true_whiteScore(13)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(30)
+	true_maxRounds(20)
+	true_rounds(18)
+	true_whiteScore(60)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(25)
+	true_maxRounds(20)
+	true_rounds(13)
+	true_whiteScore(35)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(29)
+	true_maxRounds(20)
+	true_rounds(14)
+	true_whiteScore(39)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(27)
+	true_maxRounds(20)
+	true_rounds(10)
+	true_whiteScore(12)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(19)
+	true_maxRounds(20)
+	true_rounds(10)
+	true_whiteScore(29)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(50)
+	true_maxRounds(20)
+	true_rounds(18)
+	true_whiteScore(35)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(50)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(40)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(48)
+	true_maxRounds(20)
+	true_rounds(19)
+	true_whiteScore(33)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(43)
+	true_maxRounds(20)
+	true_rounds(13)
+	true_whiteScore(23)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(51)
+	true_maxRounds(20)
+	true_rounds(18)
+	true_whiteScore(41)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(15)
+	true_maxRounds(20)
+	true_rounds(9)
+	true_whiteScore(15)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(45)
+	true_maxRounds(20)
+	true_rounds(19)
+	true_whiteScore(40)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(59)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(34)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(47)
+	true_maxRounds(20)
+	true_rounds(18)
+	true_whiteScore(32)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(12)
+	true_maxRounds(20)
+	true_rounds(4)
+	true_whiteScore(12)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(8)
+	true_maxRounds(20)
+	true_rounds(4)
+	true_whiteScore(3)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(29)
+	true_maxRounds(20)
+	true_rounds(11)
+	true_whiteScore(29)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(22)
+	true_maxRounds(20)
+	true_rounds(13)
+	true_whiteScore(32)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(47)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(27)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(22)
+	true_maxRounds(20)
+	true_rounds(6)
+	true_whiteScore(7)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(47)
+	true_maxRounds(20)
+	true_rounds(19)
+	true_whiteScore(47)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(18)
+	true_maxRounds(20)
+	true_rounds(9)
+	true_whiteScore(28)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(19)
+	true_maxRounds(20)
+	true_rounds(5)
+	true_whiteScore(4)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(26)
+	true_maxRounds(20)
+	true_rounds(14)
+	true_whiteScore(31)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(28)
+	true_maxRounds(20)
+	true_rounds(14)
+	true_whiteScore(43)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(30)
+	true_maxRounds(20)
+	true_rounds(8)
+	true_whiteScore(15)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(40)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(35)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(22)
+	true_maxRounds(20)
+	true_rounds(8)
+	true_whiteScore(22)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(10)
+	true_maxRounds(20)
+	true_rounds(5)
+	true_whiteScore(15)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(34)
+	true_maxRounds(20)
+	true_rounds(17)
+	true_whiteScore(34)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(38)
+	true_maxRounds(20)
+	true_rounds(12)
+	true_whiteScore(23)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(16)
+	true_maxRounds(20)
+	true_rounds(15)
+	true_whiteScore(46)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(12)
+	true_maxRounds(20)
+	true_rounds(5)
+	true_whiteScore(7)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(23)
+	true_maxRounds(20)
+	true_rounds(10)
+	true_whiteScore(23)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(23)
+	true_maxRounds(20)
+	true_rounds(9)
+	true_whiteScore(13)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(31)
+	true_maxRounds(20)
+	true_rounds(11)
+	true_whiteScore(16)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(21)
+	true_maxRounds(20)
+	true_rounds(8)
+	true_whiteScore(21)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(17)
+	true_maxRounds(20)
+	true_rounds(5)
+	true_whiteScore(12)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(29)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(39)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(36)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(41)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(9)
+	true_maxRounds(20)
+	true_rounds(5)
+	true_whiteScore(19)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(18)
+	true_maxRounds(20)
+	true_rounds(12)
+	true_whiteScore(33)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(11)
+	true_maxRounds(20)
+	true_rounds(8)
+	true_whiteScore(21)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(24)
+	true_maxRounds(20)
+	true_rounds(10)
+	true_whiteScore(24)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(30)
+	true_maxRounds(20)
+	true_rounds(11)
+	true_whiteScore(20)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(45)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(55)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(17)
+	true_maxRounds(20)
+	true_rounds(12)
+	true_whiteScore(32)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(19)
+	true_maxRounds(20)
+	true_rounds(8)
+	true_whiteScore(9)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(34)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(44)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(32)
+	true_maxRounds(20)
+	true_rounds(15)
+	true_whiteScore(47)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(17)
+	true_maxRounds(20)
+	true_rounds(7)
+	true_whiteScore(12)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(26)
+	true_maxRounds(20)
+	true_rounds(12)
+	true_whiteScore(21)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(41)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(36)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(14)
+	true_maxRounds(20)
+	true_rounds(7)
+	true_whiteScore(14)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(47)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(32)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(37)
+	true_maxRounds(20)
+	true_rounds(17)
+	true_whiteScore(42)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(17)
+	true_maxRounds(20)
+	true_rounds(11)
+	true_whiteScore(32)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(30)
+	true_maxRounds(20)
+	true_rounds(13)
+	true_whiteScore(25)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(21)
+	true_maxRounds(20)
+	true_rounds(7)
+	true_whiteScore(16)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(46)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(31)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(48)
+	true_maxRounds(20)
+	true_rounds(17)
+	true_whiteScore(33)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(13)
+	true_maxRounds(20)
+	true_rounds(8)
+	true_whiteScore(13)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(24)
+	true_maxRounds(20)
+	true_rounds(8)
+	true_whiteScore(14)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(49)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(34)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(31)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(41)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(6)
+	true_maxRounds(20)
+	true_rounds(7)
+	true_whiteScore(21)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(26)
+	true_maxRounds(20)
+	true_rounds(13)
+	true_whiteScore(26)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(26)
+	true_maxRounds(20)
+	true_rounds(15)
+	true_whiteScore(41)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(33)
+	true_maxRounds(20)
+	true_rounds(13)
+	true_whiteScore(18)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(6)
+	true_maxRounds(20)
+	true_rounds(5)
+	true_whiteScore(16)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(20)
+	true_maxRounds(20)
+	true_rounds(15)
+	true_whiteScore(35)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(23)
+	true_maxRounds(20)
+	true_rounds(11)
+	true_whiteScore(28)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(35)
+	true_maxRounds(20)
+	true_rounds(17)
+	true_whiteScore(50)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(52)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(27)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(41)
+	true_maxRounds(20)
+	true_rounds(13)
+	true_whiteScore(21)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(38)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(53)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(36)
+	true_maxRounds(20)
+	true_rounds(12)
+	true_whiteScore(26)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(52)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(42)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(21)
+	true_maxRounds(20)
+	true_rounds(11)
+	true_whiteScore(26)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(22)
+	true_maxRounds(20)
+	true_rounds(10)
+	true_whiteScore(17)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(34)
+	true_maxRounds(20)
+	true_rounds(8)
+	true_whiteScore(4)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(30)
+	true_maxRounds(20)
+	true_rounds(11)
+	true_whiteScore(25)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(13)
+	true_maxRounds(20)
+	true_rounds(8)
+	true_whiteScore(28)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(33)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(48)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(25)
+	true_maxRounds(20)
+	true_rounds(11)
+	true_whiteScore(20)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(37)
+	true_maxRounds(20)
+	true_rounds(13)
+	true_whiteScore(22)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(53)
+	true_maxRounds(20)
+	true_rounds(18)
+	true_whiteScore(33)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(32)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(52)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(35)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(30)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(27)
+	true_maxRounds(20)
+	true_rounds(19)
+	true_whiteScore(57)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(50)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(25)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(56)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(41)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(18)
+	true_maxRounds(20)
+	true_rounds(11)
+	true_whiteScore(28)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(29)
+	true_maxRounds(20)
+	true_rounds(13)
+	true_whiteScore(29)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(48)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(53)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(7)
+	true_maxRounds(20)
+	true_rounds(5)
+	true_whiteScore(12)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(27)
+	true_maxRounds(20)
+	true_rounds(14)
+	true_whiteScore(27)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(30)
+	true_maxRounds(20)
+	true_rounds(12)
+	true_whiteScore(20)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(52)
+	true_maxRounds(20)
+	true_rounds(18)
+	true_whiteScore(37)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(36)
+	true_maxRounds(20)
+	true_rounds(14)
+	true_whiteScore(36)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(9)
+	true_maxRounds(20)
+	true_rounds(6)
+	true_whiteScore(14)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(28)
+	true_maxRounds(20)
+	true_rounds(13)
+	true_whiteScore(23)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(14)
+	true_maxRounds(20)
+	true_rounds(4)
+	true_whiteScore(9)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(8)
+	true_maxRounds(20)
+	true_rounds(6)
+	true_whiteScore(13)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(15)
+	true_maxRounds(20)
+	true_rounds(6)
+	true_whiteScore(15)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(18)
+	true_maxRounds(20)
+	true_rounds(8)
+	true_whiteScore(23)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(31)
+	true_maxRounds(20)
+	true_rounds(15)
+	true_whiteScore(26)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(5)
+	true_maxRounds(20)
+	true_rounds(1)
+	true_whiteScore(0)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(22)
+	true_maxRounds(20)
+	true_rounds(9)
+	true_whiteScore(12)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(5)
+	true_maxRounds(20)
+	true_rounds(2)
+	true_whiteScore(5)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(17)
+	true_maxRounds(20)
+	true_rounds(11)
+	true_whiteScore(37)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(7)
+	true_maxRounds(20)
+	true_rounds(3)
+	true_whiteScore(7)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(18)
+	true_maxRounds(20)
+	true_rounds(6)
+	true_whiteScore(13)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(35)
+	true_maxRounds(20)
+	true_rounds(14)
+	true_whiteScore(30)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(40)
+	true_maxRounds(20)
+	true_rounds(15)
+	true_whiteScore(35)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(28)
+	true_maxRounds(20)
+	true_rounds(10)
+	true_whiteScore(18)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(1)
+	true_maxRounds(20)
+	true_rounds(1)
+	true_whiteScore(1)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(54)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(29)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(17)
+	true_maxRounds(20)
+	true_rounds(6)
+	true_whiteScore(17)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(45)
+	true_maxRounds(20)
+	true_rounds(15)
+	true_whiteScore(30)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(44)
+	true_maxRounds(20)
+	true_rounds(18)
+	true_whiteScore(39)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(41)
+	true_maxRounds(20)
+	true_rounds(19)
+	true_whiteScore(31)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(57)
+	true_maxRounds(20)
+	true_rounds(19)
+	true_whiteScore(32)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(25)
+	true_maxRounds(20)
+	true_rounds(14)
+	true_whiteScore(45)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(8)
+	true_maxRounds(20)
+	true_rounds(8)
+	true_whiteScore(23)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(15)
+	true_maxRounds(20)
+	true_rounds(10)
+	true_whiteScore(25)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(50)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(30)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(24)
+	true_maxRounds(20)
+	true_rounds(7)
+	true_whiteScore(9)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(27)
+	true_maxRounds(20)
+	true_rounds(13)
+	true_whiteScore(32)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(16)
+	true_maxRounds(20)
+	true_rounds(9)
+	true_whiteScore(26)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(41)
+	true_maxRounds(20)
+	true_rounds(17)
+	true_whiteScore(36)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(13)
+	true_maxRounds(20)
+	true_rounds(8)
+	true_whiteScore(18)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(18)
+	true_maxRounds(20)
+	true_rounds(8)
+	true_whiteScore(18)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(26)
+	true_maxRounds(20)
+	true_rounds(12)
+	true_whiteScore(26)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(1)
+	true_maxRounds(20)
+	true_rounds(4)
+	true_whiteScore(16)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(26)
+	true_maxRounds(20)
+	true_rounds(14)
+	true_whiteScore(36)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(30)
+	true_maxRounds(20)
+	true_rounds(19)
+	true_whiteScore(50)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(21)
+	true_maxRounds(20)
+	true_rounds(10)
+	true_whiteScore(21)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(17)
+	true_maxRounds(20)
+	true_rounds(10)
+	true_whiteScore(27)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(48)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(23)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(48)
+	true_maxRounds(20)
+	true_rounds(17)
+	true_whiteScore(28)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(40)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(45)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(50)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(35)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(38)
+	true_maxRounds(20)
+	true_rounds(15)
+	true_whiteScore(33)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(10)
+	true_maxRounds(20)
+	true_rounds(2)
+	true_whiteScore(0)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(35)
+	true_maxRounds(20)
+	true_rounds(13)
+	true_whiteScore(30)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(39)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(29)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(41)
+	true_maxRounds(20)
+	true_rounds(15)
+	true_whiteScore(31)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(32)
+	true_maxRounds(20)
+	true_rounds(15)
+	true_whiteScore(42)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(4)
+	true_maxRounds(20)
+	true_rounds(5)
+	true_whiteScore(19)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(40)
+	true_maxRounds(20)
+	true_rounds(18)
+	true_whiteScore(50)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(28)
+	true_maxRounds(20)
+	true_rounds(9)
+	true_whiteScore(18)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(12)
+	true_maxRounds(20)
+	true_rounds(11)
+	true_whiteScore(32)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(30)
+	true_maxRounds(20)
+	true_rounds(15)
+	true_whiteScore(35)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(20)
+	true_maxRounds(20)
+	true_rounds(14)
+	true_whiteScore(40)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(33)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(53)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(36)
+	true_maxRounds(20)
+	true_rounds(17)
+	true_whiteScore(36)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(23)
+	true_maxRounds(20)
+	true_rounds(12)
+	true_whiteScore(28)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(33)
+	true_maxRounds(20)
+	true_rounds(17)
+	true_whiteScore(43)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(12)
+	true_maxRounds(20)
+	true_rounds(5)
+	true_whiteScore(17)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(54)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(44)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(8)
+	true_maxRounds(20)
+	true_rounds(5)
+	true_whiteScore(8)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(26)
+	true_maxRounds(20)
+	true_rounds(9)
+	true_whiteScore(11)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(39)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(49)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(27)
+	true_maxRounds(20)
+	true_rounds(14)
+	true_whiteScore(37)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(31)
+	true_maxRounds(20)
+	true_rounds(12)
+	true_whiteScore(21)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(25)
+	true_maxRounds(20)
+	true_rounds(11)
+	true_whiteScore(30)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(8)
+	true_maxRounds(20)
+	true_rounds(3)
+	true_whiteScore(8)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(13)
+	true_maxRounds(20)
+	true_rounds(9)
+	true_whiteScore(28)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(34)
+	true_maxRounds(20)
+	true_rounds(15)
+	true_whiteScore(44)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(43)
+	true_maxRounds(20)
+	true_rounds(18)
+	true_whiteScore(38)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(43)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(38)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(24)
+	true_maxRounds(20)
+	true_rounds(11)
+	true_whiteScore(29)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(22)
+	true_maxRounds(20)
+	true_rounds(10)
+	true_whiteScore(22)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(11)
+	true_maxRounds(20)
+	true_rounds(4)
+	true_whiteScore(6)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(42)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(27)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(5)
+	true_maxRounds(20)
+	true_rounds(6)
+	true_whiteScore(20)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(37)
+	true_maxRounds(20)
+	true_rounds(19)
+	true_whiteScore(52)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(39)
+	true_maxRounds(20)
+	true_rounds(17)
+	true_whiteScore(29)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(58)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(43)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(10)
+	true_maxRounds(20)
+	true_rounds(7)
+	true_whiteScore(20)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(28)
+	true_maxRounds(20)
+	true_rounds(14)
+	true_whiteScore(28)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(14)
+	true_maxRounds(20)
+	true_rounds(10)
+	true_whiteScore(34)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(11)
+	true_maxRounds(20)
+	true_rounds(7)
+	true_whiteScore(16)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(24)
+	true_maxRounds(20)
+	true_rounds(10)
+	true_whiteScore(19)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(13)
+	true_maxRounds(20)
+	true_rounds(7)
+	true_whiteScore(23)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(20)
+	true_maxRounds(20)
+	true_rounds(15)
+	true_whiteScore(45)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(27)
+	true_maxRounds(20)
+	true_rounds(17)
+	true_whiteScore(47)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(43)
+	true_maxRounds(20)
+	true_rounds(17)
+	true_whiteScore(33)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(37)
+	true_maxRounds(20)
+	true_rounds(15)
+	true_whiteScore(37)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(29)
+	true_maxRounds(20)
+	true_rounds(10)
+	true_whiteScore(19)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(42)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(37)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(47)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(32)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(11)
+	true_maxRounds(20)
+	true_rounds(5)
+	true_whiteScore(6)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(14)
+	true_maxRounds(20)
+	true_rounds(7)
+	true_whiteScore(19)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(12)
+	true_maxRounds(20)
+	true_rounds(7)
+	true_whiteScore(17)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(41)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(51)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(12)
+	true_maxRounds(20)
+	true_rounds(6)
+	true_whiteScore(12)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(39)
+	true_maxRounds(20)
+	true_rounds(18)
+	true_whiteScore(39)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(11)
+	true_maxRounds(20)
+	true_rounds(7)
+	true_whiteScore(26)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(37)
+	true_maxRounds(20)
+	true_rounds(14)
+	true_whiteScore(32)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(27)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(32)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(13)
+	true_maxRounds(20)
+	true_rounds(6)
+	true_whiteScore(18)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(20)
+	true_maxRounds(20)
+	true_rounds(7)
+	true_whiteScore(10)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(30)
+	true_maxRounds(20)
+	true_rounds(18)
+	true_whiteScore(55)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(10)
+	true_maxRounds(20)
+	true_rounds(7)
+	true_whiteScore(15)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(32)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(42)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(59)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(29)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(36)
+	true_maxRounds(20)
+	true_rounds(14)
+	true_whiteScore(21)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(41)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(46)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(33)
+	true_maxRounds(20)
+	true_rounds(7)
+	true_whiteScore(3)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(30)
+	true_maxRounds(20)
+	true_rounds(14)
+	true_whiteScore(25)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(45)
+	true_maxRounds(20)
+	true_rounds(18)
+	true_whiteScore(40)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(27)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(42)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(47)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(52)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(20)
+	true_maxRounds(20)
+	true_rounds(10)
+	true_whiteScore(25)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(14)
+	true_maxRounds(20)
+	true_rounds(7)
+	true_whiteScore(24)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(34)
+	true_maxRounds(20)
+	true_rounds(18)
+	true_whiteScore(39)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(34)
+	true_maxRounds(20)
+	true_rounds(11)
+	true_whiteScore(14)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(27)
+	true_maxRounds(20)
+	true_rounds(10)
+	true_whiteScore(22)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(51)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(36)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(8)
+	true_maxRounds(20)
+	true_rounds(5)
+	true_whiteScore(18)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(5)
+	true_maxRounds(20)
+	true_rounds(5)
+	true_whiteScore(15)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(44)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(24)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(25)
+	true_maxRounds(20)
+	true_rounds(17)
+	true_whiteScore(60)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(16)
+	true_maxRounds(20)
+	true_rounds(5)
+	true_whiteScore(11)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(27)
+	true_maxRounds(20)
+	true_rounds(14)
+	true_whiteScore(42)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(28)
+	true_maxRounds(20)
+	true_rounds(6)
+	true_whiteScore(3)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(44)
+	true_maxRounds(20)
+	true_rounds(17)
+	true_whiteScore(34)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(36)
+	true_maxRounds(20)
+	true_rounds(13)
+	true_whiteScore(31)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(34)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(59)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(25)
+	true_maxRounds(20)
+	true_rounds(13)
+	true_whiteScore(40)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(11)
+	true_maxRounds(20)
+	true_rounds(10)
+	true_whiteScore(31)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(34)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(49)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(53)
+	true_maxRounds(20)
+	true_rounds(19)
+	true_whiteScore(28)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(31)
+	true_maxRounds(20)
+	true_rounds(14)
+	true_whiteScore(31)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(39)
+	true_maxRounds(20)
+	true_rounds(18)
+	true_whiteScore(34)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(10)
+	true_maxRounds(20)
+	true_rounds(9)
+	true_whiteScore(25)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(52)
+	true_maxRounds(20)
+	true_rounds(19)
+	true_whiteScore(42)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(42)
+	true_maxRounds(20)
+	true_rounds(17)
+	true_whiteScore(32)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(22)
+	true_maxRounds(20)
+	true_rounds(15)
+	true_whiteScore(52)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(23)
+	true_maxRounds(20)
+	true_rounds(13)
+	true_whiteScore(23)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(19)
+	true_maxRounds(20)
+	true_rounds(8)
+	true_whiteScore(14)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(47)
+	true_maxRounds(20)
+	true_rounds(19)
+	true_whiteScore(52)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(21)
+	true_maxRounds(20)
+	true_rounds(13)
+	true_whiteScore(36)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(49)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(29)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(40)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(40)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(7)
+	true_maxRounds(20)
+	true_rounds(4)
+	true_whiteScore(7)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(20)
+	true_maxRounds(20)
+	true_rounds(10)
+	true_whiteScore(20)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(26)
+	true_maxRounds(20)
+	true_rounds(11)
+	true_whiteScore(26)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(5)
+	true_maxRounds(20)
+	true_rounds(3)
+	true_whiteScore(5)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(12)
+	true_maxRounds(20)
+	true_rounds(5)
+	true_whiteScore(12)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(35)
+	true_maxRounds(20)
+	true_rounds(13)
+	true_whiteScore(20)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(15)
+	true_maxRounds(20)
+	true_rounds(7)
+	true_whiteScore(15)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(24)
+	true_maxRounds(20)
+	true_rounds(11)
+	true_whiteScore(24)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(32)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(47)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(23)
+	true_maxRounds(20)
+	true_rounds(9)
+	true_whiteScore(28)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(58)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(18)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(46)
+	true_maxRounds(20)
+	true_rounds(19)
+	true_whiteScore(51)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(55)
+	true_maxRounds(20)
+	true_rounds(19)
+	true_whiteScore(40)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(55)
+	true_maxRounds(20)
+	true_rounds(15)
+	true_whiteScore(15)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(10)
+	true_maxRounds(20)
+	true_rounds(7)
+	true_whiteScore(25)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(2)
+	true_maxRounds(20)
+	true_rounds(4)
+	true_whiteScore(12)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(39)
+	true_maxRounds(20)
+	true_rounds(12)
+	true_whiteScore(14)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(14)
+	true_maxRounds(20)
+	true_rounds(9)
+	true_whiteScore(24)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(13)
+	true_maxRounds(20)
+	true_rounds(9)
+	true_whiteScore(23)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(39)
+	true_maxRounds(20)
+	true_rounds(15)
+	true_whiteScore(29)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(16)
+	true_maxRounds(20)
+	true_rounds(6)
+	true_whiteScore(16)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(16)
+	true_maxRounds(20)
+	true_rounds(9)
+	true_whiteScore(16)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(35)
+	true_maxRounds(20)
+	true_rounds(18)
+	true_whiteScore(40)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(41)
+	true_maxRounds(20)
+	true_rounds(18)
+	true_whiteScore(31)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(1)
+	true_maxRounds(20)
+	true_rounds(2)
+	true_whiteScore(6)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(46)
+	true_maxRounds(20)
+	true_rounds(18)
+	true_whiteScore(31)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(24)
+	true_maxRounds(20)
+	true_rounds(12)
+	true_whiteScore(39)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(36)
+	true_maxRounds(20)
+	true_rounds(15)
+	true_whiteScore(41)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(7)
+	true_maxRounds(20)
+	true_rounds(3)
+	true_whiteScore(2)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(23)
+	true_maxRounds(20)
+	true_rounds(10)
+	true_whiteScore(28)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(33)
+	true_maxRounds(20)
+	true_rounds(15)
+	true_whiteScore(28)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(31)
+	true_maxRounds(20)
+	true_rounds(8)
+	true_whiteScore(11)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(23)
+	true_maxRounds(20)
+	true_rounds(8)
+	true_whiteScore(13)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(34)
+	true_maxRounds(20)
+	true_rounds(15)
+	true_whiteScore(39)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(26)
+	true_maxRounds(20)
+	true_rounds(10)
+	true_whiteScore(16)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(45)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(40)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(34)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(54)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(41)
+	true_maxRounds(20)
+	true_rounds(17)
+	true_whiteScore(31)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(19)
+	true_maxRounds(20)
+	true_rounds(7)
+	true_whiteScore(9)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(40)
+	true_maxRounds(20)
+	true_rounds(15)
+	true_whiteScore(25)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(15)
+	true_maxRounds(20)
+	true_rounds(10)
+	true_whiteScore(20)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(14)
+	true_maxRounds(20)
+	true_rounds(8)
+	true_whiteScore(19)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(52)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(47)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(29)
+	true_maxRounds(20)
+	true_rounds(15)
+	true_whiteScore(34)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(43)
+	true_maxRounds(20)
+	true_rounds(17)
+	true_whiteScore(38)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(14)
+	true_maxRounds(20)
+	true_rounds(8)
+	true_whiteScore(29)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(17)
+	true_maxRounds(20)
+	true_rounds(9)
+	true_whiteScore(17)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(44)
+	true_maxRounds(20)
+	true_rounds(19)
+	true_whiteScore(34)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(19)
+	true_maxRounds(20)
+	true_rounds(7)
+	true_whiteScore(14)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(48)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(38)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(1)
+	true_maxRounds(20)
+	true_rounds(3)
+	true_whiteScore(11)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(36)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(31)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(37)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(37)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(61)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(36)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(9)
+	true_maxRounds(20)
+	true_rounds(4)
+	true_whiteScore(9)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(38)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(63)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(5)
+	true_maxRounds(20)
+	true_rounds(4)
+	true_whiteScore(15)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(21)
+	true_maxRounds(20)
+	true_rounds(9)
+	true_whiteScore(21)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(45)
+	true_maxRounds(20)
+	true_rounds(19)
+	true_whiteScore(50)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(36)
+	true_maxRounds(20)
+	true_rounds(14)
+	true_whiteScore(31)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(3)
+	true_maxRounds(20)
+	true_rounds(3)
+	true_whiteScore(13)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(37)
+	true_maxRounds(20)
+	true_rounds(14)
+	true_whiteScore(27)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(37)
+	true_maxRounds(20)
+	true_rounds(15)
+	true_whiteScore(42)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(18)
+	true_maxRounds(20)
+	true_rounds(13)
+	true_whiteScore(33)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(42)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(37)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(4)
+	true_maxRounds(20)
+	true_rounds(4)
+	true_whiteScore(4)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(17)
+	true_maxRounds(20)
+	true_rounds(7)
+	true_whiteScore(17)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(32)
+	true_maxRounds(20)
+	true_rounds(14)
+	true_whiteScore(42)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(32)
+	true_maxRounds(20)
+	true_rounds(19)
+	true_whiteScore(52)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(49)
+	true_maxRounds(20)
+	true_rounds(13)
+	true_whiteScore(14)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(22)
+	true_maxRounds(20)
+	true_rounds(18)
+	true_whiteScore(42)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(21)
+	true_maxRounds(20)
+	true_rounds(7)
+	true_whiteScore(11)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(16)
+	true_maxRounds(20)
+	true_rounds(8)
+	true_whiteScore(26)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(13)
+	true_maxRounds(20)
+	true_rounds(5)
+	true_whiteScore(8)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(42)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(32)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(40)
+	true_maxRounds(20)
+	true_rounds(18)
+	true_whiteScore(30)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(22)
+	true_maxRounds(20)
+	true_rounds(11)
+	true_whiteScore(32)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(8)
+	true_maxRounds(20)
+	true_rounds(10)
+	true_whiteScore(38)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(11)
+	true_maxRounds(20)
+	true_rounds(5)
+	true_whiteScore(16)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(11)
+	true_maxRounds(20)
+	true_rounds(3)
+	true_whiteScore(6)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(13)
+	true_maxRounds(20)
+	true_rounds(5)
+	true_whiteScore(13)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(31)
+	true_maxRounds(20)
+	true_rounds(17)
+	true_whiteScore(46)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(47)
+	true_maxRounds(20)
+	true_rounds(19)
+	true_whiteScore(42)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(32)
+	true_maxRounds(20)
+	true_rounds(12)
+	true_whiteScore(32)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(63)
+	true_maxRounds(20)
+	true_rounds(17)
+	true_whiteScore(18)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(9)
+	true_maxRounds(20)
+	true_rounds(8)
+	true_whiteScore(24)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(27)
+	true_maxRounds(20)
+	true_rounds(12)
+	true_whiteScore(27)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(66)
+	true_maxRounds(20)
+	true_rounds(18)
+	true_whiteScore(21)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(33)
+	true_maxRounds(20)
+	true_rounds(19)
+	true_whiteScore(53)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(4)
+	true_maxRounds(20)
+	true_rounds(3)
+	true_whiteScore(9)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(30)
+	true_maxRounds(20)
+	true_rounds(17)
+	true_whiteScore(40)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(27)
+	true_maxRounds(20)
+	true_rounds(12)
+	true_whiteScore(32)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(30)
+	true_maxRounds(20)
+	true_rounds(13)
+	true_whiteScore(35)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(42)
+	true_maxRounds(20)
+	true_rounds(14)
+	true_whiteScore(22)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(9)
+	true_maxRounds(20)
+	true_rounds(5)
+	true_whiteScore(14)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(52)
+	true_maxRounds(20)
+	true_rounds(18)
+	true_whiteScore(32)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(29)
+	true_maxRounds(20)
+	true_rounds(12)
+	true_whiteScore(29)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(38)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(38)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(31)
+	true_maxRounds(20)
+	true_rounds(12)
+	true_whiteScore(26)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(32)
+	true_maxRounds(20)
+	true_rounds(14)
+	true_whiteScore(27)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(31)
+	true_maxRounds(20)
+	true_rounds(13)
+	true_whiteScore(36)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(55)
+	true_maxRounds(20)
+	true_rounds(17)
+	true_whiteScore(30)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(12)
+	true_maxRounds(20)
+	true_rounds(7)
+	true_whiteScore(22)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(33)
+	true_maxRounds(20)
+	true_rounds(13)
+	true_whiteScore(33)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(55)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(45)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(46)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(36)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(32)
+	true_maxRounds(20)
+	true_rounds(11)
+	true_whiteScore(27)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(16)
+	true_maxRounds(20)
+	true_rounds(9)
+	true_whiteScore(21)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(19)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(44)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(44)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(29)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(31)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(31)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(40)
+	true_maxRounds(20)
+	true_rounds(14)
+	true_whiteScore(30)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(46)
+	true_maxRounds(20)
+	true_rounds(17)
+	true_whiteScore(41)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(19)
+	true_maxRounds(20)
+	true_rounds(8)
+	true_whiteScore(19)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(16)
+	true_maxRounds(20)
+	true_rounds(13)
+	true_whiteScore(41)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(31)
+	true_maxRounds(20)
+	true_rounds(10)
+	true_whiteScore(16)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(30)
+	true_maxRounds(20)
+	true_rounds(15)
+	true_whiteScore(30)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(29)
+	true_maxRounds(20)
+	true_rounds(17)
+	true_whiteScore(54)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(33)
+	true_maxRounds(20)
+	true_rounds(12)
+	true_whiteScore(18)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(62)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(37)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(24)
+	true_maxRounds(20)
+	true_rounds(18)
+	true_whiteScore(49)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(51)
+	true_maxRounds(20)
+	true_rounds(18)
+	true_whiteScore(31)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(15)
+	true_maxRounds(20)
+	true_rounds(6)
+	true_whiteScore(10)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(23)
+	true_maxRounds(20)
+	true_rounds(15)
+	true_whiteScore(38)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(38)
+	true_maxRounds(20)
+	true_rounds(18)
+	true_whiteScore(38)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(40)
+	true_maxRounds(20)
+	true_rounds(18)
+	true_whiteScore(40)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(22)
+	true_maxRounds(20)
+	true_rounds(13)
+	true_whiteScore(42)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(29)
+	true_maxRounds(20)
+	true_rounds(13)
+	true_whiteScore(24)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(38)
+	true_maxRounds(20)
+	true_rounds(14)
+	true_whiteScore(23)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(46)
+	true_maxRounds(20)
+	true_rounds(17)
+	true_whiteScore(36)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(14)
+	true_maxRounds(20)
+	true_rounds(4)
+	true_whiteScore(4)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(48)
+	true_maxRounds(20)
+	true_rounds(19)
+	true_whiteScore(43)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(14)
+	true_maxRounds(20)
+	true_rounds(5)
+	true_whiteScore(9)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(9)
+	true_maxRounds(20)
+	true_rounds(5)
+	true_whiteScore(9)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(27)
+	true_maxRounds(20)
+	true_rounds(13)
+	true_whiteScore(22)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(39)
+	true_maxRounds(20)
+	true_rounds(18)
+	true_whiteScore(44)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(35)
+	true_maxRounds(20)
+	true_rounds(18)
+	true_whiteScore(45)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(47)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(37)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(19)
+	true_maxRounds(20)
+	true_rounds(9)
+	true_whiteScore(29)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(35)
+	true_maxRounds(20)
+	true_rounds(17)
+	true_whiteScore(40)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(26)
+	true_maxRounds(20)
+	true_rounds(15)
+	true_whiteScore(31)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(43)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(28)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(27)
+	true_maxRounds(20)
+	true_rounds(9)
+	true_whiteScore(22)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(13)
+	true_maxRounds(20)
+	true_rounds(7)
+	true_whiteScore(18)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(40)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(45)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(16)
+	true_maxRounds(20)
+	true_rounds(7)
+	true_whiteScore(21)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(28)
+	true_maxRounds(20)
+	true_rounds(12)
+	true_whiteScore(28)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(18)
+	true_maxRounds(20)
+	true_rounds(10)
+	true_whiteScore(23)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(23)
+	true_maxRounds(20)
+	true_rounds(11)
+	true_whiteScore(33)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(38)
+	true_maxRounds(20)
+	true_rounds(14)
+	true_whiteScore(28)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(53)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(33)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(41)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(26)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(34)
+	true_maxRounds(20)
+	true_rounds(13)
+	true_whiteScore(24)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(38)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(43)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(27)
+	true_maxRounds(20)
+	true_rounds(8)
+	true_whiteScore(12)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(43)
+	true_maxRounds(20)
+	true_rounds(19)
+	true_whiteScore(38)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(18)
+	true_maxRounds(20)
+	true_rounds(15)
+	true_whiteScore(43)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(13)
+	true_maxRounds(20)
+	true_rounds(5)
+	true_whiteScore(3)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(40)
+	true_maxRounds(20)
+	true_rounds(19)
+	true_whiteScore(35)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(24)
+	true_maxRounds(20)
+	true_rounds(18)
+	true_whiteScore(54)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(22)
+	true_maxRounds(20)
+	true_rounds(12)
+	true_whiteScore(32)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(30)
+	true_maxRounds(20)
+	true_rounds(9)
+	true_whiteScore(20)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(16)
+	true_maxRounds(20)
+	true_rounds(11)
+	true_whiteScore(31)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(26)
+	true_maxRounds(20)
+	true_rounds(11)
+	true_whiteScore(16)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(12)
+	true_maxRounds(20)
+	true_rounds(4)
+	true_whiteScore(7)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(33)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(38)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(51)
+	true_maxRounds(20)
+	true_rounds(17)
+	true_whiteScore(26)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(35)
+	true_maxRounds(20)
+	true_rounds(19)
+	true_whiteScore(55)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(5)
+	true_maxRounds(20)
+	true_rounds(3)
+	true_whiteScore(10)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(27)
+	true_maxRounds(20)
+	true_rounds(15)
+	true_whiteScore(42)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(38)
+	true_maxRounds(20)
+	true_rounds(17)
+	true_whiteScore(48)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(30)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(35)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(46)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(41)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(23)
+	true_maxRounds(20)
+	true_rounds(15)
+	true_whiteScore(43)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(32)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(37)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(18)
+	true_maxRounds(20)
+	true_rounds(7)
+	true_whiteScore(18)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(32)
+	true_maxRounds(20)
+	true_rounds(18)
+	true_whiteScore(47)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(11)
+	true_maxRounds(20)
+	true_rounds(6)
+	true_whiteScore(16)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(25)
+	true_maxRounds(20)
+	true_rounds(15)
+	true_whiteScore(50)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(32)
+	true_maxRounds(20)
+	true_rounds(18)
+	true_whiteScore(52)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(42)
+	true_maxRounds(20)
+	true_rounds(18)
+	true_whiteScore(37)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(43)
+	true_maxRounds(20)
+	true_rounds(15)
+	true_whiteScore(28)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(16)
+	true_maxRounds(20)
+	true_rounds(4)
+	true_whiteScore(1)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(7)
+	true_maxRounds(20)
+	true_rounds(7)
+	true_whiteScore(27)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(29)
+	true_maxRounds(20)
+	true_rounds(14)
+	true_whiteScore(29)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(21)
+	true_maxRounds(20)
+	true_rounds(12)
+	true_whiteScore(26)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(14)
+	true_maxRounds(20)
+	true_rounds(7)
+	true_whiteScore(9)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(26)
+	true_maxRounds(20)
+	true_rounds(10)
+	true_whiteScore(21)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(31)
+	true_maxRounds(20)
+	true_rounds(19)
+	true_whiteScore(56)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(28)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(38)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(24)
+	true_maxRounds(20)
+	true_rounds(11)
+	true_whiteScore(34)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(23)
+	true_maxRounds(20)
+	true_rounds(13)
+	true_whiteScore(33)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(22)
+	true_maxRounds(20)
+	true_rounds(6)
+	true_whiteScore(12)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(12)
+	true_maxRounds(20)
+	true_rounds(8)
+	true_whiteScore(27)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(20)
+	true_maxRounds(20)
+	true_rounds(8)
+	true_whiteScore(25)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(18)
+	true_maxRounds(20)
+	true_rounds(10)
+	true_whiteScore(28)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(27)
+	true_maxRounds(20)
+	true_rounds(11)
+	true_whiteScore(27)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(15)
+	true_maxRounds(20)
+	true_rounds(11)
+	true_whiteScore(25)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(46)
+	true_maxRounds(20)
+	true_rounds(19)
+	true_whiteScore(31)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(28)
+	true_maxRounds(20)
+	true_rounds(15)
+	true_whiteScore(38)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(44)
+	true_maxRounds(20)
+	true_rounds(17)
+	true_whiteScore(29)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(15)
+	true_maxRounds(20)
+	true_rounds(7)
+	true_whiteScore(20)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(48)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(28)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(24)
+	true_maxRounds(20)
+	true_rounds(9)
+	true_whiteScore(24)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(17)
+	true_maxRounds(20)
+	true_rounds(8)
+	true_whiteScore(22)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(41)
+	true_maxRounds(20)
+	true_rounds(15)
+	true_whiteScore(21)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(31)
+	true_maxRounds(20)
+	true_rounds(15)
+	true_whiteScore(41)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(46)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(51)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(50)
+	true_maxRounds(20)
+	true_rounds(19)
+	true_whiteScore(35)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(23)
+	true_maxRounds(20)
+	true_rounds(9)
+	true_whiteScore(23)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(39)
+	true_maxRounds(20)
+	true_rounds(11)
+	true_whiteScore(9)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(40)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(50)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(20)
+	true_maxRounds(20)
+	true_rounds(13)
+	true_whiteScore(40)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(45)
+	true_maxRounds(20)
+	true_rounds(17)
+	true_whiteScore(30)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(46)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(46)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(44)
+	true_maxRounds(20)
+	true_rounds(14)
+	true_whiteScore(24)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(21)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(46)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(32)
+	true_maxRounds(20)
+	true_rounds(12)
+	true_whiteScore(22)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(28)
+	true_maxRounds(20)
+	true_rounds(14)
+	true_whiteScore(23)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(22)
+	true_maxRounds(20)
+	true_rounds(7)
+	true_whiteScore(7)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(9)
+	true_maxRounds(20)
+	true_rounds(7)
+	true_whiteScore(19)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(37)
+	true_maxRounds(20)
+	true_rounds(12)
+	true_whiteScore(22)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(12)
+	true_maxRounds(20)
+	true_rounds(12)
+	true_whiteScore(42)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(24)
+	true_maxRounds(20)
+	true_rounds(10)
+	true_whiteScore(29)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(58)
+	true_maxRounds(20)
+	true_rounds(19)
+	true_whiteScore(33)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(53)
+	true_maxRounds(20)
+	true_rounds(19)
+	true_whiteScore(43)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(36)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(46)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(13)
+	true_maxRounds(20)
+	true_rounds(12)
+	true_whiteScore(38)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(38)
+	true_maxRounds(20)
+	true_rounds(17)
+	true_whiteScore(38)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(25)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(55)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(14)
+	true_maxRounds(20)
+	true_rounds(5)
+	true_whiteScore(14)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(0)
+	true_maxRounds(20)
+	true_rounds(0)
+	true_whiteScore(0)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(10)
+	true_maxRounds(20)
+	true_rounds(4)
+	true_whiteScore(5)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(36)
+	true_maxRounds(20)
+	true_rounds(10)
+	true_whiteScore(6)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(15)
+	true_maxRounds(20)
+	true_rounds(8)
+	true_whiteScore(15)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(6)
+	true_maxRounds(20)
+	true_rounds(8)
+	true_whiteScore(26)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(4)
+	true_maxRounds(20)
+	true_rounds(4)
+	true_whiteScore(14)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(25)
+	true_maxRounds(20)
+	true_rounds(10)
+	true_whiteScore(25)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(28)
+	true_maxRounds(20)
+	true_rounds(8)
+	true_whiteScore(8)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(37)
+	true_maxRounds(20)
+	true_rounds(19)
+	true_whiteScore(42)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(21)
+	true_maxRounds(20)
+	true_rounds(9)
+	true_whiteScore(11)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(29)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(44)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(30)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(45)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(32)
+	true_maxRounds(20)
+	true_rounds(15)
+	true_whiteScore(37)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(37)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(32)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(36)
+	true_maxRounds(20)
+	true_rounds(15)
+	true_whiteScore(36)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(34)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(39)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(36)
+	true_maxRounds(20)
+	true_rounds(12)
+	true_whiteScore(21)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(35)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(35)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(45)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(30)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(16)
+	true_maxRounds(20)
+	true_rounds(4)
+	true_whiteScore(6)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(22)
+	true_maxRounds(20)
+	true_rounds(13)
+	true_whiteScore(37)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(19)
+	true_maxRounds(20)
+	true_rounds(12)
+	true_whiteScore(34)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(6)
+	true_maxRounds(20)
+	true_rounds(4)
+	true_whiteScore(11)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(15)
+	true_maxRounds(20)
+	true_rounds(5)
+	true_whiteScore(10)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(39)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(39)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(38)
+	true_maxRounds(20)
+	true_rounds(18)
+	true_whiteScore(43)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(27)
+	true_maxRounds(20)
+	true_rounds(9)
+	true_whiteScore(12)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(12)
+	true_maxRounds(20)
+	true_rounds(8)
+	true_whiteScore(17)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(15)
+	true_maxRounds(20)
+	true_rounds(13)
+	true_whiteScore(40)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(6)
+	true_maxRounds(20)
+	true_rounds(6)
+	true_whiteScore(16)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(40)
+	true_maxRounds(20)
+	true_rounds(15)
+	true_whiteScore(30)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(42)
+	true_maxRounds(20)
+	true_rounds(19)
+	true_whiteScore(52)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(34)
+	true_maxRounds(20)
+	true_rounds(14)
+	true_whiteScore(34)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(23)
+	true_maxRounds(20)
+	true_rounds(14)
+	true_whiteScore(38)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(23)
+	true_maxRounds(20)
+	true_rounds(9)
+	true_whiteScore(18)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(34)
+	true_maxRounds(20)
+	true_rounds(18)
+	true_whiteScore(44)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(29)
+	true_maxRounds(20)
+	true_rounds(10)
+	true_whiteScore(24)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(6)
+	true_maxRounds(20)
+	true_rounds(3)
+	true_whiteScore(11)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(15)
+	true_maxRounds(20)
+	true_rounds(9)
+	true_whiteScore(30)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(54)
+	true_maxRounds(20)
+	true_rounds(19)
+	true_whiteScore(29)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(21)
+	true_maxRounds(20)
+	true_rounds(10)
+	true_whiteScore(16)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(38)
+	true_maxRounds(20)
+	true_rounds(19)
+	true_whiteScore(48)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(42)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(32)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(31)
+	true_maxRounds(20)
+	true_rounds(11)
+	true_whiteScore(26)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(22)
+	true_maxRounds(20)
+	true_rounds(8)
+	true_whiteScore(12)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(30)
+	true_maxRounds(20)
+	true_rounds(9)
+	true_whiteScore(10)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(34)
+	true_maxRounds(20)
+	true_rounds(13)
+	true_whiteScore(19)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(37)
+	true_maxRounds(20)
+	true_rounds(15)
+	true_whiteScore(32)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(28)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(53)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(46)
+	true_maxRounds(20)
+	true_rounds(19)
+	true_whiteScore(41)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(31)
+	true_maxRounds(20)
+	true_rounds(10)
+	true_whiteScore(21)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(26)
+	true_maxRounds(20)
+	true_rounds(9)
+	true_whiteScore(16)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(3)
+	true_maxRounds(20)
+	true_rounds(1)
+	true_whiteScore(3)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(47)
+	true_maxRounds(20)
+	true_rounds(17)
+	true_whiteScore(27)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(25)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(50)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(9)
+	true_maxRounds(20)
+	true_rounds(4)
+	true_whiteScore(14)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(29)
+	true_maxRounds(20)
+	true_rounds(14)
+	true_whiteScore(34)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(27)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(62)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(39)
+	true_maxRounds(20)
+	true_rounds(17)
+	true_whiteScore(34)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(35)
+	true_maxRounds(20)
+	true_rounds(12)
+	true_whiteScore(25)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(21)
+	true_maxRounds(20)
+	true_rounds(8)
+	true_whiteScore(16)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(19)
+	true_maxRounds(20)
+	true_rounds(9)
+	true_whiteScore(14)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(33)
+	true_maxRounds(20)
+	true_rounds(11)
+	true_whiteScore(18)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(24)
+	true_maxRounds(20)
+	true_rounds(17)
+	true_whiteScore(49)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(37)
+	true_maxRounds(20)
+	true_rounds(18)
+	true_whiteScore(52)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(14)
+	true_maxRounds(20)
+	true_rounds(6)
+	true_whiteScore(14)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(41)
+	true_maxRounds(20)
+	true_rounds(15)
+	true_whiteScore(26)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(31)
+	true_maxRounds(20)
+	true_rounds(15)
+	true_whiteScore(36)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(46)
+	true_maxRounds(20)
+	true_rounds(18)
+	true_whiteScore(41)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(52)
+	true_maxRounds(20)
+	true_rounds(17)
+	true_whiteScore(32)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(40)
+	true_maxRounds(20)
+	true_rounds(17)
+	true_whiteScore(40)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(20)
+	true_maxRounds(20)
+	true_rounds(10)
+	true_whiteScore(15)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(58)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(33)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(17)
+	true_maxRounds(20)
+	true_rounds(10)
+	true_whiteScore(22)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(39)
+	true_maxRounds(20)
+	true_rounds(9)
+	true_whiteScore(4)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(33)
+	true_maxRounds(20)
+	true_rounds(11)
+	true_whiteScore(23)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(13)
+	true_maxRounds(20)
+	true_rounds(7)
+	true_whiteScore(13)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(22)
+	true_maxRounds(20)
+	true_rounds(12)
+	true_whiteScore(27)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(28)
+	true_maxRounds(20)
+	true_rounds(11)
+	true_whiteScore(28)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(19)
+	true_maxRounds(20)
+	true_rounds(6)
+	true_whiteScore(9)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(26)
+	true_maxRounds(20)
+	true_rounds(8)
+	true_whiteScore(11)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(28)
+	true_maxRounds(20)
+	true_rounds(10)
+	true_whiteScore(23)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(23)
+	true_maxRounds(20)
+	true_rounds(5)
+	true_whiteScore(3)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(27)
+	true_maxRounds(20)
+	true_rounds(7)
+	true_whiteScore(12)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(29)
+	true_maxRounds(20)
+	true_rounds(12)
+	true_whiteScore(34)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(38)
+	true_maxRounds(20)
+	true_rounds(15)
+	true_whiteScore(28)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(53)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(38)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(18)
+	true_maxRounds(20)
+	true_rounds(11)
+	true_whiteScore(23)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(57)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(37)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(27)
+	true_maxRounds(20)
+	true_rounds(18)
+	true_whiteScore(52)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(22)
+	true_maxRounds(20)
+	true_rounds(8)
+	true_whiteScore(17)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(28)
+	true_maxRounds(20)
+	true_rounds(17)
+	true_whiteScore(48)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(6)
+	true_maxRounds(20)
+	true_rounds(2)
+	true_whiteScore(1)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(37)
+	true_maxRounds(20)
+	true_rounds(11)
+	true_whiteScore(17)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(30)
+	true_maxRounds(20)
+	true_rounds(10)
+	true_whiteScore(20)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(13)
+	true_maxRounds(20)
+	true_rounds(8)
+	true_whiteScore(23)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(36)
+	true_maxRounds(20)
+	true_rounds(17)
+	true_whiteScore(41)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(51)
+	true_maxRounds(20)
+	true_rounds(17)
+	true_whiteScore(36)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(28)
+	true_maxRounds(20)
+	true_rounds(10)
+	true_whiteScore(13)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(37)
+	true_maxRounds(20)
+	true_rounds(15)
+	true_whiteScore(27)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(27)
+	true_maxRounds(20)
+	true_rounds(11)
+	true_whiteScore(12)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(35)
+	true_maxRounds(20)
+	true_rounds(12)
+	true_whiteScore(15)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(15)
+	true_maxRounds(20)
+	true_rounds(3)
+	true_whiteScore(0)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(23)
+	true_maxRounds(20)
+	true_rounds(14)
+	true_whiteScore(28)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(22)
+	true_maxRounds(20)
+	true_rounds(13)
+	true_whiteScore(27)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(31)
+	true_maxRounds(20)
+	true_rounds(9)
+	true_whiteScore(6)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(28)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(58)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(18)
+	true_maxRounds(20)
+	true_rounds(9)
+	true_whiteScore(13)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(31)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(36)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(41)
+	true_maxRounds(20)
+	true_rounds(18)
+	true_whiteScore(51)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(44)
+	true_maxRounds(20)
+	true_rounds(14)
+	true_whiteScore(29)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(49)
+	true_maxRounds(20)
+	true_rounds(18)
+	true_whiteScore(34)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(18)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(48)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(30)
+	true_maxRounds(20)
+	true_rounds(15)
+	true_whiteScore(45)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(53)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(43)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(26)
+	true_maxRounds(20)
+	true_rounds(12)
+	true_whiteScore(36)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(37)
+	true_maxRounds(20)
+	true_rounds(19)
+	true_whiteScore(47)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(49)
+	true_maxRounds(20)
+	true_rounds(18)
+	true_whiteScore(29)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(11)
+	true_maxRounds(20)
+	true_rounds(9)
+	true_whiteScore(26)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(39)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(59)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(5)
+	true_maxRounds(20)
+	true_rounds(4)
+	true_whiteScore(10)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(50)
+	true_maxRounds(20)
+	true_rounds(19)
+	true_whiteScore(45)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(23)
+	true_maxRounds(20)
+	true_rounds(11)
+	true_whiteScore(23)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(38)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(33)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(11)
+	true_maxRounds(20)
+	true_rounds(6)
+	true_whiteScore(21)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(40)
+	true_maxRounds(20)
+	true_rounds(14)
+	true_whiteScore(25)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(34)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(34)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(34)
+	true_maxRounds(20)
+	true_rounds(15)
+	true_whiteScore(29)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(30)
+	true_maxRounds(20)
+	true_rounds(13)
+	true_whiteScore(30)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(7)
+	true_maxRounds(20)
+	true_rounds(7)
+	true_whiteScore(22)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(19)
+	true_maxRounds(20)
+	true_rounds(11)
+	true_whiteScore(34)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(30)
+	true_maxRounds(20)
+	true_rounds(12)
+	true_whiteScore(25)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(40)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(40)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(32)
+	true_maxRounds(20)
+	true_rounds(11)
+	true_whiteScore(17)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(33)
+	true_maxRounds(20)
+	true_rounds(15)
+	true_whiteScore(38)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(40)
+	true_maxRounds(20)
+	true_rounds(13)
+	true_whiteScore(25)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(19)
+	true_maxRounds(20)
+	true_rounds(10)
+	true_whiteScore(34)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(28)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(43)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(39)
+	true_maxRounds(20)
+	true_rounds(17)
+	true_whiteScore(39)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(27)
+	true_maxRounds(20)
+	true_rounds(10)
+	true_whiteScore(17)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(7)
+	true_maxRounds(20)
+	true_rounds(6)
+	true_whiteScore(22)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(22)
+	true_maxRounds(20)
+	true_rounds(11)
+	true_whiteScore(27)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(33)
+	true_maxRounds(20)
+	true_rounds(12)
+	true_whiteScore(28)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(20)
+	true_maxRounds(20)
+	true_rounds(7)
+	true_whiteScore(15)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(20)
+	true_maxRounds(20)
+	true_rounds(10)
+	true_whiteScore(30)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(32)
+	true_maxRounds(20)
+	true_rounds(10)
+	true_whiteScore(17)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(22)
+	true_maxRounds(20)
+	true_rounds(7)
+	true_whiteScore(17)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(25)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(55)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(29)
+	true_maxRounds(20)
+	true_rounds(14)
+	true_whiteScore(44)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(33)
+	true_maxRounds(20)
+	true_rounds(14)
+	true_whiteScore(28)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(32)
+	true_maxRounds(20)
+	true_rounds(13)
+	true_whiteScore(22)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(26)
+	true_maxRounds(20)
+	true_rounds(13)
+	true_whiteScore(36)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(22)
+	true_maxRounds(20)
+	true_rounds(10)
+	true_whiteScore(27)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(17)
+	true_maxRounds(20)
+	true_rounds(5)
+	true_whiteScore(7)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(31)
+	true_maxRounds(20)
+	true_rounds(14)
+	true_whiteScore(36)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(38)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(48)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(33)
+	true_maxRounds(20)
+	true_rounds(15)
+	true_whiteScore(33)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(47)
+	true_maxRounds(20)
+	true_rounds(18)
+	true_whiteScore(37)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(46)
+	true_maxRounds(20)
+	true_rounds(19)
+	true_whiteScore(36)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(10)
+	true_maxRounds(20)
+	true_rounds(8)
+	true_whiteScore(25)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(43)
+	true_maxRounds(20)
+	true_rounds(14)
+	true_whiteScore(18)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(44)
+	true_maxRounds(20)
+	true_rounds(18)
+	true_whiteScore(49)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(14)
+	true_maxRounds(20)
+	true_rounds(8)
+	true_whiteScore(14)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(47)
+	true_maxRounds(20)
+	true_rounds(18)
+	true_whiteScore(42)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(33)
+	true_maxRounds(20)
+	true_rounds(10)
+	true_whiteScore(18)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(52)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(52)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(47)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(47)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(38)
+	true_maxRounds(20)
+	true_rounds(16)
+	true_whiteScore(28)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(18)
+	true_maxRounds(20)
+	true_rounds(4)
+	true_whiteScore(3)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(43)
+	true_maxRounds(20)
+	true_rounds(20)
+	true_whiteScore(48)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_blackScore(10)
+	true_maxRounds(20)
+	true_rounds(11)
+	true_whiteScore(35)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(28)
+	true_maxRounds(20)
+	true_rounds(12)
+	true_whiteScore(33)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(21)
+	true_maxRounds(20)
+	true_rounds(6)
+	true_whiteScore(6)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(31)
+	true_maxRounds(20)
+	true_rounds(13)
+	true_whiteScore(31)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(50)
+	true_maxRounds(20)
+	true_rounds(18)
+	true_whiteScore(40)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(23)
+	true_maxRounds(20)
+	true_rounds(12)
+	true_whiteScore(33)
+
+---
+
+positives:
+
+---
+
+background:
+	true_blackScore(16)
+	true_maxRounds(20)
+	true_rounds(6)
+	true_whiteScore(6)
+
+---
+
+positives:
+
+---
+

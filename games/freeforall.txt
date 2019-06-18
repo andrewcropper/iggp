@@ -1,0 +1,319 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Freeforall
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Components
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (role red)
+  (role blue)
+
+  (<= (base (cell ?m ?n ?r)) (index ?m) (index ?n) (role ?r))
+
+  (<= (base (capture ?r 0)) (role ?r))
+  (<= (base (capture ?r ?n)) (role ?r) (captureadd ?m ?n))
+
+  (<= (base (control ?r)) (role ?r))
+
+  (<= (base (step ?m)) (stepcount ?m ?n))
+  (base (step 31))
+
+
+  (<= (input ?r (move ?x1 ?y1 ?x2 ?y2))
+      (role ?r)
+      (orthogonal ?x1 ?y1 ?x2 ?y2))
+
+  (<= (input ?r (move ?x1 ?y1 ?x2 ?y2))
+      (role ?r)
+      (diagonal ?x1 ?y1 ?x2 ?y2))
+
+  (<= (input ?r (move ?x1 ?y1 ?x2 ?y2))
+      (role ?r)
+      (ell ?x1 ?y1 ?x2 ?y2))
+
+  (<= (input ?r noop) (role ?r))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; init
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (init (cell 1 4 red))
+  (init (cell 7 4 blue))
+
+  (init (capture red 0))
+  (init (capture blue 0))
+
+  (init (control red))
+
+  (init (step 1))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; legal
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (<= (legal ?player ?move)
+      (legal2 ?player ?move))
+
+  (<= (legal ?player noop)
+      (role ?player)
+      (not (true (control ?player))))
+
+  (<= (legal ?player noop)
+      (true (control ?player))
+      (not (hasLegalMove ?player)))
+
+
+  (<= (hasLegalMove ?player)
+      (legal2 ?player ?move))
+
+
+  (<= (legal2 ?player (move ?x1 ?y1 ?x2 ?y2))
+      (true (control ?player))
+      (true (cell ?x1 ?y1 ?player))
+      (orthogonal ?x1 ?y1 ?x2 ?y2)
+      (onboard ?x2 ?y2)
+      (true (cell ?x2 ?y2 ?player2))
+      (distinct ?player ?player2))
+
+  (<= (legal2 ?player (move ?x1 ?y1 ?x2 ?y2))
+      (true (control ?player))
+      (true (cell ?x1 ?y1 ?player))
+      (diagonal ?x1 ?y1 ?x2 ?y2)
+      (onboard ?x2 ?y2)
+      (true (cell ?x2 ?y2 ?player2))
+      (distinct ?player ?player2))
+
+  (<= (legal2 ?player (move ?x1 ?y1 ?x2 ?y2))
+      (true (control ?player))
+      (true (cell ?x1 ?y1 ?player))
+      (ell ?x1 ?y1 ?x2 ?y2)
+      (opencell ?x2 ?y2))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; next
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (<= (next (cell ?x2 ?y2 ?player))
+      (does ?player (move ?x1 ?y1 ?x2 ?y2)))
+
+  (<= (next (cell ?x ?y ?piece))
+      (true (cell ?x ?y ?piece))
+      (not (camefrom ?x ?y))
+      (not (wentto ?x ?y)))
+
+  (<= (next (cell ?x ?y ?player))
+      (spawns ?x ?y ?player))
+
+  (<= (next (capture ?player ?count))
+      (true (capture ?player ?count))
+      (not (captured ?player)))
+
+  (<= (next (capture ?player ?count2))
+      (true (capture ?player ?count1))
+      (captured ?player)
+      (captureadd ?count1 ?count2))
+
+      next_capture()
+
+  (<= (next (control ?p2))
+      (true (control ?p1))
+      (rotation ?p1 ?p2))
+
+  (<= (next (step ?t2))
+      (true (step ?t1))
+      (stepcount ?t1 ?t2))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; goal
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (<= (goal ?player ?goal)
+      (true (capture ?player ?count))
+      (scoremap ?count ?goal))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; terminal
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (<= terminal (true (step 31)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Views
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (<= (orthogonal ?x1 ?y ?x2 ?y)
+      (add 1 ?x1 ?x2)
+      (index ?y))
+
+  (<= (orthogonal ?x1 ?y ?x2 ?y)
+      (add 1 ?x2 ?x1)
+      (index ?y))
+
+  (<= (orthogonal ?x ?y1 ?x ?y2)
+      (add 1 ?y1 ?y2)
+      (index ?x))
+
+  (<= (orthogonal ?x ?y1 ?x ?y2)
+      (add 1 ?y2 ?y1)
+      (index ?x))
+
+
+  (<= (diagonal ?x1 ?y1 ?x2 ?y2)
+      (add 1 ?x1 ?x2)
+      (add 1 ?y1 ?y2))
+
+  (<= (diagonal ?x1 ?y1 ?x2 ?y2)
+      (add 1 ?x1 ?x2)
+      (add 1 ?y2 ?y1))
+
+  (<= (diagonal ?x1 ?y1 ?x2 ?y2)
+      (add 1 ?x2 ?x1)
+      (add 1 ?y1 ?y2))
+
+  (<= (diagonal ?x1 ?y1 ?x2 ?y2)
+      (add 1 ?x2 ?x1)
+      (add 1 ?y2 ?y1))
+
+
+  (<= (ell ?x1 ?y1 ?x2 ?y2)
+      (add 2 ?x1 ?x2)
+      (add 1 ?y1 ?y2))
+
+  (<= (ell ?x1 ?y1 ?x2 ?y2)
+      (add 2 ?x1 ?x2)
+      (add 1 ?y2 ?y1))
+
+  (<= (ell ?x1 ?y1 ?x2 ?y2)
+      (add 2 ?x2 ?x1)
+      (add 1 ?y1 ?y2))
+
+  (<= (ell ?x1 ?y1 ?x2 ?y2)
+      (add 2 ?x2 ?x1)
+      (add 1 ?y2 ?y1))
+
+  (<= (ell ?x1 ?y1 ?x2 ?y2)
+      (add 1 ?x1 ?x2)
+      (add 2 ?y1 ?y2))
+
+  (<= (ell ?x1 ?y1 ?x2 ?y2)
+      (add 1 ?x1 ?x2)
+      (add 2 ?y2 ?y1))
+
+  (<= (ell ?x1 ?y1 ?x2 ?y2)
+      (add 1 ?x2 ?x1)
+      (add 2 ?y1 ?y2))
+
+  (<= (ell ?x1 ?y1 ?x2 ?y2)
+      (add 1 ?x2 ?x1)
+      (add 2 ?y2 ?y1))
+
+
+  (<= (opencell ?x ?y)
+      (onboard ?x ?y)
+      (not (true (cell ?x ?y red)))
+      (not (true (cell ?x ?y blue))))
+
+  (<= (onboard ?x ?y)
+      (index ?x)
+      (index ?y)
+      (distinct ?x 1)
+      (distinct ?x 7)
+      (distinct ?y 1)
+      (distinct ?y 7))
+
+  (<= (camefrom ?x1 ?y1) (does ?player (move ?x1 ?y1 ?x2 ?y2)))
+  (<= (wentto ?x2 ?y2) (does ?player (move ?x1 ?y1 ?x2 ?y2)))
+
+  (<= (captured ?player)
+      (true (control ?player))
+      (wentto ?x ?y)
+      (true (cell ?x ?y ?any)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Data
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (index 1)
+  (index 2)
+  (index 3)
+  (index 4)
+  (index 5)
+  (index 6)
+  (index 7)
+
+  (add 1 1 2)
+  (add 1 2 3)
+  (add 1 3 4)
+  (add 1 4 5)
+  (add 1 5 6)
+  (add 1 6 7)
+  (add 2 1 3)
+  (add 2 2 4)
+  (add 2 3 5)
+  (add 2 4 6)
+  (add 2 5 7)
+
+  (rotation red blue)
+  (rotation blue red)
+
+  (spawns 1 4 red)
+  (spawns 7 4 blue)
+
+  (stepcount 1 2)
+  (stepcount 2 3)
+  (stepcount 3 4)
+  (stepcount 4 5)
+  (stepcount 5 6)
+  (stepcount 6 7)
+  (stepcount 7 8)
+  (stepcount 8 9)
+  (stepcount 9 10)
+  (stepcount 10 11)
+  (stepcount 11 12)
+  (stepcount 12 13)
+  (stepcount 13 14)
+  (stepcount 14 15)
+  (stepcount 15 16)
+  (stepcount 16 17)
+  (stepcount 17 18)
+  (stepcount 18 19)
+  (stepcount 19 20)
+  (stepcount 20 21)
+  (stepcount 21 22)
+  (stepcount 22 23)
+  (stepcount 23 24)
+  (stepcount 24 25)
+  (stepcount 25 26)
+  (stepcount 26 27)
+  (stepcount 27 28)
+  (stepcount 28 29)
+  (stepcount 29 30)
+  (stepcount 30 31)
+
+  (captureadd 0 1)
+  (captureadd 1 2)
+  (captureadd 2 3)
+  (captureadd 3 4)
+  (captureadd 4 5)
+  (captureadd 5 6)
+  (captureadd 6 7)
+  (captureadd 7 8)
+  (captureadd 8 9)
+  (captureadd 9 10)
+  (captureadd 10 10)
+
+  (scoremap 0 0)
+  (scoremap 1 10)
+  (scoremap 2 20)
+  (scoremap 3 30)
+  (scoremap 4 40)
+  (scoremap 5 50)
+  (scoremap 6 60)
+  (scoremap 7 70)
+  (scoremap 8 80)
+  (scoremap 9 90)
+  (scoremap 10 100)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

@@ -1,0 +1,3962 @@
+atoms:
+	next_blackScore(0)
+	next_blackScore(1)
+	next_blackScore(10)
+	next_blackScore(100)
+	next_blackScore(11)
+	next_blackScore(12)
+	next_blackScore(13)
+	next_blackScore(14)
+	next_blackScore(15)
+	next_blackScore(16)
+	next_blackScore(17)
+	next_blackScore(18)
+	next_blackScore(19)
+	next_blackScore(2)
+	next_blackScore(20)
+	next_blackScore(21)
+	next_blackScore(22)
+	next_blackScore(23)
+	next_blackScore(24)
+	next_blackScore(25)
+	next_blackScore(26)
+	next_blackScore(27)
+	next_blackScore(28)
+	next_blackScore(29)
+	next_blackScore(3)
+	next_blackScore(30)
+	next_blackScore(31)
+	next_blackScore(32)
+	next_blackScore(33)
+	next_blackScore(34)
+	next_blackScore(35)
+	next_blackScore(36)
+	next_blackScore(37)
+	next_blackScore(38)
+	next_blackScore(39)
+	next_blackScore(4)
+	next_blackScore(40)
+	next_blackScore(41)
+	next_blackScore(42)
+	next_blackScore(43)
+	next_blackScore(44)
+	next_blackScore(45)
+	next_blackScore(46)
+	next_blackScore(47)
+	next_blackScore(48)
+	next_blackScore(49)
+	next_blackScore(5)
+	next_blackScore(50)
+	next_blackScore(51)
+	next_blackScore(52)
+	next_blackScore(53)
+	next_blackScore(54)
+	next_blackScore(55)
+	next_blackScore(56)
+	next_blackScore(57)
+	next_blackScore(58)
+	next_blackScore(59)
+	next_blackScore(6)
+	next_blackScore(60)
+	next_blackScore(61)
+	next_blackScore(62)
+	next_blackScore(63)
+	next_blackScore(64)
+	next_blackScore(65)
+	next_blackScore(66)
+	next_blackScore(67)
+	next_blackScore(68)
+	next_blackScore(69)
+	next_blackScore(7)
+	next_blackScore(70)
+	next_blackScore(71)
+	next_blackScore(72)
+	next_blackScore(73)
+	next_blackScore(74)
+	next_blackScore(75)
+	next_blackScore(76)
+	next_blackScore(77)
+	next_blackScore(78)
+	next_blackScore(79)
+	next_blackScore(8)
+	next_blackScore(80)
+	next_blackScore(81)
+	next_blackScore(82)
+	next_blackScore(83)
+	next_blackScore(84)
+	next_blackScore(85)
+	next_blackScore(86)
+	next_blackScore(87)
+	next_blackScore(88)
+	next_blackScore(89)
+	next_blackScore(9)
+	next_blackScore(90)
+	next_blackScore(91)
+	next_blackScore(92)
+	next_blackScore(93)
+	next_blackScore(94)
+	next_blackScore(95)
+	next_blackScore(96)
+	next_blackScore(97)
+	next_blackScore(98)
+	next_blackScore(99)
+	next_rounds(0)
+	next_rounds(1)
+	next_rounds(10)
+	next_rounds(100)
+	next_rounds(11)
+	next_rounds(12)
+	next_rounds(13)
+	next_rounds(14)
+	next_rounds(15)
+	next_rounds(16)
+	next_rounds(17)
+	next_rounds(18)
+	next_rounds(19)
+	next_rounds(2)
+	next_rounds(20)
+	next_rounds(21)
+	next_rounds(22)
+	next_rounds(23)
+	next_rounds(24)
+	next_rounds(25)
+	next_rounds(26)
+	next_rounds(27)
+	next_rounds(28)
+	next_rounds(29)
+	next_rounds(3)
+	next_rounds(30)
+	next_rounds(31)
+	next_rounds(32)
+	next_rounds(33)
+	next_rounds(34)
+	next_rounds(35)
+	next_rounds(36)
+	next_rounds(37)
+	next_rounds(38)
+	next_rounds(39)
+	next_rounds(4)
+	next_rounds(40)
+	next_rounds(41)
+	next_rounds(42)
+	next_rounds(43)
+	next_rounds(44)
+	next_rounds(45)
+	next_rounds(46)
+	next_rounds(47)
+	next_rounds(48)
+	next_rounds(49)
+	next_rounds(5)
+	next_rounds(50)
+	next_rounds(51)
+	next_rounds(52)
+	next_rounds(53)
+	next_rounds(54)
+	next_rounds(55)
+	next_rounds(56)
+	next_rounds(57)
+	next_rounds(58)
+	next_rounds(59)
+	next_rounds(6)
+	next_rounds(60)
+	next_rounds(61)
+	next_rounds(62)
+	next_rounds(63)
+	next_rounds(64)
+	next_rounds(65)
+	next_rounds(66)
+	next_rounds(67)
+	next_rounds(68)
+	next_rounds(69)
+	next_rounds(7)
+	next_rounds(70)
+	next_rounds(71)
+	next_rounds(72)
+	next_rounds(73)
+	next_rounds(74)
+	next_rounds(75)
+	next_rounds(76)
+	next_rounds(77)
+	next_rounds(78)
+	next_rounds(79)
+	next_rounds(8)
+	next_rounds(80)
+	next_rounds(81)
+	next_rounds(82)
+	next_rounds(83)
+	next_rounds(84)
+	next_rounds(85)
+	next_rounds(86)
+	next_rounds(87)
+	next_rounds(88)
+	next_rounds(89)
+	next_rounds(9)
+	next_rounds(90)
+	next_rounds(91)
+	next_rounds(92)
+	next_rounds(93)
+	next_rounds(94)
+	next_rounds(95)
+	next_rounds(96)
+	next_rounds(97)
+	next_rounds(98)
+	next_rounds(99)
+	next_whiteScore(0)
+	next_whiteScore(1)
+	next_whiteScore(10)
+	next_whiteScore(100)
+	next_whiteScore(11)
+	next_whiteScore(12)
+	next_whiteScore(13)
+	next_whiteScore(14)
+	next_whiteScore(15)
+	next_whiteScore(16)
+	next_whiteScore(17)
+	next_whiteScore(18)
+	next_whiteScore(19)
+	next_whiteScore(2)
+	next_whiteScore(20)
+	next_whiteScore(21)
+	next_whiteScore(22)
+	next_whiteScore(23)
+	next_whiteScore(24)
+	next_whiteScore(25)
+	next_whiteScore(26)
+	next_whiteScore(27)
+	next_whiteScore(28)
+	next_whiteScore(29)
+	next_whiteScore(3)
+	next_whiteScore(30)
+	next_whiteScore(31)
+	next_whiteScore(32)
+	next_whiteScore(33)
+	next_whiteScore(34)
+	next_whiteScore(35)
+	next_whiteScore(36)
+	next_whiteScore(37)
+	next_whiteScore(38)
+	next_whiteScore(39)
+	next_whiteScore(4)
+	next_whiteScore(40)
+	next_whiteScore(41)
+	next_whiteScore(42)
+	next_whiteScore(43)
+	next_whiteScore(44)
+	next_whiteScore(45)
+	next_whiteScore(46)
+	next_whiteScore(47)
+	next_whiteScore(48)
+	next_whiteScore(49)
+	next_whiteScore(5)
+	next_whiteScore(50)
+	next_whiteScore(51)
+	next_whiteScore(52)
+	next_whiteScore(53)
+	next_whiteScore(54)
+	next_whiteScore(55)
+	next_whiteScore(56)
+	next_whiteScore(57)
+	next_whiteScore(58)
+	next_whiteScore(59)
+	next_whiteScore(6)
+	next_whiteScore(60)
+	next_whiteScore(61)
+	next_whiteScore(62)
+	next_whiteScore(63)
+	next_whiteScore(64)
+	next_whiteScore(65)
+	next_whiteScore(66)
+	next_whiteScore(67)
+	next_whiteScore(68)
+	next_whiteScore(69)
+	next_whiteScore(7)
+	next_whiteScore(70)
+	next_whiteScore(71)
+	next_whiteScore(72)
+	next_whiteScore(73)
+	next_whiteScore(74)
+	next_whiteScore(75)
+	next_whiteScore(76)
+	next_whiteScore(77)
+	next_whiteScore(78)
+	next_whiteScore(79)
+	next_whiteScore(8)
+	next_whiteScore(80)
+	next_whiteScore(81)
+	next_whiteScore(82)
+	next_whiteScore(83)
+	next_whiteScore(84)
+	next_whiteScore(85)
+	next_whiteScore(86)
+	next_whiteScore(87)
+	next_whiteScore(88)
+	next_whiteScore(89)
+	next_whiteScore(9)
+	next_whiteScore(90)
+	next_whiteScore(91)
+	next_whiteScore(92)
+	next_whiteScore(93)
+	next_whiteScore(94)
+	next_whiteScore(95)
+	next_whiteScore(96)
+	next_whiteScore(97)
+	next_whiteScore(98)
+	next_whiteScore(99)
+
+---
+
+statics:
+	maxRounds(20)
+	role(black)
+	role(white)
+	succ(0, 1)
+	succ(1, 2)
+	succ(10, 11)
+	succ(11, 12)
+	succ(12, 13)
+	succ(13, 14)
+	succ(14, 15)
+	succ(15, 16)
+	succ(16, 17)
+	succ(17, 18)
+	succ(18, 19)
+	succ(19, 20)
+	succ(2, 3)
+	succ(20, 21)
+	succ(21, 22)
+	succ(22, 23)
+	succ(23, 24)
+	succ(24, 25)
+	succ(25, 26)
+	succ(26, 27)
+	succ(27, 28)
+	succ(28, 29)
+	succ(29, 30)
+	succ(3, 4)
+	succ(30, 31)
+	succ(31, 32)
+	succ(32, 33)
+	succ(33, 34)
+	succ(34, 35)
+	succ(35, 36)
+	succ(36, 37)
+	succ(37, 38)
+	succ(38, 39)
+	succ(39, 40)
+	succ(4, 5)
+	succ(40, 41)
+	succ(41, 42)
+	succ(42, 43)
+	succ(43, 44)
+	succ(44, 45)
+	succ(45, 46)
+	succ(46, 47)
+	succ(47, 48)
+	succ(48, 49)
+	succ(49, 50)
+	succ(5, 6)
+	succ(50, 51)
+	succ(51, 52)
+	succ(52, 53)
+	succ(53, 54)
+	succ(54, 55)
+	succ(55, 56)
+	succ(56, 57)
+	succ(57, 58)
+	succ(58, 59)
+	succ(59, 60)
+	succ(6, 7)
+	succ(60, 61)
+	succ(61, 62)
+	succ(62, 63)
+	succ(63, 64)
+	succ(64, 65)
+	succ(65, 66)
+	succ(66, 67)
+	succ(67, 68)
+	succ(68, 69)
+	succ(69, 70)
+	succ(7, 8)
+	succ(70, 71)
+	succ(71, 72)
+	succ(72, 73)
+	succ(73, 74)
+	succ(74, 75)
+	succ(75, 76)
+	succ(76, 77)
+	succ(77, 78)
+	succ(78, 79)
+	succ(79, 80)
+	succ(8, 9)
+	succ(80, 81)
+	succ(81, 82)
+	succ(82, 83)
+	succ(83, 84)
+	succ(84, 85)
+	succ(85, 86)
+	succ(86, 87)
+	succ(87, 88)
+	succ(88, 89)
+	succ(89, 90)
+	succ(9, 10)
+	succ(90, 91)
+	succ(91, 92)
+	succ(92, 93)
+	succ(93, 94)
+	succ(94, 95)
+	succ(95, 96)
+	succ(96, 97)
+	succ(97, 98)
+	succ(98, 99)
+	succ(99, 100)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(10)
+	true_rounds(3)
+	true_whiteScore(6)
+
+---
+
+positives:
+	next_blackScore(10)
+	next_rounds(4)
+	next_whiteScore(6)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(6)
+	true_rounds(2)
+	true_whiteScore(10)
+
+---
+
+positives:
+	next_blackScore(10)
+	next_rounds(3)
+	next_whiteScore(14)
+
+---
+
+background:
+	true_blackScore(54)
+	true_rounds(20)
+	true_whiteScore(58)
+
+---
+
+positives:
+	next_rounds(21)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(44)
+	true_rounds(17)
+	true_whiteScore(44)
+
+---
+
+positives:
+	next_blackScore(44)
+	next_rounds(18)
+	next_whiteScore(44)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(46)
+	true_rounds(11)
+	true_whiteScore(42)
+
+---
+
+positives:
+	next_blackScore(50)
+	next_rounds(12)
+	next_whiteScore(46)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(4)
+	true_rounds(3)
+	true_whiteScore(4)
+
+---
+
+positives:
+	next_blackScore(7)
+	next_rounds(4)
+	next_whiteScore(9)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(30)
+	true_rounds(13)
+	true_whiteScore(34)
+
+---
+
+positives:
+	next_blackScore(33)
+	next_rounds(14)
+	next_whiteScore(39)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(31)
+	true_rounds(12)
+	true_whiteScore(33)
+
+---
+
+positives:
+	next_blackScore(35)
+	next_rounds(13)
+	next_whiteScore(37)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(29)
+	true_rounds(12)
+	true_whiteScore(35)
+
+---
+
+positives:
+	next_blackScore(29)
+	next_rounds(13)
+	next_whiteScore(35)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(51)
+	true_rounds(17)
+	true_whiteScore(45)
+
+---
+
+positives:
+	next_blackScore(51)
+	next_rounds(18)
+	next_whiteScore(45)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(35)
+	true_rounds(13)
+	true_whiteScore(37)
+
+---
+
+positives:
+	next_blackScore(35)
+	next_rounds(14)
+	next_whiteScore(37)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(33)
+	true_rounds(13)
+	true_whiteScore(31)
+
+---
+
+positives:
+	next_blackScore(36)
+	next_rounds(14)
+	next_whiteScore(36)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(13)
+	true_rounds(6)
+	true_whiteScore(11)
+
+---
+
+positives:
+	next_blackScore(16)
+	next_rounds(7)
+	next_whiteScore(16)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(38)
+	true_rounds(11)
+	true_whiteScore(34)
+
+---
+
+positives:
+	next_blackScore(41)
+	next_rounds(12)
+	next_whiteScore(39)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(30)
+	true_rounds(7)
+	true_whiteScore(18)
+
+---
+
+positives:
+	next_blackScore(33)
+	next_rounds(8)
+	next_whiteScore(23)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(56)
+	true_rounds(16)
+	true_whiteScore(48)
+
+---
+
+positives:
+	next_blackScore(56)
+	next_rounds(17)
+	next_whiteScore(48)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(44)
+	true_rounds(14)
+	true_whiteScore(36)
+
+---
+
+positives:
+	next_blackScore(44)
+	next_rounds(15)
+	next_whiteScore(36)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(54)
+	true_rounds(15)
+	true_whiteScore(58)
+
+---
+
+positives:
+	next_blackScore(54)
+	next_rounds(16)
+	next_whiteScore(58)
+
+---
+
+background:
+	does(black, straight)
+	does(white, swerve)
+	true_blackScore(29)
+	true_rounds(10)
+	true_whiteScore(35)
+
+---
+
+positives:
+	next_blackScore(34)
+	next_rounds(11)
+	next_whiteScore(38)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(9)
+	true_rounds(7)
+	true_whiteScore(15)
+
+---
+
+positives:
+	next_blackScore(12)
+	next_rounds(8)
+	next_whiteScore(20)
+
+---
+
+background:
+	true_blackScore(44)
+	true_rounds(20)
+	true_whiteScore(52)
+
+---
+
+positives:
+	next_rounds(21)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(48)
+	true_rounds(14)
+	true_whiteScore(40)
+
+---
+
+positives:
+	next_blackScore(51)
+	next_rounds(15)
+	next_whiteScore(45)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(39)
+	true_rounds(18)
+	true_whiteScore(49)
+
+---
+
+positives:
+	next_blackScore(42)
+	next_rounds(19)
+	next_whiteScore(54)
+
+---
+
+background:
+	does(black, straight)
+	does(white, swerve)
+	true_blackScore(38)
+	true_rounds(13)
+	true_whiteScore(42)
+
+---
+
+positives:
+	next_blackScore(43)
+	next_rounds(14)
+	next_whiteScore(45)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(21)
+	true_rounds(12)
+	true_whiteScore(27)
+
+---
+
+positives:
+	next_blackScore(25)
+	next_rounds(13)
+	next_whiteScore(31)
+
+---
+
+background:
+	does(black, straight)
+	does(white, swerve)
+	true_blackScore(75)
+	true_rounds(19)
+	true_whiteScore(69)
+
+---
+
+positives:
+	next_blackScore(80)
+	next_rounds(20)
+	next_whiteScore(72)
+
+---
+
+background:
+	does(black, straight)
+	does(white, swerve)
+	true_blackScore(5)
+	true_rounds(2)
+	true_whiteScore(3)
+
+---
+
+positives:
+	next_blackScore(10)
+	next_rounds(3)
+	next_whiteScore(6)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(43)
+	true_rounds(17)
+	true_whiteScore(53)
+
+---
+
+positives:
+	next_blackScore(46)
+	next_rounds(18)
+	next_whiteScore(58)
+
+---
+
+background:
+	true_blackScore(59)
+	true_rounds(20)
+	true_whiteScore(61)
+
+---
+
+positives:
+	next_rounds(21)
+
+---
+
+background:
+	does(black, straight)
+	does(white, swerve)
+	true_blackScore(33)
+	true_rounds(11)
+	true_whiteScore(31)
+
+---
+
+positives:
+	next_blackScore(38)
+	next_rounds(12)
+	next_whiteScore(34)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(32)
+	true_rounds(12)
+	true_whiteScore(32)
+
+---
+
+positives:
+	next_blackScore(32)
+	next_rounds(13)
+	next_whiteScore(32)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(12)
+	true_rounds(4)
+	true_whiteScore(12)
+
+---
+
+positives:
+	next_blackScore(15)
+	next_rounds(5)
+	next_whiteScore(17)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(49)
+	true_rounds(18)
+	true_whiteScore(55)
+
+---
+
+positives:
+	next_blackScore(49)
+	next_rounds(19)
+	next_whiteScore(55)
+
+---
+
+background:
+	does(black, straight)
+	does(white, swerve)
+	true_blackScore(28)
+	true_rounds(7)
+	true_whiteScore(28)
+
+---
+
+positives:
+	next_blackScore(33)
+	next_rounds(8)
+	next_whiteScore(31)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(66)
+	true_rounds(19)
+	true_whiteScore(70)
+
+---
+
+positives:
+	next_blackScore(66)
+	next_rounds(20)
+	next_whiteScore(70)
+
+---
+
+background:
+	does(black, straight)
+	does(white, swerve)
+	true_blackScore(46)
+	true_rounds(12)
+	true_whiteScore(42)
+
+---
+
+positives:
+	next_blackScore(51)
+	next_rounds(13)
+	next_whiteScore(45)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(9)
+	true_rounds(4)
+	true_whiteScore(7)
+
+---
+
+positives:
+	next_blackScore(12)
+	next_rounds(5)
+	next_whiteScore(12)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(31)
+	true_rounds(8)
+	true_whiteScore(33)
+
+---
+
+positives:
+	next_blackScore(34)
+	next_rounds(9)
+	next_whiteScore(38)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(18)
+	true_rounds(8)
+	true_whiteScore(14)
+
+---
+
+positives:
+	next_blackScore(22)
+	next_rounds(9)
+	next_whiteScore(18)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(12)
+	true_rounds(3)
+	true_whiteScore(12)
+
+---
+
+positives:
+	next_blackScore(16)
+	next_rounds(4)
+	next_whiteScore(16)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(44)
+	true_rounds(18)
+	true_whiteScore(44)
+
+---
+
+positives:
+	next_blackScore(47)
+	next_rounds(19)
+	next_whiteScore(49)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(48)
+	true_rounds(13)
+	true_whiteScore(40)
+
+---
+
+positives:
+	next_blackScore(52)
+	next_rounds(14)
+	next_whiteScore(44)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(55)
+	true_rounds(19)
+	true_whiteScore(49)
+
+---
+
+positives:
+	next_blackScore(58)
+	next_rounds(20)
+	next_whiteScore(54)
+
+---
+
+background:
+	does(black, straight)
+	does(white, swerve)
+	true_blackScore(43)
+	true_rounds(13)
+	true_whiteScore(37)
+
+---
+
+positives:
+	next_blackScore(48)
+	next_rounds(14)
+	next_whiteScore(40)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(43)
+	true_rounds(14)
+	true_whiteScore(37)
+
+---
+
+positives:
+	next_blackScore(47)
+	next_rounds(15)
+	next_whiteScore(41)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(11)
+	true_rounds(4)
+	true_whiteScore(13)
+
+---
+
+positives:
+	next_blackScore(14)
+	next_rounds(5)
+	next_whiteScore(18)
+
+---
+
+background:
+	does(black, straight)
+	does(white, swerve)
+	true_blackScore(30)
+	true_rounds(9)
+	true_whiteScore(26)
+
+---
+
+positives:
+	next_blackScore(35)
+	next_rounds(10)
+	next_whiteScore(29)
+
+---
+
+background:
+	does(black, straight)
+	does(white, swerve)
+	true_blackScore(39)
+	true_rounds(11)
+	true_whiteScore(33)
+
+---
+
+positives:
+	next_blackScore(44)
+	next_rounds(12)
+	next_whiteScore(36)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(41)
+	true_rounds(18)
+	true_whiteScore(31)
+
+---
+
+positives:
+	next_blackScore(45)
+	next_rounds(19)
+	next_whiteScore(35)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(49)
+	true_rounds(18)
+	true_whiteScore(47)
+
+---
+
+positives:
+	next_blackScore(53)
+	next_rounds(19)
+	next_whiteScore(51)
+
+---
+
+background:
+	true_blackScore(80)
+	true_rounds(20)
+	true_whiteScore(72)
+
+---
+
+positives:
+	next_rounds(21)
+
+---
+
+background:
+	does(black, straight)
+	does(white, swerve)
+	true_blackScore(51)
+	true_rounds(19)
+	true_whiteScore(53)
+
+---
+
+positives:
+	next_blackScore(56)
+	next_rounds(20)
+	next_whiteScore(56)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(59)
+	true_rounds(18)
+	true_whiteScore(61)
+
+---
+
+positives:
+	next_blackScore(62)
+	next_rounds(19)
+	next_whiteScore(66)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(36)
+	true_rounds(15)
+	true_whiteScore(44)
+
+---
+
+positives:
+	next_blackScore(39)
+	next_rounds(16)
+	next_whiteScore(49)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(42)
+	true_rounds(14)
+	true_whiteScore(46)
+
+---
+
+positives:
+	next_blackScore(45)
+	next_rounds(15)
+	next_whiteScore(51)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(72)
+	true_rounds(19)
+	true_whiteScore(64)
+
+---
+
+positives:
+	next_blackScore(75)
+	next_rounds(20)
+	next_whiteScore(69)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(31)
+	true_rounds(11)
+	true_whiteScore(33)
+
+---
+
+positives:
+	next_blackScore(35)
+	next_rounds(12)
+	next_whiteScore(37)
+
+---
+
+background:
+	does(black, straight)
+	does(white, swerve)
+	true_blackScore(20)
+	true_rounds(5)
+	true_whiteScore(20)
+
+---
+
+positives:
+	next_blackScore(25)
+	next_rounds(6)
+	next_whiteScore(23)
+
+---
+
+background:
+	does(black, straight)
+	does(white, swerve)
+	true_blackScore(18)
+	true_rounds(6)
+	true_whiteScore(22)
+
+---
+
+positives:
+	next_blackScore(23)
+	next_rounds(7)
+	next_whiteScore(25)
+
+---
+
+background:
+	does(black, straight)
+	does(white, swerve)
+	true_blackScore(16)
+	true_rounds(7)
+	true_whiteScore(16)
+
+---
+
+positives:
+	next_blackScore(21)
+	next_rounds(8)
+	next_whiteScore(19)
+
+---
+
+background:
+	does(black, straight)
+	does(white, swerve)
+	true_blackScore(21)
+	true_rounds(7)
+	true_whiteScore(19)
+
+---
+
+positives:
+	next_blackScore(26)
+	next_rounds(8)
+	next_whiteScore(22)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(21)
+	true_rounds(9)
+	true_whiteScore(19)
+
+---
+
+positives:
+	next_blackScore(24)
+	next_rounds(10)
+	next_whiteScore(24)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(47)
+	true_rounds(16)
+	true_whiteScore(41)
+
+---
+
+positives:
+	next_blackScore(47)
+	next_rounds(17)
+	next_whiteScore(41)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(59)
+	true_rounds(17)
+	true_whiteScore(53)
+
+---
+
+positives:
+	next_blackScore(63)
+	next_rounds(18)
+	next_whiteScore(57)
+
+---
+
+background:
+	does(black, straight)
+	does(white, swerve)
+	true_blackScore(37)
+	true_rounds(12)
+	true_whiteScore(43)
+
+---
+
+positives:
+	next_blackScore(42)
+	next_rounds(13)
+	next_whiteScore(46)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(51)
+	true_rounds(14)
+	true_whiteScore(45)
+
+---
+
+positives:
+	next_blackScore(54)
+	next_rounds(15)
+	next_whiteScore(50)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(7)
+	true_rounds(3)
+	true_whiteScore(9)
+
+---
+
+positives:
+	next_blackScore(11)
+	next_rounds(4)
+	next_whiteScore(13)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(38)
+	true_rounds(14)
+	true_whiteScore(42)
+
+---
+
+positives:
+	next_blackScore(41)
+	next_rounds(15)
+	next_whiteScore(47)
+
+---
+
+background:
+	does(black, straight)
+	does(white, swerve)
+	true_blackScore(51)
+	true_rounds(17)
+	true_whiteScore(53)
+
+---
+
+positives:
+	next_blackScore(56)
+	next_rounds(18)
+	next_whiteScore(56)
+
+---
+
+background:
+	true_blackScore(61)
+	true_rounds(20)
+	true_whiteScore(51)
+
+---
+
+positives:
+	next_rounds(21)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(17)
+	true_rounds(5)
+	true_whiteScore(15)
+
+---
+
+positives:
+	next_blackScore(20)
+	next_rounds(6)
+	next_whiteScore(20)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(24)
+	true_rounds(14)
+	true_whiteScore(32)
+
+---
+
+positives:
+	next_blackScore(27)
+	next_rounds(15)
+	next_whiteScore(37)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(17)
+	true_rounds(9)
+	true_whiteScore(23)
+
+---
+
+positives:
+	next_blackScore(21)
+	next_rounds(10)
+	next_whiteScore(27)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(43)
+	true_rounds(16)
+	true_whiteScore(45)
+
+---
+
+positives:
+	next_blackScore(46)
+	next_rounds(17)
+	next_whiteScore(50)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(28)
+	true_rounds(12)
+	true_whiteScore(28)
+
+---
+
+positives:
+	next_blackScore(31)
+	next_rounds(13)
+	next_whiteScore(33)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(43)
+	true_rounds(14)
+	true_whiteScore(45)
+
+---
+
+positives:
+	next_blackScore(46)
+	next_rounds(15)
+	next_whiteScore(50)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(62)
+	true_rounds(19)
+	true_whiteScore(58)
+
+---
+
+positives:
+	next_blackScore(62)
+	next_rounds(20)
+	next_whiteScore(58)
+
+---
+
+background:
+	does(black, straight)
+	does(white, swerve)
+	true_blackScore(37)
+	true_rounds(11)
+	true_whiteScore(35)
+
+---
+
+positives:
+	next_blackScore(42)
+	next_rounds(12)
+	next_whiteScore(38)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(37)
+	true_rounds(13)
+	true_whiteScore(43)
+
+---
+
+positives:
+	next_blackScore(40)
+	next_rounds(14)
+	next_whiteScore(48)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(40)
+	true_rounds(14)
+	true_whiteScore(48)
+
+---
+
+positives:
+	next_blackScore(43)
+	next_rounds(15)
+	next_whiteScore(53)
+
+---
+
+background:
+	does(black, straight)
+	does(white, swerve)
+	true_blackScore(24)
+	true_rounds(10)
+	true_whiteScore(24)
+
+---
+
+positives:
+	next_blackScore(29)
+	next_rounds(11)
+	next_whiteScore(27)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(61)
+	true_rounds(18)
+	true_whiteScore(67)
+
+---
+
+positives:
+	next_blackScore(61)
+	next_rounds(19)
+	next_whiteScore(67)
+
+---
+
+background:
+	does(black, straight)
+	does(white, swerve)
+	true_blackScore(28)
+	true_rounds(11)
+	true_whiteScore(28)
+
+---
+
+positives:
+	next_blackScore(33)
+	next_rounds(12)
+	next_whiteScore(31)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(48)
+	true_rounds(14)
+	true_whiteScore(48)
+
+---
+
+positives:
+	next_blackScore(51)
+	next_rounds(15)
+	next_whiteScore(53)
+
+---
+
+background:
+	does(black, straight)
+	does(white, swerve)
+	true_blackScore(34)
+	true_rounds(11)
+	true_whiteScore(30)
+
+---
+
+positives:
+	next_blackScore(39)
+	next_rounds(12)
+	next_whiteScore(33)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(25)
+	true_rounds(5)
+	true_whiteScore(15)
+
+---
+
+positives:
+	next_blackScore(25)
+	next_rounds(6)
+	next_whiteScore(15)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(47)
+	true_rounds(16)
+	true_whiteScore(57)
+
+---
+
+positives:
+	next_blackScore(50)
+	next_rounds(17)
+	next_whiteScore(62)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(53)
+	true_rounds(15)
+	true_whiteScore(59)
+
+---
+
+positives:
+	next_blackScore(56)
+	next_rounds(16)
+	next_whiteScore(64)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(39)
+	true_rounds(13)
+	true_whiteScore(33)
+
+---
+
+positives:
+	next_blackScore(43)
+	next_rounds(14)
+	next_whiteScore(37)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(53)
+	true_rounds(17)
+	true_whiteScore(51)
+
+---
+
+positives:
+	next_blackScore(53)
+	next_rounds(18)
+	next_whiteScore(51)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(18)
+	true_rounds(5)
+	true_whiteScore(22)
+
+---
+
+positives:
+	next_blackScore(18)
+	next_rounds(6)
+	next_whiteScore(22)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(19)
+	true_rounds(8)
+	true_whiteScore(21)
+
+---
+
+positives:
+	next_blackScore(23)
+	next_rounds(9)
+	next_whiteScore(25)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(41)
+	true_rounds(11)
+	true_whiteScore(39)
+
+---
+
+positives:
+	next_blackScore(41)
+	next_rounds(12)
+	next_whiteScore(39)
+
+---
+
+background:
+	true_blackScore(58)
+	true_rounds(20)
+	true_whiteScore(46)
+
+---
+
+positives:
+	next_rounds(21)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(38)
+	true_rounds(12)
+	true_whiteScore(50)
+
+---
+
+positives:
+	next_blackScore(38)
+	next_rounds(13)
+	next_whiteScore(50)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(31)
+	true_rounds(10)
+	true_whiteScore(33)
+
+---
+
+positives:
+	next_blackScore(34)
+	next_rounds(11)
+	next_whiteScore(38)
+
+---
+
+background:
+	true_blackScore(53)
+	true_rounds(20)
+	true_whiteScore(51)
+
+---
+
+positives:
+	next_rounds(21)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(19)
+	true_rounds(6)
+	true_whiteScore(21)
+
+---
+
+positives:
+	next_blackScore(23)
+	next_rounds(7)
+	next_whiteScore(25)
+
+---
+
+background:
+	does(black, straight)
+	does(white, swerve)
+	true_blackScore(18)
+	true_rounds(6)
+	true_whiteScore(14)
+
+---
+
+positives:
+	next_blackScore(23)
+	next_rounds(7)
+	next_whiteScore(17)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(34)
+	true_rounds(12)
+	true_whiteScore(38)
+
+---
+
+positives:
+	next_blackScore(37)
+	next_rounds(13)
+	next_whiteScore(43)
+
+---
+
+background:
+	true_blackScore(50)
+	true_rounds(20)
+	true_whiteScore(46)
+
+---
+
+positives:
+	next_rounds(21)
+
+---
+
+background:
+	does(black, straight)
+	does(white, swerve)
+	true_blackScore(10)
+	true_rounds(3)
+	true_whiteScore(6)
+
+---
+
+positives:
+	next_blackScore(15)
+	next_rounds(4)
+	next_whiteScore(9)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(12)
+	true_rounds(8)
+	true_whiteScore(20)
+
+---
+
+positives:
+	next_blackScore(15)
+	next_rounds(9)
+	next_whiteScore(25)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(50)
+	true_rounds(15)
+	true_whiteScore(46)
+
+---
+
+positives:
+	next_blackScore(50)
+	next_rounds(16)
+	next_whiteScore(46)
+
+---
+
+background:
+	does(black, straight)
+	does(white, swerve)
+	true_blackScore(24)
+	true_rounds(11)
+	true_whiteScore(16)
+
+---
+
+positives:
+	next_blackScore(29)
+	next_rounds(12)
+	next_whiteScore(19)
+
+---
+
+background:
+	true_blackScore(58)
+	true_rounds(20)
+	true_whiteScore(70)
+
+---
+
+positives:
+	next_rounds(21)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(36)
+	true_rounds(14)
+	true_whiteScore(36)
+
+---
+
+positives:
+	next_blackScore(40)
+	next_rounds(15)
+	next_whiteScore(40)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(24)
+	true_rounds(7)
+	true_whiteScore(24)
+
+---
+
+positives:
+	next_blackScore(24)
+	next_rounds(8)
+	next_whiteScore(24)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(66)
+	true_rounds(19)
+	true_whiteScore(62)
+
+---
+
+positives:
+	next_blackScore(66)
+	next_rounds(20)
+	next_whiteScore(62)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(18)
+	true_rounds(6)
+	true_whiteScore(22)
+
+---
+
+positives:
+	next_blackScore(22)
+	next_rounds(7)
+	next_whiteScore(26)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(46)
+	true_rounds(17)
+	true_whiteScore(42)
+
+---
+
+positives:
+	next_blackScore(50)
+	next_rounds(18)
+	next_whiteScore(46)
+
+---
+
+background:
+	does(black, straight)
+	does(white, swerve)
+	true_blackScore(39)
+	true_rounds(15)
+	true_whiteScore(41)
+
+---
+
+positives:
+	next_blackScore(44)
+	next_rounds(16)
+	next_whiteScore(44)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(51)
+	true_rounds(16)
+	true_whiteScore(53)
+
+---
+
+positives:
+	next_blackScore(51)
+	next_rounds(17)
+	next_whiteScore(53)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(33)
+	true_rounds(16)
+	true_whiteScore(39)
+
+---
+
+positives:
+	next_blackScore(33)
+	next_rounds(17)
+	next_whiteScore(39)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(33)
+	true_rounds(11)
+	true_whiteScore(31)
+
+---
+
+positives:
+	next_blackScore(37)
+	next_rounds(12)
+	next_whiteScore(35)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(36)
+	true_rounds(11)
+	true_whiteScore(36)
+
+---
+
+positives:
+	next_blackScore(36)
+	next_rounds(12)
+	next_whiteScore(36)
+
+---
+
+background:
+	does(black, straight)
+	does(white, swerve)
+	true_blackScore(41)
+	true_rounds(11)
+	true_whiteScore(39)
+
+---
+
+positives:
+	next_blackScore(46)
+	next_rounds(12)
+	next_whiteScore(42)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(42)
+	true_rounds(14)
+	true_whiteScore(38)
+
+---
+
+positives:
+	next_blackScore(42)
+	next_rounds(15)
+	next_whiteScore(38)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(33)
+	true_rounds(10)
+	true_whiteScore(31)
+
+---
+
+positives:
+	next_blackScore(33)
+	next_rounds(11)
+	next_whiteScore(31)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(47)
+	true_rounds(18)
+	true_whiteScore(49)
+
+---
+
+positives:
+	next_blackScore(47)
+	next_rounds(19)
+	next_whiteScore(49)
+
+---
+
+background:
+	does(black, straight)
+	does(white, swerve)
+	true_blackScore(14)
+	true_rounds(4)
+	true_whiteScore(18)
+
+---
+
+positives:
+	next_blackScore(19)
+	next_rounds(5)
+	next_whiteScore(21)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(20)
+	true_rounds(12)
+	true_whiteScore(28)
+
+---
+
+positives:
+	next_blackScore(24)
+	next_rounds(13)
+	next_whiteScore(32)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(28)
+	true_rounds(8)
+	true_whiteScore(36)
+
+---
+
+positives:
+	next_blackScore(28)
+	next_rounds(9)
+	next_whiteScore(36)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(32)
+	true_rounds(11)
+	true_whiteScore(40)
+
+---
+
+positives:
+	next_blackScore(35)
+	next_rounds(12)
+	next_whiteScore(45)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(48)
+	true_rounds(13)
+	true_whiteScore(40)
+
+---
+
+positives:
+	next_blackScore(51)
+	next_rounds(14)
+	next_whiteScore(45)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(31)
+	true_rounds(9)
+	true_whiteScore(25)
+
+---
+
+positives:
+	next_blackScore(34)
+	next_rounds(10)
+	next_whiteScore(30)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(40)
+	true_rounds(11)
+	true_whiteScore(40)
+
+---
+
+positives:
+	next_blackScore(44)
+	next_rounds(12)
+	next_whiteScore(44)
+
+---
+
+background:
+	does(black, straight)
+	does(white, swerve)
+	true_blackScore(8)
+	true_rounds(4)
+	true_whiteScore(8)
+
+---
+
+positives:
+	next_blackScore(13)
+	next_rounds(5)
+	next_whiteScore(11)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(18)
+	true_rounds(6)
+	true_whiteScore(22)
+
+---
+
+positives:
+	next_blackScore(21)
+	next_rounds(7)
+	next_whiteScore(27)
+
+---
+
+background:
+	true_blackScore(61)
+	true_rounds(20)
+	true_whiteScore(59)
+
+---
+
+positives:
+	next_rounds(21)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(13)
+	true_rounds(3)
+	true_whiteScore(11)
+
+---
+
+positives:
+	next_blackScore(13)
+	next_rounds(4)
+	next_whiteScore(11)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(14)
+	true_rounds(6)
+	true_whiteScore(18)
+
+---
+
+positives:
+	next_blackScore(18)
+	next_rounds(7)
+	next_whiteScore(22)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(51)
+	true_rounds(18)
+	true_whiteScore(45)
+
+---
+
+positives:
+	next_blackScore(55)
+	next_rounds(19)
+	next_whiteScore(49)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(38)
+	true_rounds(10)
+	true_whiteScore(42)
+
+---
+
+positives:
+	next_blackScore(41)
+	next_rounds(11)
+	next_whiteScore(47)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(66)
+	true_rounds(18)
+	true_whiteScore(70)
+
+---
+
+positives:
+	next_blackScore(66)
+	next_rounds(19)
+	next_whiteScore(70)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(47)
+	true_rounds(15)
+	true_whiteScore(49)
+
+---
+
+positives:
+	next_blackScore(51)
+	next_rounds(16)
+	next_whiteScore(53)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(12)
+	true_rounds(5)
+	true_whiteScore(12)
+
+---
+
+positives:
+	next_blackScore(15)
+	next_rounds(6)
+	next_whiteScore(17)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(47)
+	true_rounds(14)
+	true_whiteScore(41)
+
+---
+
+positives:
+	next_blackScore(51)
+	next_rounds(15)
+	next_whiteScore(45)
+
+---
+
+background:
+	does(black, straight)
+	does(white, swerve)
+	true_blackScore(51)
+	true_rounds(16)
+	true_whiteScore(53)
+
+---
+
+positives:
+	next_blackScore(56)
+	next_rounds(17)
+	next_whiteScore(56)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(27)
+	true_rounds(9)
+	true_whiteScore(37)
+
+---
+
+positives:
+	next_blackScore(31)
+	next_rounds(10)
+	next_whiteScore(41)
+
+---
+
+background:
+	does(black, straight)
+	does(white, swerve)
+	true_blackScore(51)
+	true_rounds(16)
+	true_whiteScore(45)
+
+---
+
+positives:
+	next_blackScore(56)
+	next_rounds(17)
+	next_whiteScore(48)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(50)
+	true_rounds(19)
+	true_whiteScore(62)
+
+---
+
+positives:
+	next_blackScore(50)
+	next_rounds(20)
+	next_whiteScore(62)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(50)
+	true_rounds(16)
+	true_whiteScore(54)
+
+---
+
+positives:
+	next_blackScore(53)
+	next_rounds(17)
+	next_whiteScore(59)
+
+---
+
+background:
+	does(black, straight)
+	does(white, swerve)
+	true_blackScore(57)
+	true_rounds(15)
+	true_whiteScore(47)
+
+---
+
+positives:
+	next_blackScore(62)
+	next_rounds(16)
+	next_whiteScore(50)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(14)
+	true_rounds(3)
+	true_whiteScore(10)
+
+---
+
+positives:
+	next_blackScore(18)
+	next_rounds(4)
+	next_whiteScore(14)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(12)
+	true_rounds(4)
+	true_whiteScore(12)
+
+---
+
+positives:
+	next_blackScore(16)
+	next_rounds(5)
+	next_whiteScore(16)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(22)
+	true_rounds(5)
+	true_whiteScore(18)
+
+---
+
+positives:
+	next_blackScore(26)
+	next_rounds(6)
+	next_whiteScore(22)
+
+---
+
+background:
+	does(black, straight)
+	does(white, swerve)
+	true_blackScore(48)
+	true_rounds(13)
+	true_whiteScore(40)
+
+---
+
+positives:
+	next_blackScore(53)
+	next_rounds(14)
+	next_whiteScore(43)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(49)
+	true_rounds(18)
+	true_whiteScore(55)
+
+---
+
+positives:
+	next_blackScore(53)
+	next_rounds(19)
+	next_whiteScore(59)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(50)
+	true_rounds(16)
+	true_whiteScore(46)
+
+---
+
+positives:
+	next_blackScore(50)
+	next_rounds(17)
+	next_whiteScore(46)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(37)
+	true_rounds(16)
+	true_whiteScore(35)
+
+---
+
+positives:
+	next_blackScore(41)
+	next_rounds(17)
+	next_whiteScore(39)
+
+---
+
+background:
+	does(black, straight)
+	does(white, swerve)
+	true_blackScore(21)
+	true_rounds(9)
+	true_whiteScore(27)
+
+---
+
+positives:
+	next_blackScore(26)
+	next_rounds(10)
+	next_whiteScore(30)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(32)
+	true_rounds(10)
+	true_whiteScore(32)
+
+---
+
+positives:
+	next_blackScore(36)
+	next_rounds(11)
+	next_whiteScore(36)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(34)
+	true_rounds(17)
+	true_whiteScore(38)
+
+---
+
+positives:
+	next_blackScore(34)
+	next_rounds(18)
+	next_whiteScore(38)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(37)
+	true_rounds(11)
+	true_whiteScore(35)
+
+---
+
+positives:
+	next_blackScore(37)
+	next_rounds(12)
+	next_whiteScore(35)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(60)
+	true_rounds(19)
+	true_whiteScore(60)
+
+---
+
+positives:
+	next_blackScore(63)
+	next_rounds(20)
+	next_whiteScore(65)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(23)
+	true_rounds(13)
+	true_whiteScore(25)
+
+---
+
+positives:
+	next_blackScore(27)
+	next_rounds(14)
+	next_whiteScore(29)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(16)
+	true_rounds(6)
+	true_whiteScore(16)
+
+---
+
+positives:
+	next_blackScore(20)
+	next_rounds(7)
+	next_whiteScore(20)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(18)
+	true_rounds(8)
+	true_whiteScore(22)
+
+---
+
+positives:
+	next_blackScore(18)
+	next_rounds(9)
+	next_whiteScore(22)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(41)
+	true_rounds(13)
+	true_whiteScore(39)
+
+---
+
+positives:
+	next_blackScore(44)
+	next_rounds(14)
+	next_whiteScore(44)
+
+---
+
+background:
+	true_blackScore(49)
+	true_rounds(20)
+	true_whiteScore(55)
+
+---
+
+positives:
+	next_rounds(21)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(13)
+	true_rounds(5)
+	true_whiteScore(19)
+
+---
+
+positives:
+	next_blackScore(16)
+	next_rounds(6)
+	next_whiteScore(24)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(44)
+	true_rounds(11)
+	true_whiteScore(36)
+
+---
+
+positives:
+	next_blackScore(48)
+	next_rounds(12)
+	next_whiteScore(40)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(48)
+	true_rounds(19)
+	true_whiteScore(48)
+
+---
+
+positives:
+	next_blackScore(48)
+	next_rounds(20)
+	next_whiteScore(48)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(54)
+	true_rounds(17)
+	true_whiteScore(58)
+
+---
+
+positives:
+	next_blackScore(57)
+	next_rounds(18)
+	next_whiteScore(63)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(53)
+	true_rounds(19)
+	true_whiteScore(67)
+
+---
+
+positives:
+	next_blackScore(53)
+	next_rounds(20)
+	next_whiteScore(67)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(20)
+	true_rounds(5)
+	true_whiteScore(12)
+
+---
+
+positives:
+	next_blackScore(24)
+	next_rounds(6)
+	next_whiteScore(16)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(21)
+	true_rounds(5)
+	true_whiteScore(19)
+
+---
+
+positives:
+	next_blackScore(21)
+	next_rounds(6)
+	next_whiteScore(19)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(58)
+	true_rounds(15)
+	true_whiteScore(54)
+
+---
+
+positives:
+	next_blackScore(62)
+	next_rounds(16)
+	next_whiteScore(58)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(12)
+	true_rounds(6)
+	true_whiteScore(12)
+
+---
+
+positives:
+	next_blackScore(15)
+	next_rounds(7)
+	next_whiteScore(17)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(48)
+	true_rounds(15)
+	true_whiteScore(48)
+
+---
+
+positives:
+	next_blackScore(51)
+	next_rounds(16)
+	next_whiteScore(53)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(0)
+	true_rounds(2)
+	true_whiteScore(0)
+
+---
+
+positives:
+	next_blackScore(0)
+	next_rounds(3)
+	next_whiteScore(0)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(24)
+	true_rounds(6)
+	true_whiteScore(24)
+
+---
+
+positives:
+	next_blackScore(28)
+	next_rounds(7)
+	next_whiteScore(28)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(3)
+	true_rounds(3)
+	true_whiteScore(5)
+
+---
+
+positives:
+	next_blackScore(6)
+	next_rounds(4)
+	next_whiteScore(10)
+
+---
+
+background:
+	does(black, straight)
+	does(white, swerve)
+	true_blackScore(49)
+	true_rounds(17)
+	true_whiteScore(47)
+
+---
+
+positives:
+	next_blackScore(54)
+	next_rounds(18)
+	next_whiteScore(50)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(58)
+	true_rounds(18)
+	true_whiteScore(62)
+
+---
+
+positives:
+	next_blackScore(62)
+	next_rounds(19)
+	next_whiteScore(66)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(30)
+	true_rounds(9)
+	true_whiteScore(34)
+
+---
+
+positives:
+	next_blackScore(30)
+	next_rounds(10)
+	next_whiteScore(34)
+
+---
+
+background:
+	true_blackScore(58)
+	true_rounds(20)
+	true_whiteScore(54)
+
+---
+
+positives:
+	next_rounds(21)
+
+---
+
+background:
+	does(black, straight)
+	does(white, swerve)
+	true_blackScore(26)
+	true_rounds(9)
+	true_whiteScore(30)
+
+---
+
+positives:
+	next_blackScore(31)
+	next_rounds(10)
+	next_whiteScore(33)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(24)
+	true_rounds(8)
+	true_whiteScore(32)
+
+---
+
+positives:
+	next_blackScore(27)
+	next_rounds(9)
+	next_whiteScore(37)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(19)
+	true_rounds(7)
+	true_whiteScore(21)
+
+---
+
+positives:
+	next_blackScore(22)
+	next_rounds(8)
+	next_whiteScore(26)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(51)
+	true_rounds(16)
+	true_whiteScore(53)
+
+---
+
+positives:
+	next_blackScore(54)
+	next_rounds(17)
+	next_whiteScore(58)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(60)
+	true_rounds(18)
+	true_whiteScore(60)
+
+---
+
+positives:
+	next_blackScore(63)
+	next_rounds(19)
+	next_whiteScore(65)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(24)
+	true_rounds(6)
+	true_whiteScore(16)
+
+---
+
+positives:
+	next_blackScore(27)
+	next_rounds(7)
+	next_whiteScore(21)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(13)
+	true_rounds(6)
+	true_whiteScore(11)
+
+---
+
+positives:
+	next_blackScore(17)
+	next_rounds(7)
+	next_whiteScore(15)
+
+---
+
+background:
+	does(black, straight)
+	does(white, swerve)
+	true_blackScore(29)
+	true_rounds(13)
+	true_whiteScore(35)
+
+---
+
+positives:
+	next_blackScore(34)
+	next_rounds(14)
+	next_whiteScore(38)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(47)
+	true_rounds(17)
+	true_whiteScore(41)
+
+---
+
+positives:
+	next_blackScore(51)
+	next_rounds(18)
+	next_whiteScore(45)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(50)
+	true_rounds(18)
+	true_whiteScore(54)
+
+---
+
+positives:
+	next_blackScore(53)
+	next_rounds(19)
+	next_whiteScore(59)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(37)
+	true_rounds(9)
+	true_whiteScore(35)
+
+---
+
+positives:
+	next_blackScore(41)
+	next_rounds(10)
+	next_whiteScore(39)
+
+---
+
+background:
+	does(black, straight)
+	does(white, swerve)
+	true_blackScore(34)
+	true_rounds(18)
+	true_whiteScore(38)
+
+---
+
+positives:
+	next_blackScore(39)
+	next_rounds(19)
+	next_whiteScore(41)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(41)
+	true_rounds(17)
+	true_whiteScore(39)
+
+---
+
+positives:
+	next_blackScore(41)
+	next_rounds(18)
+	next_whiteScore(39)
+
+---
+
+background:
+	true_blackScore(42)
+	true_rounds(20)
+	true_whiteScore(46)
+
+---
+
+positives:
+	next_rounds(21)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(51)
+	true_rounds(16)
+	true_whiteScore(45)
+
+---
+
+positives:
+	next_blackScore(51)
+	next_rounds(17)
+	next_whiteScore(45)
+
+---
+
+background:
+	does(black, straight)
+	does(white, swerve)
+	true_blackScore(56)
+	true_rounds(16)
+	true_whiteScore(64)
+
+---
+
+positives:
+	next_blackScore(61)
+	next_rounds(17)
+	next_whiteScore(67)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(42)
+	true_rounds(13)
+	true_whiteScore(38)
+
+---
+
+positives:
+	next_blackScore(45)
+	next_rounds(14)
+	next_whiteScore(43)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(9)
+	true_rounds(3)
+	true_whiteScore(7)
+
+---
+
+positives:
+	next_blackScore(13)
+	next_rounds(4)
+	next_whiteScore(11)
+
+---
+
+background:
+	does(black, straight)
+	does(white, swerve)
+	true_blackScore(39)
+	true_rounds(12)
+	true_whiteScore(33)
+
+---
+
+positives:
+	next_blackScore(44)
+	next_rounds(13)
+	next_whiteScore(36)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(50)
+	true_rounds(19)
+	true_whiteScore(54)
+
+---
+
+positives:
+	next_blackScore(50)
+	next_rounds(20)
+	next_whiteScore(54)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(20)
+	true_rounds(10)
+	true_whiteScore(28)
+
+---
+
+positives:
+	next_blackScore(20)
+	next_rounds(11)
+	next_whiteScore(28)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(22)
+	true_rounds(8)
+	true_whiteScore(26)
+
+---
+
+positives:
+	next_blackScore(22)
+	next_rounds(9)
+	next_whiteScore(26)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(50)
+	true_rounds(18)
+	true_whiteScore(54)
+
+---
+
+positives:
+	next_blackScore(50)
+	next_rounds(19)
+	next_whiteScore(54)
+
+---
+
+background:
+	does(black, straight)
+	does(white, swerve)
+	true_blackScore(51)
+	true_rounds(15)
+	true_whiteScore(45)
+
+---
+
+positives:
+	next_blackScore(56)
+	next_rounds(16)
+	next_whiteScore(48)
+
+---
+
+background:
+	does(black, straight)
+	does(white, swerve)
+	true_blackScore(26)
+	true_rounds(6)
+	true_whiteScore(22)
+
+---
+
+positives:
+	next_blackScore(31)
+	next_rounds(7)
+	next_whiteScore(25)
+
+---
+
+background:
+	does(black, straight)
+	does(white, swerve)
+	true_blackScore(34)
+	true_rounds(12)
+	true_whiteScore(38)
+
+---
+
+positives:
+	next_blackScore(39)
+	next_rounds(13)
+	next_whiteScore(41)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(63)
+	true_rounds(19)
+	true_whiteScore(57)
+
+---
+
+positives:
+	next_blackScore(67)
+	next_rounds(20)
+	next_whiteScore(61)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(10)
+	true_rounds(3)
+	true_whiteScore(14)
+
+---
+
+positives:
+	next_blackScore(13)
+	next_rounds(4)
+	next_whiteScore(19)
+
+---
+
+background:
+	does(black, straight)
+	does(white, swerve)
+	true_blackScore(15)
+	true_rounds(8)
+	true_whiteScore(17)
+
+---
+
+positives:
+	next_blackScore(20)
+	next_rounds(9)
+	next_whiteScore(20)
+
+---
+
+background:
+	does(black, straight)
+	does(white, swerve)
+	true_blackScore(47)
+	true_rounds(18)
+	true_whiteScore(49)
+
+---
+
+positives:
+	next_blackScore(52)
+	next_rounds(19)
+	next_whiteScore(52)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(36)
+	true_rounds(11)
+	true_whiteScore(36)
+
+---
+
+positives:
+	next_blackScore(39)
+	next_rounds(12)
+	next_whiteScore(41)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(32)
+	true_rounds(13)
+	true_whiteScore(32)
+
+---
+
+positives:
+	next_blackScore(32)
+	next_rounds(14)
+	next_whiteScore(32)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(31)
+	true_rounds(11)
+	true_whiteScore(41)
+
+---
+
+positives:
+	next_blackScore(35)
+	next_rounds(12)
+	next_whiteScore(45)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(44)
+	true_rounds(15)
+	true_whiteScore(52)
+
+---
+
+positives:
+	next_blackScore(44)
+	next_rounds(16)
+	next_whiteScore(52)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(31)
+	true_rounds(7)
+	true_whiteScore(25)
+
+---
+
+positives:
+	next_blackScore(35)
+	next_rounds(8)
+	next_whiteScore(29)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(18)
+	true_rounds(4)
+	true_whiteScore(14)
+
+---
+
+positives:
+	next_blackScore(22)
+	next_rounds(5)
+	next_whiteScore(18)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(38)
+	true_rounds(15)
+	true_whiteScore(26)
+
+---
+
+positives:
+	next_blackScore(38)
+	next_rounds(16)
+	next_whiteScore(26)
+
+---
+
+background:
+	does(black, straight)
+	does(white, swerve)
+	true_blackScore(35)
+	true_rounds(10)
+	true_whiteScore(37)
+
+---
+
+positives:
+	next_blackScore(40)
+	next_rounds(11)
+	next_whiteScore(40)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(57)
+	true_rounds(19)
+	true_whiteScore(55)
+
+---
+
+positives:
+	next_blackScore(61)
+	next_rounds(20)
+	next_whiteScore(59)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(51)
+	true_rounds(13)
+	true_whiteScore(45)
+
+---
+
+positives:
+	next_blackScore(54)
+	next_rounds(14)
+	next_whiteScore(50)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(10)
+	true_rounds(7)
+	true_whiteScore(14)
+
+---
+
+positives:
+	next_blackScore(13)
+	next_rounds(8)
+	next_whiteScore(19)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(45)
+	true_rounds(18)
+	true_whiteScore(43)
+
+---
+
+positives:
+	next_blackScore(49)
+	next_rounds(19)
+	next_whiteScore(47)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(27)
+	true_rounds(8)
+	true_whiteScore(29)
+
+---
+
+positives:
+	next_blackScore(30)
+	next_rounds(9)
+	next_whiteScore(34)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(56)
+	true_rounds(15)
+	true_whiteScore(48)
+
+---
+
+positives:
+	next_blackScore(56)
+	next_rounds(16)
+	next_whiteScore(48)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, straight)
+	true_blackScore(47)
+	true_rounds(15)
+	true_whiteScore(49)
+
+---
+
+positives:
+	next_blackScore(50)
+	next_rounds(16)
+	next_whiteScore(54)
+
+---
+
+background:
+	does(black, swerve)
+	does(white, swerve)
+	true_blackScore(42)
+	true_rounds(13)
+	true_whiteScore(38)
+
+---
+
+positives:
+	next_blackScore(46)
+	next_rounds(14)
+	next_whiteScore(42)
+
+---
+
+background:
+	does(black, straight)
+	does(white, straight)
+	true_blackScore(24)
+	true_rounds(8)
+	true_whiteScore(32)
+
+---
+
+positives:
+	next_blackScore(24)
+	next_rounds(9)
+	next_whiteScore(32)
+
+---
+

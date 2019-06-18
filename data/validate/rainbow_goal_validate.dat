@@ -1,0 +1,1130 @@
+atoms:
+	goal(robot, 0)
+	goal(robot, 100)
+
+---
+
+statics:
+	hue(blue)
+	hue(green)
+	hue(red)
+	hue(yellow)
+	input_mark(robot, r1, blue)
+	input_mark(robot, r1, green)
+	input_mark(robot, r1, red)
+	input_mark(robot, r1, yellow)
+	input_mark(robot, r2, blue)
+	input_mark(robot, r2, green)
+	input_mark(robot, r2, red)
+	input_mark(robot, r2, yellow)
+	input_mark(robot, r3, blue)
+	input_mark(robot, r3, green)
+	input_mark(robot, r3, red)
+	input_mark(robot, r3, yellow)
+	input_mark(robot, r4, blue)
+	input_mark(robot, r4, green)
+	input_mark(robot, r4, red)
+	input_mark(robot, r4, yellow)
+	input_mark(robot, r5, blue)
+	input_mark(robot, r5, green)
+	input_mark(robot, r5, red)
+	input_mark(robot, r5, yellow)
+	input_mark(robot, r6, blue)
+	input_mark(robot, r6, green)
+	input_mark(robot, r6, red)
+	input_mark(robot, r6, yellow)
+	region(r1)
+	region(r2)
+	region(r3)
+	region(r4)
+	region(r5)
+	region(r6)
+	role(robot)
+
+---
+
+background:
+	true_color(r1, red)
+	true_color(r2, blue)
+	true_color(r3, yellow)
+	true_color(r4, yellow)
+	true_color(r5, red)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r3, red)
+	true_color(r5, green)
+	true_color(r6, yellow)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, red)
+	true_color(r2, blue)
+	true_color(r3, blue)
+	true_color(r4, red)
+	true_color(r5, red)
+	true_color(r6, red)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r2, red)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r5, red)
+	true_color(r6, yellow)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, green)
+	true_color(r2, blue)
+	true_color(r3, yellow)
+	true_color(r4, red)
+	true_color(r6, green)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r2, red)
+	true_color(r4, green)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, blue)
+	true_color(r2, green)
+	true_color(r3, yellow)
+	true_color(r4, green)
+	true_color(r5, yellow)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r5, blue)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r2, yellow)
+	true_color(r3, yellow)
+	true_color(r4, red)
+	true_color(r6, red)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r2, green)
+	true_color(r3, green)
+	true_color(r5, green)
+	true_color(r6, yellow)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, red)
+	true_color(r2, yellow)
+	true_color(r5, yellow)
+	true_color(r6, red)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, red)
+	true_color(r2, yellow)
+	true_color(r3, green)
+	true_color(r4, yellow)
+	true_color(r5, yellow)
+	true_color(r6, yellow)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, blue)
+	true_color(r3, red)
+	true_color(r5, yellow)
+	true_color(r6, red)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, yellow)
+	true_color(r4, green)
+	true_color(r5, red)
+	true_color(r6, green)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, green)
+	true_color(r3, blue)
+	true_color(r4, yellow)
+	true_color(r5, green)
+	true_color(r6, red)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r4, red)
+	true_color(r5, red)
+	true_color(r6, yellow)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, red)
+	true_color(r2, yellow)
+	true_color(r3, yellow)
+	true_color(r4, yellow)
+	true_color(r5, red)
+	true_color(r6, blue)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, yellow)
+	true_color(r2, red)
+	true_color(r3, green)
+	true_color(r4, blue)
+	true_color(r5, yellow)
+	true_color(r6, red)
+
+---
+
+positives:
+	goal(robot, 100)
+
+---
+
+background:
+	true_color(r1, blue)
+	true_color(r2, blue)
+	true_color(r4, green)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, yellow)
+	true_color(r3, red)
+	true_color(r4, green)
+	true_color(r5, red)
+	true_color(r6, green)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r2, blue)
+	true_color(r3, blue)
+	true_color(r5, green)
+	true_color(r6, green)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, red)
+	true_color(r3, green)
+	true_color(r4, red)
+	true_color(r5, green)
+	true_color(r6, green)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r3, blue)
+	true_color(r4, red)
+	true_color(r5, red)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, green)
+	true_color(r3, yellow)
+	true_color(r4, red)
+	true_color(r5, red)
+	true_color(r6, yellow)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, green)
+	true_color(r3, yellow)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r3, red)
+	true_color(r4, red)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, blue)
+	true_color(r2, blue)
+	true_color(r3, green)
+	true_color(r4, green)
+	true_color(r5, blue)
+	true_color(r6, yellow)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, blue)
+	true_color(r2, green)
+	true_color(r3, yellow)
+	true_color(r4, red)
+	true_color(r5, blue)
+	true_color(r6, blue)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, blue)
+	true_color(r3, blue)
+	true_color(r4, red)
+	true_color(r5, yellow)
+	true_color(r6, blue)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, yellow)
+	true_color(r2, yellow)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, yellow)
+	true_color(r5, yellow)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r3, red)
+	true_color(r4, green)
+	true_color(r5, red)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, green)
+	true_color(r2, blue)
+	true_color(r3, yellow)
+	true_color(r4, red)
+	true_color(r5, green)
+	true_color(r6, green)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, yellow)
+	true_color(r2, blue)
+	true_color(r3, yellow)
+	true_color(r4, red)
+	true_color(r5, blue)
+	true_color(r6, red)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, green)
+	true_color(r4, red)
+	true_color(r5, red)
+	true_color(r6, yellow)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, green)
+	true_color(r2, yellow)
+	true_color(r3, yellow)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, yellow)
+	true_color(r2, red)
+	true_color(r4, red)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, green)
+	true_color(r2, red)
+	true_color(r4, red)
+	true_color(r5, blue)
+	true_color(r6, red)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r3, red)
+	true_color(r4, green)
+	true_color(r5, red)
+	true_color(r6, green)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, red)
+	true_color(r2, blue)
+	true_color(r3, red)
+	true_color(r4, red)
+	true_color(r5, green)
+	true_color(r6, yellow)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, red)
+	true_color(r3, red)
+	true_color(r4, red)
+	true_color(r5, blue)
+	true_color(r6, yellow)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, red)
+	true_color(r3, red)
+	true_color(r5, green)
+	true_color(r6, yellow)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r2, red)
+	true_color(r3, blue)
+	true_color(r4, green)
+	true_color(r6, yellow)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, red)
+	true_color(r3, blue)
+	true_color(r5, green)
+	true_color(r6, yellow)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r3, green)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, yellow)
+	true_color(r3, yellow)
+	true_color(r4, green)
+	true_color(r5, green)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r3, green)
+	true_color(r5, blue)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, green)
+	true_color(r3, red)
+	true_color(r4, blue)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, blue)
+	true_color(r3, green)
+	true_color(r5, green)
+	true_color(r6, blue)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, blue)
+	true_color(r2, red)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r2, green)
+	true_color(r4, red)
+	true_color(r5, blue)
+	true_color(r6, blue)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, yellow)
+	true_color(r3, red)
+	true_color(r4, green)
+	true_color(r5, blue)
+	true_color(r6, yellow)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, blue)
+	true_color(r3, blue)
+	true_color(r4, blue)
+	true_color(r5, green)
+	true_color(r6, yellow)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, yellow)
+	true_color(r2, red)
+	true_color(r3, yellow)
+	true_color(r4, green)
+	true_color(r5, green)
+	true_color(r6, green)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, blue)
+	true_color(r2, green)
+	true_color(r4, blue)
+	true_color(r5, green)
+	true_color(r6, yellow)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r2, green)
+	true_color(r3, green)
+	true_color(r4, red)
+	true_color(r5, yellow)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r2, yellow)
+	true_color(r3, blue)
+	true_color(r4, yellow)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, red)
+	true_color(r2, yellow)
+	true_color(r3, green)
+	true_color(r5, green)
+	true_color(r6, yellow)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r2, blue)
+	true_color(r4, yellow)
+	true_color(r6, yellow)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, blue)
+	true_color(r4, green)
+	true_color(r5, red)
+	true_color(r6, blue)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, red)
+	true_color(r2, yellow)
+	true_color(r3, red)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r2, red)
+	true_color(r3, yellow)
+	true_color(r4, green)
+	true_color(r5, blue)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, blue)
+	true_color(r2, blue)
+	true_color(r3, blue)
+	true_color(r4, green)
+	true_color(r5, green)
+	true_color(r6, green)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, blue)
+	true_color(r2, red)
+	true_color(r3, blue)
+	true_color(r4, red)
+	true_color(r5, red)
+	true_color(r6, red)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, blue)
+	true_color(r2, yellow)
+	true_color(r3, green)
+	true_color(r4, red)
+	true_color(r5, yellow)
+	true_color(r6, yellow)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, blue)
+	true_color(r2, green)
+	true_color(r3, yellow)
+	true_color(r4, red)
+	true_color(r6, blue)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, blue)
+	true_color(r3, yellow)
+	true_color(r6, red)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, blue)
+	true_color(r2, yellow)
+	true_color(r3, green)
+	true_color(r4, green)
+	true_color(r5, green)
+	true_color(r6, blue)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, blue)
+	true_color(r2, red)
+	true_color(r3, blue)
+	true_color(r4, green)
+	true_color(r5, green)
+	true_color(r6, yellow)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, green)
+	true_color(r2, blue)
+	true_color(r3, blue)
+	true_color(r4, yellow)
+	true_color(r5, yellow)
+	true_color(r6, green)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, green)
+	true_color(r2, blue)
+	true_color(r3, blue)
+	true_color(r4, yellow)
+	true_color(r6, green)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, blue)
+	true_color(r3, blue)
+	true_color(r5, green)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r2, yellow)
+	true_color(r3, yellow)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, red)
+	true_color(r2, yellow)
+	true_color(r3, yellow)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, green)
+	true_color(r2, blue)
+	true_color(r3, yellow)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, blue)
+	true_color(r2, green)
+	true_color(r3, blue)
+	true_color(r4, red)
+	true_color(r5, red)
+	true_color(r6, green)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r2, yellow)
+	true_color(r3, blue)
+	true_color(r5, yellow)
+	true_color(r6, blue)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, yellow)
+	true_color(r3, yellow)
+	true_color(r4, green)
+	true_color(r5, green)
+	true_color(r6, green)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, red)
+	true_color(r2, yellow)
+	true_color(r3, blue)
+	true_color(r4, yellow)
+	true_color(r5, red)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r2, blue)
+	true_color(r5, blue)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, blue)
+	true_color(r4, red)
+	true_color(r6, yellow)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+
+background:
+	true_color(r1, green)
+	true_color(r5, green)
+	true_color(r6, blue)
+
+---
+
+positives:
+	goal(robot, 0)
+
+---
+

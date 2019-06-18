@@ -1,0 +1,800 @@
+atoms:
+	next_at(1, 1, o)
+	next_at(2, 1, o)
+	next_at(3, 1, o)
+	next_at(4, 1, o)
+	next_at(5, 1, o)
+	next_at(1, 2, o)
+	next_at(2, 2, o)
+	next_at(3, 2, o)
+	next_at(4, 2, o)
+	next_at(5, 2, o)
+	next_at(1, 3, o)
+	next_at(2, 3, o)
+	next_at(3, 3, o)
+	next_at(4, 3, o)
+	next_at(5, 3, o)
+	next_at(1, 4, o)
+	next_at(2, 4, o)
+	next_at(3, 4, o)
+	next_at(4, 4, o)
+	next_at(5, 4, o)
+	next_at(1, 5, o)
+	next_at(2, 5, o)
+	next_at(3, 5, o)
+	next_at(4, 5, o)
+	next_at(5, 5, o)
+	next_at(1, 1, x)
+	next_at(2, 1, x)
+	next_at(3, 1, x)
+	next_at(4, 1, x)
+	next_at(5, 1, x)
+	next_at(1, 2, x)
+	next_at(2, 2, x)
+	next_at(3, 2, x)
+	next_at(4, 2, x)
+	next_at(5, 2, x)
+	next_at(1, 3, x)
+	next_at(2, 3, x)
+	next_at(3, 3, x)
+	next_at(4, 3, x)
+	next_at(5, 3, x)
+	next_at(1, 4, x)
+	next_at(2, 4, x)
+	next_at(3, 4, x)
+	next_at(4, 4, x)
+	next_at(5, 4, x)
+	next_at(1, 5, x)
+	next_at(2, 5, x)
+	next_at(3, 5, x)
+	next_at(4, 5, x)
+	next_at(5, 5, x)
+	next_marked(1, 1)
+	next_marked(2, 1)
+	next_marked(3, 1)
+	next_marked(4, 1)
+	next_marked(5, 1)
+	next_marked(1, 2)
+	next_marked(2, 2)
+	next_marked(3, 2)
+	next_marked(4, 2)
+	next_marked(5, 2)
+	next_marked(1, 3)
+	next_marked(2, 3)
+	next_marked(3, 3)
+	next_marked(4, 3)
+	next_marked(5, 3)
+	next_marked(1, 4)
+	next_marked(2, 4)
+	next_marked(3, 4)
+	next_marked(4, 4)
+	next_marked(5, 4)
+	next_marked(1, 5)
+	next_marked(2, 5)
+	next_marked(3, 5)
+	next_marked(4, 5)
+	next_marked(5, 5)
+
+---
+
+statics:
+	bounds(1)
+	bounds(2)
+	bounds(3)
+	bounds(4)
+	bounds(5)
+	controls(black, x)
+	controls(white, o)
+	distinct(black, white)
+	distinct(white, black)
+	input(black, down)
+	input(black, left)
+	input(black, right)
+	input(black, up)
+	input(white, down)
+	input(white, left)
+	input(white, right)
+	input(white, up)
+	object(o)
+	object(x)
+	role(black)
+	role(white)
+	succ(1, 2)
+	succ(2, 3)
+	succ(3, 4)
+	succ(4, 5)
+
+---
+
+background:
+	true_at(2, 2, o)
+	true_at(4, 1, x)
+	true_marked(1, 1)
+	true_marked(1, 2)
+	true_marked(2, 2)
+	true_marked(2, 3)
+	true_marked(2, 4)
+	true_marked(2, 5)
+	true_marked(3, 2)
+	true_marked(3, 3)
+	true_marked(3, 4)
+	true_marked(4, 2)
+
+---
+
+positives:
+	next_marked(1, 1)
+	next_marked(1, 2)
+	next_marked(2, 2)
+	next_marked(2, 3)
+	next_marked(2, 4)
+	next_marked(2, 5)
+	next_marked(3, 2)
+	next_marked(3, 3)
+	next_marked(3, 4)
+	next_marked(4, 1)
+	next_marked(4, 2)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(2, 5, o)
+	true_marked(1, 1)
+	true_marked(1, 2)
+	true_marked(1, 5)
+	true_marked(2, 5)
+
+---
+
+positives:
+	next_marked(1, 1)
+	next_marked(1, 2)
+	next_marked(1, 5)
+	next_marked(2, 5)
+
+---
+
+background:
+	does(black, left)
+	does(white, right)
+	true_at(2, 1, x)
+	true_at(2, 4, o)
+	true_marked(1, 1)
+	true_marked(2, 5)
+
+---
+
+positives:
+	next_at(1, 1, x)
+	next_at(3, 4, o)
+	next_marked(1, 1)
+	next_marked(2, 1)
+	next_marked(2, 4)
+	next_marked(2, 5)
+
+---
+
+background:
+	does(black, up)
+	does(white, down)
+	true_at(1, 5, o)
+	true_at(2, 1, x)
+	true_marked(1, 1)
+	true_marked(2, 5)
+
+---
+
+positives:
+	next_at(1, 4, o)
+	next_at(2, 2, x)
+	next_marked(1, 1)
+	next_marked(1, 5)
+	next_marked(2, 1)
+	next_marked(2, 5)
+
+---
+
+background:
+	does(black, up)
+	does(white, left)
+	true_at(3, 2, x)
+	true_at(5, 5, o)
+	true_marked(1, 1)
+	true_marked(2, 1)
+	true_marked(2, 5)
+	true_marked(3, 1)
+	true_marked(3, 5)
+	true_marked(4, 5)
+
+---
+
+positives:
+	next_at(3, 3, x)
+	next_at(4, 5, o)
+	next_marked(1, 1)
+	next_marked(2, 1)
+	next_marked(2, 5)
+	next_marked(3, 1)
+	next_marked(3, 2)
+	next_marked(3, 5)
+	next_marked(4, 5)
+	next_marked(5, 5)
+
+---
+
+background:
+	does(black, right)
+	does(white, left)
+	true_at(1, 1, x)
+	true_at(2, 5, o)
+
+---
+
+positives:
+	next_at(1, 5, o)
+	next_at(2, 1, x)
+	next_marked(1, 1)
+	next_marked(2, 5)
+
+---
+
+background:
+	does(black, down)
+	does(white, down)
+	true_at(1, 2, x)
+	true_at(2, 4, o)
+	true_marked(1, 1)
+	true_marked(2, 5)
+
+---
+
+positives:
+	next_at(1, 1, x)
+	next_at(2, 3, o)
+	next_marked(1, 1)
+	next_marked(1, 2)
+	next_marked(2, 4)
+	next_marked(2, 5)
+
+---
+
+background:
+	does(black, right)
+	does(white, left)
+	true_at(1, 2, x)
+	true_at(3, 5, o)
+	true_marked(1, 1)
+	true_marked(2, 5)
+
+---
+
+positives:
+	next_at(2, 2, x)
+	next_at(2, 5, o)
+	next_marked(1, 1)
+	next_marked(1, 2)
+	next_marked(2, 5)
+	next_marked(3, 5)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(2, 5, o)
+	true_marked(1, 1)
+	true_marked(1, 2)
+	true_marked(2, 4)
+	true_marked(2, 5)
+
+---
+
+positives:
+	next_marked(1, 1)
+	next_marked(1, 2)
+	next_marked(2, 4)
+	next_marked(2, 5)
+
+---
+
+background:
+	does(black, up)
+	does(white, left)
+	true_at(2, 3, o)
+	true_at(3, 1, x)
+	true_marked(1, 1)
+	true_marked(2, 1)
+	true_marked(2, 4)
+	true_marked(2, 5)
+
+---
+
+positives:
+	next_at(1, 3, o)
+	next_at(3, 2, x)
+	next_marked(1, 1)
+	next_marked(2, 1)
+	next_marked(2, 3)
+	next_marked(2, 4)
+	next_marked(2, 5)
+	next_marked(3, 1)
+
+---
+
+background:
+	true_at(2, 1, x)
+	true_at(2, 4, o)
+	true_marked(1, 1)
+	true_marked(2, 1)
+	true_marked(2, 4)
+	true_marked(2, 5)
+	true_marked(3, 1)
+	true_marked(3, 4)
+
+---
+
+positives:
+	next_marked(1, 1)
+	next_marked(2, 1)
+	next_marked(2, 4)
+	next_marked(2, 5)
+	next_marked(3, 1)
+	next_marked(3, 4)
+
+---
+
+background:
+	does(black, down)
+	does(white, right)
+	true_at(1, 4, o)
+	true_at(2, 2, x)
+	true_marked(1, 1)
+	true_marked(1, 2)
+	true_marked(2, 4)
+	true_marked(2, 5)
+
+---
+
+positives:
+	next_at(2, 1, x)
+	next_at(2, 4, o)
+	next_marked(1, 1)
+	next_marked(1, 2)
+	next_marked(1, 4)
+	next_marked(2, 2)
+	next_marked(2, 4)
+	next_marked(2, 5)
+
+---
+
+background:
+	does(black, right)
+	does(white, right)
+	true_at(1, 4, o)
+	true_at(3, 1, x)
+	true_marked(1, 1)
+	true_marked(1, 5)
+	true_marked(2, 1)
+	true_marked(2, 5)
+
+---
+
+positives:
+	next_at(2, 4, o)
+	next_at(4, 1, x)
+	next_marked(1, 1)
+	next_marked(1, 4)
+	next_marked(1, 5)
+	next_marked(2, 1)
+	next_marked(2, 5)
+	next_marked(3, 1)
+
+---
+
+background:
+	does(black, down)
+	does(white, up)
+	true_at(1, 3, x)
+	true_at(1, 4, o)
+	true_marked(1, 1)
+	true_marked(1, 2)
+	true_marked(1, 5)
+	true_marked(2, 5)
+
+---
+
+positives:
+	next_at(1, 2, x)
+	next_at(1, 5, o)
+	next_marked(1, 1)
+	next_marked(1, 2)
+	next_marked(1, 3)
+	next_marked(1, 4)
+	next_marked(1, 5)
+	next_marked(2, 5)
+
+---
+
+background:
+	true_at(3, 3, x)
+	true_at(4, 5, o)
+	true_marked(1, 1)
+	true_marked(2, 1)
+	true_marked(2, 5)
+	true_marked(3, 1)
+	true_marked(3, 2)
+	true_marked(3, 5)
+	true_marked(4, 5)
+	true_marked(5, 5)
+
+---
+
+positives:
+	next_marked(1, 1)
+	next_marked(2, 1)
+	next_marked(2, 5)
+	next_marked(3, 1)
+	next_marked(3, 2)
+	next_marked(3, 3)
+	next_marked(3, 5)
+	next_marked(4, 5)
+	next_marked(5, 5)
+
+---
+
+background:
+	does(black, down)
+	does(white, left)
+	true_at(2, 2, x)
+	true_at(4, 5, o)
+	true_marked(1, 1)
+	true_marked(1, 2)
+	true_marked(2, 5)
+	true_marked(3, 5)
+
+---
+
+positives:
+	next_at(2, 1, x)
+	next_at(3, 5, o)
+	next_marked(1, 1)
+	next_marked(1, 2)
+	next_marked(2, 2)
+	next_marked(2, 5)
+	next_marked(3, 5)
+	next_marked(4, 5)
+
+---
+
+background:
+	true_at(2, 2, x)
+	true_at(2, 5, o)
+	true_marked(1, 1)
+	true_marked(2, 1)
+	true_marked(2, 4)
+	true_marked(2, 5)
+
+---
+
+positives:
+	next_marked(1, 1)
+	next_marked(2, 1)
+	next_marked(2, 2)
+	next_marked(2, 4)
+	next_marked(2, 5)
+
+---
+
+background:
+	does(black, up)
+	does(white, right)
+	true_at(2, 1, x)
+	true_at(3, 5, o)
+	true_marked(1, 1)
+	true_marked(2, 5)
+
+---
+
+positives:
+	next_at(2, 2, x)
+	next_at(4, 5, o)
+	next_marked(1, 1)
+	next_marked(2, 1)
+	next_marked(2, 5)
+	next_marked(3, 5)
+
+---
+
+background:
+	does(black, right)
+	does(white, down)
+	true_at(1, 2, x)
+	true_at(2, 4, o)
+	true_marked(1, 1)
+	true_marked(2, 5)
+
+---
+
+positives:
+	next_at(2, 2, x)
+	next_at(2, 3, o)
+	next_marked(1, 1)
+	next_marked(1, 2)
+	next_marked(2, 4)
+	next_marked(2, 5)
+
+---
+
+background:
+	does(black, up)
+	does(white, down)
+	true_at(1, 4, o)
+	true_at(3, 1, x)
+	true_marked(1, 1)
+	true_marked(2, 1)
+	true_marked(2, 4)
+	true_marked(2, 5)
+
+---
+
+positives:
+	next_at(1, 3, o)
+	next_at(3, 2, x)
+	next_marked(1, 1)
+	next_marked(1, 4)
+	next_marked(2, 1)
+	next_marked(2, 4)
+	next_marked(2, 5)
+	next_marked(3, 1)
+
+---
+
+background:
+	does(black, right)
+	does(white, up)
+	true_at(2, 2, x)
+	true_at(3, 4, o)
+	true_marked(1, 1)
+	true_marked(1, 2)
+	true_marked(2, 4)
+	true_marked(2, 5)
+
+---
+
+positives:
+	next_at(3, 2, x)
+	next_at(3, 5, o)
+	next_marked(1, 1)
+	next_marked(1, 2)
+	next_marked(2, 2)
+	next_marked(2, 4)
+	next_marked(2, 5)
+	next_marked(3, 4)
+
+---
+
+background:
+	true_at(1, 5, o)
+	true_at(2, 3, x)
+	true_marked(1, 1)
+	true_marked(1, 2)
+	true_marked(1, 3)
+	true_marked(1, 4)
+	true_marked(1, 5)
+	true_marked(2, 5)
+
+---
+
+positives:
+	next_marked(1, 1)
+	next_marked(1, 2)
+	next_marked(1, 3)
+	next_marked(1, 4)
+	next_marked(1, 5)
+	next_marked(2, 3)
+	next_marked(2, 5)
+
+---
+
+background:
+	true_at(2, 2, x)
+	true_at(2, 5, o)
+	true_marked(1, 1)
+	true_marked(1, 2)
+	true_marked(1, 3)
+	true_marked(1, 4)
+	true_marked(1, 5)
+	true_marked(2, 3)
+	true_marked(2, 4)
+	true_marked(2, 5)
+
+---
+
+positives:
+	next_marked(1, 1)
+	next_marked(1, 2)
+	next_marked(1, 3)
+	next_marked(1, 4)
+	next_marked(1, 5)
+	next_marked(2, 2)
+	next_marked(2, 3)
+	next_marked(2, 4)
+	next_marked(2, 5)
+
+---
+
+background:
+	true_at(2, 2, x)
+	true_at(4, 3, o)
+	true_marked(1, 1)
+	true_marked(1, 2)
+	true_marked(2, 1)
+	true_marked(2, 2)
+	true_marked(2, 5)
+	true_marked(3, 5)
+	true_marked(4, 4)
+	true_marked(4, 5)
+
+---
+
+positives:
+	next_marked(1, 1)
+	next_marked(1, 2)
+	next_marked(2, 1)
+	next_marked(2, 2)
+	next_marked(2, 5)
+	next_marked(3, 5)
+	next_marked(4, 3)
+	next_marked(4, 4)
+	next_marked(4, 5)
+
+---
+
+background:
+	true_at(1, 1, x)
+	true_at(3, 4, o)
+	true_marked(1, 1)
+	true_marked(2, 1)
+	true_marked(2, 5)
+	true_marked(3, 5)
+
+---
+
+positives:
+	next_marked(1, 1)
+	next_marked(2, 1)
+	next_marked(2, 5)
+	next_marked(3, 4)
+	next_marked(3, 5)
+
+---
+
+background:
+	does(black, down)
+	does(white, right)
+	true_at(1, 2, x)
+	true_at(1, 5, o)
+	true_marked(1, 1)
+	true_marked(2, 5)
+
+---
+
+positives:
+	next_at(1, 1, x)
+	next_at(2, 5, o)
+	next_marked(1, 1)
+	next_marked(1, 2)
+	next_marked(1, 5)
+	next_marked(2, 5)
+
+---
+
+background:
+	true_at(2, 4, o)
+	true_at(3, 2, x)
+	true_marked(1, 1)
+	true_marked(1, 4)
+	true_marked(2, 1)
+	true_marked(2, 2)
+	true_marked(2, 4)
+	true_marked(2, 5)
+
+---
+
+positives:
+	next_marked(1, 1)
+	next_marked(1, 4)
+	next_marked(2, 1)
+	next_marked(2, 2)
+	next_marked(2, 4)
+	next_marked(2, 5)
+	next_marked(3, 2)
+
+---
+
+background:
+	does(black, up)
+	does(white, right)
+	true_at(1, 2, x)
+	true_at(1, 5, o)
+	true_marked(1, 1)
+	true_marked(2, 5)
+
+---
+
+positives:
+	next_at(1, 3, x)
+	next_at(2, 5, o)
+	next_marked(1, 1)
+	next_marked(1, 2)
+	next_marked(1, 5)
+	next_marked(2, 5)
+
+---
+
+background:
+	true_at(4, 2, o)
+	true_at(5, 2, x)
+	true_marked(1, 1)
+	true_marked(1, 4)
+	true_marked(1, 5)
+	true_marked(2, 1)
+	true_marked(2, 4)
+	true_marked(2, 5)
+	true_marked(3, 1)
+	true_marked(3, 2)
+	true_marked(3, 3)
+	true_marked(3, 4)
+	true_marked(4, 1)
+	true_marked(5, 1)
+	true_marked(5, 2)
+	true_marked(5, 3)
+
+---
+
+positives:
+	next_marked(1, 1)
+	next_marked(1, 4)
+	next_marked(1, 5)
+	next_marked(2, 1)
+	next_marked(2, 4)
+	next_marked(2, 5)
+	next_marked(3, 1)
+	next_marked(3, 2)
+	next_marked(3, 3)
+	next_marked(3, 4)
+	next_marked(4, 1)
+	next_marked(4, 2)
+	next_marked(5, 1)
+	next_marked(5, 2)
+	next_marked(5, 3)
+
+---
+
+background:
+	true_at(2, 5, o)
+	true_at(4, 2, x)
+	true_marked(1, 1)
+	true_marked(2, 1)
+	true_marked(2, 4)
+	true_marked(2, 5)
+	true_marked(3, 1)
+	true_marked(3, 4)
+	true_marked(3, 5)
+	true_marked(4, 1)
+
+---
+
+positives:
+	next_marked(1, 1)
+	next_marked(2, 1)
+	next_marked(2, 4)
+	next_marked(2, 5)
+	next_marked(3, 1)
+	next_marked(3, 4)
+	next_marked(3, 5)
+	next_marked(4, 1)
+	next_marked(4, 2)
+
+---
+

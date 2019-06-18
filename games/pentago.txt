@@ -1,0 +1,307 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Pentago
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; components
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (role red)
+  (role black)
+
+  (<= (base (cellholds ?q ?m ?n ?role))
+      (quadrant ?q)
+      (index ?m)
+      (index ?n)
+      (role ?role))
+
+  (<= (base (placecontrol ?player))
+      (role ?player))
+
+  (<= (base (rotatecontrol ?player))
+      (role ?player))
+
+
+  (<= (input ?player (place ?q ?m ?n))
+      (role ?player)
+      (quadrant ?q)
+      (index ?m)
+      (index ?n))
+
+  (<= (input ?player (rotate ?q ?dir))
+      (role ?player)
+      (quadrant ?q)
+      (direction ?dir))
+    
+  (<= (input ?player noop)
+      (role ?player))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; init
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (init (placecontrol red))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; legal
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (<= (legal ?player (place ?q ?m ?n))
+      (true (placecontrol ?player))
+      (cellempty ?q ?m ?n))
+    
+  (<= (legal ?player (rotate ?q ?dir))
+      (true (rotatecontrol ?player))
+      (quadrant ?q)
+      (direction ?dir))
+    
+  (<= (legal ?player noop)
+      (role ?player)
+      (not (true (placecontrol ?player)))
+      (not (true (rotatecontrol ?player))))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; next
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (<= (next (cellholds ?q ?m ?n ?player))
+      (does ?player (place ?q ?m ?n)))
+
+  (<= (next (cellholds ?q ?m ?n ?role))
+      (true (cellholds ?q ?m ?n ?role))
+      (does ?player (place ?qany ?many ?nany)))
+    
+  (<= (next (cellholds ?q ?m2 ?n2 ?role))
+      (does ?player (rotate ?q ?dir))
+      (true (cellholds ?q ?m1 ?n1 ?role))
+      (rotation ?dir ?m1 ?n1 ?m2 ?n2))
+    
+  (<= (next (cellholds ?q1 ?m ?n ?role))
+      (does ?player (rotate ?q2 ?dirany))
+      (true (cellholds ?q1 ?m ?n ?role))
+      (distinct ?q1 ?q2))
+
+  (<= (next (rotatecontrol red))
+      (true (placecontrol red)))
+
+  (<= (next (placecontrol red))
+      (true (rotatecontrol black)))
+
+  (<= (next (rotatecontrol black))
+      (true (placecontrol black)))
+
+  (<= (next (placecontrol black))
+      (true (rotatecontrol red)))
+    
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; goal
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+   
+  (<= (goal red 100)
+      (line red)
+      (not (line black)))
+
+  (<= (goal red 50)
+      (not (line red))
+      (not (line black))
+      (not boardopen))
+
+  (<= (goal red 50)
+      (line red)
+      (line black))
+
+  (<= (goal red 0)
+      (line black)
+      (not (line red)))
+
+  (<= (goal red 0)
+      (not (line red))
+      (not (line black))
+      boardopen)
+
+
+  (<= (goal black 100)
+      (line black)
+      (not (line red)))
+
+  (<= (goal black 50)
+      (not (line red))
+      (not (line black))
+      (not boardopen))
+
+  (<= (goal black 50)
+      (line red)
+      (line black))
+
+  (<= (goal black 0)
+      (line red)
+      (not (line black)))
+
+  (<= (goal black 0)
+      (not (line red))
+      (not (line black))
+      boardopen)
+    
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; terminal
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+    
+  (<= terminal (line red))
+  (<= terminal (line black))
+  (<= terminal (not boardopen))
+    
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; views
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (<= (line ?player) (row ?player))
+  (<= (line ?player) (col ?player))
+  (<= (line ?player) (diag ?player))
+
+  (<= (row ?player)
+      (true (cellholds ?q1 ?m1 ?n1 ?player))
+      (globalindex ?q1 ?m1 ?n1 ?mg ?n1g)
+      (succ ?n1g ?n2g)
+      (globalindex ?q2 ?m2 ?n2 ?mg ?n2g)
+      (true (cellholds ?q2 ?m2 ?n2 ?player))
+      (succ ?n2g ?n3g)
+      (globalindex ?q3 ?m3 ?n3 ?mg ?n3g)
+      (true (cellholds ?q3 ?m3 ?n3 ?player))
+      (succ ?n3g ?n4g)
+      (globalindex ?q4 ?m4 ?n4 ?mg ?n4g)
+      (true (cellholds ?q4 ?m4 ?n4 ?player))
+      (succ ?n4g ?n5g)
+      (globalindex ?q5 ?m5 ?n5 ?mg ?n5g)
+      (true (cellholds ?q5 ?m5 ?n5 ?player)))
+
+  (<= (col ?player)
+      (true (cellholds ?q1 ?m1 ?n1 ?player))
+      (globalindex ?q1 ?m1 ?n1 ?m1g ?ng)
+      (succ ?m1g ?m2g)
+      (globalindex ?q2 ?m2 ?n2 ?m2g ?ng)
+      (true (cellholds ?q2 ?m2 ?n2 ?player))
+      (succ ?m2g ?m3g)
+      (globalindex ?q3 ?m3 ?n3 ?m3g ?ng)
+      (true (cellholds ?q3 ?m3 ?n3 ?player))
+      (succ ?m3g ?m4g)
+      (globalindex ?q4 ?m4 ?n4 ?m4g ?ng)
+      (true (cellholds ?q4 ?m4 ?n4 ?player))
+      (succ ?m4g ?m5g)
+      (globalindex ?q5 ?m5 ?n5 ?m5g ?ng)
+      (true (cellholds ?q5 ?m5 ?n5 ?player)))
+
+  (<= (diag ?player)
+      (true (cellholds ?q1 ?m1 ?n1 ?player))
+      (globalindex ?q1 ?m1 ?n1 ?m1g ?n1g)
+      (succ ?m1g ?m2g)
+      (succ ?n1g ?n2g)
+      (globalindex ?q2 ?m2 ?n2 ?m2g ?n2g)
+      (true (cellholds ?q2 ?m2 ?n2 ?player))
+      (succ ?m2g ?m3g)
+      (succ ?n2g ?n3g)
+      (globalindex ?q3 ?m3 ?n3 ?m3g ?n3g)
+      (true (cellholds ?q3 ?m3 ?n3 ?player))
+      (succ ?m3g ?m4g)
+      (succ ?n3g ?n4g)
+      (globalindex ?q4 ?m4 ?n4 ?m4g ?n4g)
+      (true (cellholds ?q4 ?m4 ?n4 ?player))
+      (succ ?m4g ?m5g)
+      (succ ?n4g ?n5g)
+      (globalindex ?q5 ?m5 ?n5 ?m5g ?n5g)
+      (true (cellholds ?q5 ?m5 ?n5 ?player)))
+    
+  (<= (diag ?player)
+      (true (cellholds ?q1 ?m1 ?n1 ?player))
+      (globalindex ?q1 ?m1 ?n1 ?m1g ?n5g)
+      (succ ?m1g ?m2g)
+      (succ ?n4g ?n5g)
+      (globalindex ?q2 ?m2 ?n2 ?m2g ?n4g)
+      (true (cellholds ?q2 ?m2 ?n2 ?player))
+      (succ ?m2g ?m3g)
+      (succ ?n3g ?n4g)
+      (globalindex ?q3 ?m3 ?n3 ?m3g ?n3g)
+      (true (cellholds ?q3 ?m3 ?n3 ?player))
+      (succ ?m3g ?m4g)
+      (succ ?n2g ?n3g)
+      (globalindex ?q4 ?m4 ?n4 ?m4g ?n2g)
+      (true (cellholds ?q4 ?m4 ?n4 ?player))
+      (succ ?m4g ?m5g)
+      (succ ?n1g ?n2g)
+      (globalindex ?q5 ?m5 ?n5 ?m5g ?n1g)
+      (true (cellholds ?q5 ?m5 ?n5 ?player)))
+
+
+  (<= (globalindex 1 ?m ?n ?m ?n)    
+      (index ?m)
+      (index ?n))
+
+  (<= (globalindex 2 ?m ?n ?m ?ng)
+      (add 3 ?n ?ng)
+      (index ?m))
+
+  (<= (globalindex 3 ?m ?n ?mg ?ng)
+      (add 3 ?m ?mg)
+      (add 3 ?n ?ng))
+
+  (<= (globalindex 4 ?m ?n ?mg ?n)    
+      (add 3 ?m ?mg)
+      (index ?n))
+
+
+  (<= (rotation clockwise ?m1 ?n1 ?m2 ?n2)
+      (horizontalflip ?n1 ?m1 ?m2 ?n2))
+
+  (<= (rotation counterclockwise ?m1 ?n1 ?m2 ?n2)
+      (verticalflip ?n1 ?m1 ?m2 ?n2))
+
+
+  (<= (verticalflip 1 ?n 3 ?n)
+      (index ?n))
+
+  (<= (verticalflip 2 ?n 2 ?n)
+      (index ?n))
+
+  (<= (verticalflip 3 ?n 1 ?n)
+      (index ?n))
+    
+
+  (<= (horizontalflip ?m 1 ?m 3)
+      (index ?m))
+
+  (<= (horizontalflip ?m 2 ?m 2)
+      (index ?m))
+
+  (<= (horizontalflip ?m 3 ?m 1)
+      (index ?m))
+    
+
+  (<= boardopen (cellempty ?q ?m ?n))
+
+  (<= (cellempty ?q ?m ?n)
+      (cell ?q ?m ?n)
+      (not (cellmarked ?q ?m ?n)))
+
+  (<= (cellmarked ?q ?m ?n)
+      (true (cellholds ?q ?m ?n ?role)))
+
+  (<= (cell ?q ?m ?n)
+      (quadrant ?q)
+      (index ?m)
+      (index ?n))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; data
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (quadrant 1) (quadrant 2) (quadrant 3) (quadrant 4)
+
+  (index 1) (index 2) (index 3)
+
+  (direction clockwise) (direction counterclockwise)
+
+  (succ 1 2) (succ 2 3) (succ 3 4) (succ 4 5) (succ 5 6)
+
+  (add 3 1 4) (add 3 2 5) (add 3 3 6)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

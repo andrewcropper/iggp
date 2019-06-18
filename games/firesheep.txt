@@ -1,0 +1,386 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Firesheep
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Components
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (role red)
+  (role blue)
+
+  (<= (base (at ?e ?i ?j)) (sheep_index ?e) (index ?i) (index ?j))
+  (<= (base (sheep ?e ?l ?d)) (sheep_index ?e) (life_val ?l) (direction ?d))
+  (<= (base (frozen ?e ?i ?j)) (index ?i) (index ?j) (sheep_index ?e))
+  (<= (base (burning ?e ?i ?j)) (index ?i) (index ?j) (sheep_index ?e))
+  (<= (base (score ?p ?s)) (role ?p) (score_succ ?s ?o))
+  (<= (base (score ?p ?s)) (role ?p) (score_succ ?o ?s))
+  (<= (base (grass ?p ?i ?j)) (role ?p) (index ?i) (index ?j))
+  (<= (base (grass_last_turn ?p)) (role ?p))
+  (<= (base (has_kill ?p)) (role ?p))
+  (<= (base (has_force_noop ?p)) (role ?p))
+  (<= (base (forced ?p)) (role ?p))
+
+  (<= (input ?p (freeze ?e)) (role ?p) (sheep_index ?e))
+  (<= (input ?p (burn ?e)) (role ?p) (sheep_index ?e))
+  (<= (input ?p (kill ?e)) (role ?p) (sheep_index ?e))
+  (<= (input ?p (force_noop ?q)) (role ?p) (role ?q))
+  (<= (input ?p noop) (role ?p))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; init
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (init (sheep 1 9 down))
+  (init (sheep 2 9 down))
+  (init (sheep 3 9 down))
+  (init (sheep 4 9 down))
+  (init (sheep 5 9 up))
+  (init (sheep 6 9 up))
+  (init (sheep 7 9 up))
+  (init (sheep 8 9 up))
+  (init (sheep 9 9 up))
+
+  (init (at 1 1 1))
+  (init (at 2 1 3))
+  (init (at 3 1 5))
+  (init (at 4 1 7))
+  (init (at 5 9 2))
+  (init (at 6 9 4))
+  (init (at 7 9 6))
+  (init (at 8 9 8))
+  (init (at 9 1 9))
+
+  (init (grass blue 5 1))
+  (init (grass red 5 2))
+  (init (grass blue 5 3))
+  (init (grass red  5 4))
+  (init (grass blue 5 6)) 
+  (init (grass red 5 7)) 
+  (init (grass blue 5 8)) 
+  (init (grass red 5 9)) 
+  (init (grass blue 4 2))
+  (init (grass red 4 3))
+  (init (grass blue 4 7)) 
+  (init (grass red 4 8)) 
+  (init (grass blue 6 2))
+  (init (grass red 6 3))
+  (init (grass blue 6 7)) 
+  (init (grass red 6 8)) 
+
+  (init (score red 0))
+  (init (score blue 0))
+
+  (init (has_kill blue))
+  (init (has_kill red))
+
+  (init (has_force_noop blue))
+  (init (has_force_noop red))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; legal
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (<= (legal ?p (freeze ?e))
+      (role ?p)
+      (true (sheep ?e ?l ?d))
+      (not (true (forced ?p))))
+
+  (<= (legal ?p (burn ?e))
+      (role ?p)
+      (true (sheep ?e ?l ?d))
+      (not (true (forced ?p))))
+
+  (<= (legal ?p (kill ?e))
+      (true (sheep ?e ?l ?d))
+      (true (has_kill ?p))
+      (not (true (forced ?p))))
+
+  (<= (legal ?p (force_noop ?q))
+      (true (has_force_noop ?p))
+      (role ?q)
+      (distinct ?p ?q))
+
+  (<= (legal ?p noop)
+      (role ?p))
+
+  (<= (collision ?e ?f) (true (at ?e ?i ?j)) (true (at ?f ?i ?j)) (distinct ?e ?f))
+
+  (<= (alive ?e)
+      (true (sheep ?e ?l ?d))
+      (distinct ?l 0)
+      (not (killed ?e)))
+
+  (<= (killed ?e)
+      (does ?p (kill ?e)))
+
+  (<= (hit_border ?e up) (true (sheep ?e ?l up)) (true (at ?e ?i ?j)) (border_top ?i))
+  (<= (hit_border ?e down) (true (sheep ?e ?l down)) (true (at ?e ?i ?j)) (border_bottom ?i))
+  (<= (hit_border ?e left) (true (sheep ?e ?l left)) (true (at ?e ?i ?j)) (border_top ?j))
+  (<= (hit_border ?e right) (true (sheep ?e ?l right)) (true (at ?e ?i ?j)) (border_bottom ?j))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; next
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (<= (next (grass ?p ?i ?j))
+      (true (grass ?p ?i ?j))
+      (not (burning_grass ?i ?j)))
+
+  (<= (next (frozen ?e ?i ?j))
+      (does ?p (freeze ?e))
+      (next_at_final ?e ?i ?j))
+
+  (<= (next (burning ?e ?i ?j))
+      (does ?p (burn ?e))
+      (next_at_final ?e ?i ?j))
+
+  (<= (next (burning ?e ?i ?j))
+      (next_at_final ?e ?i ?j)
+      (adjacent ?i ?j ?m ?n)
+      (true (burning ?f ?m ?n)))
+
+  (<= (next (burning ?e ?i ?j))
+      (true (at ?e ?k ?l))
+      (adjacent ?k ?l ?m ?n)
+      (true (burning ?f ?m ?n))
+      (next_at_final ?e ?i ?j))
+
+  (<= (next (has_kill ?p))
+      (true (has_kill ?p))
+      (not (doing_kill ?p)))
+
+  (<= (next (has_force_noop ?p))
+      (true (has_force_noop ?p))
+      (not (doing_force ?p)))
+
+  (<= (next (forced ?q))
+      (does ?p (force_noop ?q)))
+
+  (<= (next (at ?e ?i ?j))
+      (next_at_final ?e ?i ?j)
+      (alive ?e))
+
+  (<= (next (sheep ?e ?l ?d))
+      (true (sheep ?e ?l ?b))
+      (next_d ?e ?d)
+      (not (turning ?e))
+      (alive ?e))
+
+  (<= (next (sheep ?e ?l ?d))
+      (true (sheep ?e ?o ?b))
+      (next_d ?e ?d)
+      (life_succ ?l ?o)
+      (turning ?e)
+      (alive ?e))
+
+  (<= (next (grass_last_turn ?p))
+      (on_grass ?p)
+      (not (true (grass_last_turn ?p))))
+
+  (<= (next (score ?p ?s))
+      (true (score ?p ?s))
+      (not (scoring ?p)))
+
+  (<= (next (score ?p ?s))
+      (true (score ?p ?o))
+      (score_succ ?o ?s)
+      (scoring ?p))
+
+
+  (<= (next_at_final ?e ?i ?j)
+      (next_at ?e ?i ?j)
+      (moving_final ?e))
+
+  (<= (next_at_final ?e ?i ?j)
+      (true (at ?e ?i ?j))
+      (not (moving_final ?e)))
+
+
+  (<= (next_at ?e ?i ?j)
+      (true (at ?e ?m ?j))
+      (true (sheep ?e ?l up)) 
+      (board_succ ?i ?m)
+      (moving ?e)
+      (not (true (frozen ?e ?i ?j))))
+
+  (<= (next_at ?e ?i ?j)
+      (true (at ?e ?m ?j))
+      (true (sheep ?e ?l down)) 
+      (board_succ ?m ?i)
+      (moving ?e)
+      (not (true (frozen ?e ?i ?j))))
+
+  (<= (next_at ?e ?i ?j) (true (at ?e ?i ?n)) (true (sheep ?e ?l left)) 
+  (board_succ ?j ?n) (moving ?e) (not (true (frozen ?e ?i ?j))))
+
+  (<= (next_at ?e ?i ?j) (true (at ?e ?i ?n)) (true (sheep ?e ?l right)) 
+  (board_succ ?n ?j) (moving ?e) (not (true (frozen ?e ?i ?j))))
+
+  (<= (next_at ?e ?i ?j) (true (at ?e ?i ?j)) (not_moving ?e))
+
+
+  (<= (moving_final ?e)
+      (moving ?e)
+      (not (collision_next ?e)))
+
+  (<= (moving ?e)
+      (sheep_index ?e)
+      (not (not_moving ?e)))
+
+
+  (<= (not_moving ?e) (true (frozen ?e ?i ?j)))
+  (<= (not_moving ?e) (true (sheep ?e ?l stopped)))
+  (<= (not_moving ?e) (hit_border ?e ?d))
+  (<= (not_moving ?e) (sheep_index ?e) (not (alive ?e)))
+
+
+  (<= (collision_next ?e)
+      (next_at ?e ?i ?j)
+      (true (at ?e ?i ?j))
+      (true (at ?d ?i ?j))
+      (next_at ?d ?i ?j)
+      (distinct ?e ?d))
+
+
+  (<= (burning_grass ?i ?j)
+      (true (at ?e ?i ?j))
+      (true (burning ?e ?i ?j))
+      (true (grass ?p ?i ?j)))
+
+  (<= (adjacent ?i ?j ?i ?n) (index ?i) (board_succ ?j ?n))
+  (<= (adjacent ?i ?j ?i ?n) (index ?i) (board_succ ?n ?j))
+  (<= (adjacent ?i ?j ?m ?j) (index ?j) (board_succ ?i ?m))
+  (<= (adjacent ?i ?j ?m ?j) (index ?j) (board_succ ?m ?i))
+
+  (<= (frozen_index ?e) (true (frozen ?e ?i ?j)))
+  (<= (burning_index ?e) (true (frozen ?e ?i ?j)))
+  (<= (turning ?e) (true (burning ?e ?i ?j)) (not (frozen_index ?e)))
+  (<= (turning ?e) (true (frozen ?e ?i ?j)) (not (burning_index ?e)))
+
+  (<= (doing_kill ?p) (does ?p (kill ?e)))
+
+  (<= (doing_force ?p) (does ?p (force_noop ?q)))
+
+  (<= (next_d ?e stopped) (hit_border ?e down) (not (turning ?e)))
+  (<= (next_d ?e stopped) (hit_border ?e right) (not (turning ?e))) 
+  (<= (next_d ?e right) (true (sheep ?e ?l down)) (true (burning ?e ?i ?j)) (turning ?e))
+  (<= (next_d ?e up) (true (sheep ?e ?l right)) (true (burning ?e ?i ?j)) (turning ?e))
+  (<= (next_d ?e left) (true (sheep ?e ?l up)) (true (burning ?e ?i ?j)) (turning ?e))
+  (<= (next_d ?e down) (true (sheep ?e ?l left)) (true (burning ?e ?i ?j)) (turning ?e))
+  (<= (next_d ?e left) (true (sheep ?e ?l down)) (true (frozen ?e ?i ?j)) (turning ?e))
+  (<= (next_d ?e up) (true (sheep ?e ?l left)) (true (frozen ?e ?i ?j)) (turning ?e))
+  (<= (next_d ?e right) (true (sheep ?e ?l up)) (true (frozen ?e ?i ?j)) (turning ?e))
+  (<= (next_d ?e down) (true (sheep ?e ?l right)) (true (frozen ?e ?i ?j)) (turning ?e))
+  (<= (next_d ?e ?d) (true (sheep ?e ?l ?d)) (not (turning ?e)))
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; goal
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (<= (goal ?p ?s) (true (score ?p ?s)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; terminal
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (<= terminal (not (sheep_moving)))
+  (<= terminal (not (sheep_exist)))
+
+  (<= (sheep_moving) (moving_final ?e))
+
+  (<= (sheep_exist) (true (sheep ?e ?l ?d)))
+
+  (<= (on_grass ?p) (true (at ?e ?i ?j)) (true (grass ?p ?i ?j)))
+  (<= (scoring ?p) (on_grass ?p) (true (grass_last_turn ?p)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Data
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (sheep_index 1)
+  (sheep_index 2)
+  (sheep_index 3)
+  (sheep_index 4)
+  (sheep_index 5)
+  (sheep_index 6)
+  (sheep_index 7)
+  (sheep_index 8)
+  (sheep_index 9)
+
+  (direction up) 
+  (direction down)
+  (direction left)
+  (direction right)
+  (direction stopped)
+
+  (life_val 0)
+  (life_val 1)
+  (life_val 2)
+  (life_val 3)
+  (life_val 4)
+  (life_val 5)
+  (life_val 6)
+  (life_val 7)
+  (life_val 8)
+  (life_val 9)
+
+  (life_succ 0 1)
+  (life_succ 1 2)
+  (life_succ 2 3)
+  (life_succ 3 4)
+  (life_succ 4 5)
+  (life_succ 5 6)
+  (life_succ 6 7)
+  (life_succ 7 8)
+  (life_succ 8 9)
+
+  (border_top 1)
+  (border_bottom 9)
+  (board_succ 1 2)
+  (board_succ 2 3)
+  (board_succ 3 4)
+  (board_succ 4 5)
+  (board_succ 5 6)
+  (board_succ 6 7)
+  (board_succ 7 8)
+  (board_succ 8 9)
+
+  (index 1)
+  (index 2)
+  (index 3)
+  (index 4)
+  (index 5)
+  (index 6)
+  (index 7)
+  (index 8)
+  (index 9)
+
+  (score_succ 0 10)
+  (score_succ 10 20)
+  (score_succ 20 30)
+  (score_succ 30 40)
+  (score_succ 40 50)
+  (score_succ 50 60)
+  (score_succ 60 70)
+  (score_succ 70 80)
+  (score_succ 80 90)
+  (score_succ 90 100)
+  (score_succ 100 100)
+
+  (succ 0 1)
+  (succ 1 2)
+  (succ 2 3)
+  (succ 3 4)
+  (succ 4 5)
+  (succ 5 6)
+  (succ 6 7)
+  (succ 7 8)
+  (succ 8 9)
+  (succ 9 10)
+  (succ 10 11)
+  (succ 11 12)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

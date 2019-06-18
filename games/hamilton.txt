@@ -1,0 +1,207 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Hamilton
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Components
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (role robot)
+
+  (<= (base (location ?x)) (node ?x))
+  (<= (base (visited ?x)) (node ?x))
+  (<= (base (score 0)))
+  (<= (base (score ?n)) (scorenext ?m ?n))
+  (<= (base (step 1)))
+  (<= (base (step ?n)) (successor ?m ?n))
+
+  (<= (input robot (move ?y)) (node ?y))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; init
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (init (location a))
+  (init (visited a))
+  (init (score 0))
+  (init (step 1))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; legal
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (<= (legal robot (move ?y))
+      (true (location ?x))
+      (connected ?x ?y))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; next
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (<= (next (location ?y))
+      (does robot (move ?y)))
+
+  (<= (next (visited ?y))
+      (does robot (move ?y)))
+
+  (<= (next (visited ?y))
+      (true (visited ?y)))
+
+  (<= (next (score ?n))
+      (does robot (move ?y))
+      (not (true (visited ?y)))
+      (true (score ?m))
+      (scorenext ?m ?n))
+
+  (<= (next (score ?n))
+      (does robot (move ?y))
+      (true (visited ?y))
+      (true (score ?n)))
+
+  (<= (next (step ?n))
+      (true (step ?m))
+      (successor ?m ?n))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; goal
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (<= (goal robot ?n) (true (score ?n)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; terminal
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  
+  (<= terminal (true (step 20)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Views
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Data
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (node a)
+  (node b)
+  (node c)
+  (node d)
+  (node e)
+  (node f)
+  (node g)
+  (node h)
+  (node i)
+  (node j)
+  (node k)
+  (node l)
+  (node m)
+  (node n)
+  (node o)
+  (node p)
+  (node q)
+  (node r)
+  (node s)
+  (node t)
+
+  (connected a b)
+  (connected a e)
+  (connected a h)
+  (connected b a)
+  (connected b c)
+  (connected b j)
+  (connected c b)
+  (connected c d)
+  (connected c l)
+  (connected d c)
+  (connected d e)
+  (connected d n)
+  (connected e a)
+  (connected e d)
+  (connected e f)
+  (connected f e)
+  (connected f g)
+  (connected f o)
+  (connected g f)
+  (connected g h)
+  (connected g q)
+  (connected h a)
+  (connected h g)
+  (connected h i)
+  (connected i h)
+  (connected i j)
+  (connected i r)
+  (connected j b)
+  (connected j i)
+  (connected j k)
+  (connected k j)
+  (connected k l)
+  (connected k s)
+  (connected l c)
+  (connected l k)
+  (connected l m)
+  (connected m l)
+  (connected m n)
+  (connected m t)
+  (connected n d)
+  (connected n m)
+  (connected n o)
+  (connected o n)
+  (connected o f)
+  (connected o p)
+  (connected p o)
+  (connected p q)
+  (connected p t)
+  (connected q g)
+  (connected q p)
+  (connected q r)
+  (connected r i)
+  (connected r q)
+  (connected r s)
+  (connected s k)
+  (connected s r)
+  (connected s t)
+  (connected t m)
+  (connected t s)
+  (connected t p)
+
+  (scorenext  0  1)
+  (scorenext  1  2)
+  (scorenext  2  4)
+  (scorenext  4  6)
+  (scorenext  6  9)
+  (scorenext  9 12)
+  (scorenext 12 16)
+  (scorenext 16 20)
+  (scorenext 20 25)
+  (scorenext 25 30)
+  (scorenext 30 36)
+  (scorenext 36 42)
+  (scorenext 42 49)
+  (scorenext 49 56)
+  (scorenext 56 64)
+  (scorenext 64 72)
+  (scorenext 72 81)
+  (scorenext 81 90)
+  (scorenext 90 100)
+
+  (successor  1  2)
+  (successor  2  3)
+  (successor  3  4)
+  (successor  4  5)
+  (successor  5  6)
+  (successor  6  7)
+  (successor  7  8)
+  (successor  8  9)
+  (successor  9 10)
+  (successor 10 11)
+  (successor 11 12)
+  (successor 12 13)
+  (successor 13 14)
+  (successor 14 15)
+  (successor 15 16)
+  (successor 16 17)
+  (successor 17 18)
+  (successor 18 19)
+  (successor 19 20)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

@@ -1,0 +1,66 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Walkabout
+;;;
+;;; The two players must stand on the same square to win.
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(role black)
+(role white)
+
+(<= (base (at ?x ?y ?obj)) (bounds ?x) (bounds ?y) (object ?obj))
+
+(<= (input ?r left) (role ?r))
+(<= (input ?r right) (role ?r))
+(<= (input ?r up) (role ?r))
+(<= (input ?r down) (role ?r))
+(<= (input ?r noop) (role ?r))
+
+(bounds 1)
+(bounds 2)
+(bounds 3)
+(bounds 4)
+(bounds 5)
+
+(succ 1 2)
+(succ 2 3)
+(succ 3 4)
+(succ 4 5)
+
+(object x)
+(object o)
+
+(init (at 1 1 x))
+(init (at 2 5 o))
+
+(controls black x)
+(controls white o)
+
+(<= (legal ?r left) (true (at ?x ?y ?obj)) (controls ?r ?obj) (succ ?z ?x))
+(<= (legal ?r right) (true (at ?x ?y ?obj)) (controls ?r ?obj) (succ ?x ?z))
+(<= (legal ?r up) (true (at ?x ?y ?obj)) (controls ?r ?obj) (succ ?y ?z))
+(<= (legal ?r down) (true (at ?x ?y ?obj)) (controls ?r ?obj) (succ ?z ?y))
+(<= (legal ?r noop) (controls ?r ?obj))
+
+(<= (next (at ?x ?y ?obj)) (true (at ?z ?y ?obj)) (does ?r left) (controls ?r ?obj) (succ ?x ?z))
+(<= (next (at ?x ?y ?obj)) (true (at ?z ?y ?obj)) (does ?r right) (controls ?r ?obj) (succ ?z ?x))
+(<= (next (at ?x ?y ?obj)) (true (at ?x ?z ?obj)) (does ?r up) (controls ?r ?obj) (succ ?z ?y))
+(<= (next (at ?x ?y ?obj)) (true (at ?x ?z ?obj)) (does ?r down) (controls ?r ?obj) (succ ?y ?z))
+(<= (next (at ?x ?y ?obj)) (true (at ?x ?y ?obj)) (does ?r noop) (controls ?r ?obj))
+
+(distinct black white)
+(distinct white black)
+
+(<= (goal black 100) aux_same_square)
+(<= (goal black 0) (not aux_same_square))
+(<= (goal white 100) aux_same_square)
+(<= (goal white 0) (not aux_same_square))
+
+(<= aux_same_square (true (at ?x ?y ?obj1)) (true (at ?x ?y ?obj2)) (controls black ?obj1) (controls white ?obj2))
+
+(<= terminal aux_same_square)
+
+
+aux_same_square:-f1(A,B),f2(A,B).
+f1(A,B):-true_at(A,B,C),controls(black,C).
+f1(A,B):-true_at(A,B,C),controls(white,C).
+

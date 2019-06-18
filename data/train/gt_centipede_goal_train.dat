@@ -1,0 +1,205 @@
+atoms:
+	goal(black, 0)
+	goal(white, 0)
+	goal(black, 10)
+	goal(white, 10)
+	goal(black, 100)
+	goal(white, 100)
+	goal(black, 15)
+	goal(white, 15)
+	goal(black, 20)
+	goal(white, 20)
+	goal(black, 25)
+	goal(white, 25)
+	goal(black, 30)
+	goal(white, 30)
+	goal(black, 35)
+	goal(white, 35)
+	goal(black, 40)
+	goal(white, 40)
+	goal(black, 45)
+	goal(white, 45)
+	goal(black, 5)
+	goal(white, 5)
+	goal(black, 50)
+	goal(white, 50)
+	goal(black, 55)
+	goal(white, 55)
+	goal(black, 60)
+	goal(white, 60)
+	goal(black, 65)
+	goal(white, 65)
+	goal(black, 70)
+	goal(white, 70)
+	goal(black, 75)
+	goal(white, 75)
+	goal(black, 80)
+	goal(white, 80)
+	goal(black, 85)
+	goal(white, 85)
+	goal(black, 90)
+	goal(white, 90)
+	goal(black, 95)
+	goal(white, 95)
+
+---
+
+statics:
+	role(black)
+	role(white)
+	succ(0, 5)
+	succ(10, 15)
+	succ(15, 20)
+	succ(20, 25)
+	succ(25, 30)
+	succ(30, 35)
+	succ(35, 40)
+	succ(40, 45)
+	succ(45, 50)
+	succ(5, 10)
+	succ(50, 55)
+	succ(55, 60)
+	succ(60, 65)
+	succ(65, 70)
+	succ(70, 75)
+	succ(75, 80)
+	succ(80, 85)
+	succ(85, 90)
+	succ(90, 95)
+	succ(95, 100)
+
+---
+
+background:
+	true_blackPayoff(30)
+	true_control(white)
+	true_whitePayoff(35)
+
+---
+
+positives:
+	goal(black, 0)
+	goal(white, 0)
+
+---
+
+background:
+	true_blackPayoff(25)
+	true_control(black)
+	true_whitePayoff(10)
+
+---
+
+positives:
+	goal(black, 0)
+	goal(white, 0)
+
+---
+
+background:
+	true_blackPayoff(10)
+	true_control(white)
+	true_whitePayoff(15)
+
+---
+
+positives:
+	goal(black, 0)
+	goal(white, 0)
+
+---
+
+background:
+	true_blackPayoff(15)
+	true_control(white)
+	true_gameOver()
+	true_whitePayoff(0)
+
+---
+
+positives:
+	goal(black, 15)
+	goal(white, 0)
+
+---
+
+background:
+	true_blackPayoff(0)
+	true_control(white)
+	true_whitePayoff(5)
+
+---
+
+positives:
+	goal(black, 0)
+	goal(white, 0)
+
+---
+
+background:
+	true_blackPayoff(35)
+	true_control(black)
+	true_whitePayoff(20)
+
+---
+
+positives:
+	goal(black, 0)
+	goal(white, 0)
+
+---
+
+background:
+	true_blackPayoff(15)
+	true_control(black)
+	true_whitePayoff(0)
+
+---
+
+positives:
+	goal(black, 0)
+	goal(white, 0)
+
+---
+
+background:
+	true_blackPayoff(0)
+	true_control(black)
+	true_gameOver()
+	true_whitePayoff(5)
+
+---
+
+positives:
+	goal(black, 0)
+	goal(white, 5)
+
+---
+
+background:
+	true_blackPayoff(10)
+	true_control(black)
+	true_gameOver()
+	true_whitePayoff(15)
+
+---
+
+positives:
+	goal(black, 10)
+	goal(white, 15)
+
+---
+
+background:
+	true_blackPayoff(45)
+	true_control(black)
+	true_whitePayoff(30)
+
+---
+
+positives:
+	goal(black, 0)
+	goal(white, 0)
+
+---
+

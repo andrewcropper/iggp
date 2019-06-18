@@ -1,0 +1,10 @@
+import sokoban_pos_core
+
+(init (target pos13))
+
+(init (at pos11 x))
+(init (at pos12 wall))
+(init (at pos22 wall))
+(init (at pos32 wall))
+(init (at pos43 obj1))
+

@@ -1,0 +1,194 @@
+; DontTouch - senior_bois
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; DontTouch
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Components
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+    (role white)
+    (role black)
+
+    (<= (base (cell ?m ?n x)) (index ?m) (index ?n))
+    (<= (base (cell ?m ?n o)) (index ?m) (index ?n))
+    (<= (base (cell ?m ?n b)) (index ?m) (index ?n))
+    (base (control white))
+    (base (control black))
+
+    (<= (input ?r (mark ?m ?n)) (role ?r) (index ?m) (index ?n))
+    (<= (input ?r noop) (role ?r))
+
+    (index 1)
+    (index 2)
+    (index 3)
+    (index 4)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; init
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+    (init (cell 1 1 b))
+    (init (cell 1 2 b))
+    (init (cell 1 3 b))
+    (init (cell 1 4 b))
+    (init (cell 2 1 b))
+    (init (cell 2 2 b))
+    (init (cell 2 3 b))
+    (init (cell 2 4 b))
+    (init (cell 3 1 b))
+    (init (cell 3 2 b))
+    (init (cell 3 3 b))
+    (init (cell 3 4 b))
+    (init (cell 4 1 b))
+    (init (cell 4 2 b))
+    (init (cell 4 3 b))
+    (init (cell 4 4 b))
+
+    (init (control white))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; legal
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+    (<= (legal ?w (mark ?x ?y))
+        (true (cell ?x ?y b))
+        (true (control ?w)))
+
+p(A,B,C):-q(A),r(B,C).
+
+legal_mark(W,X,Y):-true_control(W),lm1(X,Y),
+lm1(X,Y):-true_cell(X,Y,b).
+
+
+
+    (<= (legal white noop)
+        (true (control black)))
+
+    (<= (legal black noop)
+        (true (control white)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; next
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+    (<= (next (cell ?m ?n x))
+        (does white (mark ?m ?n))
+        (true (cell ?m ?n b)))
+
+    (<= (next (cell ?m ?n o))
+        (does black (mark ?m ?n))
+        (true (cell ?m ?n b)))
+
+    (<= (next (cell ?m ?n ?w))
+        (true (cell ?m ?n ?w))
+        (distinct ?w b))
+
+    (<= (next (cell ?m ?n b))
+        (does ?w (mark ?j ?k))
+        (true (cell ?m ?n b))
+        (distinct ?m ?j))
+
+    (<= (next (cell ?m ?n b))
+        (does ?w (mark ?j ?k))
+        (true (cell ?m ?n b))
+        (distinct ?n ?k))
+
+    (<= (next (control white))
+        (true (control black)))
+
+    (<= (next (control black))
+        (true (control white)))
+
+
+    (<= (up ?m ?x)
+        (true (succ ?m ?m2))
+        (true (cell ?m 1 ?x))
+        )
+
+
+    (<= (right ?x)
+        (true (cell 1 3 ?x))
+        (true (cell 2 2 ?x))
+        (true (cell 3 1 ?x)))
+
+
+    (<= (touch ?player)
+        (true (cell ?x1 ?y ?player))
+        (succ ?x1 ?x2)
+        (true (cell ?x2 ?y ?player)))
+
+    (<= (touch ?player)
+        (true (cell ?x ?y1 ?player))
+        (succ ?y1 ?y2)
+        (true (cell ?x ?y2 ?player)))
+
+
+
+    (<= open (true (cell ?m ?n b)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; goal
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+    (<= (goal white 0)
+        (touch x)
+        (not (touch o)))
+
+    (<= (goal white 50)
+        (not (touch x))
+        (not (touch o)))
+
+    (<= (goal white 100)
+        (not (touch x))
+        (touch o))
+
+    (<= (goal black 0)
+        (not (touch x))
+        (touch o))
+
+    (<= (goal black 50)
+        (not (touch x))
+        (not (touch o)))
+
+    (<= (goal black 100)
+        (touch x)
+        (not (touch o)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; terminal
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+    (<= terminal
+        (touch x))
+
+terminal :- touch(x).
+
+    (<= terminal
+        (touch o))
+
+    (<= terminal
+        (not open))
+
+(<= (touch ?player)
+        (true (cell ?x1 ?y ?player))
+        (succ ?x1 ?x2)
+        (true (cell ?x2 ?y ?player)))
+
+touch(P):-
+    true_cell(X1,Y,P),
+    succ(X1,X2),
+    true_cell(X2,Y,P).
+
+touch(P):-
+    true_cell(X,Y1,P),
+    succ(Y1,Y2),
+    true_cell(X,Y2,P).
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(succ 1 2) (succ 2 3) (succ 3 4) (succ 4 5) (succ 5 6) (succ 6 7) (succ 7 8)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

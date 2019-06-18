@@ -1,0 +1,4736 @@
+atoms:
+	goal(robot, 1)
+	goal(robot, 2)
+	goal(robot, 3)
+	goal(robot, 4)
+	goal(robot, 5)
+	goal(robot, 0)
+	goal(robot, 10)
+	goal(robot, 100)
+	goal(robot, 11)
+	goal(robot, 12)
+	goal(robot, 13)
+	goal(robot, 14)
+	goal(robot, 15)
+	goal(robot, 16)
+	goal(robot, 17)
+	goal(robot, 18)
+	goal(robot, 19)
+	goal(robot, 20)
+	goal(robot, 21)
+	goal(robot, 22)
+	goal(robot, 23)
+	goal(robot, 24)
+	goal(robot, 25)
+	goal(robot, 26)
+	goal(robot, 27)
+	goal(robot, 28)
+	goal(robot, 29)
+	goal(robot, 30)
+	goal(robot, 31)
+	goal(robot, 37)
+	goal(robot, 40)
+	goal(robot, 45)
+	goal(robot, 50)
+	goal(robot, 54)
+	goal(robot, 6)
+	goal(robot, 60)
+	goal(robot, 64)
+	goal(robot, 7)
+	goal(robot, 70)
+	goal(robot, 75)
+	goal(robot, 8)
+	goal(robot, 80)
+	goal(robot, 87)
+	goal(robot, 9)
+	goal(robot, 90)
+
+---
+
+statics:
+	add1col(1, 2)
+	add1col(2, 3)
+	add1row(1, 2)
+	add1row(2, 3)
+	add1row(3, 4)
+	add1row(4, 5)
+	add2col(1, 3)
+	add2row(1, 3)
+	add2row(2, 4)
+	add2row(3, 5)
+	col(1)
+	col(2)
+	col(3)
+	input_move(robot, 1, 1, 2, 3)
+	input_move(robot, 1, 1, 3, 2)
+	input_move(robot, 1, 2, 3, 1)
+	input_move(robot, 1, 2, 3, 3)
+	input_move(robot, 1, 3, 2, 1)
+	input_move(robot, 1, 3, 3, 2)
+	input_move(robot, 2, 1, 1, 3)
+	input_move(robot, 2, 1, 3, 3)
+	input_move(robot, 2, 1, 4, 2)
+	input_move(robot, 2, 2, 4, 1)
+	input_move(robot, 2, 2, 4, 3)
+	input_move(robot, 2, 3, 1, 1)
+	input_move(robot, 2, 3, 3, 1)
+	input_move(robot, 2, 3, 4, 2)
+	input_move(robot, 3, 1, 1, 2)
+	input_move(robot, 3, 1, 2, 3)
+	input_move(robot, 3, 1, 4, 3)
+	input_move(robot, 3, 1, 5, 2)
+	input_move(robot, 3, 2, 1, 1)
+	input_move(robot, 3, 2, 1, 3)
+	input_move(robot, 3, 2, 5, 1)
+	input_move(robot, 3, 2, 5, 3)
+	input_move(robot, 3, 3, 1, 2)
+	input_move(robot, 3, 3, 2, 1)
+	input_move(robot, 3, 3, 4, 1)
+	input_move(robot, 3, 3, 5, 2)
+	input_move(robot, 4, 1, 2, 2)
+	input_move(robot, 4, 1, 3, 3)
+	input_move(robot, 4, 1, 5, 3)
+	input_move(robot, 4, 2, 2, 1)
+	input_move(robot, 4, 2, 2, 3)
+	input_move(robot, 4, 3, 2, 2)
+	input_move(robot, 4, 3, 3, 1)
+	input_move(robot, 4, 3, 5, 1)
+	input_move(robot, 5, 1, 3, 2)
+	input_move(robot, 5, 1, 4, 3)
+	input_move(robot, 5, 2, 3, 1)
+	input_move(robot, 5, 2, 3, 3)
+	input_move(robot, 5, 3, 3, 2)
+	input_move(robot, 5, 3, 4, 1)
+	knightmove(1, 1, 2, 3)
+	knightmove(1, 1, 3, 2)
+	knightmove(1, 2, 3, 1)
+	knightmove(1, 2, 3, 3)
+	knightmove(1, 3, 2, 1)
+	knightmove(1, 3, 3, 2)
+	knightmove(2, 1, 1, 3)
+	knightmove(2, 1, 3, 3)
+	knightmove(2, 1, 4, 2)
+	knightmove(2, 2, 4, 1)
+	knightmove(2, 2, 4, 3)
+	knightmove(2, 3, 1, 1)
+	knightmove(2, 3, 3, 1)
+	knightmove(2, 3, 4, 2)
+	knightmove(3, 1, 1, 2)
+	knightmove(3, 1, 2, 3)
+	knightmove(3, 1, 4, 3)
+	knightmove(3, 1, 5, 2)
+	knightmove(3, 2, 1, 1)
+	knightmove(3, 2, 1, 3)
+	knightmove(3, 2, 5, 1)
+	knightmove(3, 2, 5, 3)
+	knightmove(3, 3, 1, 2)
+	knightmove(3, 3, 2, 1)
+	knightmove(3, 3, 4, 1)
+	knightmove(3, 3, 5, 2)
+	knightmove(4, 1, 2, 2)
+	knightmove(4, 1, 3, 3)
+	knightmove(4, 1, 5, 3)
+	knightmove(4, 2, 2, 1)
+	knightmove(4, 2, 2, 3)
+	knightmove(4, 3, 2, 2)
+	knightmove(4, 3, 3, 1)
+	knightmove(4, 3, 5, 1)
+	knightmove(5, 1, 3, 2)
+	knightmove(5, 1, 4, 3)
+	knightmove(5, 2, 3, 1)
+	knightmove(5, 2, 3, 3)
+	knightmove(5, 3, 3, 2)
+	knightmove(5, 3, 4, 1)
+	piece(blank)
+	piece(knight)
+	piece(pawn)
+	role(robot)
+	row(1)
+	row(2)
+	row(3)
+	row(4)
+	row(5)
+	scoremap(0, 0)
+	scoremap(1, 1)
+	scoremap(10, 54)
+	scoremap(11, 64)
+	scoremap(12, 75)
+	scoremap(13, 87)
+	scoremap(14, 100)
+	scoremap(2, 3)
+	scoremap(3, 7)
+	scoremap(4, 11)
+	scoremap(5, 16)
+	scoremap(6, 22)
+	scoremap(7, 29)
+	scoremap(8, 37)
+	scoremap(9, 45)
+	succ(0, 1)
+	succ(1, 2)
+	succ(10, 11)
+	succ(11, 12)
+	succ(12, 13)
+	succ(13, 14)
+	succ(14, 15)
+	succ(15, 16)
+	succ(2, 3)
+	succ(3, 4)
+	succ(4, 5)
+	succ(5, 6)
+	succ(6, 7)
+	succ(7, 8)
+	succ(8, 9)
+	succ(9, 10)
+
+---
+
+background:
+	true_captures(4)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, knight)
+	true_cell(5, 1, blank)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(8)
+
+---
+
+positives:
+	goal(robot, 11)
+
+---
+
+background:
+	true_captures(8)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, blank)
+	true_cell(2, 1, knight)
+	true_cell(2, 2, blank)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, blank)
+	true_cell(5, 1, blank)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(12)
+
+---
+
+positives:
+	goal(robot, 37)
+
+---
+
+background:
+	true_captures(6)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, blank)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, pawn)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, blank)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, knight)
+	true_cell(5, 3, pawn)
+	true_step(16)
+
+---
+
+positives:
+	goal(robot, 22)
+
+---
+
+background:
+	true_captures(5)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, blank)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, knight)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, pawn)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(8)
+
+---
+
+positives:
+	goal(robot, 16)
+
+---
+
+background:
+	true_captures(4)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, knight)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(5)
+
+---
+
+positives:
+	goal(robot, 11)
+
+---
+
+background:
+	true_captures(9)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, blank)
+	true_cell(1, 3, blank)
+	true_cell(2, 1, blank)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, knight)
+	true_cell(5, 1, blank)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(16)
+
+---
+
+positives:
+	goal(robot, 45)
+
+---
+
+background:
+	true_captures(6)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, blank)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, blank)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, knight)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, pawn)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, blank)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(14)
+
+---
+
+positives:
+	goal(robot, 22)
+
+---
+
+background:
+	true_captures(4)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, knight)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, blank)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(10)
+
+---
+
+positives:
+	goal(robot, 11)
+
+---
+
+background:
+	true_captures(8)
+	true_cell(1, 1, knight)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, blank)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, blank)
+	true_cell(5, 1, blank)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(15)
+
+---
+
+positives:
+	goal(robot, 37)
+
+---
+
+background:
+	true_captures(9)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, blank)
+	true_cell(1, 3, blank)
+	true_cell(2, 1, blank)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, knight)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, blank)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, blank)
+	true_cell(5, 3, pawn)
+	true_step(16)
+
+---
+
+positives:
+	goal(robot, 45)
+
+---
+
+background:
+	true_captures(6)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, knight)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(13)
+
+---
+
+positives:
+	goal(robot, 22)
+
+---
+
+background:
+	true_captures(3)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, knight)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, blank)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(6)
+
+---
+
+positives:
+	goal(robot, 7)
+
+---
+
+background:
+	true_captures(4)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, knight)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(10)
+
+---
+
+positives:
+	goal(robot, 11)
+
+---
+
+background:
+	true_captures(4)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, blank)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, knight)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(7)
+
+---
+
+positives:
+	goal(robot, 11)
+
+---
+
+background:
+	true_captures(6)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, blank)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, knight)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, pawn)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, blank)
+	true_cell(5, 3, pawn)
+	true_step(8)
+
+---
+
+positives:
+	goal(robot, 22)
+
+---
+
+background:
+	true_captures(7)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, blank)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, knight)
+	true_cell(5, 1, blank)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(16)
+
+---
+
+positives:
+	goal(robot, 29)
+
+---
+
+background:
+	true_captures(5)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, blank)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, knight)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(11)
+
+---
+
+positives:
+	goal(robot, 16)
+
+---
+
+background:
+	true_captures(6)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, blank)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, pawn)
+	true_cell(3, 3, knight)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, blank)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, blank)
+	true_cell(5, 3, pawn)
+	true_step(15)
+
+---
+
+positives:
+	goal(robot, 22)
+
+---
+
+background:
+	true_captures(7)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, blank)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, blank)
+	true_cell(5, 1, blank)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, knight)
+	true_step(13)
+
+---
+
+positives:
+	goal(robot, 29)
+
+---
+
+background:
+	true_captures(5)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, blank)
+	true_cell(2, 1, knight)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, pawn)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, blank)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(16)
+
+---
+
+positives:
+	goal(robot, 16)
+
+---
+
+background:
+	true_captures(2)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, knight)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(6)
+
+---
+
+positives:
+	goal(robot, 3)
+
+---
+
+background:
+	true_captures(5)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, blank)
+	true_cell(2, 1, knight)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, blank)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(16)
+
+---
+
+positives:
+	goal(robot, 16)
+
+---
+
+background:
+	true_captures(4)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, blank)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, knight)
+	true_cell(3, 2, pawn)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, blank)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(7)
+
+---
+
+positives:
+	goal(robot, 11)
+
+---
+
+background:
+	true_captures(5)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, blank)
+	true_cell(2, 1, blank)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, knight)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, blank)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(8)
+
+---
+
+positives:
+	goal(robot, 16)
+
+---
+
+background:
+	true_captures(7)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, blank)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, knight)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, blank)
+	true_cell(5, 3, blank)
+	true_step(13)
+
+---
+
+positives:
+	goal(robot, 29)
+
+---
+
+background:
+	true_captures(4)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, blank)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, knight)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, blank)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(10)
+
+---
+
+positives:
+	goal(robot, 11)
+
+---
+
+background:
+	true_captures(6)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, blank)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, pawn)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, blank)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, knight)
+	true_cell(5, 3, pawn)
+	true_step(14)
+
+---
+
+positives:
+	goal(robot, 22)
+
+---
+
+background:
+	true_captures(7)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, blank)
+	true_cell(1, 3, blank)
+	true_cell(2, 1, blank)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, knight)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(10)
+
+---
+
+positives:
+	goal(robot, 29)
+
+---
+
+background:
+	true_captures(4)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, pawn)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, knight)
+	true_cell(4, 3, blank)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(13)
+
+---
+
+positives:
+	goal(robot, 11)
+
+---
+
+background:
+	true_captures(4)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, knight)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, pawn)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, blank)
+	true_cell(4, 3, blank)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(12)
+
+---
+
+positives:
+	goal(robot, 11)
+
+---
+
+background:
+	true_captures(4)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, blank)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, knight)
+	true_step(7)
+
+---
+
+positives:
+	goal(robot, 11)
+
+---
+
+background:
+	true_captures(6)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, blank)
+	true_cell(2, 1, knight)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, blank)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, blank)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(10)
+
+---
+
+positives:
+	goal(robot, 22)
+
+---
+
+background:
+	true_captures(4)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, knight)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, blank)
+	true_cell(5, 1, blank)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(5)
+
+---
+
+positives:
+	goal(robot, 11)
+
+---
+
+background:
+	true_captures(7)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, blank)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, knight)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, blank)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(14)
+
+---
+
+positives:
+	goal(robot, 29)
+
+---
+
+background:
+	true_captures(6)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, blank)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, knight)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, blank)
+	true_cell(5, 1, blank)
+	true_cell(5, 2, blank)
+	true_cell(5, 3, pawn)
+	true_step(15)
+
+---
+
+positives:
+	goal(robot, 22)
+
+---
+
+background:
+	true_captures(8)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, knight)
+	true_cell(2, 1, blank)
+	true_cell(2, 2, blank)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, blank)
+	true_cell(5, 1, blank)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(13)
+
+---
+
+positives:
+	goal(robot, 37)
+
+---
+
+background:
+	true_captures(4)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, knight)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(9)
+
+---
+
+positives:
+	goal(robot, 11)
+
+---
+
+background:
+	true_captures(3)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, knight)
+	true_cell(2, 1, blank)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(9)
+
+---
+
+positives:
+	goal(robot, 7)
+
+---
+
+background:
+	true_captures(5)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, knight)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, blank)
+	true_cell(5, 1, blank)
+	true_cell(5, 2, blank)
+	true_cell(5, 3, pawn)
+	true_step(9)
+
+---
+
+positives:
+	goal(robot, 16)
+
+---
+
+background:
+	true_captures(2)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, knight)
+	true_step(7)
+
+---
+
+positives:
+	goal(robot, 3)
+
+---
+
+background:
+	true_captures(7)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, knight)
+	true_cell(2, 2, blank)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, pawn)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, blank)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(12)
+
+---
+
+positives:
+	goal(robot, 29)
+
+---
+
+background:
+	true_captures(6)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, blank)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, knight)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, blank)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(11)
+
+---
+
+positives:
+	goal(robot, 22)
+
+---
+
+background:
+	true_captures(4)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, knight)
+	true_cell(3, 2, pawn)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, blank)
+	true_cell(4, 3, blank)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(7)
+
+---
+
+positives:
+	goal(robot, 11)
+
+---
+
+background:
+	true_captures(5)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, blank)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, knight)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, blank)
+	true_cell(5, 1, blank)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(8)
+
+---
+
+positives:
+	goal(robot, 16)
+
+---
+
+background:
+	true_captures(5)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, blank)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, knight)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, blank)
+	true_cell(5, 1, blank)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(9)
+
+---
+
+positives:
+	goal(robot, 16)
+
+---
+
+background:
+	true_captures(3)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, knight)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(11)
+
+---
+
+positives:
+	goal(robot, 7)
+
+---
+
+background:
+	true_captures(4)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, knight)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, pawn)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, blank)
+	true_cell(5, 3, pawn)
+	true_step(6)
+
+---
+
+positives:
+	goal(robot, 11)
+
+---
+
+background:
+	true_captures(4)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, pawn)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, knight)
+	true_cell(5, 3, pawn)
+	true_step(10)
+
+---
+
+positives:
+	goal(robot, 11)
+
+---
+
+background:
+	true_captures(8)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, blank)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, blank)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, knight)
+	true_step(13)
+
+---
+
+positives:
+	goal(robot, 37)
+
+---
+
+background:
+	true_captures(8)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, blank)
+	true_cell(2, 1, knight)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, blank)
+	true_cell(5, 3, blank)
+	true_step(16)
+
+---
+
+positives:
+	goal(robot, 37)
+
+---
+
+background:
+	true_captures(7)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, blank)
+	true_cell(2, 1, blank)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, knight)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, blank)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(13)
+
+---
+
+positives:
+	goal(robot, 29)
+
+---
+
+background:
+	true_captures(8)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, blank)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, knight)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(11)
+
+---
+
+positives:
+	goal(robot, 37)
+
+---
+
+background:
+	true_captures(4)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, blank)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, knight)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(12)
+
+---
+
+positives:
+	goal(robot, 11)
+
+---
+
+background:
+	true_captures(8)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, blank)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, blank)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, knight)
+	true_cell(4, 3, blank)
+	true_cell(5, 1, blank)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(9)
+
+---
+
+positives:
+	goal(robot, 37)
+
+---
+
+background:
+	true_captures(5)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, blank)
+	true_cell(5, 1, knight)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(13)
+
+---
+
+positives:
+	goal(robot, 16)
+
+---
+
+background:
+	true_captures(1)
+	true_cell(1, 1, knight)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(5)
+
+---
+
+positives:
+	goal(robot, 1)
+
+---
+
+background:
+	true_captures(6)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, knight)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, pawn)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, blank)
+	true_cell(4, 3, blank)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(13)
+
+---
+
+positives:
+	goal(robot, 22)
+
+---
+
+background:
+	true_captures(7)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, blank)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, knight)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(16)
+
+---
+
+positives:
+	goal(robot, 29)
+
+---
+
+background:
+	true_captures(7)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, blank)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, pawn)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, knight)
+	true_cell(4, 2, blank)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, blank)
+	true_cell(5, 3, pawn)
+	true_step(16)
+
+---
+
+positives:
+	goal(robot, 29)
+
+---
+
+background:
+	true_captures(7)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, knight)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, blank)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(15)
+
+---
+
+positives:
+	goal(robot, 29)
+
+---
+
+background:
+	true_captures(4)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, blank)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, pawn)
+	true_cell(3, 3, knight)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, blank)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(7)
+
+---
+
+positives:
+	goal(robot, 11)
+
+---
+
+background:
+	true_captures(9)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, blank)
+	true_cell(2, 1, blank)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, blank)
+	true_cell(5, 1, knight)
+	true_cell(5, 2, blank)
+	true_cell(5, 3, blank)
+	true_step(13)
+
+---
+
+positives:
+	goal(robot, 45)
+
+---
+
+background:
+	true_captures(2)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, knight)
+	true_step(5)
+
+---
+
+positives:
+	goal(robot, 3)
+
+---
+
+background:
+	true_captures(7)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, blank)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, knight)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(12)
+
+---
+
+positives:
+	goal(robot, 29)
+
+---
+
+background:
+	true_captures(4)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, blank)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, knight)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(10)
+
+---
+
+positives:
+	goal(robot, 11)
+
+---
+
+background:
+	true_captures(3)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, knight)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, blank)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(8)
+
+---
+
+positives:
+	goal(robot, 7)
+
+---
+
+background:
+	true_captures(8)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, blank)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, knight)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, blank)
+	true_cell(5, 1, blank)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(13)
+
+---
+
+positives:
+	goal(robot, 37)
+
+---
+
+background:
+	true_captures(7)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, blank)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, knight)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, blank)
+	true_cell(5, 2, blank)
+	true_cell(5, 3, blank)
+	true_step(14)
+
+---
+
+positives:
+	goal(robot, 29)
+
+---
+
+background:
+	true_captures(8)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, blank)
+	true_cell(1, 3, blank)
+	true_cell(2, 1, blank)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, blank)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, knight)
+	true_cell(5, 3, blank)
+	true_step(16)
+
+---
+
+positives:
+	goal(robot, 37)
+
+---
+
+background:
+	true_captures(3)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, blank)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, knight)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, pawn)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, blank)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(6)
+
+---
+
+positives:
+	goal(robot, 7)
+
+---
+
+background:
+	true_captures(7)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, blank)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, blank)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, blank)
+	true_cell(5, 1, knight)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(11)
+
+---
+
+positives:
+	goal(robot, 29)
+
+---
+
+background:
+	true_captures(4)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, knight)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, blank)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(7)
+
+---
+
+positives:
+	goal(robot, 11)
+
+---
+
+background:
+	true_captures(5)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, blank)
+	true_cell(5, 3, knight)
+	true_step(15)
+
+---
+
+positives:
+	goal(robot, 16)
+
+---
+
+background:
+	true_captures(5)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, knight)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, blank)
+	true_cell(5, 1, blank)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(9)
+
+---
+
+positives:
+	goal(robot, 16)
+
+---
+
+background:
+	true_captures(3)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, pawn)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, knight)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(4)
+
+---
+
+positives:
+	goal(robot, 7)
+
+---
+
+background:
+	true_captures(4)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, knight)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(7)
+
+---
+
+positives:
+	goal(robot, 11)
+
+---
+
+background:
+	true_captures(7)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, blank)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, blank)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, knight)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, blank)
+	true_cell(5, 1, blank)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(15)
+
+---
+
+positives:
+	goal(robot, 29)
+
+---
+
+background:
+	true_captures(10)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, blank)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, knight)
+	true_cell(5, 1, blank)
+	true_cell(5, 2, blank)
+	true_cell(5, 3, blank)
+	true_step(16)
+
+---
+
+positives:
+	goal(robot, 54)
+
+---
+
+background:
+	true_captures(2)
+	true_cell(1, 1, knight)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, pawn)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, blank)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(5)
+
+---
+
+positives:
+	goal(robot, 3)
+
+---
+
+background:
+	true_captures(7)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, blank)
+	true_cell(2, 1, blank)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, knight)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, blank)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(12)
+
+---
+
+positives:
+	goal(robot, 29)
+
+---
+
+background:
+	true_captures(8)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, blank)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, knight)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, blank)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(13)
+
+---
+
+positives:
+	goal(robot, 37)
+
+---
+
+background:
+	true_captures(8)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, blank)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, blank)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, knight)
+	true_cell(5, 1, blank)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(14)
+
+---
+
+positives:
+	goal(robot, 37)
+
+---
+
+background:
+	true_captures(4)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, knight)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, blank)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(8)
+
+---
+
+positives:
+	goal(robot, 11)
+
+---
+
+background:
+	true_captures(7)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, blank)
+	true_cell(1, 3, blank)
+	true_cell(2, 1, knight)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, blank)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(14)
+
+---
+
+positives:
+	goal(robot, 29)
+
+---
+
+background:
+	true_captures(4)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, knight)
+	true_cell(2, 1, blank)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, pawn)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, blank)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(5)
+
+---
+
+positives:
+	goal(robot, 11)
+
+---
+
+background:
+	true_captures(9)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, blank)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, blank)
+	true_cell(5, 1, blank)
+	true_cell(5, 2, knight)
+	true_cell(5, 3, blank)
+	true_step(12)
+
+---
+
+positives:
+	goal(robot, 45)
+
+---
+
+background:
+	true_captures(3)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, pawn)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, knight)
+	true_cell(5, 3, pawn)
+	true_step(6)
+
+---
+
+positives:
+	goal(robot, 7)
+
+---
+
+background:
+	true_captures(8)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, knight)
+	true_cell(1, 3, blank)
+	true_cell(2, 1, blank)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, blank)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(16)
+
+---
+
+positives:
+	goal(robot, 37)
+
+---
+
+background:
+	true_captures(5)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, knight)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, blank)
+	true_cell(5, 1, blank)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(9)
+
+---
+
+positives:
+	goal(robot, 16)
+
+---
+
+background:
+	true_captures(4)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, pawn)
+	true_cell(3, 3, knight)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, blank)
+	true_cell(5, 3, pawn)
+	true_step(7)
+
+---
+
+positives:
+	goal(robot, 11)
+
+---
+
+background:
+	true_captures(5)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, blank)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, pawn)
+	true_cell(3, 3, knight)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, blank)
+	true_cell(5, 3, pawn)
+	true_step(11)
+
+---
+
+positives:
+	goal(robot, 16)
+
+---
+
+background:
+	true_captures(6)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, blank)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, pawn)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, blank)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, knight)
+	true_step(11)
+
+---
+
+positives:
+	goal(robot, 22)
+
+---
+
+background:
+	true_captures(6)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, blank)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, blank)
+	true_cell(5, 1, knight)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(15)
+
+---
+
+positives:
+	goal(robot, 22)
+
+---
+
+background:
+	true_captures(6)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, blank)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, knight)
+	true_cell(3, 2, pawn)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, blank)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, blank)
+	true_cell(5, 3, pawn)
+	true_step(15)
+
+---
+
+positives:
+	goal(robot, 22)
+
+---
+
+background:
+	true_captures(5)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, blank)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, pawn)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, knight)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, blank)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(8)
+
+---
+
+positives:
+	goal(robot, 16)
+
+---
+
+background:
+	true_captures(2)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, knight)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(10)
+
+---
+
+positives:
+	goal(robot, 3)
+
+---
+
+background:
+	true_captures(2)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, blank)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, knight)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(4)
+
+---
+
+positives:
+	goal(robot, 3)
+
+---
+
+background:
+	true_captures(4)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, pawn)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, knight)
+	true_cell(5, 3, pawn)
+	true_step(8)
+
+---
+
+positives:
+	goal(robot, 11)
+
+---
+
+background:
+	true_captures(3)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, knight)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, blank)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(7)
+
+---
+
+positives:
+	goal(robot, 7)
+
+---
+
+background:
+	true_captures(6)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, knight)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, blank)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, blank)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(10)
+
+---
+
+positives:
+	goal(robot, 22)
+
+---
+
+background:
+	true_captures(9)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, blank)
+	true_cell(2, 1, blank)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, knight)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, blank)
+	true_cell(5, 1, blank)
+	true_cell(5, 2, blank)
+	true_cell(5, 3, blank)
+	true_step(14)
+
+---
+
+positives:
+	goal(robot, 45)
+
+---
+
+background:
+	true_captures(4)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, knight)
+	true_cell(3, 2, pawn)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, blank)
+	true_cell(5, 3, pawn)
+	true_step(11)
+
+---
+
+positives:
+	goal(robot, 11)
+
+---
+
+background:
+	true_captures(4)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, knight)
+	true_cell(5, 1, blank)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(6)
+
+---
+
+positives:
+	goal(robot, 11)
+
+---
+
+background:
+	true_captures(8)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, blank)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, blank)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, knight)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(15)
+
+---
+
+positives:
+	goal(robot, 37)
+
+---
+
+background:
+	true_captures(9)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, blank)
+	true_cell(2, 1, knight)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, blank)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, blank)
+	true_cell(5, 3, pawn)
+	true_step(16)
+
+---
+
+positives:
+	goal(robot, 45)
+
+---
+
+background:
+	true_captures(5)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, blank)
+	true_cell(2, 1, blank)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, pawn)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, knight)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(13)
+
+---
+
+positives:
+	goal(robot, 16)
+
+---
+
+background:
+	true_captures(7)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, blank)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, knight)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, blank)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(12)
+
+---
+
+positives:
+	goal(robot, 29)
+
+---
+
+background:
+	true_captures(4)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, knight)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, blank)
+	true_cell(5, 3, pawn)
+	true_step(7)
+
+---
+
+positives:
+	goal(robot, 11)
+
+---
+
+background:
+	true_captures(10)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, blank)
+	true_cell(1, 3, knight)
+	true_cell(2, 1, blank)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, blank)
+	true_cell(4, 3, blank)
+	true_cell(5, 1, blank)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(15)
+
+---
+
+positives:
+	goal(robot, 54)
+
+---
+
+background:
+	true_captures(6)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, blank)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, blank)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, pawn)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, knight)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(13)
+
+---
+
+positives:
+	goal(robot, 22)
+
+---
+
+background:
+	true_captures(5)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, blank)
+	true_cell(2, 1, blank)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, knight)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(6)
+
+---
+
+positives:
+	goal(robot, 16)
+
+---
+
+background:
+	true_captures(3)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, knight)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(6)
+
+---
+
+positives:
+	goal(robot, 7)
+
+---
+
+background:
+	true_captures(5)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, knight)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(8)
+
+---
+
+positives:
+	goal(robot, 16)
+
+---
+
+background:
+	true_captures(4)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, blank)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, knight)
+	true_cell(5, 1, blank)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(8)
+
+---
+
+positives:
+	goal(robot, 11)
+
+---
+
+background:
+	true_captures(3)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, knight)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(5)
+
+---
+
+positives:
+	goal(robot, 7)
+
+---
+
+background:
+	true_captures(7)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, blank)
+	true_cell(2, 1, blank)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, knight)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, blank)
+	true_cell(4, 3, blank)
+	true_cell(5, 1, blank)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(13)
+
+---
+
+positives:
+	goal(robot, 29)
+
+---
+
+background:
+	true_captures(4)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, blank)
+	true_cell(2, 1, knight)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(6)
+
+---
+
+positives:
+	goal(robot, 11)
+
+---
+
+background:
+	true_captures(5)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, blank)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, knight)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, blank)
+	true_cell(5, 3, pawn)
+	true_step(10)
+
+---
+
+positives:
+	goal(robot, 16)
+
+---
+
+background:
+	true_captures(9)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, knight)
+	true_cell(1, 3, blank)
+	true_cell(2, 1, blank)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, blank)
+	true_cell(4, 3, blank)
+	true_cell(5, 1, blank)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(16)
+
+---
+
+positives:
+	goal(robot, 45)
+
+---
+
+background:
+	true_captures(6)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, blank)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, blank)
+	true_cell(5, 1, knight)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(9)
+
+---
+
+positives:
+	goal(robot, 22)
+
+---
+
+background:
+	true_captures(2)
+	true_cell(1, 1, knight)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, blank)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(5)
+
+---
+
+positives:
+	goal(robot, 3)
+
+---
+
+background:
+	true_captures(3)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, knight)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(8)
+
+---
+
+positives:
+	goal(robot, 7)
+
+---
+
+background:
+	true_captures(6)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, blank)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, blank)
+	true_cell(5, 1, knight)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(11)
+
+---
+
+positives:
+	goal(robot, 22)
+
+---
+
+background:
+	true_captures(8)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, blank)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, knight)
+	true_cell(4, 3, blank)
+	true_cell(5, 1, blank)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(11)
+
+---
+
+positives:
+	goal(robot, 37)
+
+---
+
+background:
+	true_captures(4)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, blank)
+	true_cell(2, 1, blank)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, knight)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(8)
+
+---
+
+positives:
+	goal(robot, 11)
+
+---
+
+background:
+	true_captures(6)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, blank)
+	true_cell(2, 1, blank)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, knight)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, blank)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(12)
+
+---
+
+positives:
+	goal(robot, 22)
+
+---
+
+background:
+	true_captures(8)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, blank)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, blank)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, knight)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(14)
+
+---
+
+positives:
+	goal(robot, 37)
+
+---
+
+background:
+	true_captures(6)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, blank)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, knight)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, blank)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(9)
+
+---
+
+positives:
+	goal(robot, 22)
+
+---
+
+background:
+	true_captures(4)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, blank)
+	true_cell(2, 1, blank)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, knight)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(13)
+
+---
+
+positives:
+	goal(robot, 11)
+
+---
+
+background:
+	true_captures(6)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, blank)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, knight)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, blank)
+	true_cell(5, 1, blank)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(16)
+
+---
+
+positives:
+	goal(robot, 22)
+
+---
+
+background:
+	true_captures(7)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, knight)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, blank)
+	true_cell(5, 1, blank)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(15)
+
+---
+
+positives:
+	goal(robot, 29)
+
+---
+
+background:
+	true_captures(3)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, knight)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, pawn)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(8)
+
+---
+
+positives:
+	goal(robot, 7)
+
+---
+
+background:
+	true_captures(6)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, blank)
+	true_cell(1, 3, blank)
+	true_cell(2, 1, blank)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, knight)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, blank)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(13)
+
+---
+
+positives:
+	goal(robot, 22)
+
+---
+
+background:
+	true_captures(4)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, knight)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(11)
+
+---
+
+positives:
+	goal(robot, 11)
+
+---
+
+background:
+	true_captures(6)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, knight)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, pawn)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(14)
+
+---
+
+positives:
+	goal(robot, 22)
+
+---
+
+background:
+	true_captures(4)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, pawn)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, blank)
+	true_cell(4, 3, knight)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(6)
+
+---
+
+positives:
+	goal(robot, 11)
+
+---
+
+background:
+	true_captures(1)
+	true_cell(1, 1, knight)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, pawn)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(5)
+
+---
+
+positives:
+	goal(robot, 1)
+
+---
+
+background:
+	true_captures(6)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, knight)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, pawn)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, blank)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(13)
+
+---
+
+positives:
+	goal(robot, 22)
+
+---
+
+background:
+	true_captures(4)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, knight)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(9)
+
+---
+
+positives:
+	goal(robot, 11)
+
+---
+
+background:
+	true_captures(5)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, pawn)
+	true_cell(3, 3, knight)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, blank)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, blank)
+	true_cell(5, 3, pawn)
+	true_step(7)
+
+---
+
+positives:
+	goal(robot, 16)
+
+---
+
+background:
+	true_captures(9)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, blank)
+	true_cell(2, 1, blank)
+	true_cell(2, 2, blank)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, knight)
+	true_cell(4, 2, blank)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(14)
+
+---
+
+positives:
+	goal(robot, 45)
+
+---
+
+background:
+	true_captures(6)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, blank)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, knight)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, blank)
+	true_cell(5, 1, blank)
+	true_cell(5, 2, blank)
+	true_cell(5, 3, pawn)
+	true_step(11)
+
+---
+
+positives:
+	goal(robot, 22)
+
+---
+
+background:
+	true_captures(10)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, blank)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, blank)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, knight)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, blank)
+	true_cell(5, 1, blank)
+	true_cell(5, 2, blank)
+	true_cell(5, 3, blank)
+	true_step(15)
+
+---
+
+positives:
+	goal(robot, 54)
+
+---
+
+background:
+	true_captures(7)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, blank)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, knight)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(14)
+
+---
+
+positives:
+	goal(robot, 29)
+
+---
+
+background:
+	true_captures(4)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, knight)
+	true_cell(5, 1, blank)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(10)
+
+---
+
+positives:
+	goal(robot, 11)
+
+---
+
+background:
+	true_captures(5)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, blank)
+	true_cell(5, 3, knight)
+	true_step(9)
+
+---
+
+positives:
+	goal(robot, 16)
+
+---
+
+background:
+	true_captures(8)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, blank)
+	true_cell(1, 3, blank)
+	true_cell(2, 1, blank)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, knight)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(11)
+
+---
+
+positives:
+	goal(robot, 37)
+
+---
+
+background:
+	true_captures(2)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, knight)
+	true_cell(3, 2, pawn)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(3)
+
+---
+
+positives:
+	goal(robot, 3)
+
+---
+
+background:
+	true_captures(2)
+	true_cell(1, 1, knight)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, pawn)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(7)
+
+---
+
+positives:
+	goal(robot, 3)
+
+---
+
+background:
+	true_captures(6)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, knight)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, pawn)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, blank)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, blank)
+	true_cell(5, 3, pawn)
+	true_step(12)
+
+---
+
+positives:
+	goal(robot, 22)
+
+---
+
+background:
+	true_captures(6)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, blank)
+	true_cell(2, 1, knight)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, blank)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(14)
+
+---
+
+positives:
+	goal(robot, 22)
+
+---
+
+background:
+	true_captures(8)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, blank)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, blank)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, knight)
+	true_step(15)
+
+---
+
+positives:
+	goal(robot, 37)
+
+---
+
+background:
+	true_captures(5)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, blank)
+	true_cell(2, 1, blank)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, pawn)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, knight)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(15)
+
+---
+
+positives:
+	goal(robot, 16)
+
+---
+
+background:
+	true_captures(3)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, pawn)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, knight)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(6)
+
+---
+
+positives:
+	goal(robot, 7)
+
+---
+
+background:
+	true_captures(6)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, blank)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, knight)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, blank)
+	true_cell(5, 1, blank)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(9)
+
+---
+
+positives:
+	goal(robot, 22)
+
+---
+
+background:
+	true_captures(4)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, knight)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, blank)
+	true_cell(5, 1, blank)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(8)
+
+---
+
+positives:
+	goal(robot, 11)
+
+---
+
+background:
+	true_captures(6)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, knight)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, pawn)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, blank)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, blank)
+	true_cell(5, 3, pawn)
+	true_step(14)
+
+---
+
+positives:
+	goal(robot, 22)
+
+---
+
+background:
+	true_captures(6)
+	true_cell(1, 1, knight)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, blank)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, blank)
+	true_cell(5, 1, blank)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(13)
+
+---
+
+positives:
+	goal(robot, 22)
+
+---
+
+background:
+	true_captures(5)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, blank)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, knight)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, blank)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(10)
+
+---
+
+positives:
+	goal(robot, 16)
+
+---
+
+background:
+	true_captures(4)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, knight)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, pawn)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, blank)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(5)
+
+---
+
+positives:
+	goal(robot, 11)
+
+---
+
+background:
+	true_captures(8)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, blank)
+	true_cell(2, 1, knight)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, blank)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, blank)
+	true_cell(5, 3, pawn)
+	true_step(10)
+
+---
+
+positives:
+	goal(robot, 37)
+
+---
+
+background:
+	true_captures(4)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, blank)
+	true_cell(2, 1, knight)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(12)
+
+---
+
+positives:
+	goal(robot, 11)
+
+---
+
+background:
+	true_captures(7)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, knight)
+	true_cell(2, 1, blank)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, blank)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, blank)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(11)
+
+---
+
+positives:
+	goal(robot, 29)
+
+---
+
+background:
+	true_captures(8)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, knight)
+	true_cell(1, 3, blank)
+	true_cell(2, 1, blank)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, blank)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(14)
+
+---
+
+positives:
+	goal(robot, 37)
+
+---
+
+background:
+	true_captures(9)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, blank)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, knight)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, blank)
+	true_cell(4, 3, blank)
+	true_cell(5, 1, blank)
+	true_cell(5, 2, blank)
+	true_cell(5, 3, pawn)
+	true_step(14)
+
+---
+
+positives:
+	goal(robot, 45)
+
+---
+
+background:
+	true_captures(4)
+	true_cell(1, 1, knight)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, blank)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(13)
+
+---
+
+positives:
+	goal(robot, 11)
+
+---
+
+background:
+	true_captures(4)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, blank)
+	true_cell(2, 1, knight)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(8)
+
+---
+
+positives:
+	goal(robot, 11)
+
+---
+
+background:
+	true_captures(5)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, knight)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, blank)
+	true_cell(5, 3, blank)
+	true_step(10)
+
+---
+
+positives:
+	goal(robot, 16)
+
+---
+
+background:
+	true_captures(6)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, blank)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, pawn)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, knight)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(10)
+
+---
+
+positives:
+	goal(robot, 22)
+
+---
+
+background:
+	true_captures(10)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, blank)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, blank)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, knight)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, blank)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, blank)
+	true_cell(5, 1, blank)
+	true_cell(5, 2, blank)
+	true_cell(5, 3, pawn)
+	true_step(15)
+
+---
+
+positives:
+	goal(robot, 54)
+
+---
+
+background:
+	true_captures(7)
+	true_cell(1, 1, knight)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, blank)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, blank)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, blank)
+	true_cell(5, 1, blank)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, blank)
+	true_step(15)
+
+---
+
+positives:
+	goal(robot, 29)
+
+---
+
+background:
+	true_captures(3)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, knight)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(5)
+
+---
+
+positives:
+	goal(robot, 7)
+
+---
+
+background:
+	true_captures(5)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, knight)
+	true_cell(2, 1, blank)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, blank)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(13)
+
+---
+
+positives:
+	goal(robot, 16)
+
+---
+
+background:
+	true_captures(2)
+	true_cell(1, 1, blank)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, pawn)
+	true_cell(3, 1, pawn)
+	true_cell(3, 2, blank)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, knight)
+	true_cell(5, 2, pawn)
+	true_cell(5, 3, pawn)
+	true_step(5)
+
+---
+
+positives:
+	goal(robot, 3)
+
+---
+
+background:
+	true_captures(3)
+	true_cell(1, 1, knight)
+	true_cell(1, 2, pawn)
+	true_cell(1, 3, pawn)
+	true_cell(2, 1, pawn)
+	true_cell(2, 2, pawn)
+	true_cell(2, 3, blank)
+	true_cell(3, 1, blank)
+	true_cell(3, 2, pawn)
+	true_cell(3, 3, pawn)
+	true_cell(4, 1, pawn)
+	true_cell(4, 2, pawn)
+	true_cell(4, 3, pawn)
+	true_cell(5, 1, pawn)
+	true_cell(5, 2, blank)
+	true_cell(5, 3, pawn)
+	true_step(9)
+
+---
+
+positives:
+	goal(robot, 7)
+
+---
+

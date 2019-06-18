@@ -1,0 +1,119 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Switches
+;;; 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(role black)
+
+(<= (base (at ?x ?y ?obj)) (bounds ?x) (bounds ?y) (object ?obj))
+
+(<= (base (target ?x ?y)) (bounds ?x) (bounds ?y))
+
+(<= (base (open ?d ?n)) (door ?d) (bounds ?n))
+
+(<= (base (switch ?x ?y ?d)) (door ?d) (bounds ?x) (bounds ?y))
+
+(<= (input ?r noop) (role ?r))
+(<= (input ?r left) (role ?r))
+(<= (input ?r right) (role ?r))
+(<= (input ?r up) (role ?r))
+(<= (input ?r down) (role ?r))
+
+(bounds 1)
+(bounds 2)
+(bounds 3)
+(bounds 4)
+(bounds 5)
+
+(succ 1 2)
+(succ 2 3)
+(succ 3 4)
+(succ 4 5)
+
+(dir left)
+(dir right)
+(dir up)
+(dir down)
+
+(object x)
+(object wall)
+(object obj1)
+(object d1)
+
+(door d1)
+
+(is_box obj1)
+
+(init (target 5 1))
+
+(init (at 3 1 x))
+(init (at 4 1 wall))
+(init (at 4 2 wall))
+(init (at 4 3 wall))
+(init (at 4 4 wall))
+(init (at 2 2 obj1))
+(init (at 5 2 d1))
+(init (switch 3 2 d1))
+
+(controls black x)
+(player_obj x)
+
+(<= (legal ?r noop) (controls ?r ?obj))
+(<= (legal ?r left) (controls ?r ?obj) (true (at ?x ?y ?obj)) (succ ?x2 ?x) (aux_clear ?x2 ?y))
+(<= (legal ?r right) (controls ?r ?obj) (true (at ?x ?y ?obj)) (succ ?x ?x2) (aux_clear ?x2 ?y))
+(<= (legal ?r up) (controls ?r ?obj) (true (at ?x ?y ?obj)) (succ ?y ?y2) (aux_clear ?x ?y2))
+(<= (legal ?r down) (controls ?r ?obj) (true (at ?x ?y ?obj)) (succ ?y2 ?y) (aux_clear ?x ?y2))
+
+(<= (legal ?r left) (controls ?r ?obj) (true (at ?x ?y ?obj)) (succ ?x2 ?x) (aux_box_at ?x2 ?y) (succ ?x3 ?x2) (aux_clear ?x3 ?y))
+(<= (legal ?r right) (controls ?r ?obj) (true (at ?x ?y ?obj)) (succ ?x ?x2) (aux_box_at ?x2 ?y) (succ ?x2 ?x3) (aux_clear ?x3 ?y))
+(<= (legal ?r up) (controls ?r ?obj) (true (at ?x ?y ?obj)) (succ ?y ?y2) (aux_box_at ?x ?y2) (succ ?y2 ?y3) (aux_clear ?x ?y3))
+(<= (legal ?r down) (controls ?r ?obj) (true (at ?x ?y ?obj)) (succ ?y2 ?y) (aux_box_at ?x ?y2) (succ ?y3 ?y2) (aux_clear ?x ?y3))
+
+(<= (aux_box_moves_dir ?box left) (controls ?r ?obj) (true (at ?x ?y ?obj)) (does ?r left) (succ ?x2 ?x) (true (at ?x2 ?y ?box)) (is_box ?box) (succ ?x3 ?x2) (aux_clear ?x3 ?y))
+(<= (aux_box_moves_dir ?box right) (controls ?r ?obj) (true (at ?x ?y ?obj)) (does ?r right) (succ ?x ?x2) (true (at ?x2 ?y ?box)) (is_box ?box) (succ ?x2 ?x3) (aux_clear ?x3 ?y))
+(<= (aux_box_moves_dir ?box up) (controls ?r ?obj) (true (at ?x ?y ?obj)) (does ?r up) (succ ?y ?y2) (true (at ?x ?y2 ?box)) (is_box ?box) (succ ?y2 ?y3) (aux_clear ?x ?y3))
+(<= (aux_box_moves_dir ?box down) (controls ?r ?obj) (true (at ?x ?y ?obj)) (does ?r down) (succ ?y2 ?y) (true (at ?x ?y2 ?box)) (is_box ?box) (succ ?y3 ?y2) (aux_clear ?x ?y3))
+
+(<= (aux_is_moving ?box) (aux_box_moves_dir ?box ?dir))
+
+(<= (next (at ?x ?y ?obj)) (true (at ?x ?y ?obj)) (does ?r ?a) (not (player_obj ?obj)) (not (aux_is_moving ?obj)))
+
+(<= (next (at ?x ?y ?obj)) (true (at ?x ?y ?obj)) (does ?r noop) (controls ?r ?obj))
+
+(<= (next (at ?x ?y ?obj)) (true (at ?x2 ?y ?obj)) (does ?r left) (controls ?r ?obj) (succ ?x ?x2))
+
+(<= (next (at ?x ?y ?obj)) (true (at ?x2 ?y ?obj)) (does ?r right) (controls ?r ?obj) (succ ?x2 ?x))
+
+(<= (next (at ?x ?y ?obj)) (true (at ?x ?y2 ?obj)) (does ?r up) (controls ?r ?obj) (succ ?y2 ?y))
+
+(<= (next (at ?x ?y ?obj)) (true (at ?x ?y2 ?obj)) (does ?r down) (controls ?r ?obj) (succ ?y ?y2))
+
+(<= (next (at ?x ?y ?obj)) (true (at ?x2 ?y ?obj)) (aux_box_moves_dir ?obj left) (succ ?x ?x2))
+
+(<= (next (at ?x ?y ?obj)) (true (at ?x2 ?y ?obj)) (aux_box_moves_dir ?obj right) (succ ?x2 ?x))
+
+(<= (next (at ?x ?y ?obj)) (true (at ?x ?y2 ?obj)) (aux_box_moves_dir ?obj up) (succ ?y2 ?y))
+
+(<= (next (at ?x ?y ?obj)) (true (at ?x ?y2 ?obj)) (aux_box_moves_dir ?obj down) (succ ?y ?y2))
+
+(<= (next (target ?x ?y)) (true (target ?x ?y)))
+
+(<= (next (open ?d 5)) (true (at ?x ?y ?obj)) (true (switch ?x ?y ?d)))
+
+(<= (next (open ?d ?n)) (true (open ?d ?m)) (succ ?n ?m))
+
+(<= (next (switch ?x ?y ?d)) (true (switch ?x ?y ?d)))
+
+(<= (aux_clear ?x ?y) (bounds ?x) (bounds ?y) (not (aux_object_at ?x ?y)))
+
+(<= (aux_clear ?x ?y) (true (at ?x ?y ?obj)) (true (open ?obj ?n)))
+
+(<= (aux_object_at ?x ?y) (true (at ?x ?y ?obj)))
+
+(<= (aux_box_at ?x ?y) (true (at ?x ?y ?obj)) (is_box ?obj))
+
+(<= aux_on_target (true (at ?x ?y ?obj)) (player_obj ?obj) (true (target ?x ?y)))
+ 
+(<= (goal black 100) aux_on_target)
+
+(<= terminal aux_on_target)

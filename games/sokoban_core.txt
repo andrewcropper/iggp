@@ -1,0 +1,101 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Sokoban
+;;; 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(role black)
+
+(<= (base (at ?x ?y ?obj)) (bounds ?x) (bounds ?y) (object ?obj))
+
+(<= (base (target ?x ?y)) (bounds ?x) (bounds ?y))
+
+(<= (input ?r noop) (role ?r))
+(<= (input ?r left) (role ?r))
+(<= (input ?r right) (role ?r))
+(<= (input ?r up) (role ?r))
+(<= (input ?r down) (role ?r))
+
+(<= (bounds ?x) (succ ?x ?y))
+(<= (bounds ?x) (succ ?y ?x))
+
+(dir left)
+(dir right)
+(dir up)
+(dir down)
+
+(object x)
+(object wall)
+(object obj1)
+(object obj2)
+
+(is_box obj1)
+(is_box obj2)
+
+(controls black x)
+(player_obj x)
+
+(<= (legal ?r noop) (controls ?r ?obj))
+(<= (legal ?r left) (controls ?r ?obj) (true (at ?x ?y ?obj)) (succ ?x2 ?x) (aux_clear ?x2 ?y))
+(<= (legal ?r right) (controls ?r ?obj) (true (at ?x ?y ?obj)) (succ ?x ?x2) (aux_clear ?x2 ?y))
+(<= (legal ?r up) (controls ?r ?obj) (true (at ?x ?y ?obj)) (succ ?y ?y2) (aux_clear ?x ?y2))
+(<= (legal ?r down) (controls ?r ?obj) (true (at ?x ?y ?obj)) (succ ?y2 ?y) (aux_clear ?x ?y2))
+
+(<= (legal ?r left) (controls ?r ?obj) (true (at ?x ?y ?obj)) (succ ?x2 ?x) (aux_box_at ?x2 ?y) (succ ?x3 ?x2) (aux_clear ?x3 ?y))
+(<= (legal ?r right) (controls ?r ?obj) (true (at ?x ?y ?obj)) (succ ?x ?x2) (aux_box_at ?x2 ?y) (succ ?x2 ?x3) (aux_clear ?x3 ?y))
+(<= (legal ?r up) (controls ?r ?obj) (true (at ?x ?y ?obj)) (succ ?y ?y2) (aux_box_at ?x ?y2) (succ ?y2 ?y3) (aux_clear ?x ?y3))
+(<= (legal ?r down) (controls ?r ?obj) (true (at ?x ?y ?obj)) (succ ?y2 ?y) (aux_box_at ?x ?y2) (succ ?y3 ?y2) (aux_clear ?x ?y3))
+
+(<= (aux_box_moves_dir ?box left) (controls ?r ?obj) (true (at ?x ?y ?obj)) (does ?r left) (succ ?x2 ?x) (true (at ?x2 ?y ?box)) (is_box ?box) (succ ?x3 ?x2) (aux_clear ?x3 ?y))
+(<= (aux_box_moves_dir ?box right) (controls ?r ?obj) (true (at ?x ?y ?obj)) (does ?r right) (succ ?x ?x2) (true (at ?x2 ?y ?box)) (is_box ?box) (succ ?x2 ?x3) (aux_clear ?x3 ?y))
+(<= (aux_box_moves_dir ?box up) (controls ?r ?obj) (true (at ?x ?y ?obj)) (does ?r up) (succ ?y ?y2) (true (at ?x ?y2 ?box)) (is_box ?box) (succ ?y2 ?y3) (aux_clear ?x ?y3))
+(<= (aux_box_moves_dir ?box down) (controls ?r ?obj) (true (at ?x ?y ?obj)) (does ?r down) (succ ?y2 ?y) (true (at ?x ?y2 ?box)) (is_box ?box) (succ ?y3 ?y2) (aux_clear ?x ?y3))
+
+(<= (aux_is_moving ?box) (aux_box_moves_dir ?box ?dir))
+
+(<= (next (at ?x ?y ?obj)) (true (at ?x ?y ?obj)) (does ?r ?a) (not (player_obj ?obj)) (not (aux_is_moving ?obj)))
+
+(<= (next (at ?x ?y ?obj)) (true (at ?x ?y ?obj)) (does ?r noop) (controls ?r ?obj))
+
+(<= (next (at ?x ?y ?obj)) (true (at ?x2 ?y ?obj)) (does ?r left) (controls ?r ?obj) (succ ?x ?x2))
+
+(<= (next (at ?x ?y ?obj)) (true (at ?x2 ?y ?obj)) (does ?r right) (controls ?r ?obj) (succ ?x2 ?x))
+
+(<= (next (at ?x ?y ?obj)) (true (at ?x ?y2 ?obj)) (does ?r up) (controls ?r ?obj) (succ ?y2 ?y))
+
+(<= (next (at ?x ?y ?obj)) (true (at ?x ?y2 ?obj)) (does ?r down) (controls ?r ?obj) (succ ?y ?y2))
+
+(<= (next (at ?x ?y ?obj)) (true (at ?x2 ?y ?obj)) (aux_box_moves_dir ?obj left) (succ ?x ?x2))
+
+(<= (next (at ?x ?y ?obj)) (true (at ?x2 ?y ?obj)) (aux_box_moves_dir ?obj right) (succ ?x2 ?x))
+
+(<= (next (at ?x ?y ?obj)) (true (at ?x ?y2 ?obj)) (aux_box_moves_dir ?obj up) (succ ?y2 ?y))
+
+(<= (next (at ?x ?y ?obj)) (true (at ?x ?y2 ?obj)) (aux_box_moves_dir ?obj down) (succ ?y ?y2))
+
+(<= (next (target ?x ?y)) (true (target ?x ?y)))
+
+(<= (aux_clear ?x ?y) (bounds ?x) (bounds ?y) (not (aux_object_at ?x ?y)))
+
+(<= (aux_object_at ?x ?y) (true (at ?x ?y ?obj)))
+
+(<= (aux_box_at ?x ?y) (true (at ?x ?y ?obj)) (is_box ?obj))
+
+(<= (goal ?r 100) (reward ?r))
+
+(<= (reward ?r) (role ?r) (not (aux_box_out_of_place ?r)))
+
+(<= (aux_box_out_of_place ?r) (role ?r) (is_box ?box) (true (at ?x ?y ?box)) (not (true (target ?x ?y))))
+
+(<= terminal (role ?r) (not (aux_box_out_of_place ?r)))
+
+(is_left left)
+(is_right right)
+(is_up up)
+(is_down down)
+(is_noop noop)
+
+(succ 1 2)
+(succ 2 3)
+(succ 3 4)
+(succ 4 5)
+

@@ -1,0 +1,1548 @@
+atoms:
+	terminal()
+
+---
+
+statics:
+	index(1)
+	index(2)
+	index(3)
+	index(4)
+	index(5)
+	index(6)
+	index(7)
+	index(8)
+	index(9)
+	input_a(robot, 1)
+	input_a(robot, 2)
+	input_a(robot, 3)
+	input_a(robot, 4)
+	input_a(robot, 5)
+	input_a(robot, 6)
+	input_a(robot, 7)
+	input_a(robot, 8)
+	input_a(robot, 9)
+	input_b(robot, 1)
+	input_b(robot, 2)
+	input_b(robot, 3)
+	input_b(robot, 4)
+	input_b(robot, 5)
+	input_b(robot, 6)
+	input_b(robot, 7)
+	input_b(robot, 8)
+	input_b(robot, 9)
+	input_c(robot, 1)
+	input_c(robot, 2)
+	input_c(robot, 3)
+	input_c(robot, 4)
+	input_c(robot, 5)
+	input_c(robot, 6)
+	input_c(robot, 7)
+	input_c(robot, 8)
+	input_c(robot, 9)
+	role(robot)
+	successor(1, 2)
+	successor(2, 3)
+	successor(3, 4)
+	successor(4, 5)
+	successor(5, 6)
+	successor(6, 7)
+
+---
+
+background:
+	true_p(1)
+	true_p(5)
+	true_p(6)
+	true_step(5)
+
+---
+
+positives:
+
+---
+
+background:
+	true_q(6)
+	true_step(7)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_p(5)
+	true_p(7)
+	true_step(6)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(5)
+	true_step(4)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(4)
+	true_p(5)
+	true_step(4)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(6)
+	true_p(8)
+	true_step(7)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_p(6)
+	true_step(6)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(4)
+	true_step(3)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(4)
+	true_p(9)
+	true_step(7)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_p(3)
+	true_p(4)
+	true_p(5)
+	true_step(7)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_p(1)
+	true_step(6)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(4)
+	true_step(6)
+
+---
+
+positives:
+
+---
+
+background:
+	true_step(7)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_p(1)
+	true_p(8)
+	true_q(2)
+	true_step(7)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_p(2)
+	true_p(8)
+	true_step(6)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(2)
+	true_step(4)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(4)
+	true_p(6)
+	true_step(6)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(3)
+	true_p(6)
+	true_step(7)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_p(4)
+	true_q(4)
+	true_step(5)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(7)
+	true_p(8)
+	true_step(4)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(3)
+	true_p(8)
+	true_step(7)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_p(5)
+	true_p(7)
+	true_step(7)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_q(4)
+	true_step(6)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(1)
+	true_step(3)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(2)
+	true_p(4)
+	true_step(7)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_p(9)
+	true_q(2)
+	true_step(6)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(5)
+	true_q(4)
+	true_step(7)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_p(2)
+	true_p(4)
+	true_step(6)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(4)
+	true_p(8)
+	true_step(7)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_p(2)
+	true_p(6)
+	true_step(6)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(5)
+	true_p(8)
+	true_step(6)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(3)
+	true_p(7)
+	true_step(4)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(2)
+	true_p(3)
+	true_p(4)
+	true_p(5)
+	true_step(6)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(3)
+	true_p(5)
+	true_p(7)
+	true_step(5)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(4)
+	true_p(5)
+	true_p(7)
+	true_p(8)
+	true_step(7)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_p(4)
+	true_p(8)
+	true_step(5)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(1)
+	true_p(8)
+	true_step(6)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(3)
+	true_step(6)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(1)
+	true_p(4)
+	true_step(6)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(8)
+	true_q(2)
+	true_step(5)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(3)
+	true_p(4)
+	true_step(6)
+
+---
+
+positives:
+
+---
+
+background:
+	true_q(4)
+	true_step(5)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(4)
+	true_p(5)
+	true_p(6)
+	true_step(5)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(4)
+	true_p(5)
+	true_step(5)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(1)
+	true_p(3)
+	true_p(4)
+	true_step(7)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_p(6)
+	true_step(3)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(4)
+	true_p(6)
+	true_step(5)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(2)
+	true_step(5)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(7)
+	true_p(8)
+	true_step(5)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(7)
+	true_step(2)
+
+---
+
+positives:
+
+---
+
+background:
+	true_q(5)
+	true_step(7)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_p(3)
+	true_p(9)
+	true_step(7)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_p(2)
+	true_p(5)
+	true_p(9)
+	true_step(6)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(4)
+	true_p(7)
+	true_step(4)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(3)
+	true_p(4)
+	true_p(5)
+	true_p(7)
+	true_step(6)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(2)
+	true_p(8)
+	true_step(3)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(1)
+	true_p(3)
+	true_step(6)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(5)
+	true_step(2)
+
+---
+
+positives:
+
+---
+
+background:
+	true_step(2)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(1)
+	true_p(4)
+	true_p(5)
+	true_step(6)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(6)
+	true_step(2)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(1)
+	true_step(2)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(9)
+	true_q(2)
+	true_step(7)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_p(4)
+	true_p(6)
+	true_p(8)
+	true_step(7)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_p(8)
+	true_step(2)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(1)
+	true_p(7)
+	true_step(7)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_p(2)
+	true_p(9)
+	true_step(7)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_p(3)
+	true_p(6)
+	true_step(6)
+
+---
+
+positives:
+
+---
+
+background:
+	true_step(6)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(4)
+	true_p(8)
+	true_step(6)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(3)
+	true_step(5)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(4)
+	true_p(5)
+	true_step(3)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(4)
+	true_p(5)
+	true_p(9)
+	true_q(4)
+	true_step(7)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_p(1)
+	true_step(5)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(1)
+	true_p(5)
+	true_p(6)
+	true_step(6)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(1)
+	true_p(3)
+	true_step(7)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_p(6)
+	true_p(8)
+	true_step(4)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(3)
+	true_p(4)
+	true_step(7)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_p(6)
+	true_step(4)
+
+---
+
+positives:
+
+---
+
+background:
+	true_q(3)
+	true_step(5)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(2)
+	true_p(5)
+	true_p(6)
+	true_q(3)
+	true_step(7)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_p(5)
+	true_step(3)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(3)
+	true_step(7)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_p(4)
+	true_p(7)
+	true_p(8)
+	true_step(5)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(1)
+	true_step(7)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_p(3)
+	true_step(4)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(2)
+	true_p(3)
+	true_step(3)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(2)
+	true_p(3)
+	true_p(5)
+	true_step(4)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(4)
+	true_p(9)
+	true_q(4)
+	true_step(6)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(5)
+	true_step(5)
+
+---
+
+positives:
+
+---
+
+background:
+	true_q(4)
+	true_step(4)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(9)
+	true_q(1)
+	true_step(6)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(2)
+	true_p(3)
+	true_p(5)
+	true_p(6)
+	true_step(6)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(5)
+	true_p(8)
+	true_step(5)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(4)
+	true_step(4)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(8)
+	true_step(4)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(2)
+	true_p(5)
+	true_step(7)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_p(2)
+	true_step(2)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(8)
+	true_p(9)
+	true_step(4)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(9)
+	true_q(1)
+	true_step(7)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_p(5)
+	true_p(9)
+	true_step(6)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(4)
+	true_q(6)
+	true_step(7)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_p(4)
+	true_step(7)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_p(9)
+	true_step(2)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(4)
+	true_p(5)
+	true_p(6)
+	true_step(7)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_p(4)
+	true_p(5)
+	true_step(7)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_p(1)
+	true_p(9)
+	true_step(7)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_p(5)
+	true_p(8)
+	true_step(7)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_p(4)
+	true_step(5)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(2)
+	true_p(9)
+	true_step(4)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(5)
+	true_p(6)
+	true_step(5)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(8)
+	true_step(3)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(3)
+	true_p(8)
+	true_step(4)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(8)
+	true_step(6)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(5)
+	true_q(2)
+	true_step(7)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_p(8)
+	true_q(2)
+	true_step(6)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(2)
+	true_p(5)
+	true_step(6)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(4)
+	true_q(7)
+	true_step(4)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(5)
+	true_p(6)
+	true_step(4)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(2)
+	true_p(3)
+	true_p(5)
+	true_step(5)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(6)
+	true_p(8)
+	true_step(6)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(3)
+	true_p(5)
+	true_step(4)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(1)
+	true_p(8)
+	true_p(9)
+	true_step(5)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(2)
+	true_p(7)
+	true_step(7)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_p(3)
+	true_p(5)
+	true_p(6)
+	true_step(5)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(8)
+	true_q(6)
+	true_step(7)
+
+---
+
+positives:
+	terminal()
+
+---
+
+background:
+	true_p(2)
+	true_p(5)
+	true_step(5)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(4)
+	true_p(5)
+	true_p(6)
+	true_step(6)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(1)
+	true_p(8)
+	true_step(5)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(6)
+	true_step(5)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(3)
+	true_p(5)
+	true_step(5)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(9)
+	true_step(4)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(3)
+	true_p(4)
+	true_step(4)
+
+---
+
+positives:
+
+---
+
+background:
+	true_p(8)
+	true_q(6)
+	true_step(6)
+
+---
+
+positives:
+
+---
+

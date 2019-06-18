@@ -1,0 +1,242 @@
+atoms:
+	next_score(p1, 0)
+	next_score(p2, 0)
+	next_score(p1, 1)
+	next_score(p2, 1)
+	next_score(p1, 2)
+	next_score(p2, 2)
+	next_score(p1, 3)
+	next_score(p2, 3)
+	next_step(0)
+	next_step(1)
+	next_step(2)
+	next_step(3)
+
+---
+
+statics:
+	beats(paper, stone)
+	beats(scissors, paper)
+	beats(stone, scissors)
+	player(p1)
+	player(p2)
+	succ(0, 1)
+	succ(1, 2)
+	succ(2, 3)
+
+---
+
+background:
+	true_score(p1, 0)
+	true_score(p2, 1)
+	true_step(3)
+
+---
+
+positives:
+
+---
+
+background:
+	does(p1, stone)
+	does(p2, scissors)
+	true_score(p1, 2)
+	true_score(p2, 0)
+	true_step(2)
+
+---
+
+positives:
+	next_score(p1, 3)
+	next_score(p2, 0)
+	next_step(3)
+
+---
+
+background:
+	does(p1, paper)
+	does(p2, scissors)
+	true_score(p1, 0)
+	true_score(p2, 0)
+	true_step(1)
+
+---
+
+positives:
+	next_score(p1, 0)
+	next_score(p2, 1)
+	next_step(2)
+
+---
+
+background:
+	does(p1, scissors)
+	does(p2, scissors)
+	true_score(p1, 0)
+	true_score(p2, 1)
+	true_step(1)
+
+---
+
+positives:
+	next_score(p1, 0)
+	next_score(p2, 1)
+	next_step(2)
+
+---
+
+background:
+	true_score(p1, 3)
+	true_score(p2, 0)
+	true_step(3)
+
+---
+
+positives:
+
+---
+
+background:
+	does(p1, paper)
+	does(p2, stone)
+	true_score(p1, 1)
+	true_score(p2, 1)
+	true_step(2)
+
+---
+
+positives:
+	next_score(p1, 2)
+	next_score(p2, 1)
+	next_step(3)
+
+---
+
+background:
+	does(p1, paper)
+	does(p2, paper)
+	true_score(p1, 0)
+	true_score(p2, 0)
+	true_step(0)
+
+---
+
+positives:
+	next_score(p1, 0)
+	next_score(p2, 0)
+	next_step(1)
+
+---
+
+background:
+	does(p1, paper)
+	does(p2, paper)
+	true_score(p1, 0)
+	true_score(p2, 1)
+	true_step(2)
+
+---
+
+positives:
+	next_score(p1, 0)
+	next_score(p2, 1)
+	next_step(3)
+
+---
+
+background:
+	does(p1, scissors)
+	does(p2, stone)
+	true_score(p1, 0)
+	true_score(p2, 1)
+	true_step(2)
+
+---
+
+positives:
+	next_score(p1, 0)
+	next_score(p2, 2)
+	next_step(3)
+
+---
+
+background:
+	does(p1, paper)
+	does(p2, stone)
+	true_score(p1, 1)
+	true_score(p2, 0)
+	true_step(1)
+
+---
+
+positives:
+	next_score(p1, 2)
+	next_score(p2, 0)
+	next_step(2)
+
+---
+
+background:
+	does(p1, scissors)
+	does(p2, paper)
+	true_score(p1, 0)
+	true_score(p2, 1)
+	true_step(1)
+
+---
+
+positives:
+	next_score(p1, 1)
+	next_score(p2, 1)
+	next_step(2)
+
+---
+
+background:
+	does(p1, scissors)
+	does(p2, scissors)
+	true_score(p1, 1)
+	true_score(p2, 1)
+	true_step(2)
+
+---
+
+positives:
+	next_score(p1, 1)
+	next_score(p2, 1)
+	next_step(3)
+
+---
+
+background:
+	does(p1, paper)
+	does(p2, stone)
+	true_score(p1, 0)
+	true_score(p2, 1)
+	true_step(2)
+
+---
+
+positives:
+	next_score(p1, 1)
+	next_score(p2, 1)
+	next_step(3)
+
+---
+
+background:
+	does(p1, stone)
+	does(p2, stone)
+	true_score(p1, 2)
+	true_score(p2, 0)
+	true_step(2)
+
+---
+
+positives:
+	next_score(p1, 2)
+	next_score(p2, 0)
+	next_step(3)
+
+---
+
